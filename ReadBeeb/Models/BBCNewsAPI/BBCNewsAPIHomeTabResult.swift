@@ -98,25 +98,27 @@ struct BBCNewsAPIHomeTabItemItem: Codable {
     let updated: Int?
     let topic: BBCNewsAPIHomeTabTopic?
     let image: BBCNewsAPIHomeTabImage?
-    let uasToken: String?
     let badges: [BBCNewsAPIHomeTabBadge]?
-    let title: String?
+    let uasToken, title: String?
 }
 
 // MARK: - BBCNewsAPIHomeTabBadge
 struct BBCNewsAPIHomeTabBadge: Codable {
     let type: BBCNewsAPIHomeTabBadgeType
     let brand: BBCNewsAPIHomeTabBbcProducer
-    let duration: Int?
     let text: String?
+    let duration: Int?
 }
 
 enum BBCNewsAPIHomeTabBbcProducer: String, Codable {
     case bbcProducerDEFAULT = "DEFAULT"
     case news = "NEWS"
+    case sport = "SPORT"
 }
 
 enum BBCNewsAPIHomeTabBadgeType: String, Codable {
+    case breaking = "BREAKING"
+    case live = "LIVE"
     case ordered = "ORDERED"
     case video = "VIDEO"
 }
