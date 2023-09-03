@@ -1,5 +1,5 @@
 //
-//  BBCNewsAPIHomeTabResult.swift
+//  BBCNewsAPIFederatedDiscoveryResult.swift
 //  ReadBeeb
 //
 //  Created by Bilaal Rashid on 27/08/2023.
@@ -7,194 +7,194 @@
 
 import Foundation
 
-// MARK: - BBCNewsAPIHomeTabResult
-struct BBCNewsAPIHomeTabResult: Codable {
-    let data: BBCNewsAPIHomeTabData
+// MARK: - BBCNewsAPIFederatedDiscoveryResult
+struct BBCNewsAPIFederatedDiscoveryResult: Codable {
+    let data: BBCNewsAPIFederatedDiscoveryData
     let contentType: String
 }
 
-// MARK: - BBCNewsAPIHomeTabData
-struct BBCNewsAPIHomeTabData: Codable {
-    let metadata: BBCNewsAPIHomeTabDataMetadata
-    let items: [BBCNewsAPIHomeTabDataItem]
-    let trackers: [BBCNewsAPIHomeTabDataTracker]
+// MARK: - BBCNewsAPIFederatedDiscoveryData
+struct BBCNewsAPIFederatedDiscoveryData: Codable {
+    let metadata: BBCNewsAPIFederatedDiscoveryDataMetadata
+    let items: [BBCNewsAPIFederatedDiscoveryDataItem]
+    let trackers: [BBCNewsAPIFederatedDiscoveryDataTracker]
 }
 
-// MARK: - BBCNewsAPIHomeTabDataItem
-struct BBCNewsAPIHomeTabDataItem: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryDataItem
+struct BBCNewsAPIFederatedDiscoveryDataItem: Codable {
     let type: String
-    let items: [BBCNewsAPIHomeTabItemItem]?
+    let items: [BBCNewsAPIFederatedDiscoveryItemItem]?
     let text: String?
-    let link: BBCNewsAPIHomeTabItemLink?
+    let link: BBCNewsAPIFederatedDiscoveryItemLink?
     let period: String?
-    let location: BBCNewsAPIHomeTabLocation?
-    let forecast: BBCNewsAPIHomeTabForecast?
+    let location: BBCNewsAPIFederatedDiscoveryLocation?
+    let forecast: BBCNewsAPIFederatedDiscoveryForecast?
     let aspectRatio: Double?
-    let presentation: BBCNewsAPIHomeTabItemPresentation?
+    let presentation: BBCNewsAPIFederatedDiscoveryItemPresentation?
     let hasPageIndicator: Bool?
-    let trackedEvents: [BBCNewsAPIHomeTabTrackedEvent]?
+    let trackedEvents: [BBCNewsAPIFederatedDiscoveryTrackedEvent]?
     let title, subtitle: String?
-    let buttons: [BBCNewsAPIHomeTabButton]?
+    let buttons: [BBCNewsAPIFederatedDiscoveryButton]?
     let lastUpdated: Int?
 }
 
-// MARK: - BBCNewsAPIHomeTabButton
-struct BBCNewsAPIHomeTabButton: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryButton
+struct BBCNewsAPIFederatedDiscoveryButton: Codable {
     let title: String
-    let link: BBCNewsAPIHomeTabButtonLink
+    let link: BBCNewsAPIFederatedDiscoveryButtonLink
 }
 
-// MARK: - BBCNewsAPIHomeTabButtonLink
-struct BBCNewsAPIHomeTabButtonLink: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryButtonLink
+struct BBCNewsAPIFederatedDiscoveryButtonLink: Codable {
     let trackers: [JSONAny]
-    let destinations: [BBCNewsAPIHomeTabPurpleDestination]
+    let destinations: [BBCNewsAPIFederatedDiscoveryPurpleDestination]
 }
 
-// MARK: - BBCNewsAPIHomeTabPurpleDestination
-struct BBCNewsAPIHomeTabPurpleDestination: Codable {
-    let sourceFormat: BBCNewsAPIHomeTabSourceFormat
+// MARK: - BBCNewsAPIFederatedDiscoveryPurpleDestination
+struct BBCNewsAPIFederatedDiscoveryPurpleDestination: Codable {
+    let sourceFormat: BBCNewsAPIFederatedDiscoverySourceFormat
     let url, id: String
-    let presentation: BBCNewsAPIHomeTabPurplePresentation
+    let presentation: BBCNewsAPIFederatedDiscoveryPurplePresentation
 }
 
-// MARK: - BBCNewsAPIHomeTabPurplePresentation
-struct BBCNewsAPIHomeTabPurplePresentation: Codable {
-    let type: BBCNewsAPIHomeTabPresentationType
+// MARK: - BBCNewsAPIFederatedDiscoveryPurplePresentation
+struct BBCNewsAPIFederatedDiscoveryPurplePresentation: Codable {
+    let type: BBCNewsAPIFederatedDiscoveryPresentationType
     let contentSource: String
 }
 
-enum BBCNewsAPIHomeTabPresentationType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryPresentationType: String, Codable {
     case singleRenderer = "SINGLE_RENDERER"
     case verticalVideo = "VERTICAL_VIDEO"
     case web = "WEB"
 }
 
-enum BBCNewsAPIHomeTabSourceFormat: String, Codable {
+enum BBCNewsAPIFederatedDiscoverySourceFormat: String, Codable {
     case abl = "ABL"
     case html = "HTML"
 }
 
-// MARK: - BBCNewsAPIHomeTabForecast
-struct BBCNewsAPIHomeTabForecast: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryForecast
+struct BBCNewsAPIFederatedDiscoveryForecast: Codable {
     let description: String
-    let high, low: BBCNewsAPIHomeTabHigh
+    let high, low: BBCNewsAPIFederatedDiscoveryHigh
     let icon: String
     let nighttimeLayout: Bool
 }
 
-// MARK: - BBCNewsAPIHomeTabHigh
-struct BBCNewsAPIHomeTabHigh: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryHigh
+struct BBCNewsAPIFederatedDiscoveryHigh: Codable {
     let celsius: Int
 }
 
-// MARK: - BBCNewsAPIHomeTabItemItem
-struct BBCNewsAPIHomeTabItemItem: Codable {
-    let type: BBCNewsAPIHomeTabItemType?
-    let style: BBCNewsAPIHomeTabStyle?
-    let languageCode: BBCNewsAPIHomeTabLanguageCode?
+// MARK: - BBCNewsAPIFederatedDiscoveryItemItem
+struct BBCNewsAPIFederatedDiscoveryItemItem: Codable {
+    let type: BBCNewsAPIFederatedDiscoveryItemType?
+    let style: BBCNewsAPIFederatedDiscoveryStyle?
+    let languageCode: BBCNewsAPIFederatedDiscoveryLanguageCode?
     let text: String?
-    let link: BBCNewsAPIHomeTabItemLink
+    let link: BBCNewsAPIFederatedDiscoveryItemLink
     let subtext: String?
     let updated: Int?
-    let topic: BBCNewsAPIHomeTabTopic?
-    let image: BBCNewsAPIHomeTabImage?
-    let badges: [BBCNewsAPIHomeTabBadge]?
+    let topic: BBCNewsAPIFederatedDiscoveryTopic?
+    let image: BBCNewsAPIFederatedDiscoveryImage?
+    let badges: [BBCNewsAPIFederatedDiscoveryBadge]?
     let uasToken, title: String?
 }
 
-// MARK: - BBCNewsAPIHomeTabBadge
-struct BBCNewsAPIHomeTabBadge: Codable {
-    let type: BBCNewsAPIHomeTabBadgeType
-    let brand: BBCNewsAPIHomeTabBbcProducer
+// MARK: - BBCNewsAPIFederatedDiscoveryBadge
+struct BBCNewsAPIFederatedDiscoveryBadge: Codable {
+    let type: BBCNewsAPIFederatedDiscoveryBadgeType
+    let brand: BBCNewsAPIFederatedDiscoveryBbcProducer
     let text: String?
     let duration: Int?
 }
 
-enum BBCNewsAPIHomeTabBbcProducer: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryBbcProducer: String, Codable {
     case bbcProducerDEFAULT = "DEFAULT"
     case news = "NEWS"
     case sport = "SPORT"
 }
 
-enum BBCNewsAPIHomeTabBadgeType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryBadgeType: String, Codable {
     case breaking = "BREAKING"
     case live = "LIVE"
     case ordered = "ORDERED"
     case video = "VIDEO"
 }
 
-// MARK: - BBCNewsAPIHomeTabImage
-struct BBCNewsAPIHomeTabImage: Codable {
-    let type: BBCNewsAPIHomeTabImageType
-    let source: BBCNewsAPIHomeTabSource
-    let metadata: BBCNewsAPIHomeTabImageMetadata?
+// MARK: - BBCNewsAPIFederatedDiscoveryImage
+struct BBCNewsAPIFederatedDiscoveryImage: Codable {
+    let type: BBCNewsAPIFederatedDiscoveryImageType
+    let source: BBCNewsAPIFederatedDiscoverySource
+    let metadata: BBCNewsAPIFederatedDiscoveryImageMetadata?
 }
 
-// MARK: - BBCNewsAPIHomeTabImageMetadata
-struct BBCNewsAPIHomeTabImageMetadata: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryImageMetadata
+struct BBCNewsAPIFederatedDiscoveryImageMetadata: Codable {
     let altText: String
     let caption, copyrightText: String?
 }
 
-// MARK: - BBCNewsAPIHomeTabSource
-struct BBCNewsAPIHomeTabSource: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoverySource
+struct BBCNewsAPIFederatedDiscoverySource: Codable {
     let aspectRatio: Double?
     let url: String
-    let sizingMethod: BBCNewsAPIHomeTabSizingMethod
+    let sizingMethod: BBCNewsAPIFederatedDiscoverySizingMethod
 }
 
-// MARK: - BBCNewsAPIHomeTabSizingMethod
-struct BBCNewsAPIHomeTabSizingMethod: Codable {
-    let type: BBCNewsAPIHomeTabSizingMethodType
-    let widthToken: BBCNewsAPIHomeTabWidthToken
+// MARK: - BBCNewsAPIFederatedDiscoverySizingMethod
+struct BBCNewsAPIFederatedDiscoverySizingMethod: Codable {
+    let type: BBCNewsAPIFederatedDiscoverySizingMethodType
+    let widthToken: BBCNewsAPIFederatedDiscoveryWidthToken
     let widths: [Int]
 }
 
-enum BBCNewsAPIHomeTabSizingMethodType: String, Codable {
+enum BBCNewsAPIFederatedDiscoverySizingMethodType: String, Codable {
     case specificWidths = "SPECIFIC_WIDTHS"
 }
 
-enum BBCNewsAPIHomeTabWidthToken: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryWidthToken: String, Codable {
     case width = "{width}"
 }
 
-enum BBCNewsAPIHomeTabImageType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryImageType: String, Codable {
     case image = "Image"
 }
 
-enum BBCNewsAPIHomeTabLanguageCode: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryLanguageCode: String, Codable {
     case enGB = "en-gb"
 }
 
-// MARK: - BBCNewsAPIHomeTabItemLink
-struct BBCNewsAPIHomeTabItemLink: Codable {
-    let trackers: [BBCNewsAPIHomeTabLinkTracker]
-    let destinations: [BBCNewsAPIHomeTabFluffyDestination]
+// MARK: - BBCNewsAPIFederatedDiscoveryItemLink
+struct BBCNewsAPIFederatedDiscoveryItemLink: Codable {
+    let trackers: [BBCNewsAPIFederatedDiscoveryLinkTracker]
+    let destinations: [BBCNewsAPIFederatedDiscoveryFluffyDestination]
 }
 
-// MARK: - BBCNewsAPIHomeTabFluffyDestination
-struct BBCNewsAPIHomeTabFluffyDestination: Codable {
-    let sourceFormat: BBCNewsAPIHomeTabSourceFormat
+// MARK: - BBCNewsAPIFederatedDiscoveryFluffyDestination
+struct BBCNewsAPIFederatedDiscoveryFluffyDestination: Codable {
+    let sourceFormat: BBCNewsAPIFederatedDiscoverySourceFormat
     let url, id: String
-    let presentation: BBCNewsAPIHomeTabFluffyPresentation
+    let presentation: BBCNewsAPIFederatedDiscoveryFluffyPresentation
 }
 
-// MARK: - BBCNewsAPIHomeTabFluffyPresentation
-struct BBCNewsAPIHomeTabFluffyPresentation: Codable {
-    let type: BBCNewsAPIHomeTabPresentationType
+// MARK: - BBCNewsAPIFederatedDiscoveryFluffyPresentation
+struct BBCNewsAPIFederatedDiscoveryFluffyPresentation: Codable {
+    let type: BBCNewsAPIFederatedDiscoveryPresentationType
     let canShare: Bool?
     let focusedItemIndex: Int?
     let contentSource, title: String?
 }
 
-// MARK: - BBCNewsAPIHomeTabLinkTracker
-struct BBCNewsAPIHomeTabLinkTracker: Codable {
-    let type: BBCNewsAPIHomeTabTrackerType
-    let payload: BBCNewsAPIHomeTabPurplePayload
+// MARK: - BBCNewsAPIFederatedDiscoveryLinkTracker
+struct BBCNewsAPIFederatedDiscoveryLinkTracker: Codable {
+    let type: BBCNewsAPIFederatedDiscoveryTrackerType
+    let payload: BBCNewsAPIFederatedDiscoveryPurplePayload
 }
 
-// MARK: - BBCNewsAPIHomeTabPurplePayload
-struct BBCNewsAPIHomeTabPurplePayload: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryPurplePayload
+struct BBCNewsAPIFederatedDiscoveryPurplePayload: Codable {
     let actionType, actionName: String
 
     enum CodingKeys: String, CodingKey {
@@ -203,45 +203,45 @@ struct BBCNewsAPIHomeTabPurplePayload: Codable {
     }
 }
 
-enum BBCNewsAPIHomeTabTrackerType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryTrackerType: String, Codable {
     case atiV2 = "ati_v2"
 }
 
-enum BBCNewsAPIHomeTabStyle: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryStyle: String, Codable {
     case badgeLEDPromoCard = "BADGE_LED_PROMO_CARD"
     case portraitPromoCard = "PORTRAIT_PROMO_CARD"
     case smallHorizontalPromoCard = "SMALL_HORIZONTAL_PROMO_CARD"
 }
 
-// MARK: - BBCNewsAPIHomeTabTopic
-struct BBCNewsAPIHomeTabTopic: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryTopic
+struct BBCNewsAPIFederatedDiscoveryTopic: Codable {
     let text: String
-    let link: BBCNewsAPIHomeTabItemLink
+    let link: BBCNewsAPIFederatedDiscoveryItemLink
 }
 
-enum BBCNewsAPIHomeTabItemType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryItemType: String, Codable {
     case storyPromo = "StoryPromo"
 }
 
-// MARK: - BBCNewsAPIHomeTabLocation
-struct BBCNewsAPIHomeTabLocation: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryLocation
+struct BBCNewsAPIFederatedDiscoveryLocation: Codable {
     let name: String
     let isCurrentLocation: Bool
 }
 
-// MARK: - BBCNewsAPIHomeTabItemPresentation
-struct BBCNewsAPIHomeTabItemPresentation: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryItemPresentation
+struct BBCNewsAPIFederatedDiscoveryItemPresentation: Codable {
     let type: String
 }
 
-// MARK: - BBCNewsAPIHomeTabTrackedEvent
-struct BBCNewsAPIHomeTabTrackedEvent: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryTrackedEvent
+struct BBCNewsAPIFederatedDiscoveryTrackedEvent: Codable {
     let event: String
-    let trackers: [BBCNewsAPIHomeTabLinkTracker]
+    let trackers: [BBCNewsAPIFederatedDiscoveryLinkTracker]
 }
 
-// MARK: - BBCNewsAPIHomeTabDataMetadata
-struct BBCNewsAPIHomeTabDataMetadata: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryDataMetadata
+struct BBCNewsAPIFederatedDiscoveryDataMetadata: Codable {
     let name: String
     let allowAdvertising: Bool
     let lastUpdated: Int
@@ -253,16 +253,16 @@ struct BBCNewsAPIHomeTabDataMetadata: Codable {
     }
 }
 
-// MARK: - BBCNewsAPIHomeTabDataTracker
-struct BBCNewsAPIHomeTabDataTracker: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryDataTracker
+struct BBCNewsAPIFederatedDiscoveryDataTracker: Codable {
     let type: String
-    let payload: BBCNewsAPIHomeTabFluffyPayload
+    let payload: BBCNewsAPIFederatedDiscoveryFluffyPayload
 }
 
-// MARK: - BBCNewsAPIHomeTabFluffyPayload
-struct BBCNewsAPIHomeTabFluffyPayload: Codable {
+// MARK: - BBCNewsAPIFederatedDiscoveryFluffyPayload
+struct BBCNewsAPIFederatedDiscoveryFluffyPayload: Codable {
     let pageTitle, bbcContentType: String?
-    let bbcProducer: BBCNewsAPIHomeTabBbcProducer?
+    let bbcProducer: BBCNewsAPIFederatedDiscoveryBbcProducer?
     let name: String?
     let id: String?
     let sections, actionName: String?
