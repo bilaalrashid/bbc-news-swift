@@ -8,20 +8,20 @@
 import Foundation
 
 // MARK: - BBCNewsAPIFederatedDiscoveryResult
-struct BBCNewsAPIFederatedDiscoveryResult: Codable {
+struct BBCNewsAPIFederatedDiscoveryResult: Codable, Equatable, Hashable {
     let data: BBCNewsAPIFederatedDiscoveryData
     let contentType: String
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryData
-struct BBCNewsAPIFederatedDiscoveryData: Codable {
+struct BBCNewsAPIFederatedDiscoveryData: Codable, Equatable, Hashable {
     let metadata: BBCNewsAPIFederatedDiscoveryDataMetadata
     let items: [BBCNewsAPIFederatedDiscoveryDataItem]
     let trackers: [BBCNewsAPIFederatedDiscoveryDataTracker]
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryDataItem
-struct BBCNewsAPIFederatedDiscoveryDataItem: Codable {
+struct BBCNewsAPIFederatedDiscoveryDataItem: Codable, Equatable, Hashable {
     let type: String
     let items: [BBCNewsAPIFederatedDiscoveryItemItem]?
     let text: String?
@@ -39,43 +39,51 @@ struct BBCNewsAPIFederatedDiscoveryDataItem: Codable {
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryButton
-struct BBCNewsAPIFederatedDiscoveryButton: Codable {
+struct BBCNewsAPIFederatedDiscoveryButton: Codable, Equatable, Hashable {
     let title: String
     let link: BBCNewsAPIFederatedDiscoveryButtonLink
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryButtonLink
-struct BBCNewsAPIFederatedDiscoveryButtonLink: Codable {
+struct BBCNewsAPIFederatedDiscoveryButtonLink: Codable, Equatable, Hashable {
     let trackers: [JSONAny]
     let destinations: [BBCNewsAPIFederatedDiscoveryPurpleDestination]
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(destinations)
+    }
+
+    static func == (lhs: BBCNewsAPIFederatedDiscoveryButtonLink, rhs: BBCNewsAPIFederatedDiscoveryButtonLink) -> Bool {
+        return lhs.destinations == rhs.destinations
+    }
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryPurpleDestination
-struct BBCNewsAPIFederatedDiscoveryPurpleDestination: Codable {
+struct BBCNewsAPIFederatedDiscoveryPurpleDestination: Codable, Equatable, Hashable {
     let sourceFormat: BBCNewsAPIFederatedDiscoverySourceFormat
     let url, id: String
     let presentation: BBCNewsAPIFederatedDiscoveryPurplePresentation
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryPurplePresentation
-struct BBCNewsAPIFederatedDiscoveryPurplePresentation: Codable {
+struct BBCNewsAPIFederatedDiscoveryPurplePresentation: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFederatedDiscoveryPresentationType
     let contentSource: String
 }
 
-enum BBCNewsAPIFederatedDiscoveryPresentationType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryPresentationType: String, Codable, Equatable, Hashable {
     case singleRenderer = "SINGLE_RENDERER"
     case verticalVideo = "VERTICAL_VIDEO"
     case web = "WEB"
 }
 
-enum BBCNewsAPIFederatedDiscoverySourceFormat: String, Codable {
+enum BBCNewsAPIFederatedDiscoverySourceFormat: String, Codable, Equatable, Hashable {
     case abl = "ABL"
     case html = "HTML"
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryForecast
-struct BBCNewsAPIFederatedDiscoveryForecast: Codable {
+struct BBCNewsAPIFederatedDiscoveryForecast: Codable, Equatable, Hashable {
     let description: String
     let high, low: BBCNewsAPIFederatedDiscoveryHigh
     let icon: String
@@ -83,12 +91,12 @@ struct BBCNewsAPIFederatedDiscoveryForecast: Codable {
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryHigh
-struct BBCNewsAPIFederatedDiscoveryHigh: Codable {
+struct BBCNewsAPIFederatedDiscoveryHigh: Codable, Equatable, Hashable {
     let celsius: Int
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryItemItem
-struct BBCNewsAPIFederatedDiscoveryItemItem: Codable {
+struct BBCNewsAPIFederatedDiscoveryItemItem: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFederatedDiscoveryItemType?
     let style: BBCNewsAPIFederatedDiscoveryStyle?
     let languageCode: BBCNewsAPIFederatedDiscoveryLanguageCode?
@@ -103,20 +111,20 @@ struct BBCNewsAPIFederatedDiscoveryItemItem: Codable {
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryBadge
-struct BBCNewsAPIFederatedDiscoveryBadge: Codable {
+struct BBCNewsAPIFederatedDiscoveryBadge: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFederatedDiscoveryBadgeType
     let brand: BBCNewsAPIFederatedDiscoveryBbcProducer
     let text: String?
     let duration: Int?
 }
 
-enum BBCNewsAPIFederatedDiscoveryBbcProducer: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryBbcProducer: String, Codable, Equatable, Hashable {
     case bbcProducerDEFAULT = "DEFAULT"
     case news = "NEWS"
     case sport = "SPORT"
 }
 
-enum BBCNewsAPIFederatedDiscoveryBadgeType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryBadgeType: String, Codable, Equatable, Hashable {
     case breaking = "BREAKING"
     case live = "LIVE"
     case ordered = "ORDERED"
@@ -124,63 +132,63 @@ enum BBCNewsAPIFederatedDiscoveryBadgeType: String, Codable {
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryImage
-struct BBCNewsAPIFederatedDiscoveryImage: Codable {
+struct BBCNewsAPIFederatedDiscoveryImage: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFederatedDiscoveryImageType
     let source: BBCNewsAPIFederatedDiscoverySource
     let metadata: BBCNewsAPIFederatedDiscoveryImageMetadata?
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryImageMetadata
-struct BBCNewsAPIFederatedDiscoveryImageMetadata: Codable {
+struct BBCNewsAPIFederatedDiscoveryImageMetadata: Codable, Equatable, Hashable {
     let altText: String
     let caption, copyrightText: String?
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoverySource
-struct BBCNewsAPIFederatedDiscoverySource: Codable {
+struct BBCNewsAPIFederatedDiscoverySource: Codable, Equatable, Hashable {
     let aspectRatio: Double?
     let url: String
     let sizingMethod: BBCNewsAPIFederatedDiscoverySizingMethod
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoverySizingMethod
-struct BBCNewsAPIFederatedDiscoverySizingMethod: Codable {
+struct BBCNewsAPIFederatedDiscoverySizingMethod: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFederatedDiscoverySizingMethodType
     let widthToken: BBCNewsAPIFederatedDiscoveryWidthToken
     let widths: [Int]
 }
 
-enum BBCNewsAPIFederatedDiscoverySizingMethodType: String, Codable {
+enum BBCNewsAPIFederatedDiscoverySizingMethodType: String, Codable, Equatable, Hashable {
     case specificWidths = "SPECIFIC_WIDTHS"
 }
 
-enum BBCNewsAPIFederatedDiscoveryWidthToken: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryWidthToken: String, Codable, Equatable, Hashable {
     case width = "{width}"
 }
 
-enum BBCNewsAPIFederatedDiscoveryImageType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryImageType: String, Codable, Equatable, Hashable {
     case image = "Image"
 }
 
-enum BBCNewsAPIFederatedDiscoveryLanguageCode: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryLanguageCode: String, Codable, Equatable, Hashable {
     case enGB = "en-gb"
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryItemLink
-struct BBCNewsAPIFederatedDiscoveryItemLink: Codable {
+struct BBCNewsAPIFederatedDiscoveryItemLink: Codable, Equatable, Hashable {
     let trackers: [BBCNewsAPIFederatedDiscoveryLinkTracker]
     let destinations: [BBCNewsAPIFederatedDiscoveryFluffyDestination]
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryFluffyDestination
-struct BBCNewsAPIFederatedDiscoveryFluffyDestination: Codable {
+struct BBCNewsAPIFederatedDiscoveryFluffyDestination: Codable, Equatable, Hashable {
     let sourceFormat: BBCNewsAPIFederatedDiscoverySourceFormat
     let url, id: String
     let presentation: BBCNewsAPIFederatedDiscoveryFluffyPresentation
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryFluffyPresentation
-struct BBCNewsAPIFederatedDiscoveryFluffyPresentation: Codable {
+struct BBCNewsAPIFederatedDiscoveryFluffyPresentation: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFederatedDiscoveryPresentationType
     let canShare: Bool?
     let focusedItemIndex: Int?
@@ -188,13 +196,13 @@ struct BBCNewsAPIFederatedDiscoveryFluffyPresentation: Codable {
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryLinkTracker
-struct BBCNewsAPIFederatedDiscoveryLinkTracker: Codable {
+struct BBCNewsAPIFederatedDiscoveryLinkTracker: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFederatedDiscoveryTrackerType
     let payload: BBCNewsAPIFederatedDiscoveryPurplePayload
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryPurplePayload
-struct BBCNewsAPIFederatedDiscoveryPurplePayload: Codable {
+struct BBCNewsAPIFederatedDiscoveryPurplePayload: Codable, Equatable, Hashable {
     let actionType, actionName: String
 
     enum CodingKeys: String, CodingKey {
@@ -203,7 +211,7 @@ struct BBCNewsAPIFederatedDiscoveryPurplePayload: Codable {
     }
 }
 
-enum BBCNewsAPIFederatedDiscoveryTrackerType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryTrackerType: String, Codable, Equatable, Hashable {
     case atiV2 = "ati_v2"
 }
 
@@ -214,34 +222,34 @@ enum BBCNewsAPIFederatedDiscoveryStyle: String, Codable {
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryTopic
-struct BBCNewsAPIFederatedDiscoveryTopic: Codable {
+struct BBCNewsAPIFederatedDiscoveryTopic: Codable, Equatable, Hashable {
     let text: String
     let link: BBCNewsAPIFederatedDiscoveryItemLink
 }
 
-enum BBCNewsAPIFederatedDiscoveryItemType: String, Codable {
+enum BBCNewsAPIFederatedDiscoveryItemType: String, Codable, Equatable, Hashable {
     case storyPromo = "StoryPromo"
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryLocation
-struct BBCNewsAPIFederatedDiscoveryLocation: Codable {
+struct BBCNewsAPIFederatedDiscoveryLocation: Codable, Equatable, Hashable {
     let name: String
     let isCurrentLocation: Bool
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryItemPresentation
-struct BBCNewsAPIFederatedDiscoveryItemPresentation: Codable {
+struct BBCNewsAPIFederatedDiscoveryItemPresentation: Codable, Equatable, Hashable {
     let type: String
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryTrackedEvent
-struct BBCNewsAPIFederatedDiscoveryTrackedEvent: Codable {
+struct BBCNewsAPIFederatedDiscoveryTrackedEvent: Codable, Equatable, Hashable {
     let event: String
     let trackers: [BBCNewsAPIFederatedDiscoveryLinkTracker]
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryDataMetadata
-struct BBCNewsAPIFederatedDiscoveryDataMetadata: Codable {
+struct BBCNewsAPIFederatedDiscoveryDataMetadata: Codable, Equatable, Hashable {
     let name: String
     let allowAdvertising: Bool
     let lastUpdated: Int
@@ -254,13 +262,13 @@ struct BBCNewsAPIFederatedDiscoveryDataMetadata: Codable {
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryDataTracker
-struct BBCNewsAPIFederatedDiscoveryDataTracker: Codable {
+struct BBCNewsAPIFederatedDiscoveryDataTracker: Codable, Equatable, Hashable {
     let type: String
     let payload: BBCNewsAPIFederatedDiscoveryFluffyPayload
 }
 
 // MARK: - BBCNewsAPIFederatedDiscoveryFluffyPayload
-struct BBCNewsAPIFederatedDiscoveryFluffyPayload: Codable {
+struct BBCNewsAPIFederatedDiscoveryFluffyPayload: Codable, Equatable, Hashable {
     let pageTitle, bbcContentType: String?
     let bbcProducer: BBCNewsAPIFederatedDiscoveryBbcProducer?
     let name: String?
@@ -278,7 +286,7 @@ struct BBCNewsAPIFederatedDiscoveryFluffyPayload: Codable {
 
 // MARK: - Encode/decode helpers
 
-class JSONNull: Codable, Hashable {
+class JSONNull: Codable, Hashable, Equatable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
@@ -307,7 +315,7 @@ class JSONNull: Codable, Hashable {
     }
 }
 
-class JSONCodingKey: CodingKey {
+class JSONCodingKey: CodingKey, Equatable, Hashable {
     let key: String
 
     required init?(intValue: Int) {
@@ -324,6 +332,14 @@ class JSONCodingKey: CodingKey {
 
     var stringValue: String {
         return key
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(key)
+    }
+
+    static func == (lhs: JSONCodingKey, rhs: JSONCodingKey) -> Bool {
+        return lhs.key == rhs.key
     }
 }
 
