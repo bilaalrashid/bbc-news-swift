@@ -24,7 +24,7 @@ struct BBCNewsAPIFDData: Codable, Equatable, Hashable {
 struct BBCNewsAPIFDDataItem: Codable, Equatable, Hashable {
     let type: String
     let items: [BBCNewsAPIFDItemItem]?
-    let text: BBCNewsAPIFDText?
+    let text: BBCNewsAPIFDTextUnion?
     let link: BBCNewsAPIFDItemLink?
     let period: String?
     let location: BBCNewsAPIFDLocation?
@@ -81,10 +81,15 @@ struct BBCNewsAPIFDPurpleDestination: Codable, Equatable, Hashable {
 // MARK: - BBCNewsAPIFDPurplePresentation
 struct BBCNewsAPIFDPurplePresentation: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFDPresentationType
-    let contentSource: String
+    let contentSource: BBCNewsAPIFDContentSource
 }
 
-enum BBCNewsAPIFDPresentationType: String, Codable, Equatable, Hashable {
+enum BBCNewsAPIFDContentSource: String, Codable {
+    case bbc = "BBC"
+    case external = "EXTERNAL"
+}
+
+enum BBCNewsAPIFDPresentationType: String, Codable {
     case singleRenderer = "SINGLE_RENDERER"
     case verticalVideo = "VERTICAL_VIDEO"
     case web = "WEB"
@@ -175,13 +180,13 @@ struct BBCNewsAPIFDItemItem: Codable, Equatable, Hashable {
 // MARK: - BBCNewsAPIFDBadge
 struct BBCNewsAPIFDBadge: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFDBadgeType
-    let brand: BBCNewsAPIFDBbcProducer
+    let brand: BBCNewsAPIFDBrand
     let text: String?
     let duration: Int?
 }
 
-enum BBCNewsAPIFDBbcProducer: String, Codable, Equatable, Hashable {
-    case bbcProducerDEFAULT = "DEFAULT"
+enum BBCNewsAPIFDBrand: String, Codable {
+    case brandDEFAULT = "DEFAULT"
     case news = "NEWS"
     case sport = "SPORT"
 }
@@ -215,7 +220,8 @@ struct BBCNewsAPIFDFluffyPresentation: Codable, Equatable, Hashable {
     let type: BBCNewsAPIFDPresentationType
     let canShare: Bool?
     let focusedItemIndex: Int?
-    let contentSource, title: String?
+    let contentSource: BBCNewsAPIFDContentSource?
+    let title: String?
 }
 
 // MARK: - BBCNewsAPIFDLinkTracker
@@ -259,18 +265,18 @@ enum BBCNewsAPIFDItemType: String, Codable, Equatable, Hashable {
 // MARK: - BBCNewsAPIFDListItem
 struct BBCNewsAPIFDListItem: Codable, Equatable, Hashable {
     let text: String
-    let spans: [BBCNewsAPIFDSpan]
+    let spans: [BBCNewsAPIFDListItemSpan]
 }
 
-// MARK: - BBCNewsAPIFDSpan
-struct BBCNewsAPIFDSpan: Codable, Equatable, Hashable {
+// MARK: - BBCNewsAPIFDListItemSpan
+struct BBCNewsAPIFDListItemSpan: Codable, Equatable, Hashable {
     let type: String
     let startIndex, length: Int
-    let link: BBCNewsAPIFDSpanLink
+    let link: BBCNewsAPIFDPurpleLink
 }
 
-// MARK: - BBCNewsAPIFDSpanLink
-struct BBCNewsAPIFDSpanLink: Codable, Equatable, Hashable {
+// MARK: - BBCNewsAPIFDPurpleLink
+struct BBCNewsAPIFDPurpleLink: Codable, Equatable, Hashable {
     let trackers: [JSONAny]
     let destinations: [BBCNewsAPIFDTentacledDestination]
 
@@ -278,7 +284,7 @@ struct BBCNewsAPIFDSpanLink: Codable, Equatable, Hashable {
         hasher.combine(destinations)
     }
 
-    static func == (lhs: BBCNewsAPIFDSpanLink, rhs: BBCNewsAPIFDSpanLink) -> Bool {
+    static func == (lhs: BBCNewsAPIFDPurpleLink, rhs: BBCNewsAPIFDPurpleLink) -> Bool {
         return lhs.destinations == rhs.destinations
     }
 }
@@ -333,8 +339,8 @@ struct BBCNewsAPIFDItemSource: Codable, Equatable, Hashable {
     }
 }
 
-enum BBCNewsAPIFDText: Codable, Equatable, Hashable {
-    case bbcNewsAPIFDListItem(BBCNewsAPIFDListItem)
+enum BBCNewsAPIFDTextUnion: Codable, Equatable, Hashable {
+    case bbcNewsAPIFDTextClass(BBCNewsAPIFDTextClass)
     case string(String)
 
     init(from decoder: Decoder) throws {
@@ -343,22 +349,35 @@ enum BBCNewsAPIFDText: Codable, Equatable, Hashable {
             self = .string(x)
             return
         }
-        if let x = try? container.decode(BBCNewsAPIFDListItem.self) {
-            self = .bbcNewsAPIFDListItem(x)
+        if let x = try? container.decode(BBCNewsAPIFDTextClass.self) {
+            self = .bbcNewsAPIFDTextClass(x)
             return
         }
-        throw DecodingError.typeMismatch(BBCNewsAPIFDText.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for BBCNewsAPIFDText"))
+        throw DecodingError.typeMismatch(BBCNewsAPIFDTextUnion.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for BBCNewsAPIFDTextUnion"))
     }
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
-        case .bbcNewsAPIFDListItem(let x):
+        case .bbcNewsAPIFDTextClass(let x):
             try container.encode(x)
         case .string(let x):
             try container.encode(x)
         }
     }
+}
+
+// MARK: - BBCNewsAPIFDTextClass
+struct BBCNewsAPIFDTextClass: Codable, Equatable, Hashable {
+    let text: String
+    let spans: [BBCNewsAPIFDTextSpan]
+}
+
+// MARK: - BBCNewsAPIFDTextSpan
+struct BBCNewsAPIFDTextSpan: Codable, Equatable, Hashable {
+    let type: String
+    let startIndex, length: Int
+    let link: BBCNewsAPIFDItemLink
 }
 
 // MARK: - BBCNewsAPIFDTrackedEvent
@@ -388,9 +407,7 @@ struct BBCNewsAPIFDDataTracker: Codable, Equatable, Hashable {
 
 // MARK: - BBCNewsAPIFDFluffyPayload
 struct BBCNewsAPIFDFluffyPayload: Codable, Equatable, Hashable {
-    let pageTitle, bbcContentType: String?
-    let bbcProducer: BBCNewsAPIFDBbcProducer?
-    let name: String?
+    let pageTitle, bbcContentType, bbcProducer, name: String?
     let id: String?
     let sections, actionName, section, bbcContentID: String?
     let uasToken: String?
