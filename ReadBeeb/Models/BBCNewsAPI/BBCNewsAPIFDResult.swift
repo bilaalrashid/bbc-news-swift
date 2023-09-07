@@ -24,7 +24,7 @@ struct BBCNewsAPIFDData: Codable, Equatable, Hashable {
 struct BBCNewsAPIFDDataItem: Codable, Equatable, Hashable {
     let type: String
     let items: [BBCNewsAPIFDItemItem]?
-    let text: String?
+    let text: BBCNewsAPIFDText?
     let link: BBCNewsAPIFDItemLink?
     let period: String?
     let location: BBCNewsAPIFDLocation?
@@ -36,6 +36,19 @@ struct BBCNewsAPIFDDataItem: Codable, Equatable, Hashable {
     let title, subtitle: String?
     let buttons: [BBCNewsAPIFDButton]?
     let lastUpdated: Int?
+    let source: BBCNewsAPIFDItemSource?
+    let image: BBCNewsAPIFDImage?
+    let metadata: BBCNewsAPIFDItemMetadata?
+    let byline: BBCNewsAPIFDByline?
+    let topic: BBCNewsAPIFDTopic?
+    let languageCode: BBCNewsAPIFDLanguageCode?
+    let readTimeMinutes: Int?
+    let containerType: BBCNewsAPIFDContainerType?
+    let ordering: String?
+    let listItems: [BBCNewsAPIFDListItem]?
+    let style: BBCNewsAPIFDStyle?
+    let subtext: String?
+    let updated: Int?
 }
 
 // MARK: - BBCNewsAPIFDButton
@@ -82,6 +95,17 @@ enum BBCNewsAPIFDSourceFormat: String, Codable, Equatable, Hashable {
     case html = "HTML"
 }
 
+// MARK: - BBCNewsAPIFDByline
+struct BBCNewsAPIFDByline: Codable, Equatable, Hashable {
+    let name, purpose: String
+}
+
+enum BBCNewsAPIFDContainerType: String, Codable, Equatable, Hashable {
+    case body = "body"
+    case crosshead = "crosshead"
+    case introduction = "introduction"
+}
+
 // MARK: - BBCNewsAPIFDForecast
 struct BBCNewsAPIFDForecast: Codable, Equatable, Hashable {
     let description: String
@@ -93,6 +117,44 @@ struct BBCNewsAPIFDForecast: Codable, Equatable, Hashable {
 // MARK: - BBCNewsAPIFDHigh
 struct BBCNewsAPIFDHigh: Codable, Equatable, Hashable {
     let celsius: Int
+}
+
+// MARK: - BBCNewsAPIFDImage
+struct BBCNewsAPIFDImage: Codable, Equatable, Hashable {
+    let type: BBCNewsAPIFDImageType
+    let source: BBCNewsAPIFDImageSource
+    let metadata: BBCNewsAPIFDImageMetadata?
+}
+
+// MARK: - BBCNewsAPIFDImageMetadata
+struct BBCNewsAPIFDImageMetadata: Codable, Equatable, Hashable {
+    let caption, copyrightText, altText: String?
+}
+
+// MARK: - BBCNewsAPIFDImageSource
+struct BBCNewsAPIFDImageSource: Codable, Equatable, Hashable {
+    let url: String
+    let sizingMethod: BBCNewsAPIFDSizingMethod
+    let aspectRatio: Double?
+}
+
+// MARK: - BBCNewsAPIFDSizingMethod
+struct BBCNewsAPIFDSizingMethod: Codable, Equatable, Hashable {
+    let type: BBCNewsAPIFDSizingMethodType
+    let widthToken: BBCNewsAPIFDWidthToken
+    let widths: [Int]
+}
+
+enum BBCNewsAPIFDSizingMethodType: String, Codable, Equatable, Hashable {
+    case specificWidths = "SPECIFIC_WIDTHS"
+}
+
+enum BBCNewsAPIFDWidthToken: String, Codable, Equatable, Hashable {
+    case width = "{width}"
+}
+
+enum BBCNewsAPIFDImageType: String, Codable, Equatable, Hashable {
+    case image = "Image"
 }
 
 // MARK: - BBCNewsAPIFDItemItem
@@ -131,45 +193,6 @@ enum BBCNewsAPIFDBadgeType: String, Codable, Equatable, Hashable {
     case video = "VIDEO"
 }
 
-// MARK: - BBCNewsAPIFDImage
-struct BBCNewsAPIFDImage: Codable, Equatable, Hashable {
-    let type: BBCNewsAPIFDImageType
-    let source: BBCNewsAPIFDSource
-    let metadata: BBCNewsAPIFDImageMetadata?
-}
-
-// MARK: - BBCNewsAPIFDImageMetadata
-struct BBCNewsAPIFDImageMetadata: Codable, Equatable, Hashable {
-    let altText: String
-    let caption, copyrightText: String?
-}
-
-// MARK: - BBCNewsAPIFDSource
-struct BBCNewsAPIFDSource: Codable, Equatable, Hashable {
-    let aspectRatio: Double?
-    let url: String
-    let sizingMethod: BBCNewsAPIFDSizingMethod
-}
-
-// MARK: - BBCNewsAPIFDSizingMethod
-struct BBCNewsAPIFDSizingMethod: Codable, Equatable, Hashable {
-    let type: BBCNewsAPIFDSizingMethodType
-    let widthToken: BBCNewsAPIFDWidthToken
-    let widths: [Int]
-}
-
-enum BBCNewsAPIFDSizingMethodType: String, Codable, Equatable, Hashable {
-    case specificWidths = "SPECIFIC_WIDTHS"
-}
-
-enum BBCNewsAPIFDWidthToken: String, Codable, Equatable, Hashable {
-    case width = "{width}"
-}
-
-enum BBCNewsAPIFDImageType: String, Codable, Equatable, Hashable {
-    case image = "Image"
-}
-
 enum BBCNewsAPIFDLanguageCode: String, Codable, Equatable, Hashable {
     case enGB = "en-gb"
 }
@@ -203,7 +226,8 @@ struct BBCNewsAPIFDLinkTracker: Codable, Equatable, Hashable {
 
 // MARK: - BBCNewsAPIFDPurplePayload
 struct BBCNewsAPIFDPurplePayload: Codable, Equatable, Hashable {
-    let actionType, actionName: String
+    let actionType: String?
+    let actionName: String
 
     enum CodingKeys: String, CodingKey {
         case actionType = "action_type"
@@ -213,6 +237,7 @@ struct BBCNewsAPIFDPurplePayload: Codable, Equatable, Hashable {
 
 enum BBCNewsAPIFDTrackerType: String, Codable, Equatable, Hashable {
     case atiV2 = "ati_v2"
+    case optimizelyV1 = "optimizely_v1"
 }
 
 enum BBCNewsAPIFDStyle: String, Codable {
@@ -231,15 +256,109 @@ enum BBCNewsAPIFDItemType: String, Codable, Equatable, Hashable {
     case storyPromo = "StoryPromo"
 }
 
+// MARK: - BBCNewsAPIFDListItem
+struct BBCNewsAPIFDListItem: Codable, Equatable, Hashable {
+    let text: String
+    let spans: [BBCNewsAPIFDSpan]
+}
+
+// MARK: - BBCNewsAPIFDSpan
+struct BBCNewsAPIFDSpan: Codable, Equatable, Hashable {
+    let type: String
+    let startIndex, length: Int
+    let link: BBCNewsAPIFDSpanLink
+}
+
+// MARK: - BBCNewsAPIFDSpanLink
+struct BBCNewsAPIFDSpanLink: Codable, Equatable, Hashable {
+    let trackers: [JSONAny]
+    let destinations: [BBCNewsAPIFDTentacledDestination]
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(destinations)
+    }
+
+    static func == (lhs: BBCNewsAPIFDSpanLink, rhs: BBCNewsAPIFDSpanLink) -> Bool {
+        return lhs.destinations == rhs.destinations
+    }
+}
+
+// MARK: - BBCNewsAPIFDTentacledDestination
+struct BBCNewsAPIFDTentacledDestination: Codable, Equatable, Hashable {
+    let sourceFormat: BBCNewsAPIFDSourceFormat
+    let url: String
+    let id: String
+    let presentation: BBCNewsAPIFDTentacledPresentation
+}
+
+// MARK: - BBCNewsAPIFDTentacledPresentation
+struct BBCNewsAPIFDTentacledPresentation: Codable, Equatable, Hashable {
+    let type: BBCNewsAPIFDPresentationType
+    let canShare: Bool
+}
+
 // MARK: - BBCNewsAPIFDLocation
 struct BBCNewsAPIFDLocation: Codable, Equatable, Hashable {
     let name: String
     let isCurrentLocation: Bool
 }
 
+// MARK: - BBCNewsAPIFDItemMetadata
+struct BBCNewsAPIFDItemMetadata: Codable, Equatable, Hashable {
+    let title, summary, caption: String?
+    let timestamp: Int?
+    let allowAdvertising: Bool?
+    let altText, copyrightText: String?
+}
+
 // MARK: - BBCNewsAPIFDItemPresentation
 struct BBCNewsAPIFDItemPresentation: Codable, Equatable, Hashable {
     let type: String
+}
+
+// MARK: - BBCNewsAPIFDItemSource
+struct BBCNewsAPIFDItemSource: Codable, Equatable, Hashable {
+    let id: String?
+    let type: BBCNewsAPIFDBadgeType?
+    let duration: Int?
+    let aspectRatio: Double
+    let isLive, canAutoPlay: Bool?
+    let episodePID, url: String?
+    let sizingMethod: BBCNewsAPIFDSizingMethod?
+
+    enum CodingKeys: String, CodingKey {
+        case id, type, duration, aspectRatio, isLive, canAutoPlay
+        case episodePID = "episodePid"
+        case url, sizingMethod
+    }
+}
+
+enum BBCNewsAPIFDText: Codable, Equatable, Hashable {
+    case bbcNewsAPIFDListItem(BBCNewsAPIFDListItem)
+    case string(String)
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let x = try? container.decode(String.self) {
+            self = .string(x)
+            return
+        }
+        if let x = try? container.decode(BBCNewsAPIFDListItem.self) {
+            self = .bbcNewsAPIFDListItem(x)
+            return
+        }
+        throw DecodingError.typeMismatch(BBCNewsAPIFDText.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for BBCNewsAPIFDText"))
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .bbcNewsAPIFDListItem(let x):
+            try container.encode(x)
+        case .string(let x):
+            try container.encode(x)
+        }
+    }
 }
 
 // MARK: - BBCNewsAPIFDTrackedEvent
@@ -273,7 +392,8 @@ struct BBCNewsAPIFDFluffyPayload: Codable, Equatable, Hashable {
     let bbcProducer: BBCNewsAPIFDBbcProducer?
     let name: String?
     let id: String?
-    let sections, actionName: String?
+    let sections, actionName, section, bbcContentID: String?
+    let uasToken: String?
 
     enum CodingKeys: String, CodingKey {
         case pageTitle = "page_title"
@@ -281,6 +401,9 @@ struct BBCNewsAPIFDFluffyPayload: Codable, Equatable, Hashable {
         case bbcProducer = "bbc_producer"
         case name, id, sections
         case actionName = "action_name"
+        case section
+        case bbcContentID = "bbc_content_id"
+        case uasToken
     }
 }
 

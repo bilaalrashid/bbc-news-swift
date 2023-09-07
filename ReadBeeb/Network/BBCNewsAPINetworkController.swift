@@ -33,6 +33,10 @@ struct BBCNewsAPINetworkController {
             return url
         }()
 
+        return try await self.fetchFDUrl(url: url)
+    }
+
+    static func fetchFDUrl(url: String) async throws -> BBCNewsAPIFDResult {
         let request = self.session.request(url).validate().serializingDecodable(BBCNewsAPIFDResult.self)
         return try await request.value
     }
