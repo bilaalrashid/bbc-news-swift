@@ -8,8 +8,8 @@
 import Foundation
 
 struct FDTextContainer: Codable, Equatable, Hashable {
-    let type: String?
-    let containerType: String?
+    let type: String
+    let containerType: String
     let text: FDTextContainerText
 }
 
