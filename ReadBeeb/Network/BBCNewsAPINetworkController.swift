@@ -21,6 +21,12 @@ struct BBCNewsAPINetworkController {
         return Session(configuration: configuration)
     }()
 
+    static func isAPIUrl(url: String) -> Bool {
+        guard let baseHostname = URL(string: self.baseUri)?.host else { return false }
+        guard let hostname = URL(string: url)?.host else { return false }
+        return hostname == baseHostname
+    }
+
     /// Fetches the data for the BBC News home tab
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A
     /// - Returns: The home tab data
