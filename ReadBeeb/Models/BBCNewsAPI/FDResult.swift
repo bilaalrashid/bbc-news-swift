@@ -177,7 +177,7 @@ struct FDStoryPromo: Codable, Equatable, Hashable {
 }
 
 struct FDLink: Codable, Equatable, Hashable {
-    let destinations: [FDPresentation]
+    let destinations: [FDLinkDestination]
 }
 
 struct FDLinkDestination: Codable, Equatable, Hashable {
