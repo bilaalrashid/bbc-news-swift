@@ -10,7 +10,7 @@ import Foundation
 struct FDImage: Codable, Equatable, Hashable {
     let type: String
     let source: FDImageSource
-    let metdata: FDImageMetadata?
+    let metadata: FDImageMetadata?
 }
 
 struct FDImageSource: Codable, Equatable, Hashable {
@@ -26,7 +26,7 @@ struct FDImageSizingMethod: Codable, Equatable, Hashable {
 }
 
 struct FDImageMetadata: Codable, Equatable, Hashable {
-    let altText: String
+    let altText: String?
     let caption: String?
     let copyrightText: String?
 }
