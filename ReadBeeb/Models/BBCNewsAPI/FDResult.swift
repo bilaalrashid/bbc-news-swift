@@ -13,11 +13,11 @@ struct FDResult: Codable, Equatable, Hashable {
 }
 
 struct FDData: Codable, Equatable, Hashable {
-    let metadata: FDResultMetadata
+    let metadata: FDDataMetadata
     let items: [FDItem]
 }
 
-struct FDResultMetadata: Codable, Equatable, Hashable {
+struct FDDataMetadata: Codable, Equatable, Hashable {
     let name: String
     let allowAdvertising: Bool
     let lastUpdated: Int
