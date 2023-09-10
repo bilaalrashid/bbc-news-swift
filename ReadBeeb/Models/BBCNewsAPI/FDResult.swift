@@ -29,7 +29,7 @@ enum FDItem: Codable, Equatable, Hashable {
     case hierarchicalCollection(FDHierarchicalCollection)
     case collectionHeader(FDCollectionHeader)
     case simpleCollection(FDSimpleCollection)
-//    case weatherPromoSummary
+    case weatherPromoSummary(FDWeatherPromoSummary)
     case carousel(FDCarousel)
 //    case chipList
 //    case callToActionBanner
@@ -62,6 +62,10 @@ enum FDItem: Codable, Equatable, Hashable {
         }
         if let value = try? container.decode(FDSimpleCollection.self), value.type == "SimpleCollection" {
             self = .simpleCollection(value)
+            return
+        }
+        if let value = try? container.decode(FDWeatherPromoSummary.self), value.type == "WeatherPromoSummary" {
+            self = .weatherPromoSummary(value)
             return
         }
         if let value = try? container.decode(FDCarousel.self), value.type == "Carousel" {
@@ -110,6 +114,8 @@ enum FDItem: Codable, Equatable, Hashable {
         case .collectionHeader(let value):
             try container.encode(value)
         case .simpleCollection(let value):
+            try container.encode(value)
+        case .weatherPromoSummary(let value):
             try container.encode(value)
         case .carousel(let value):
             try container.encode(value)
@@ -296,4 +302,28 @@ struct FDContentList: Codable, Equatable, Hashable {
 struct FDSectionHeader: Codable, Equatable, Hashable {
     let type: String
     let text: String
+}
+
+struct FDWeatherPromoSummary: Codable, Equatable, Hashable {
+    let type: String
+    let period: String
+    let location: FDWeatherLocation
+    let forecast: FDWeatherForecast
+}
+
+struct FDWeatherLocation: Codable, Equatable, Hashable {
+    let name: String
+    let isCurrentLocation: Bool
+}
+
+struct FDWeatherForecast: Codable, Equatable, Hashable {
+    let description: String
+    let high: FDTemperature
+    let low: FDTemperature
+    let icon: String
+    let nighttimeLayout: Bool
+}
+
+struct FDTemperature: Codable, Equatable, Hashable {
+    let celsius: Int
 }
