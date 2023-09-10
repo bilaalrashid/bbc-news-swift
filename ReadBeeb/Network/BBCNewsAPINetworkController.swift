@@ -24,7 +24,7 @@ struct BBCNewsAPINetworkController {
     /// Fetches the data for the BBC News home tab
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A
     /// - Returns: The home tab data
-    static func fetchHomeTabData(postcode: String? = nil) async throws -> BBCNewsAPIFDResult {
+    static func fetchHomeTabData(postcode: String? = nil) async throws -> FDResult {
         let url: String = {
             var url = self.baseUri + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
             if let postcode = postcode {
@@ -36,8 +36,8 @@ struct BBCNewsAPINetworkController {
         return try await self.fetchFDUrl(url: url)
     }
 
-    static func fetchFDUrl(url: String) async throws -> BBCNewsAPIFDResult {
-        let request = self.session.request(url).validate().serializingDecodable(BBCNewsAPIFDResult.self)
+    static func fetchFDUrl(url: String) async throws -> FDResult {
+        let request = self.session.request(url).validate().serializingDecodable(FDResult.self)
         return try await request.value
     }
 
