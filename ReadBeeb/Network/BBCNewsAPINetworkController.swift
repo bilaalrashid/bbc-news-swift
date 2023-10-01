@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import OSLog
 
 struct BBCNewsAPINetworkController {
 
@@ -109,6 +110,7 @@ struct BBCNewsAPINetworkController {
     }
 
     static func fetchFDUrl(url: String) async throws -> FDResult {
+        Logger.network.debug("Requesting: \(url, privacy: .public)")
         let request = self.session.request(url).validate().serializingDecodable(FDResult.self)
         return try await request.value
     }
