@@ -89,7 +89,7 @@ struct BBCNewsAPINetworkController {
         }
 
         return storyPromos.sorted {
-            $0.updated ?? 0 < $1.updated ?? 0
+            $0.updated ?? 0 > $1.updated ?? 0
         }
     }
 
