@@ -12,6 +12,7 @@ enum FDItem: Codable, Equatable, Hashable {
     case hierarchicalCollection(FDHierarchicalCollection)
     case collectionHeader(FDCollectionHeader)
     case simpleCollection(FDSimpleCollection)
+    case simplePromoGrid(FDSimplePromoGrid)
     case weatherPromoSummary(FDWeatherPromoSummary)
     case carousel(FDCarousel)
     case chipList(FDChipList)
@@ -46,6 +47,10 @@ enum FDItem: Codable, Equatable, Hashable {
         }
         if let value = try? container.decode(FDSimpleCollection.self), value.type == "SimpleCollection" {
             self = .simpleCollection(value)
+            return
+        }
+        if let value = try? container.decode(FDSimplePromoGrid.self), value.type == "SimplePromoGrid" {
+            self = .simplePromoGrid(value)
             return
         }
         if let value = try? container.decode(FDWeatherPromoSummary.self), value.type == "WeatherPromoSummary" {
@@ -106,6 +111,8 @@ enum FDItem: Codable, Equatable, Hashable {
         case .collectionHeader(let value):
             try container.encode(value)
         case .simpleCollection(let value):
+            try container.encode(value)
+        case .simplePromoGrid(let value):
             try container.encode(value)
         case .weatherPromoSummary(let value):
             try container.encode(value)

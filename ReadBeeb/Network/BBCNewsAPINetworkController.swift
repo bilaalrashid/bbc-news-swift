@@ -58,6 +58,8 @@ struct BBCNewsAPINetworkController {
                     break
                 case .simpleCollection(let item):
                     storyPromos.formUnion(item.items)
+                case .simplePromoGrid(let item):
+                    storyPromos.formUnion(item.items)
                 case .weatherPromoSummary(_):
                     break
                 case .carousel(let item):
