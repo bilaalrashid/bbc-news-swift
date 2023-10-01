@@ -22,5 +22,6 @@ struct FDTextContainerSpan: Codable, Equatable, Hashable {
     let type: String
     let startIndex: Int
     let length: Int
-    let link: FDLink
+    let attribute: String?
+    let link: FDLink?
 }
