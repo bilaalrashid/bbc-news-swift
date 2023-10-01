@@ -42,6 +42,70 @@ struct BBCNewsAPINetworkController {
         return try await self.fetchFDUrl(url: url)
     }
 
+    static func fetchStoryPromos(for topicIds: [String]) async throws -> [FDStoryPromo] {
+        var storyPromos = Set<FDStoryPromo>()
+
+        let topicResults = try await self.fetchTopicPages(for: topicIds)
+
+        for result in topicResults {
+            for item in result.data.structuredItems {
+                switch item.body {
+                case .billboard(let item):
+                    storyPromos.formUnion(item.items)
+                case .hierarchicalCollection(let item):
+                    storyPromos.formUnion(item.items)
+                case .collectionHeader(_):
+                    break
+                case .simpleCollection(let item):
+                    storyPromos.formUnion(item.items)
+                case .weatherPromoSummary(_):
+                    break
+                case .carousel(let item):
+                    storyPromos.formUnion(item.items)
+                case .chipList(_):
+                    break
+                case .copyright(_):
+                    break
+                case .media(_):
+                    break
+                case .image(_):
+                    break
+                case .headline(_):
+                    break
+                case .textContainer(_):
+                    break
+                case .sectionHeader(_):
+                    break
+                case .contentList(_):
+                    break
+                case .storyPromo(let item):
+                    storyPromos.insert(item)
+                case .unknown:
+                    break
+                }
+            }
+        }
+
+        return storyPromos.sorted {
+            $0.updated ?? 0 < $1.updated ?? 0
+        }
+    }
+
+    static func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
+        var results = [FDResult]()
+
+        for topicId in topicIds {
+            results.append(try await self.fetchTopicPage(for: topicId))
+        }
+
+        return results
+    }
+
+    static func fetchTopicPage(for topicId: String) async throws -> FDResult {
+        let url = self.baseUri + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
+        return try await self.fetchFDUrl(url: url)
+    }
+
     static func fetchFDUrl(url: String) async throws -> FDResult {
         let request = self.session.request(url).validate().serializingDecodable(FDResult.self)
         return try await request.value
