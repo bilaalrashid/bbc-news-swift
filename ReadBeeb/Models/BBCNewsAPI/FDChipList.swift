@@ -9,5 +9,5 @@ import Foundation
 
 struct FDChipList: Codable, Equatable, Hashable {
     let type: String
-    let items: FDTopic
+    let items: [FDTopic]
 }
