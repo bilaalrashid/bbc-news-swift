@@ -27,7 +27,6 @@ enum FDItem: Codable, Equatable, Hashable {
     case storyPromo(FDStoryPromo)
 
     //    case callToActionBanner
-    //    case copyright
 
     case unknown
 
