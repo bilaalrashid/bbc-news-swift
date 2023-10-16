@@ -8,6 +8,7 @@
 import Foundation
 
 struct FDTopic: Codable, Equatable, Hashable {
-    let text: String
+    let text: String?
+    let title: String?
     let link: FDLink?
 }
