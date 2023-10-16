@@ -26,7 +26,7 @@ struct FDMediaSource: Codable, Equatable, Hashable {
 
 struct FDMediaMetadata: Codable, Equatable, Hashable {
     let title: String
-    let summary: String
+    let summary: String?
     let caption: String
     let timestamp: Int
     let associatedContentUrl: String
