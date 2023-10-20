@@ -17,11 +17,11 @@ struct FDStoryPromo: Codable, Equatable, Hashable {
     let updated: Int?
     let topic: FDTopic?
     let image: FDImage?
-    let badges: [FDBrand]?
+    let badges: [FDBadge]?
     let uasToken: String?
 }
 
-struct FDBrand: Codable, Equatable, Hashable {
+struct FDBadge: Codable, Equatable, Hashable {
     let type: String
     let brand: String
     let text: String?
