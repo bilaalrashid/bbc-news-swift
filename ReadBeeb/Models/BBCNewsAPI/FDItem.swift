@@ -15,6 +15,7 @@ enum FDItem: Codable, Equatable, Hashable {
     case simplePromoGrid(FDSimplePromoGrid)
     case weatherPromoSummary(FDWeatherPromoSummary)
     case carousel(FDCarousel)
+    case videoPortraitStory(FDVideoPortraitStory)
     case chipList(FDChipList)
     case copyright(FDCopyright)
 
@@ -58,6 +59,10 @@ enum FDItem: Codable, Equatable, Hashable {
         }
         if let value = try? container.decode(FDCarousel.self), value.type == "Carousel" {
             self = .carousel(value)
+            return
+        }
+        if let value = try? container.decode(FDVideoPortraitStory.self), value.type == "VideoPortraitStory" {
+            self = .videoPortraitStory(value)
             return
         }
         if let value = try? container.decode(FDChipList.self), value.type == "ChipList" {
@@ -116,6 +121,8 @@ enum FDItem: Codable, Equatable, Hashable {
         case .weatherPromoSummary(let value):
             try container.encode(value)
         case .carousel(let value):
+            try container.encode(value)
+        case .videoPortraitStory(let value):
             try container.encode(value)
         case .chipList(let value):
             try container.encode(value)

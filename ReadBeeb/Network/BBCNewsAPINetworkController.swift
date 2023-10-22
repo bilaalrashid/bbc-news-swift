@@ -71,6 +71,8 @@ struct BBCNewsAPINetworkController {
                     break
                 case .media(_):
                     break
+                case .videoPortraitStory(_):
+                    break
                 case .image(_):
                     break
                 case .headline(_):
