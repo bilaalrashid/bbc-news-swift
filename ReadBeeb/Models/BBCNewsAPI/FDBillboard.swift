@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDBillboard: Codable, Equatable, Hashable {
+struct FDBillboard: FDCollection, Codable, Equatable, Hashable {
     let type: String
     let items: [FDStoryPromo]
 }
