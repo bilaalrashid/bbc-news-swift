@@ -57,33 +57,33 @@ struct BBCNewsAPINetworkController {
                     storyPromos.formUnion(item.items)
                 case .hierarchicalCollection(let item):
                     storyPromos.formUnion(item.items)
-                case .collectionHeader(_):
+                case .collectionHeader:
                     break
                 case .simpleCollection(let item):
                     storyPromos.formUnion(item.items)
                 case .simplePromoGrid(let item):
                     storyPromos.formUnion(item.items)
-                case .weatherPromoSummary(_):
+                case .weatherPromoSummary:
                     break
                 case .carousel(let item):
                     storyPromos.formUnion(item.items)
-                case .chipList(_):
+                case .chipList:
                     break
-                case .copyright(_):
+                case .copyright:
                     break
-                case .media(_):
+                case .media:
                     break
-                case .videoPortraitStory(_):
+                case .videoPortraitStory:
                     break
-                case .image(_):
+                case .image:
                     break
-                case .headline(_):
+                case .headline:
                     break
-                case .textContainer(_):
+                case .textContainer:
                     break
-                case .sectionHeader(_):
+                case .sectionHeader:
                     break
-                case .contentList(_):
+                case .contentList:
                     break
                 case .storyPromo(let item):
                     storyPromos.insert(item)

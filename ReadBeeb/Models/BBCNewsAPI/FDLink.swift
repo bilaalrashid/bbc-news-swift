@@ -17,4 +17,3 @@ struct FDLinkDestination: Codable, Equatable, Hashable {
     let id: String
     let presentation: FDPresentation
 }
-
