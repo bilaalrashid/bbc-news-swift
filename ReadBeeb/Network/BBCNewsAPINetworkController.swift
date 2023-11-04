@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import OSLog
+import UIKit
 
 struct BBCNewsAPINetworkController {
 
@@ -17,7 +18,8 @@ struct BBCNewsAPINetworkController {
         let configuration = URLSessionConfiguration.af.default
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
-            "User-Agent": "BBCNews/25339 (iPhone15,2; iOS 16.6) BBCHTTPClient/9.0.0"
+            // Example: BBCNews/25339 (iPhone15,2; iOS 16.6) BBCHTTPClient/9.0.0
+            "User-Agent": "BBCNews/25339 (\(UIDevice.current.modelIdentifier); \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)) BBCHTTPClient/9.0.0"
         ]
         return Session(configuration: configuration)
     }()
