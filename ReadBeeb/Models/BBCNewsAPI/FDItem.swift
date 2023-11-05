@@ -31,6 +31,7 @@ enum FDItem: Codable, Equatable, Hashable {
 
     case unknown
 
+    // swiftlint:disable cyclomatic_complexity function_body_length
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let value = try? container.decode(FDBillboard.self), value.type == "Billboard" {
@@ -104,7 +105,9 @@ enum FDItem: Codable, Equatable, Hashable {
         self = .unknown
         return
     }
+    // swiftlint:enable cyclomatic_complexity function_body_length
 
+    // swiftlint:disable cyclomatic_complexity
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
@@ -146,4 +149,5 @@ enum FDItem: Codable, Equatable, Hashable {
             try container.encode(false)
         }
     }
+    // swiftlint:enable cyclomatic_complexity
 }

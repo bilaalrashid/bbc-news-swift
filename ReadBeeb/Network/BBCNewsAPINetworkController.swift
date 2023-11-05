@@ -10,8 +10,7 @@ import Alamofire
 import OSLog
 import UIKit
 
-struct BBCNewsAPINetworkController {
-
+enum BBCNewsAPINetworkController {
     static let baseUri = "https://news-app.api.bbc.co.uk"
 
     static let session: Session = {
@@ -19,6 +18,7 @@ struct BBCNewsAPINetworkController {
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
             // Example: BBCNews/25339 (iPhone15,2; iOS 16.6) BBCHTTPClient/9.0.0
+            // swiftlint:disable:next line_length force_https
             "User-Agent": "BBCNews/25339 (\(UIDevice.current.modelIdentifier); \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)) BBCHTTPClient/9.0.0"
         ]
         return Session(configuration: configuration)
@@ -57,37 +57,15 @@ struct BBCNewsAPINetworkController {
                     storyPromos.formUnion(item.items)
                 case .hierarchicalCollection(let item):
                     storyPromos.formUnion(item.items)
-                case .collectionHeader:
-                    break
                 case .simpleCollection(let item):
                     storyPromos.formUnion(item.items)
                 case .simplePromoGrid(let item):
                     storyPromos.formUnion(item.items)
-                case .weatherPromoSummary:
-                    break
                 case .carousel(let item):
                     storyPromos.formUnion(item.items)
-                case .chipList:
-                    break
-                case .copyright:
-                    break
-                case .media:
-                    break
-                case .videoPortraitStory:
-                    break
-                case .image:
-                    break
-                case .headline:
-                    break
-                case .textContainer:
-                    break
-                case .sectionHeader:
-                    break
-                case .contentList:
-                    break
                 case .storyPromo(let item):
                     storyPromos.insert(item)
-                case .unknown:
+                default:
                     break
                 }
             }
@@ -118,5 +96,4 @@ struct BBCNewsAPINetworkController {
         let request = self.session.request(url).validate().serializingDecodable(FDResult.self)
         return try await request.value
     }
-
 }
