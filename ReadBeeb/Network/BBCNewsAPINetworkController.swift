@@ -45,37 +45,6 @@ enum BBCNewsAPINetworkController {
         return try await self.fetchFDUrl(url: url)
     }
 
-    static func fetchStoryPromos(for topicIds: [String]) async throws -> [FDStoryPromo] {
-        var storyPromos = Set<FDStoryPromo>()
-
-        let topicResults = try await self.fetchTopicPages(for: topicIds)
-
-        for result in topicResults {
-            for item in result.data.structuredItems {
-                switch item.body {
-                case .billboard(let item):
-                    storyPromos.formUnion(item.items)
-                case .hierarchicalCollection(let item):
-                    storyPromos.formUnion(item.items)
-                case .simpleCollection(let item):
-                    storyPromos.formUnion(item.items)
-                case .simplePromoGrid(let item):
-                    storyPromos.formUnion(item.items)
-                case .carousel(let item):
-                    storyPromos.formUnion(item.items)
-                case .storyPromo(let item):
-                    storyPromos.insert(item)
-                default:
-                    break
-                }
-            }
-        }
-
-        return storyPromos.sorted {
-            $0.updated ?? 0 > $1.updated ?? 0
-        }
-    }
-
     static func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
         var results = [FDResult]()
 
