@@ -10,10 +10,11 @@ import OSLog
 import UIKit
 
 struct BBCNewsAPINetworkController {
-    static let baseUri = "https://news-app.api.bbc.co.uk"
+    /// The base URL at which the API is hosted at
+    static let baseUrl = "https://news-app.api.bbc.co.uk"
 
     static func isAPIUrl(url: String) -> Bool {
-        guard let baseHostname = URL(string: self.baseUri)?.host else { return false }
+        guard let baseHostname = URL(string: self.baseUrl)?.host else { return false }
         guard let hostname = URL(string: url)?.host else { return false }
         return hostname == baseHostname
     }
@@ -49,7 +50,7 @@ struct BBCNewsAPINetworkController {
     /// - Returns: The home tab data
     func fetchDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
         let url: String = {
-            var url = BBCNewsAPINetworkController.baseUri + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
+            var url = BBCNewsAPINetworkController.baseUrl + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
             if let postcode = postcode {
                 url += "&clientLoc=" + postcode
             }
@@ -70,7 +71,7 @@ struct BBCNewsAPINetworkController {
     }
 
     func fetchTopicPage(for topicId: String) async throws -> FDResult {
-        let url = BBCNewsAPINetworkController.baseUri + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
+        let url = BBCNewsAPINetworkController.baseUrl + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
         return try await self.fetchFDUrl(url: url)
     }
 
