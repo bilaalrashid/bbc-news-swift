@@ -18,7 +18,10 @@ struct BBCNewsAPINetworkController {
         return hostname == baseHostname
     }
 
-    let session: URLSession = {
+    /// The session to perform network requests from
+    let session: URLSession
+
+    init() {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
@@ -26,8 +29,8 @@ struct BBCNewsAPINetworkController {
             // swiftlint:disable:next line_length force_https
             "User-Agent": "BBCNews/25339 (\(UIDevice.current.modelIdentifier); \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)) BBCHTTPClient/9.0.0"
         ]
-        return URLSession(configuration: configuration)
-    }()
+        self.session = URLSession(configuration: configuration)
+    }
 
     /// Fetches the data for the BBC News home tab
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A
