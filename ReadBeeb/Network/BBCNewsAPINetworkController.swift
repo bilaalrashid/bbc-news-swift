@@ -21,13 +21,24 @@ struct BBCNewsAPINetworkController {
     /// The session to perform network requests from
     let session: URLSession
 
-    init() {
+    /// Creates an instance of `BBCNewsAPINetworkController` for making network requests to the BBC News API.
+    ///
+    /// This initialises the device identifiers used to generate the User-Agent string.
+    ///
+    /// - Parameters:
+    ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
+    ///   - systemName: The name of the operating system e.g. iOS.
+    ///   - systemVersion: The version of the operating system e.g. 16.6.
+    init(
+        modelIdentifier: String = UIDevice.current.modelIdentifier,
+        systemName: String = UIDevice.current.systemName,
+        systemVersion: String = UIDevice.current.systemVersion
+    ) {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
             // Example: BBCNews/25339 (iPhone15,2; iOS 16.6) BBCHTTPClient/9.0.0
-            // swiftlint:disable:next line_length force_https
-            "User-Agent": "BBCNews/25339 (\(UIDevice.current.modelIdentifier); \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)) BBCHTTPClient/9.0.0"
+            "User-Agent": "BBCNews/25339 (\(modelIdentifier); \(systemName) \(systemVersion)) BBCHTTPClient/9.0.0"
         ]
         self.session = URLSession(configuration: configuration)
     }
