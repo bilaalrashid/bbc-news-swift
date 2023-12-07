@@ -44,6 +44,7 @@ struct BBCNewsAPINetworkController {
     }
 
     /// Fetches the data for the BBC News home tab
+    ///
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A
     /// - Returns: The home tab data
     func fetchDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
