@@ -9,17 +9,24 @@ import Foundation
 import OSLog
 import UIKit
 
+/// A network controller for the BBC News private API, as used by the iOS app.
+///
+/// This attempts to mimic the User-Agent of the iOS app.
 struct BBCNewsAPINetworkController {
-    /// The base URL at which the API is hosted at
+    /// The base URL at which the API is hosted at.
     static let baseUrl = "https://news-app.api.bbc.co.uk"
-
+    
+    /// Checks if a URL is hosted on the BBC News API.
+    ///
+    /// - Parameter url: The URL to check.
+    /// - Returns: If the URL is hosted on the BBC News API.
     static func isAPIUrl(url: String) -> Bool {
         guard let baseHostname = URL(string: self.baseUrl)?.host else { return false }
         guard let hostname = URL(string: url)?.host else { return false }
         return hostname == baseHostname
     }
 
-    /// The session to perform network requests from
+    /// The session to perform network requests from.
     let session: URLSession
 
     /// Creates an instance of `BBCNewsAPINetworkController` for making network requests to the BBC News API.
@@ -44,10 +51,10 @@ struct BBCNewsAPINetworkController {
         self.session = URLSession(configuration: configuration)
     }
 
-    /// Fetches the data for the BBC News home tab
+    /// Fetches the page of the BBC News Home tab.
     ///
-    /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A
-    /// - Returns: The home tab data
+    /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
+    /// - Returns: The index discovery page.
     func fetchDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
         let url: String = {
             var url = BBCNewsAPINetworkController.baseUrl + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
@@ -60,6 +67,11 @@ struct BBCNewsAPINetworkController {
         return try await self.fetchFDUrl(url: url)
     }
 
+    
+    /// Fetches the pages for multiple topics.
+    ///
+    /// - Parameter topicIds: The topic IDs to fetch.
+    /// - Returns: The fetched topic pages.
     func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
         var results = [FDResult]()
 
@@ -69,12 +81,20 @@ struct BBCNewsAPINetworkController {
 
         return results
     }
-
+    
+    /// Fetches the page for a specified topic.
+    ///
+    /// - Parameter topicId: The topic ID to fetch.
+    /// - Returns: The fetched topic page.
     func fetchTopicPage(for topicId: String) async throws -> FDResult {
         let url = BBCNewsAPINetworkController.baseUrl + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
         return try await self.fetchFDUrl(url: url)
     }
-
+    
+    /// Fetches a page from the BBC News API.
+    ///
+    /// - Parameter urlString: The absolute URL to fetch.
+    /// - Returns: The fetched page.
     func fetchFDUrl(url urlString: String) async throws -> FDResult {
         Logger.network.debug("Requesting: \(urlString, privacy: .public)")
 
