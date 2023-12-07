@@ -9,10 +9,16 @@ import Foundation
 import OSLog
 import UIKit
 
-enum BBCNewsAPINetworkController {
+struct BBCNewsAPINetworkController {
     static let baseUri = "https://news-app.api.bbc.co.uk"
 
-    static let session: URLSession = {
+    static func isAPIUrl(url: String) -> Bool {
+        guard let baseHostname = URL(string: self.baseUri)?.host else { return false }
+        guard let hostname = URL(string: url)?.host else { return false }
+        return hostname == baseHostname
+    }
+
+    let session: URLSession = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
@@ -23,18 +29,12 @@ enum BBCNewsAPINetworkController {
         return URLSession(configuration: configuration)
     }()
 
-    static func isAPIUrl(url: String) -> Bool {
-        guard let baseHostname = URL(string: self.baseUri)?.host else { return false }
-        guard let hostname = URL(string: url)?.host else { return false }
-        return hostname == baseHostname
-    }
-
     /// Fetches the data for the BBC News home tab
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A
     /// - Returns: The home tab data
-    static func fetchDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
+    func fetchDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
         let url: String = {
-            var url = self.baseUri + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
+            var url = BBCNewsAPINetworkController.baseUri + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
             if let postcode = postcode {
                 url += "&clientLoc=" + postcode
             }
@@ -44,7 +44,7 @@ enum BBCNewsAPINetworkController {
         return try await self.fetchFDUrl(url: url)
     }
 
-    static func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
+    func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
         var results = [FDResult]()
 
         for topicId in topicIds {
@@ -54,12 +54,12 @@ enum BBCNewsAPINetworkController {
         return results
     }
 
-    static func fetchTopicPage(for topicId: String) async throws -> FDResult {
-        let url = self.baseUri + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
+    func fetchTopicPage(for topicId: String) async throws -> FDResult {
+        let url = BBCNewsAPINetworkController.baseUri + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
         return try await self.fetchFDUrl(url: url)
     }
 
-    static func fetchFDUrl(url urlString: String) async throws -> FDResult {
+    func fetchFDUrl(url urlString: String) async throws -> FDResult {
         Logger.network.debug("Requesting: \(urlString, privacy: .public)")
 
         guard let url = URL(string: urlString) else {
