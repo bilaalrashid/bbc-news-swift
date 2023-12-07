@@ -51,7 +51,7 @@ struct BBCNewsAPINetworkController {
         self.session = URLSession(configuration: configuration)
     }
 
-    /// Fetches the page of the BBC News Home tab.
+    /// Fetches the main discovery page of the BBC News app i.e. the page shown in the Home tab
     ///
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
