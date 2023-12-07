@@ -15,7 +15,7 @@ import UIKit
 struct BBCNewsAPINetworkController {
     /// The base URL at which the API is hosted at.
     static let baseUrl = "https://news-app.api.bbc.co.uk"
-    
+
     /// Checks if a URL is hosted on the BBC News API.
     ///
     /// - Parameter url: The URL to check.
@@ -55,7 +55,7 @@ struct BBCNewsAPINetworkController {
     ///
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
-    func fetchDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
+    func fetchIndexDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
         let url: String = {
             var url = BBCNewsAPINetworkController.baseUrl + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
             if let postcode = postcode {
@@ -67,7 +67,6 @@ struct BBCNewsAPINetworkController {
         return try await self.fetchFDUrl(url: url)
     }
 
-    
     /// Fetches the pages for multiple topics.
     ///
     /// - Parameter topicIds: The topic IDs to fetch.
@@ -81,7 +80,7 @@ struct BBCNewsAPINetworkController {
 
         return results
     }
-    
+
     /// Fetches the page for a specified topic.
     ///
     /// - Parameter topicId: The topic ID to fetch.
@@ -90,7 +89,7 @@ struct BBCNewsAPINetworkController {
         let url = BBCNewsAPINetworkController.baseUrl + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
         return try await self.fetchFDUrl(url: url)
     }
-    
+
     /// Fetches a page from the BBC News API.
     ///
     /// - Parameter urlString: The absolute URL to fetch.
