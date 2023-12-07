@@ -5,6 +5,7 @@
 //  Created by Bilaal Rashid on 07/12/2023.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UIDevice {
@@ -23,3 +24,4 @@ extension UIDevice {
         return identifier
     }
 }
+#endif

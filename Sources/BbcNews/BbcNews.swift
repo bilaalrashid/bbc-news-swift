@@ -7,7 +7,9 @@
 
 import Foundation
 import OSLog
+#if canImport(UIKit)
 import UIKit
+#endif
 
 /// A network controller for the BBC News private API, as used by the iOS app.
 ///
@@ -29,6 +31,25 @@ struct BbcNews {
     /// The session to perform network requests from.
     let session: URLSession
 
+#if canImport(UIKit)
+    /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
+    ///
+    /// This initialises the User-Agent string, based upon the operating system and device that the request is performed from. Defaulting
+    /// to fetching from `UIDevice`, if available on the platform.
+    ///
+    /// - Parameters:
+    ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
+    ///   - systemName: The name of the operating system e.g. iOS.
+    ///   - systemVersion: The version of the operating system e.g. 16.6.
+    init() {
+        self.init(
+            modelIdentifier: UIDevice.current.modelIdentifier,
+            systemName: UIDevice.current.systemName,
+            systemVersion: UIDevice.current.systemVersion
+        )
+    }
+#endif
+
     /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
     ///
     /// This initialises the User-Agent string, based upon the operating system and device that the request is performed from.
@@ -37,11 +58,7 @@ struct BbcNews {
     ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
     ///   - systemName: The name of the operating system e.g. iOS.
     ///   - systemVersion: The version of the operating system e.g. 16.6.
-    init(
-        modelIdentifier: String = UIDevice.current.modelIdentifier,
-        systemName: String = UIDevice.current.systemName,
-        systemVersion: String = UIDevice.current.systemVersion
-    ) {
+    init(modelIdentifier: String, systemName: String, systemVersion: String) {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
