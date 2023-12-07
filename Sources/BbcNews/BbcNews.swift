@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(OSLog)
 import OSLog
+#endif
 #if canImport(UIKit)
 import UIKit
 #endif
@@ -112,7 +114,9 @@ struct BbcNews {
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
     func fetchFDUrl(url urlString: String) async throws -> FDResult {
+#if canImport(OSLog)
         Logger.network.debug("Requesting: \(urlString, privacy: .public)")
+#endif
 
         guard let url = URL(string: urlString) else {
             throw NetworkError.invalidUrl(url: urlString)
