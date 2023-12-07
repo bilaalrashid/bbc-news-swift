@@ -6,22 +6,21 @@
 //
 
 import Foundation
-import Alamofire
 import OSLog
 import UIKit
 
 enum BBCNewsAPINetworkController {
     static let baseUri = "https://news-app.api.bbc.co.uk"
 
-    static let session: Session = {
-        let configuration = URLSessionConfiguration.af.default
+    static let session: URLSession = {
+        let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
             // Example: BBCNews/25339 (iPhone15,2; iOS 16.6) BBCHTTPClient/9.0.0
             // swiftlint:disable:next line_length force_https
             "User-Agent": "BBCNews/25339 (\(UIDevice.current.modelIdentifier); \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)) BBCHTTPClient/9.0.0"
         ]
-        return Session(configuration: configuration)
+        return URLSession(configuration: configuration)
     }()
 
     static func isAPIUrl(url: String) -> Bool {
@@ -60,9 +59,25 @@ enum BBCNewsAPINetworkController {
         return try await self.fetchFDUrl(url: url)
     }
 
-    static func fetchFDUrl(url: String) async throws -> FDResult {
-        Logger.network.debug("Requesting: \(url, privacy: .public)")
-        let request = self.session.request(url).validate().serializingDecodable(FDResult.self)
-        return try await request.value
+    static func fetchFDUrl(url urlString: String) async throws -> FDResult {
+        Logger.network.debug("Requesting: \(urlString, privacy: .public)")
+
+        guard let url = URL(string: urlString) else {
+            throw NetworkError.invalidUrl(url: urlString)
+        }
+
+        let (data, response) = try await self.session.data(from: url)
+
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw NetworkError.invalidResponse
+        }
+
+        let success = 200..<300
+        guard success.contains(httpResponse.statusCode) else {
+            throw NetworkError.unsuccessfulStatusCode(code: httpResponse.statusCode)
+        }
+
+        let decoder = JSONDecoder()
+        return try decoder.decode(FDResult.self, from: data)
     }
 }
