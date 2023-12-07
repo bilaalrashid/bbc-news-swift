@@ -31,7 +31,7 @@ struct BBCNewsAPINetworkController {
 
     /// Creates an instance of `BBCNewsAPINetworkController` for making network requests to the BBC News API.
     ///
-    /// This initialises the device identifiers used to generate the User-Agent string.
+    /// This initialises the User-Agent string, based upon the operating system and device that the request is performed from.
     ///
     /// - Parameters:
     ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
