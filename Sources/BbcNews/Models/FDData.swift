@@ -11,10 +11,3 @@ struct FDData: Codable, Equatable, Hashable {
     let metadata: FDDataMetadata
     let items: [FDItem]
 }
-
-struct FDDataMetadata: Codable, Equatable, Hashable {
-    let name: String
-    let allowAdvertising: Bool
-    let lastUpdated: Int
-    let shareUrl: String?
-}

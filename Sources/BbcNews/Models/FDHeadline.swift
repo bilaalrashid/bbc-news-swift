@@ -16,8 +16,3 @@ struct FDHeadline: Codable, Equatable, Hashable {
     let languageCode: String
     let readTimeMinutes: Int
 }
-
-struct FDHeadlineByline: Codable, Equatable, Hashable {
-    let name: String
-    let purpose: String
-}

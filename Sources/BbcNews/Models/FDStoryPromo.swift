@@ -20,10 +20,3 @@ struct FDStoryPromo: Codable, Equatable, Hashable {
     let badges: [FDBadge]?
     let uasToken: String?
 }
-
-struct FDBadge: Codable, Equatable, Hashable {
-    let type: String
-    let brand: String
-    let text: String?
-    let duration: Int?
-}
