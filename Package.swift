@@ -18,7 +18,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "BbcNews",
-            targets: ["BbcNews"]),
+            targets: ["BbcNews"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/realm/SwiftLint", from: "0.54.0")
