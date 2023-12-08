@@ -114,9 +114,11 @@ struct BbcNews {
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
     func fetchFDUrl(url urlString: String) async throws -> FDResult {
+        // swiftlint:disable indentation_width
 #if canImport(OSLog)
         Logger.network.debug("Requesting: \(urlString, privacy: .public)")
 #endif
+        // swiftlint:enable indentation_width
 
         guard let url = URL(string: urlString) else {
             throw NetworkError.invalidUrl(url: urlString)
