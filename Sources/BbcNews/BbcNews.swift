@@ -24,7 +24,7 @@ struct BbcNews {
     ///
     /// - Parameter url: The URL to check.
     /// - Returns: If the URL is hosted on the BBC News API.
-    static func isAPIUrl(url: String) -> Bool {
+    static func isApiUrl(url: String) -> Bool {
         guard let baseHostname = URL(string: self.baseUrl)?.host else { return false }
         guard let hostname = URL(string: url)?.host else { return false }
         return hostname == baseHostname
