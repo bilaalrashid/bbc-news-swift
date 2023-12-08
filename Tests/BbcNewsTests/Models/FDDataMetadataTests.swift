@@ -28,6 +28,5 @@ final class FDDataMetadataTests: XCTestCase {
 
         let decoder = JSONDecoder()
         XCTAssertEqual(try decoder.decode(FDDataMetadata.self, from: json.data(using: .utf8)!), expected)
-
     }
 }

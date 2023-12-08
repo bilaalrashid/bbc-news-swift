@@ -18,7 +18,7 @@ let package = Package(
         .library(
             name: "BbcNews",
             targets: ["BbcNews"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/realm/SwiftLint", from: "0.54.0")
@@ -34,6 +34,6 @@ let package = Package(
             name: "BbcNewsTests",
             dependencies: ["BbcNews"],
             plugins: [.plugin(name: "SwiftLintPlugin", package: "SwiftLint")]
-        ),
+        )
     ]
 )
