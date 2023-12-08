@@ -1,6 +1,6 @@
 //
 //  FDSimplePromoGrid.swift
-//  ReadBeeb
+//  BbcNews
 //
 //  Created by Bilaal Rashid on 01/10/2023.
 //

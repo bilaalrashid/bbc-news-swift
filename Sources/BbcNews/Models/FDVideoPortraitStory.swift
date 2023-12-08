@@ -1,6 +1,6 @@
 //
 //  FDVideoPortraitStory.swift
-//  ReadBeeb
+//  BbcNews
 //
 //  Created by Bilaal Rashid on 22/10/2023.
 //
