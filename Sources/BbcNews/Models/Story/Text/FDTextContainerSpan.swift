@@ -13,4 +13,12 @@ public struct FDTextContainerSpan: Codable, Equatable, Hashable {
     public let length: Int
     public let attribute: String?
     public let link: FDLink?
+
+    public init(type: String, startIndex: Int, length: Int, attribute: String? = nil, link: FDLink? = nil) {
+        self.type = type
+        self.startIndex = startIndex
+        self.length = length
+        self.attribute = attribute
+        self.link = link
+    }
 }

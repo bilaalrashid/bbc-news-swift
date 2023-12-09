@@ -11,4 +11,10 @@ public struct FDTextContainer: Codable, Equatable, Hashable {
     public let type: String
     public let containerType: String
     public let text: FDTextContainerText
+
+    public init(type: String, containerType: String, text: FDTextContainerText) {
+        self.type = type
+        self.containerType = containerType
+        self.text = text
+    }
 }

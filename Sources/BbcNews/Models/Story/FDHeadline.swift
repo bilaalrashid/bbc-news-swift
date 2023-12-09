@@ -15,4 +15,22 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     public let topic: FDTopic?
     public let languageCode: String
     public let readTimeMinutes: Int
+
+    public init(
+        type: String,
+        text: String,
+        lastUpdated: Int,
+        byline: FDHeadlineByline? = nil,
+        topic: FDTopic? = nil,
+        languageCode: String,
+        readTimeMinutes: Int
+    ) {
+        self.type = type
+        self.text = text
+        self.lastUpdated = lastUpdated
+        self.byline = byline
+        self.topic = topic
+        self.languageCode = languageCode
+        self.readTimeMinutes = readTimeMinutes
+    }
 }

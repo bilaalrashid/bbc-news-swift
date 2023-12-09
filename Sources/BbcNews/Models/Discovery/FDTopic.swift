@@ -11,4 +11,10 @@ public struct FDTopic: Codable, Equatable, Hashable {
     public let text: String?
     public let title: String?
     public let link: FDLink?
+
+    public init(text: String? = nil, title: String? = nil, link: FDLink? = nil) {
+        self.text = text
+        self.title = title
+        self.link = link
+    }
 }

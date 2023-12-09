@@ -9,4 +9,8 @@ import Foundation
 
 public struct FDLink: Codable, Equatable, Hashable {
     public let destinations: [FDLinkDestination]
+
+    public init(destinations: [FDLinkDestination]) {
+        self.destinations = destinations
+    }
 }

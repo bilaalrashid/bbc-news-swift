@@ -12,4 +12,11 @@ public struct FDMedia: Codable, Equatable, Hashable {
     public let source: FDMediaSource
     public let image: FDImage
     public let metadata: FDMediaMetadata
+
+    public init(type: String, source: FDMediaSource, image: FDImage, metadata: FDMediaMetadata) {
+        self.type = type
+        self.source = source
+        self.image = image
+        self.metadata = metadata
+    }
 }

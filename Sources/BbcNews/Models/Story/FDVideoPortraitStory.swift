@@ -14,4 +14,13 @@ public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
     public let text: String
     public let subtext: String
     public let media: FDMedia
+
+    public init(type: String, id: String, url: String, text: String, subtext: String, media: FDMedia) {
+        self.type = type
+        self.id = id
+        self.url = url
+        self.text = text
+        self.subtext = subtext
+        self.media = media
+    }
 }

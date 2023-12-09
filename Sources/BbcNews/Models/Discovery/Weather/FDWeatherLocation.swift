@@ -10,4 +10,9 @@ import Foundation
 public struct FDWeatherLocation: Codable, Equatable, Hashable {
     public let name: String
     public let isCurrentLocation: Bool
+
+    public init(name: String, isCurrentLocation: Bool) {
+        self.name = name
+        self.isCurrentLocation = isCurrentLocation
+    }
 }

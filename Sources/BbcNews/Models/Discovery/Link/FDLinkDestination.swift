@@ -12,4 +12,11 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
     public let url: String
     public let id: String
     public let presentation: FDPresentation
+
+    public init(sourceFormat: String, url: String, id: String, presentation: FDPresentation) {
+        self.sourceFormat = sourceFormat
+        self.url = url
+        self.id = id
+        self.presentation = presentation
+    }
 }

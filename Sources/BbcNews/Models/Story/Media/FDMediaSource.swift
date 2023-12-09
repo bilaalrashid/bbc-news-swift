@@ -15,4 +15,14 @@ public struct FDMediaSource: Codable, Equatable, Hashable {
     public let isLive: Bool
     public let canAutoPlay: Bool
     public let episodePid: String
+
+    public init(type: String, id: String, duration: Int, aspectRatio: Double, isLive: Bool, canAutoPlay: Bool, episodePid: String) {
+        self.type = type
+        self.id = id
+        self.duration = duration
+        self.aspectRatio = aspectRatio
+        self.isLive = isLive
+        self.canAutoPlay = canAutoPlay
+        self.episodePid = episodePid
+    }
 }

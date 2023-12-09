@@ -10,4 +10,9 @@ import Foundation
 public struct FDSimplePromoGrid: FDCollection, Codable, Equatable, Hashable {
     public let type: String
     public let items: [FDStoryPromo]
+
+    public init(type: String, items: [FDStoryPromo]) {
+        self.type = type
+        self.items = items
+    }
 }

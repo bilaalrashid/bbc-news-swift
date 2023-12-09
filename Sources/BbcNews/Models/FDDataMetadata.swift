@@ -12,4 +12,11 @@ public struct FDDataMetadata: Codable, Equatable, Hashable {
     public let allowAdvertising: Bool
     public let lastUpdated: Int
     public let shareUrl: String?
+
+    public init(name: String, allowAdvertising: Bool, lastUpdated: Int, shareUrl: String? = nil) {
+        self.name = name
+        self.allowAdvertising = allowAdvertising
+        self.lastUpdated = lastUpdated
+        self.shareUrl = shareUrl
+    }
 }

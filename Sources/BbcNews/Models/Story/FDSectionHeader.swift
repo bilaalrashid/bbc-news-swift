@@ -10,4 +10,9 @@ import Foundation
 public struct FDSectionHeader: Codable, Equatable, Hashable {
     public let type: String
     public let text: String
+
+    public init(type: String, text: String) {
+        self.type = type
+        self.text = text
+    }
 }
