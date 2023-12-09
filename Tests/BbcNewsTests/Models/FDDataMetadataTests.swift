@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import BbcNews
+import BbcNews
 
 final class FDDataMetadataTests: XCTestCase {
     func testDecodeJson() throws {

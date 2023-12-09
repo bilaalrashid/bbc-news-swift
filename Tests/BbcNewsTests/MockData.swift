@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import BbcNews
+import BbcNews
 
 struct MockData {
     static let fdDataMetadata: (json: String, expected: FDDataMetadata) = {
