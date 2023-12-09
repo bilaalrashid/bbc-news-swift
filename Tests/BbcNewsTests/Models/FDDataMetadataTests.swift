@@ -10,27 +10,12 @@ import XCTest
 
 final class FDDataMetadataTests: XCTestCase {
     func testDecodeJson() throws {
-        let json = """
-            {
-                "name": "Home",
-                "allowAdvertising": true,
-                "lastUpdated": 1702078376217,
-                "shareUrl": "https://www.bbc.co.uk/news/front_page"
-            }
-        """
-
-        let expected = FDDataMetadata(
-            name: "Home",
-            allowAdvertising: true,
-            lastUpdated: 1702078376217,
-            shareUrl: "https://www.bbc.co.uk/news/front_page"
-        )
-
         let decoder = JSONDecoder()
+        let json = MockData.fdDataMetadata.json.data(using: .utf8)!
 
         XCTAssertEqual(
-            try decoder.decode(FDDataMetadata.self, from: json.data(using: .utf8)!),
-            expected,
+            try decoder.decode(FDDataMetadata.self, from: json),
+            MockData.fdDataMetadata.expected,
             "Unable to decode JSON to FDDataMetadata"
         )
     }
