@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDResult: Codable, Equatable, Hashable {
-    let data: FDData
-    let contentType: String
+public struct FDResult: Codable, Equatable, Hashable {
+    public let data: FDData
+    public let contentType: String
 }

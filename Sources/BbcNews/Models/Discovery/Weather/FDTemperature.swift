@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct FDTemperature: Codable, Equatable, Hashable {
-    let celsius: Int
+public struct FDTemperature: Codable, Equatable, Hashable {
+    public let celsius: Int
 }

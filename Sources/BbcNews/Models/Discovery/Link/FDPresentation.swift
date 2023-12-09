@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FDPresentation: Codable, Equatable, Hashable {
-    let type: String
-    let title: String?
-    let canShare: Bool?
+public struct FDPresentation: Codable, Equatable, Hashable {
+    public let type: String
+    public let title: String?
+    public let canShare: Bool?
 }

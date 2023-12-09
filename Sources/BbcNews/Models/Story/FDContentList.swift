@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FDContentList: Codable, Equatable, Hashable {
-    let type: String
-    let ordering: String
-    let listItems: [FDTextContainerText]
+public struct FDContentList: Codable, Equatable, Hashable {
+    public let type: String
+    public let ordering: String
+    public let listItems: [FDTextContainerText]
 }

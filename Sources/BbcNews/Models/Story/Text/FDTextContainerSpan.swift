@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct FDTextContainerSpan: Codable, Equatable, Hashable {
-    let type: String
-    let startIndex: Int
-    let length: Int
-    let attribute: String?
-    let link: FDLink?
+public struct FDTextContainerSpan: Codable, Equatable, Hashable {
+    public let type: String
+    public let startIndex: Int
+    public let length: Int
+    public let attribute: String?
+    public let link: FDLink?
 }

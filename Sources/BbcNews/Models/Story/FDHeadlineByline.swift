@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDHeadlineByline: Codable, Equatable, Hashable {
-    let name: String
-    let purpose: String
+public struct FDHeadlineByline: Codable, Equatable, Hashable {
+    public let name: String
+    public let purpose: String
 }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct FDMediaSource: Codable, Equatable, Hashable {
-    let type: String
-    let id: String
-    let duration: Int
-    let aspectRatio: Double
-    let isLive: Bool
-    let canAutoPlay: Bool
-    let episodePid: String
+public struct FDMediaSource: Codable, Equatable, Hashable {
+    public let type: String
+    public let id: String
+    public let duration: Int
+    public let aspectRatio: Double
+    public let isLive: Bool
+    public let canAutoPlay: Bool
+    public let episodePid: String
 }

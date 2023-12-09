@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct FDMediaMetadata: Codable, Equatable, Hashable {
-    let title: String
-    let summary: String?
-    let caption: String
-    let timestamp: Int
-    let associatedContentUrl: String
-    let allowAdvertising: Bool
+public struct FDMediaMetadata: Codable, Equatable, Hashable {
+    public let title: String
+    public let summary: String?
+    public let caption: String
+    public let timestamp: Int
+    public let associatedContentUrl: String
+    public let allowAdvertising: Bool
 }

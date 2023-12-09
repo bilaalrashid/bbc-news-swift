@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDTextContainerText: Codable, Equatable, Hashable {
-    let text: String
-    let spans: [FDTextContainerSpan]
+public struct FDTextContainerText: Codable, Equatable, Hashable {
+    public let text: String
+    public let spans: [FDTextContainerSpan]
 }

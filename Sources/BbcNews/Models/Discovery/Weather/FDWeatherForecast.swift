@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct FDWeatherForecast: Codable, Equatable, Hashable {
-    let description: String
-    let high: FDTemperature
-    let low: FDTemperature
-    let icon: String
-    let nighttimeLayout: Bool
+public struct FDWeatherForecast: Codable, Equatable, Hashable {
+    public let description: String
+    public let high: FDTemperature
+    public let low: FDTemperature
+    public let icon: String
+    public let nighttimeLayout: Bool
 }

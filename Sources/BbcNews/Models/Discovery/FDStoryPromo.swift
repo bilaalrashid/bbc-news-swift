@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct FDStoryPromo: Codable, Equatable, Hashable {
-    let type: String
-    let style: String
-    let languageCode: String
-    let text: String?
-    let link: FDLink
-    let subtext: String?
-    let updated: Int?
-    let topic: FDTopic?
-    let image: FDImage?
-    let badges: [FDBadge]?
-    let uasToken: String?
+public struct FDStoryPromo: Codable, Equatable, Hashable {
+    public let type: String
+    public let style: String
+    public let languageCode: String
+    public let text: String?
+    public let link: FDLink
+    public let subtext: String?
+    public let updated: Int?
+    public let topic: FDTopic?
+    public let image: FDImage?
+    public let badges: [FDBadge]?
+    public let uasToken: String?
 }

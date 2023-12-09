@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct FDHeadline: Codable, Equatable, Hashable {
-    let type: String
-    let text: String
-    let lastUpdated: Int
-    let byline: FDHeadlineByline?
-    let topic: FDTopic?
-    let languageCode: String
-    let readTimeMinutes: Int
+public struct FDHeadline: Codable, Equatable, Hashable {
+    public let type: String
+    public let text: String
+    public let lastUpdated: Int
+    public let byline: FDHeadlineByline?
+    public let topic: FDTopic?
+    public let languageCode: String
+    public let readTimeMinutes: Int
 }

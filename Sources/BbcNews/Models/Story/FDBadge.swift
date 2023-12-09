@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct FDBadge: Codable, Equatable, Hashable {
-    let type: String
-    let brand: String
-    let text: String?
-    let duration: Int?
+public struct FDBadge: Codable, Equatable, Hashable {
+    public let type: String
+    public let brand: String
+    public let text: String?
+    public let duration: Int?
 }

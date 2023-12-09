@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FDImage: Codable, Equatable, Hashable {
-    let type: String
-    let source: FDImageSource
-    let metadata: FDImageMetadata?
+public struct FDImage: Codable, Equatable, Hashable {
+    public let type: String
+    public let source: FDImageSource
+    public let metadata: FDImageMetadata?
 }

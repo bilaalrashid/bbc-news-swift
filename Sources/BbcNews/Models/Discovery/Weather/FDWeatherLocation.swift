@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDWeatherLocation: Codable, Equatable, Hashable {
-    let name: String
-    let isCurrentLocation: Bool
+public struct FDWeatherLocation: Codable, Equatable, Hashable {
+    public let name: String
+    public let isCurrentLocation: Bool
 }

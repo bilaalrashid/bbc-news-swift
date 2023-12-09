@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDSectionHeader: Codable, Equatable, Hashable {
-    let type: String
-    let text: String
+public struct FDSectionHeader: Codable, Equatable, Hashable {
+    public let type: String
+    public let text: String
 }

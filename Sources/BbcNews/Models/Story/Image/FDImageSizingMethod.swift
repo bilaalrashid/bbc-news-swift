@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FDImageSizingMethod: Codable, Equatable, Hashable {
-    let type: String
-    let widthToken: String
-    let widths: [Int]
+public struct FDImageSizingMethod: Codable, Equatable, Hashable {
+    public let type: String
+    public let widthToken: String
+    public let widths: [Int]
 }

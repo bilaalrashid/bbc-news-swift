@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDSimplePromoGrid: FDCollection, Codable, Equatable, Hashable {
-    let type: String
-    let items: [FDStoryPromo]
+public struct FDSimplePromoGrid: FDCollection, Codable, Equatable, Hashable {
+    public let type: String
+    public let items: [FDStoryPromo]
 }

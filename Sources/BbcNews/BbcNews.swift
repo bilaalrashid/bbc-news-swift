@@ -16,22 +16,22 @@ import UIKit
 /// A network controller for the BBC News private API, as used by the iOS app.
 ///
 /// This attempts to mimic the User-Agent of the iOS app.
-struct BbcNews {
+public struct BbcNews {
     /// The base URL at which the API is hosted at.
-    static let baseUrl = "https://news-app.api.bbc.co.uk"
+    public static let baseUrl = "https://news-app.api.bbc.co.uk"
 
     /// Checks if a URL is hosted on the BBC News API.
     ///
     /// - Parameter url: The URL to check.
     /// - Returns: If the URL is hosted on the BBC News API.
-    static func isApiUrl(url: String) -> Bool {
+    public static func isApiUrl(url: String) -> Bool {
         guard let baseHostname = URL(string: self.baseUrl)?.host else { return false }
         guard let hostname = URL(string: url)?.host else { return false }
         return hostname == baseHostname
     }
 
     /// The session to perform network requests from.
-    let session: URLSession
+    private let session: URLSession
 
 #if canImport(UIKit)
     /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
@@ -43,7 +43,7 @@ struct BbcNews {
     ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
     ///   - systemName: The name of the operating system e.g. iOS.
     ///   - systemVersion: The version of the operating system e.g. 16.6.
-    init() {
+    public init() {
         self.init(
             modelIdentifier: UIDevice.current.modelIdentifier,
             systemName: UIDevice.current.systemName,
@@ -60,7 +60,7 @@ struct BbcNews {
     ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
     ///   - systemName: The name of the operating system e.g. iOS.
     ///   - systemVersion: The version of the operating system e.g. 16.6.
-    init(modelIdentifier: String, systemName: String, systemVersion: String) {
+    public init(modelIdentifier: String, systemName: String, systemVersion: String) {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
@@ -74,7 +74,7 @@ struct BbcNews {
     ///
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
-    func fetchIndexDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
+    public func fetchIndexDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
         let url: String = {
             var url = BbcNews.baseUrl + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
             if let postcode = postcode {
@@ -90,7 +90,7 @@ struct BbcNews {
     ///
     /// - Parameter topicIds: The topic IDs to fetch.
     /// - Returns: The fetched topic pages.
-    func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
+    public func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
         var results = [FDResult]()
 
         for topicId in topicIds {
@@ -104,7 +104,7 @@ struct BbcNews {
     ///
     /// - Parameter topicId: The topic ID to fetch.
     /// - Returns: The fetched topic page.
-    func fetchTopicPage(for topicId: String) async throws -> FDResult {
+    public func fetchTopicPage(for topicId: String) async throws -> FDResult {
         let url = BbcNews.baseUrl + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
         return try await self.fetchFDUrl(url: url)
     }
@@ -113,7 +113,7 @@ struct BbcNews {
     ///
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
-    func fetchFDUrl(url urlString: String) async throws -> FDResult {
+    public func fetchFDUrl(url urlString: String) async throws -> FDResult {
         // swiftlint:disable indentation_width
 #if canImport(OSLog)
         Logger.network.debug("Requesting: \(urlString, privacy: .public)")

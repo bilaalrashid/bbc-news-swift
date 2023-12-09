@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FDImageSource: Codable, Equatable, Hashable {
-    let url: String
-    let sizingMethod: FDImageSizingMethod
-    let aspectRatio: Double?
+public struct FDImageSource: Codable, Equatable, Hashable {
+    public let url: String
+    public let sizingMethod: FDImageSizingMethod
+    public let aspectRatio: Double?
 }

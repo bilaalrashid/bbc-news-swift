@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDCopyright: Codable, Equatable, Hashable {
-    let type: String
-    let lastUpdated: Int
+public struct FDCopyright: Codable, Equatable, Hashable {
+    public let type: String
+    public let lastUpdated: Int
 }

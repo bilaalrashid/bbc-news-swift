@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FDCollectionHeader: Codable, Equatable, Hashable {
-    let type: String
-    let text: String
-    let link: FDLink?
+public struct FDCollectionHeader: Codable, Equatable, Hashable {
+    public let type: String
+    public let text: String
+    public let link: FDLink?
 }

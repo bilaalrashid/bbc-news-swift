@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct FDWeatherPromoSummary: Codable, Equatable, Hashable {
-    let type: String
-    let period: String
-    let location: FDWeatherLocation
-    let forecast: FDWeatherForecast
+public struct FDWeatherPromoSummary: Codable, Equatable, Hashable {
+    public let type: String
+    public let period: String
+    public let location: FDWeatherLocation
+    public let forecast: FDWeatherForecast
 }

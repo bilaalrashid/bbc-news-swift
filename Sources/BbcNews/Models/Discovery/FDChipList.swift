@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDChipList: Codable, Equatable, Hashable {
-    let type: String
-    let items: [FDTopic]
+public struct FDChipList: Codable, Equatable, Hashable {
+    public let type: String
+    public let items: [FDTopic]
 }

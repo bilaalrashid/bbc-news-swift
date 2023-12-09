@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct FDLinkDestination: Codable, Equatable, Hashable {
-    let sourceFormat: String
-    let url: String
-    let id: String
-    let presentation: FDPresentation
+public struct FDLinkDestination: Codable, Equatable, Hashable {
+    public let sourceFormat: String
+    public let url: String
+    public let id: String
+    public let presentation: FDPresentation
 }

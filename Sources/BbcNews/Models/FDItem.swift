@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FDItem: Codable, Equatable, Hashable {
+public enum FDItem: Codable, Equatable, Hashable {
     case billboard(FDBillboard)
     case hierarchicalCollection(FDHierarchicalCollection)
     case collectionHeader(FDCollectionHeader)
@@ -32,7 +32,7 @@ enum FDItem: Codable, Equatable, Hashable {
     case unknown
 
     // swiftlint:disable cyclomatic_complexity function_body_length
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let value = try? container.decode(FDBillboard.self), value.type == "Billboard" {
             self = .billboard(value)
@@ -108,7 +108,7 @@ enum FDItem: Codable, Equatable, Hashable {
     // swiftlint:enable cyclomatic_complexity function_body_length
 
     // swiftlint:disable cyclomatic_complexity
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
         case .billboard(let value):

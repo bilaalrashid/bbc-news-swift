@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FDCollection {
+public protocol FDCollection {
     var type: String { get }
     var items: [FDStoryPromo] { get }
 }

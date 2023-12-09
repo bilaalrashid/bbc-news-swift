@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkError: Error, LocalizedError, CustomStringConvertible {
+public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
     case invalidUrl(url: String)
     case invalidResponse
     case unsuccessfulStatusCode(code: Int)

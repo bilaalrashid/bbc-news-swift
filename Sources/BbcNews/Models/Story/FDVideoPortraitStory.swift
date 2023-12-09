@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct FDVideoPortraitStory: Codable, Equatable, Hashable {
-    let type: String
-    let id: String
-    let url: String
-    let text: String
-    let subtext: String
-    let media: FDMedia
+public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
+    public let type: String
+    public let id: String
+    public let url: String
+    public let text: String
+    public let subtext: String
+    public let media: FDMedia
 }

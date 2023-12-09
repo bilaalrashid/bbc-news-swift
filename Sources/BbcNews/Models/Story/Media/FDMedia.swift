@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct FDMedia: Codable, Equatable, Hashable {
-    let type: String
-    let source: FDMediaSource
-    let image: FDImage
-    let metadata: FDMediaMetadata
+public struct FDMedia: Codable, Equatable, Hashable {
+    public let type: String
+    public let source: FDMediaSource
+    public let image: FDImage
+    public let metadata: FDMediaMetadata
 }

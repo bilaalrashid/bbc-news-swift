@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct FDDataMetadata: Codable, Equatable, Hashable {
-    let name: String
-    let allowAdvertising: Bool
-    let lastUpdated: Int
-    let shareUrl: String?
+public struct FDDataMetadata: Codable, Equatable, Hashable {
+    public let name: String
+    public let allowAdvertising: Bool
+    public let lastUpdated: Int
+    public let shareUrl: String?
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct FDLink: Codable, Equatable, Hashable {
-    let destinations: [FDLinkDestination]
+public struct FDLink: Codable, Equatable, Hashable {
+    public let destinations: [FDLinkDestination]
 }

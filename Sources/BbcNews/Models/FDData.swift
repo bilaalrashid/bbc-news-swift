@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FDData: Codable, Equatable, Hashable {
-    let metadata: FDDataMetadata
-    let items: [FDItem]
+public struct FDData: Codable, Equatable, Hashable {
+    public let metadata: FDDataMetadata
+    public let items: [FDItem]
 }

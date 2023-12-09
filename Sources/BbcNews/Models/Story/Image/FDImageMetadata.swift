@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct FDImageMetadata: Codable, Equatable, Hashable {
-    let altText: String?
-    let caption: String?
-    let copyrightText: String?
+public struct FDImageMetadata: Codable, Equatable, Hashable {
+    public let altText: String?
+    public let caption: String?
+    public let copyrightText: String?
 }
