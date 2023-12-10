@@ -9,6 +9,35 @@ import Foundation
 import BbcNews
 
 struct MockData {
+    static let fdPresentation: [(json: String, expected: FDPresentation)] = {
+        return [
+            (
+                json: """
+                    {
+                        "type": "SINGLE_RENDERER",
+                    }
+                """,
+                expected: FDPresentation(type: "SINGLE_RENDERER")
+            ),
+            (
+                json: """
+                    {
+                        "type": "SINGLE_RENDERER",
+                        "title": "Business",
+                        "canShare": false,
+                        "contentSource": "BBC"
+                    }
+                """,
+                expected: FDPresentation(
+                    type: "SINGLE_RENDERER",
+                    title: "Business",
+                    canShare: false,
+                    contentSource: "BBC"
+                )
+            )
+        ]
+    }()
+
     static let fdDataMetadata: (json: String, expected: FDDataMetadata) = {
         return (
             json: """
