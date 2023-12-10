@@ -9,6 +9,17 @@ import Foundation
 import BbcNews
 
 struct MockData {
+    static let fdLink: (json: String, expected: FDLink) = {
+        return (
+            json: """
+                {
+                    "destinations": [\(MockData.fdLinkDestination.json)]
+                }
+            """,
+            expected: FDLink(destinations: [MockData.fdLinkDestination.expected])
+        )
+    }()
+
     static let fdLinkDestination: (json: String, expected: FDLinkDestination) = {
         return (
             json: """
