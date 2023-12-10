@@ -16,7 +16,7 @@ final class FDPresentationTests: XCTestCase {
         XCTAssertEqual(
             try decoder.decode(FDPresentation.self, from: json),
             MockData.fdPresentation[0].expected,
-            "Unable to minimal decode JSON to FDPresentation"
+            "Unable to decode minimal JSON to FDPresentation"
         )
     }
 
@@ -27,7 +27,7 @@ final class FDPresentationTests: XCTestCase {
         XCTAssertEqual(
             try decoder.decode(FDPresentation.self, from: json),
             MockData.fdPresentation[1].expected,
-            "Unable to full decode JSON to FDPresentation"
+            "Unable to decode full JSON to FDPresentation"
         )
     }
 }
