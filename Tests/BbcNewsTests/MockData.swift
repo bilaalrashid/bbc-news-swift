@@ -9,6 +9,25 @@ import Foundation
 import BbcNews
 
 struct MockData {
+    static let fdLinkDestination: (json: String, expected: FDLinkDestination) = {
+        return (
+            json: """
+                {
+                    "sourceFormat": "ABL",
+                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=uk-politics-67651883&service=news&type=asset",
+                    "id": "/news/uk-politics-67651883",
+                    "presentation": \(MockData.fdPresentation[0].json)
+                }
+            """,
+            expected: FDLinkDestination(
+                sourceFormat: "ABL",
+                url: "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=uk-politics-67651883&service=news&type=asset",
+                id: "/news/uk-politics-67651883",
+                presentation: MockData.fdPresentation[0].expected
+            )
+        )
+    }()
+
     static let fdPresentation: [(json: String, expected: FDPresentation)] = {
         return [
             (
