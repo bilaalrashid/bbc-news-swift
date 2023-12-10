@@ -9,6 +9,18 @@ import Foundation
 import BbcNews
 
 struct MockData {
+    static let fdCopyright: (json: String, expected: FDCopyright) = {
+        return (
+            json: """
+                {
+                    "type": "Copyright",
+                    "lastUpdated": 1702232639489
+                }
+            """,
+            expected: FDCopyright(type: "Copyright", lastUpdated: 1702232639489)
+        )
+    }()
+
     static let fdLink: (json: String, expected: FDLink) = {
         return (
             json: """
