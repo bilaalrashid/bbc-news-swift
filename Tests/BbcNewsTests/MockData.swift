@@ -9,6 +9,30 @@ import Foundation
 import BbcNews
 
 struct MockData {
+    static let fdCollectionHeader: [(json: String, expected: FDCollectionHeader)] = {
+        return [
+            (
+                json: """
+                    {
+                        "type": "CollectionHeader",
+                        "text": "Business"
+                    }
+                """,
+                expected: FDCollectionHeader(type: "CollectionHeader", text: "Business")
+            ),
+            (
+                json: """
+                    {
+                        "type": "CollectionHeader",
+                        "text": "Business",
+                        "link": \(MockData.fdLink.json)
+                    }
+                """,
+                expected: FDCollectionHeader(type: "CollectionHeader", text: "Business", link: MockData.fdLink.expected)
+            )
+        ]
+    }()
+
     static let fdCopyright: (json: String, expected: FDCopyright) = {
         return (
             json: """
