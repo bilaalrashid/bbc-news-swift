@@ -142,6 +142,51 @@ struct MockData {
         ]
     }()
 
+    static let fdHeadline: [(json: String, expected: FDHeadline)] = {
+        return [
+            (
+                json: """
+                    {
+                        "type": "Headline",
+                        "text": "Sir David Attenborough: What's in Planet Earth III?",
+                        "lastUpdated": 1697475724000,
+                        "languageCode": "en-gb",
+                        "readTimeMinutes": 1
+                    }
+                """,
+                expected: FDHeadline(
+                    type: "Headline",
+                    text: "Sir David Attenborough: What's in Planet Earth III?",
+                    lastUpdated: 1697475724000,
+                    languageCode: "en-gb",
+                    readTimeMinutes: 1
+                )
+            ),
+            (
+                json: """
+                    {
+                        "type": "Headline",
+                        "text": "Sir David Attenborough: What's in Planet Earth III?",
+                        "lastUpdated": 1697475724000,
+                        "byline": \(MockData.fdHeadlineByline.json),
+                        "topic": \(MockData.fdTopic.json),
+                        "languageCode": "en-gb",
+                        "readTimeMinutes": 1
+                    }
+                """,
+                expected: FDHeadline(
+                    type: "Headline",
+                    text: "Sir David Attenborough: What's in Planet Earth III?",
+                    lastUpdated: 1697475724000,
+                    byline: MockData.fdHeadlineByline.expected,
+                    topic: MockData.fdTopic.expected,
+                    languageCode: "en-gb",
+                    readTimeMinutes: 1
+                )
+            )
+        ]
+    }()
+
     static let fdHeadlineByline: (json: String, expected: FDHeadlineByline) = {
         return (
             json: """
