@@ -142,6 +142,18 @@ struct MockData {
         ]
     }()
 
+    static let fdHeadlineByline: (json: String, expected: FDHeadlineByline) = {
+        return (
+            json: """
+                {
+                    "name": "By Chris Mason",
+                    "purpose": "BBC News"
+                }
+            """,
+            expected: FDHeadlineByline(name: "By Chris Mason", purpose: "BBC News")
+        )
+    }()
+
     static let fdSectionHeader: (json: String, expected: FDSectionHeader) = {
         return (
             json: """
