@@ -9,6 +9,31 @@ import Foundation
 import BbcNews
 
 struct MockData {
+    static let fdBadge: [(json: String, expected: FDBadge)] = {
+        return [
+            (
+                json: """
+                    {
+                        "type": "VIDEO",
+                        "brand": "NEWS"
+                    }
+                """,
+                expected: FDBadge(type: "VIDEO", brand: "NEWS")
+            ),
+            (
+                json: """
+                    {
+                        "type": "VIDEO",
+                        "brand": "NEWS",
+                        "text": "LIVE",
+                        "duration": 23000
+                    }
+                """,
+                expected: FDBadge(type: "VIDEO", brand: "NEWS", text: "LIVE", duration: 23000)
+            )
+        ]
+    }()
+
     static let fdTopic: (json: String, expected: FDTopic) = {
         return (
             json: """
