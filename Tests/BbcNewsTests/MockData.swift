@@ -142,6 +142,18 @@ struct MockData {
         ]
     }()
 
+    static let fdSectionHeader: (json: String, expected: FDSectionHeader) = {
+        return (
+            json: """
+                {
+                    "type": "SectionHeader",
+                    "text": "Related Stories"
+                }
+            """,
+            expected: FDSectionHeader(type: "SectionHeader", text: "Related Stories")
+        )
+    }()
+
     static let fdDataMetadata: (json: String, expected: FDDataMetadata) = {
         return (
             json: """
