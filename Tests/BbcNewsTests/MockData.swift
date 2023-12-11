@@ -9,6 +9,19 @@ import Foundation
 import BbcNews
 
 struct MockData {
+    static let fdTopic: (json: String, expected: FDTopic) = {
+        return (
+            json: """
+                {
+                    "text": "UK Politics",
+                    "title": "UK Politics",
+                    "link": \(MockData.fdLink.json)
+                }
+            """,
+            expected: FDTopic(text: "UK Politics", title: "UK Politics", link: MockData.fdLink.expected)
+        )
+    }()
+
     static let fdCollectionHeader: [(json: String, expected: FDCollectionHeader)] = {
         return [
             (
