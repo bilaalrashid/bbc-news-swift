@@ -142,6 +142,37 @@ struct MockData {
         ]
     }()
 
+    static let fdImageSource: [(json: String, expected: FDImageSource)] = {
+        return [
+            (
+                json: """
+                    {
+                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/14DD4/production/_121306458_976aa.jpg",
+                        "sizingMethod": \(MockData.fdImageSizingMethod.json)
+                    }
+                """,
+                expected: FDImageSource(
+                    url: "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/14DD4/production/_121306458_976aa.jpg",
+                    sizingMethod: MockData.fdImageSizingMethod.expected
+                )
+            ),
+            (
+                json: """
+                    {
+                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/14DD4/production/_121306458_976aa.jpg",
+                        "sizingMethod": \(MockData.fdImageSizingMethod.json),
+                        "aspectRatio": 1.7777777777777777
+                    }
+                """,
+                expected: FDImageSource(
+                    url: "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/14DD4/production/_121306458_976aa.jpg",
+                    sizingMethod: MockData.fdImageSizingMethod.expected,
+                    aspectRatio: 1.7777777777777777
+                )
+            )
+        ]
+    }()
+
     static let fdImageSizingMethod: (json: String, expected: FDImageSizingMethod) = {
         return (
             json: """
