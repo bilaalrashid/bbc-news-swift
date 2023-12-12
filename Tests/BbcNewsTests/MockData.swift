@@ -142,6 +142,43 @@ struct MockData {
         ]
     }()
 
+    static let fdTextContainerSpan: [(json: String, expected: FDTextContainerSpan)] = {
+        return [
+            (
+                json: """
+                    {
+                        "type": "emphasis",
+                        "startIndex": 0,
+                        "length": 34
+                    }
+                """,
+                expected: FDTextContainerSpan(
+                    type: "emphasis",
+                    startIndex: 0,
+                    length: 34
+                )
+            ),
+            (
+                json: """
+                    {
+                        "type": "emphasis",
+                        "startIndex": 0,
+                        "length": 34,
+                        "attribute": "italic",
+                        "link": \(MockData.fdLink.json)
+                    }
+                """,
+                expected: FDTextContainerSpan(
+                    type: "emphasis",
+                    startIndex: 0,
+                    length: 34,
+                    attribute: "italic",
+                    link: MockData.fdLink.expected
+                )
+            )
+        ]
+    }()
+
     static let fdHeadline: [(json: String, expected: FDHeadline)] = {
         return [
             (
