@@ -142,6 +142,19 @@ struct MockData {
         ]
     }()
 
+    static let fdImageSizingMethod: (json: String, expected: FDImageSizingMethod) = {
+        return (
+            json: """
+                {
+                    "type": "SPECIFIC_WIDTHS",
+                    "widthToken": "{width}",
+                    "widths": [80, 100, 128]
+                }
+            """,
+            expected: FDImageSizingMethod(type: "SPECIFIC_WIDTHS", widthToken: "{width}", widths: [80, 100, 128])
+        )
+    }()
+
     static let fdTextContainer: (json: String, expected: FDTextContainer) = {
         return (
             json: """
