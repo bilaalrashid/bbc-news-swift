@@ -142,6 +142,19 @@ struct MockData {
         ]
     }()
 
+    static let fdTextContainer: (json: String, expected: FDTextContainer) = {
+        return (
+            json: """
+                {
+                    "type": "textContainer",
+                    "containerType": "body",
+                    "text": \(MockData.fdTextContainerText.json)
+                }
+            """,
+            expected: FDTextContainer(type: "textContainer", containerType: "body", text: MockData.fdTextContainerText.expected)
+        )
+    }()
+
     static let fdTextContainerText: (json: String, expected: FDTextContainerText) = {
         return (
             json: """
