@@ -142,6 +142,30 @@ struct MockData {
         ]
     }()
 
+    static let fdImage: [(json: String, expected: FDImage)] = {
+        return [
+            (
+                json: """
+                    {
+                        "type": "Image",
+                        "source": \(MockData.fdImageSource[1].json)
+                    }
+                """,
+                expected: FDImage(type: "Image", source: MockData.fdImageSource[1].expected)
+            ),
+            (
+                json: """
+                    {
+                        "type": "Image",
+                        "source": \(MockData.fdImageSource[1].json),
+                        "metadata": \(MockData.fdImageMetadata.json)
+                    }
+                """,
+                expected: FDImage(type: "Image", source: MockData.fdImageSource[1].expected, metadata: MockData.fdImageMetadata.expected)
+            )
+        ]
+    }()
+
     static let fdImageMetadata: (json: String, expected: FDImageMetadata) = {
         return (
             json: """
