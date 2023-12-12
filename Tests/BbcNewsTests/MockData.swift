@@ -142,6 +142,23 @@ struct MockData {
         ]
     }()
 
+    static let fdImageMetadata: (json: String, expected: FDImageMetadata) = {
+        return (
+            json: """
+                {
+                    "altText": "Sir David Attenborough",
+                    "caption": "Sir David Attenborough in Planet Earth III",
+                    "copyrightText": "BBC Studios"
+                }
+            """,
+            expected: FDImageMetadata(
+                altText: "Sir David Attenborough",
+                caption: "Sir David Attenborough in Planet Earth III",
+                copyrightText: "BBC Studios"
+            )
+        )
+    }()
+
     static let fdImageSource: [(json: String, expected: FDImageSource)] = {
         return [
             (
