@@ -33,6 +33,7 @@ let package = Package(
         .testTarget(
             name: "BbcNewsTests",
             dependencies: ["BbcNews"],
+            resources: [.copy("Resources")],
             plugins: [.plugin(name: "SwiftLintPlugin", package: "SwiftLint")]
         )
     ]

@@ -1,0 +1,2629 @@
+{
+    "data": {
+        "metadata": {
+            "name": "Amazon",
+            "allowAdvertising": true,
+            "lastUpdated": 0
+        },
+        "items": [
+            {
+                "type": "SimplePromoGrid",
+                "items": [
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Union to hold ballot at Amazon warehouse",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "HTML",
+                                    "url": "https://www.bbc.com/news/articles/cp9g7mky27no",
+                                    "id": "https://www.bbc.com/news/articles/cp9g7mky27no",
+                                    "presentation": {
+                                        "type": "WEB",
+                                        "contentSource": "BBC"
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The GMB union says it could result in a UK union being recognised by Amazon for the first time.",
+                        "updated": 1714592397040,
+                        "topic": {
+                            "text": "Coventry & Warwickshire",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cnlkl1gkn5jt&type=topic",
+                                        "id": "cnlkl1gkn5jt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Coventry & Warwickshire",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/1b9f/live/1443c210-07d8-11ef-bee9-6125e244a4cd.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "GMB union members",
+                                "caption": "It could be the first time that a UK union is recognised by Amazon ",
+                                "copyrightText": "PA Media"
+                            }
+                        },
+                        "uasToken": "urn:bbc:optimo:asset:cp9g7mky27no"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon Prime ads help tech giant drive profits",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "HTML",
+                                    "url": "https://www.bbc.com/news/articles/c9ez72kn1rlo",
+                                    "id": "https://www.bbc.com/news/articles/c9ez72kn1rlo",
+                                    "presentation": {
+                                        "type": "WEB",
+                                        "contentSource": "BBC"
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The tech giant did better than expected in many areas of its business.",
+                        "updated": 1714518639200,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7787769784172662,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/5883/live/a12ea020-0745-11ef-848d-5d77a7d4dcf1.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Person watching Prime Video on TV",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:optimo:asset:c9ez72kn1rlo"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Stowaway cat accidentally mailed in returned package",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=world-us-canada-68918102&service=news&type=asset",
+                                    "id": "/news/world-us-canada-68918102",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Galeana is back home in the US state of Utah and in good health after spending six days in a box.",
+                        "updated": 1714350201000,
+                        "topic": {
+                            "text": "US & Canada",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cp35rmprpn5t&type=topic",
+                                        "id": "cp35rmprpn5t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "US & Canada",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/4D0C/production/_133242791_galeanablurredsides.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Galeana the cat",
+                                "copyrightText": "Facebook/Carrie Clark"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:5ad6bf1a-cea5-45cd-8e17-3ad817b06caa"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Travis Kelce gets new job as TV game show host",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=entertainment-arts-68834389&service=news&type=asset",
+                                    "id": "/news/entertainment-arts-68834389",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The Kansas City Chiefs star and Taylor Swift's boyfriend will front the show for Amazon Prime Video.",
+                        "updated": 1713343522000,
+                        "topic": {
+                            "text": "Entertainment & Arts",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9j39l8pt&type=topic",
+                                        "id": "cvrl9j39l8pt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Entertainment & Arts",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/97DC/production/_133167883_cra0d8e84e7d97e633e18f7116e2c79b03d995e46b.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Dec 3, 2023; Green Bay, Wisconsin, USA; Kansas City Chiefs tight end Travis Kelce looks on during warmups prior to the Green Bay Packers against the Green Bay Packers at Lambeau Field.",
+                                "copyrightText": "Reuters"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:16505b20-45d1-4fe5-8983-d6b44923b983"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon defends selling book linked to woman's death",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-manchester-68789096&service=news&type=asset",
+                                    "id": "/news/uk-england-manchester-68789096",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "A coroner says a book telling people how to take their own lives is \"readily available\" on the site.",
+                        "updated": 1712900663000,
+                        "topic": {
+                            "text": "Manchester",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=ceq8p90z9xpt&type=topic",
+                                        "id": "ceq8p90z9xpt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Manchester",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.5,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/99AE/production/_133124393_0e3aabfa2f67f568cf746461e3e338c0d94159f8.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Amazon",
+                                "copyrightText": "PASCAL ROSSIGNOL"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:4fd8315f-a185-47e0-8f9a-4d9cd609a328"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Stars say Fallout TV show brought games to life",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=newsbeat-68790064&service=news&type=asset",
+                                    "id": "/news/newsbeat-68790064",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Two stars of Amazon's adaptation of the hit video game talk about recreating its apocalyptic world.",
+                        "updated": 1712847596000,
+                        "topic": {
+                            "text": "Newsbeat",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=c9mn073kx8jt&type=topic",
+                                        "id": "c9mn073kx8jt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Newsbeat",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/05B6/production/_133126410_fallout_s1_ut_221201_whijoj_00058rc_-_e_3000-1.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "A young woman with long black hair stands in an artificially lit, cylindrical corridor with various pipes supported by bright yellow struts along its length She's looking back over her shoulder with an impassive expression. She wears a close-fitting, dark blue leather jumpsuit with panelling down the arms.",
+                                "copyrightText": "JOJO WHILDEN"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:3a99048c-f145-4e66-9c1a-faff90bbe0d0"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon cuts hundreds of jobs in cloud business",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68729318&service=news&type=asset",
+                                    "id": "/news/business-68729318",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Amazon Web Services represents 14% of the firm's overall revenue but the firm is shifting strategies.",
+                        "updated": 1712202150000,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/BA83/production/_133074774_gettyimages-1808364407.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Attendees walk through an expo hall at AWS re:Invent 2023, a conference hosted by Amazon Web Service in Las Vegas.",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:9dca8739-e390-4a82-8a35-2662d35f0cbf"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon workers walk out on two-day strike",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "HTML",
+                                    "url": "https://www.bbc.com/news/articles/cll5dv31d2no",
+                                    "id": "https://www.bbc.com/news/articles/cll5dv31d2no",
+                                    "presentation": {
+                                        "type": "WEB",
+                                        "contentSource": "BBC"
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "More than 200 union members prepare to walk out of the firm's fulfilment centre in Sutton Coldfield.",
+                        "updated": 1711532057611,
+                        "topic": {
+                            "text": "Birmingham & Black Country",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cr1k15w1vk6t&type=topic",
+                                        "id": "cr1k15w1vk6t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Birmingham & Black Country",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/ab46/live/5f907ac0-eb71-11ee-83e8-372527fa0ffd.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Amazon workers striking in Coventry",
+                                "caption": "Amazon workers are on strike on Wednesday and Thursday",
+                                "copyrightText": "Reuters"
+                            }
+                        },
+                        "uasToken": "urn:bbc:optimo:asset:cll5dv31d2no"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "MacKenzie Scott donates $640m to US non-profits",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=world-us-canada-68609687&service=news&type=asset",
+                                    "id": "/news/world-us-canada-68609687",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "She has given $16.5bn in donations since divorcing Amazon founder Jeff Bezos in 2019.",
+                        "updated": 1710945864000,
+                        "topic": {
+                            "text": "US & Canada",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cp35rmprpn5t&type=topic",
+                                        "id": "cp35rmprpn5t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "US & Canada",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/10AB6/production/_117487286_mackenziescott2.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Ms. Scott is one of the world’s wealthiest women.",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:84197c13-d351-4169-b9fb-b512fc156b2f"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "How Temu is shaking up the world of online shopping",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68563339&service=news&type=asset",
+                                    "id": "/news/business-68563339",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Despite controversy China's Temu is becoming a global online shopping force.",
+                        "updated": 1710806968000,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/8090/production/_132921923_gettyimages-1653668946.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Temu package",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:569ac68c-7c4a-49b3-aa10-3b60c7dfebb6"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Sweet maker to drop Amazon over stock row",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-south-yorkshire-68564845&service=news&type=asset",
+                                    "id": "/news/uk-england-south-yorkshire-68564845",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Maxons Sweets claim Amazon are delaying paying invoices over non-existent stock issues",
+                        "updated": 1710418231000,
+                        "topic": {
+                            "text": "Sheffield & South Yorkshire",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cp60w97zl7kt&type=topic",
+                                        "id": "cp60w97zl7kt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Sheffield & South Yorkshire",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/16712/production/_132922919_62ce3e4287d8dcf38bd89af55380f452b51492250_0_4032_30242000x1500.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Richard Pitchfork holding some sweets",
+                                "copyrightText": "Jack Hadaway-Weller/BBC"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:678f474c-dfce-4b69-9f3d-e8181549f832"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon workers announce fresh strikes",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "HTML",
+                                    "url": "https://www.bbc.com/news/articles/ckrx15kex58o",
+                                    "id": "https://www.bbc.com/news/articles/ckrx15kex58o",
+                                    "presentation": {
+                                        "type": "WEB",
+                                        "contentSource": "BBC"
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Workers announce further strike dates in Coventry and Sutton Coldfield in a dispute over pay.",
+                        "updated": 1710245540009,
+                        "topic": {
+                            "text": "England",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=ck71r1x591xt&type=topic",
+                                        "id": "ck71r1x591xt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "England",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7775520568816658,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/bd27/live/92935510-e062-11ee-a1e7-93a0620e4c1a.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Amazon workers striking in Coventry",
+                                "caption": "GMB union members will go on strike on four dates in March",
+                                "copyrightText": "PA"
+                            }
+                        },
+                        "uasToken": "urn:bbc:optimo:asset:ckrx15kex58o"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "European parliament revokes Amazon lobbyist passes",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=technology-68428536&service=news&type=asset",
+                                    "id": "/news/technology-68428536",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "MEPs have accused the retailer of failing to cooperate with enquiries into its working practices.",
+                        "updated": 1709142059000,
+                        "topic": {
+                            "text": "Technology",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9jzx0r5t&type=topic",
+                                        "id": "cvrl9jzx0r5t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Technology",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/14CF4/production/_132763258_gettyimages-1231874026.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Amazon logo on a warehouse",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:a58a37f9-50a7-4af9-94b0-e679831dce0d"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon founder Bezos completes $8.5bn share sale",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68355811&service=news&type=asset",
+                                    "id": "/news/business-68355811",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The firm had previously said its founder would sell up to 50 million shares by the end of January 2025.",
+                        "updated": 1708481575000,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/92DF/production/_132699573_gettyimages-1929775267-1.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Jeff Bezos and partner Lauren Sanchez at Milan Fashion Week.",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:d4c653f6-d173-49cb-82f2-c9b839a72e02"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Big tech vows action on 'deceptive' AI in elections",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=technology-68316683&service=news&type=asset",
+                                    "id": "/news/technology-68316683",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Twenty firms have signed an accord pledging to stop voters being deceived but critics say it lacks teeth.",
+                        "updated": 1708103746000,
+                        "topic": {
+                            "text": "Technology",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9jzx0r5t&type=topic",
+                                        "id": "cvrl9jzx0r5t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Technology",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/2E6E/production/_132668811_gettyimages-1368404093.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Graphic of a hand putting a voting slip into a ballot box",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:43d5ad9a-d3b3-4bb5-b2a6-1726ed23eb27"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon founder Bezos sells shares worth over $4bn",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68277678&service=news&type=asset",
+                                    "id": "/news/business-68277678",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The multi-billionaire moved to Florida last year, which has no state tax on share sales above $250,000.",
+                        "updated": 1707887001000,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/7641/production/_132637203_gettyimages-1930527954-1.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Lauren Sánchez and Jeff Bezos arrive at the Dolce&Gabbana Party during the Milan Menswear Fall/Winter 2024-2025 on 13 January, 2024 in Milan, Italy.",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:c6518031-a1de-428a-a49a-cd8f85a05f8f"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon staff walk out on 'Valentine's Day' strike",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-coventry-warwickshire-68275312&service=news&type=asset",
+                                    "id": "/news/uk-england-coventry-warwickshire-68275312",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "About 1,000 workers in Coventry start three days of strike action in a dispute over pay.",
+                        "updated": 1707806140000,
+                        "topic": {
+                            "text": "Coventry & Warwickshire",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cnlkl1gkn5jt&type=topic",
+                                        "id": "cnlkl1gkn5jt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Coventry & Warwickshire",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/278B/production/_132632101_2b289206ab9b4b76f50e4424a843e0e82926ad0b.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Amazon worker protesting with megaphone",
+                                "copyrightText": "PA Media"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:0199f3c9-48d5-4a6f-bde8-56761f6b7674"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Ring doorbell customers angry at 43% price hike",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=technology-68250127&service=news&type=asset",
+                                    "id": "/news/technology-68250127",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Users have taken to message boards to complain about the increase, which they say is unjustified.",
+                        "updated": 1707483621000,
+                        "topic": {
+                            "text": "Technology",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9jzx0r5t&type=topic",
+                                        "id": "cvrl9jzx0r5t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Technology",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/A42E/production/_132603024_ring_1-1.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "A finger pushing the button on a ring doorbell",
+                                "copyrightText": "Ring"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:edd9c989-5c8e-4d2c-912f-93070feb7fe4"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon staff target Valentine's Day with strike",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-coventry-warwickshire-68239721&service=news&type=asset",
+                                    "id": "/news/uk-england-coventry-warwickshire-68239721",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "A walkout of more than 1,000 staff is set to take place at the Coventry site from 13 to 15 February.",
+                        "updated": 1707414517000,
+                        "topic": {
+                            "text": "Coventry & Warwickshire",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cnlkl1gkn5jt&type=topic",
+                                        "id": "cnlkl1gkn5jt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Coventry & Warwickshire",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/1677/production/_132415750_amazon.png",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Coventry Amazon workers strike",
+                                "copyrightText": "PA Media"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:3faf7a30-bee9-47e3-a300-da33fc67619d"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Saltburn's use of dressing gown shocks firm owner",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "HTML",
+                                    "url": "https://www.bbc.com/news/articles/c3g0n9j28n5o",
+                                    "id": "https://www.bbc.com/news/articles/c3g0n9j28n5o",
+                                    "presentation": {
+                                        "type": "WEB",
+                                        "contentSource": "BBC"
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The garment by British Boxers features prominently in the film that has been snubbed by Oscars judges.",
+                        "updated": 1707286289715,
+                        "topic": {
+                            "text": "Stoke & Staffordshire",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cw9v6l8dek5t&type=topic",
+                                        "id": "cw9v6l8dek5t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Stoke & Staffordshire",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7780517879161528,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/7b97/live/ba425e00-c4f4-11ee-a708-a5e3cd8184fa.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "A scene from the movie Saltburn",
+                                "caption": "British Boxers' dressing gown can be seen in the Amazon Prime hit Saltburn",
+                                "copyrightText": "Prime"
+                            }
+                        },
+                        "uasToken": "urn:bbc:optimo:asset:c3g0n9j28n5o"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Zuckerberg wins on Wall Street after Washington hit",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68175778&service=news&type=asset",
+                                    "id": "/news/business-68175778",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "Meta shares surge as it reports a jump in users, ad sales and profits, despite Washington concerns.",
+                        "updated": 1706864564000,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/D1B2/production/_132528635_whatsubject.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Mark Zuckerberg",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:40621a1f-23a7-4945-93d7-e70fefe42002"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon-iRobot deal scrapped after EU challenge",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68131819&service=news&type=asset",
+                                    "id": "/news/business-68131819",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The maker of the Roomba vacuum maker announces job cuts as the planned takeover collapses.",
+                        "updated": 1706545902000,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/8051/production/_132494823_irobot_gettyimages-1945576383.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "IRobot Roomba vacuum cleaners",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:337db372-f4c0-4001-aab6-8d984b8d747a"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Workers at new Amazon warehouse on strike over pay",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-birmingham-68082223&service=news&type=asset",
+                                    "id": "/news/uk-england-birmingham-68082223",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "About 60 GMB members joined the picket line at the Sutton Coldfield site on Thursday morning.",
+                        "updated": 1706178248000,
+                        "topic": {
+                            "text": "Birmingham & Black Country",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cr1k15w1vk6t&type=topic",
+                                        "id": "cr1k15w1vk6t",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Birmingham & Black Country",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/14B06/production/_132424748_amazon.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "GMB members on strike on Thursday",
+                                "copyrightText": "GMB"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:eb5dc0d6-08f6-4fec-a807-a696b2a218c2"
+                    },
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Amazon fined for 'excessive' surveillance of workers",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68067022&service=news&type=asset",
+                                    "id": "/news/business-68067022",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The online retail giant was found to be keeping detailed data on employee working patterns.",
+                        "updated": 1706018742000,
+                        "topic": {
+                            "text": "Business",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "id": "cjn6w9x7j9wt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Business",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/3BEC/production/_132404351_amazon.png",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Man scanning box",
+                                "copyrightText": "Getty Images"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:d7d2f734-1feb-4cb7-9ea9-9d5a994a24a2"
+                    }
+                ]
+            },
+            {
+                "type": "Copyright",
+                "lastUpdated": 1714857420678
+            }
+        ],
+        "trackers": [
+            {
+                "type": "ati_v2",
+                "payload": {
+                    "page_title": "Amazon",
+                    "bbc_content_type": "index-topic",
+                    "bbc_producer": "NEWS",
+                    "name": "news.topics.c50znx8v8y4t.amazon.page",
+                    "bbc_content_id": "urn:bbc:tipo:topic:c50znx8v8y4t"
+                }
+            }
+        ]
+    },
+    "contentType": "application/json; charset=utf-8"
+}
