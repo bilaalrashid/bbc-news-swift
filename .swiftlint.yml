@@ -2,6 +2,7 @@ excluded:
   - ${PWD}/Carthage
   - ${PWD}/Pods
   - ${PWD}/DerivedData
+  - ${PWD}/.build
 
 disabled_rules:
   - multiple_closures_with_trailing_closure
