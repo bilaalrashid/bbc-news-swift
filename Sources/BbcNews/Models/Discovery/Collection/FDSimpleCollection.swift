@@ -10,10 +10,10 @@ import Foundation
 public struct FDSimpleCollection: FDCollection, Codable, Equatable, Hashable {
     /// Used for decoding `FDItem`. This is always `SimpleCollection`.
     internal let type: String
-    public var items: [FDStoryPromo]
+    public var storyPromos: [FDStoryPromo]
 
     public init(items: [FDStoryPromo]) {
         self.type = "SimpleCollection"
-        self.items = items
+        self.storyPromos = items
     }
 }
