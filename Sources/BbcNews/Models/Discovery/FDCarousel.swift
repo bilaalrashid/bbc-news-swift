@@ -8,14 +8,15 @@
 import Foundation
 
 public struct FDCarousel: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `Carousel`.
+    internal let type: String
     public var items: [FDStoryPromo]
     public var aspectRatio: Double
     public var presentation: FDPresentation
     public var hasPageIndicator: Bool
 
-    public init(type: String, items: [FDStoryPromo], aspectRatio: Double, presentation: FDPresentation, hasPageIndicator: Bool) {
-        self.type = type
+    public init(items: [FDStoryPromo], aspectRatio: Double, presentation: FDPresentation, hasPageIndicator: Bool) {
+        self.type = "Carousel"
         self.items = items
         self.aspectRatio = aspectRatio
         self.presentation = presentation

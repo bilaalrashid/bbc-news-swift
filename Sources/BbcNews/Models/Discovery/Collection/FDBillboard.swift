@@ -8,11 +8,12 @@
 import Foundation
 
 public struct FDBillboard: FDCollection, Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `Billboard`.
+    internal let type: String
     public var items: [FDStoryPromo]
 
-    public init(type: String, items: [FDStoryPromo]) {
-        self.type = type
+    public init(items: [FDStoryPromo]) {
+        self.type = "Billboard"
         self.items = items
     }
 }

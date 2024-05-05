@@ -8,7 +8,8 @@
 import Foundation
 
 public struct FDHeadline: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `Headline`.
+    internal let type: String
     public var text: String
     public var lastUpdated: Int?
     public var firstPublished: Int?
@@ -23,7 +24,6 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     }
 
     public init(
-        type: String,
         text: String,
         lastUpdated: Int? = nil,
         firstPublished: Int? = nil,
@@ -33,7 +33,7 @@ public struct FDHeadline: Codable, Equatable, Hashable {
         languageCode: String,
         readTimeMinutes: Int
     ) {
-        self.type = type
+        self.type = "Headline"
         self.text = text
         self.lastUpdated = lastUpdated
         self.firstPublished = firstPublished

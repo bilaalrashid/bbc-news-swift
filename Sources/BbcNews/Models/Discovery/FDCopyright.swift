@@ -8,11 +8,12 @@
 import Foundation
 
 public struct FDCopyright: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `Copyright`.
+    internal let type: String
     public var lastUpdated: Int
 
-    public init(type: String, lastUpdated: Int) {
-        self.type = type
+    public init(lastUpdated: Int) {
+        self.type = "Copyright"
         self.lastUpdated = lastUpdated
     }
 }

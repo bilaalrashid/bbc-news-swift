@@ -8,13 +8,14 @@
 import Foundation
 
 public struct FDWeatherPromoSummary: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `WeatherPromoSummary`.
+    internal let type: String
     public var period: String
     public var location: FDWeatherLocation
     public var forecast: FDWeatherForecast
 
-    public init(type: String, period: String, location: FDWeatherLocation, forecast: FDWeatherForecast) {
-        self.type = type
+    public init(period: String, location: FDWeatherLocation, forecast: FDWeatherForecast) {
+        self.type = "WeatherPromoSummary"
         self.period = period
         self.location = location
         self.forecast = forecast

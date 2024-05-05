@@ -8,12 +8,13 @@
 import Foundation
 
 public struct FDTextContainer: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `textContainer`.
+    internal let type: String
     public var containerType: String
     public var text: FDTextContainerText
 
-    public init(type: String, containerType: String, text: FDTextContainerText) {
-        self.type = type
+    public init(containerType: String, text: FDTextContainerText) {
+        self.type = "textContainer"
         self.containerType = containerType
         self.text = text
     }

@@ -8,12 +8,13 @@
 import Foundation
 
 public struct FDImage: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `Image`.
+    internal let type: String
     public var source: FDImageSource
     public var metadata: FDImageMetadata?
 
-    public init(type: String, source: FDImageSource, metadata: FDImageMetadata? = nil) {
-        self.type = type
+    public init(source: FDImageSource, metadata: FDImageMetadata? = nil) {
+        self.type = "Image"
         self.source = source
         self.metadata = metadata
     }

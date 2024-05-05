@@ -8,11 +8,12 @@
 import Foundation
 
 public struct FDChipList: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `ChipList`.
+    internal let type: String
     public var items: [FDTopic]
 
-    public init(type: String, items: [FDTopic]) {
-        self.type = type
+    public init(items: [FDTopic]) {
+        self.type = "ChipList"
         self.items = items
     }
 }

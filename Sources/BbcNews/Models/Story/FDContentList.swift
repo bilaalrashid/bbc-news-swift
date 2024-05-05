@@ -8,12 +8,13 @@
 import Foundation
 
 public struct FDContentList: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `ContentList`.
+    internal let type: String
     public var ordering: String
     public var listItems: [FDTextContainerText]
 
-    public init(type: String, ordering: String, listItems: [FDTextContainerText]) {
-        self.type = type
+    public init(ordering: String, listItems: [FDTextContainerText]) {
+        self.type = "ContentList"
         self.ordering = ordering
         self.listItems = listItems
     }

@@ -8,11 +8,12 @@
 import Foundation
 
 public struct FDSectionHeader: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `SectionHeader`.
+    internal let type: String
     public var text: String
 
-    public init(type: String, text: String) {
-        self.type = type
+    public init(text: String) {
+        self.type = "SectionHeader"
         self.text = text
     }
 }

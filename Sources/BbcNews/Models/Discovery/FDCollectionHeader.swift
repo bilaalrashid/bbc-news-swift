@@ -8,12 +8,13 @@
 import Foundation
 
 public struct FDCollectionHeader: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `CollectionHeader`.
+    internal let type: String
     public var text: String
     public var link: FDLink?
 
-    public init(type: String, text: String, link: FDLink? = nil) {
-        self.type = type
+    public init(text: String, link: FDLink? = nil) {
+        self.type = "CollectionHeader"
         self.text = text
         self.link = link
     }

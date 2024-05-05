@@ -8,6 +8,5 @@
 import Foundation
 
 public protocol FDCollection {
-    var type: String { get }
     var items: [FDStoryPromo] { get }
 }

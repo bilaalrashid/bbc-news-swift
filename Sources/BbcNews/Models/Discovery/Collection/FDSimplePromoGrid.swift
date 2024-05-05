@@ -8,11 +8,12 @@
 import Foundation
 
 public struct FDSimplePromoGrid: FDCollection, Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `SimplePromoGrid`.
+    internal let type: String
     public var items: [FDStoryPromo]
 
-    public init(type: String, items: [FDStoryPromo]) {
-        self.type = type
+    public init(items: [FDStoryPromo]) {
+        self.type = "SimplePromoGrid"
         self.items = items
     }
 }

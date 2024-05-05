@@ -8,7 +8,8 @@
 import Foundation
 
 public struct FDStoryPromo: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `StoryPromo`.
+    internal let type: String
     public var style: String
     public var languageCode: String
     public var text: String?
@@ -21,7 +22,6 @@ public struct FDStoryPromo: Codable, Equatable, Hashable {
     public var uasToken: String?
 
     public init(
-        type: String,
         style: String,
         languageCode: String,
         text: String? = nil,
@@ -33,7 +33,7 @@ public struct FDStoryPromo: Codable, Equatable, Hashable {
         badges: [FDBadge]? = nil,
         uasToken: String? = nil
     ) {
-        self.type = type
+        self.type = "StoryPromo"
         self.style = style
         self.languageCode = languageCode
         self.text = text

@@ -46,7 +46,6 @@ final class FDImageTests: XCTestCase {
 
     private func getFDImage(sizingMethod: String) -> FDImage {
         return FDImage(
-            type: "Image",
             source: FDImageSource(
                 url: "https://example.invalid/img/{width}/example.jpg",
                 sizingMethod: FDImageSizingMethod(

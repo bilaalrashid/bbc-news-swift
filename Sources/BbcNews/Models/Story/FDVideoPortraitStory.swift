@@ -8,15 +8,16 @@
 import Foundation
 
 public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
-    public var type: String
+    /// Used for decoding `FDItem`. This is always `VideoPortraitStory`.
+    internal let type: String
     public var id: String
     public var url: String
     public var text: String
     public var subtext: String
     public var media: FDMedia
 
-    public init(type: String, id: String, url: String, text: String, subtext: String, media: FDMedia) {
-        self.type = type
+    public init(id: String, url: String, text: String, subtext: String, media: FDMedia) {
+        self.type = "VideoPortraitStory"
         self.id = id
         self.url = url
         self.text = text
