@@ -19,4 +19,17 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
         self.id = id
         self.presentation = presentation
     }
+
+    /// Returns the URL for sharing the link destination.
+    public var shareUrl: URL? {
+        switch self.sourceFormat {
+        case "ABL":
+            // The ID will contain a leading slash, so we shouldn't include one ourself in the concatenation.
+            return URL(string: "https://bbc.co.uk" + self.id)
+        case "HTML":
+            return URL(string: self.url)
+        default:
+            return nil
+        }
+    }
 }
