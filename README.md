@@ -1,5 +1,8 @@
 # BbcNewsSwift
 
+![Tests](https://github.com/bilaalrashid/BbcNewsSwift/actions/workflows/lint.yml/badge.svg)
+![Tests](https://github.com/bilaalrashid/BbcNewsSwift/actions/workflows/test.yml/badge.svg)
+
 A Swift API client for the BBC News API.
 
 ## Linting
