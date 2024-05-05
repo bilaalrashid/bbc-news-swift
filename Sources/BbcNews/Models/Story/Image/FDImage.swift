@@ -8,9 +8,9 @@
 import Foundation
 
 public struct FDImage: Codable, Equatable, Hashable {
-    public let type: String
-    public let source: FDImageSource
-    public let metadata: FDImageMetadata?
+    public var type: String
+    public var source: FDImageSource
+    public var metadata: FDImageMetadata?
 
     public init(type: String, source: FDImageSource, metadata: FDImageMetadata? = nil) {
         self.type = type

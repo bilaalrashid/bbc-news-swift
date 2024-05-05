@@ -8,11 +8,11 @@
 import Foundation
 
 public struct FDTextContainerSpan: Codable, Equatable, Hashable {
-    public let type: String
-    public let startIndex: Int
-    public let length: Int
-    public let attribute: String?
-    public let link: FDLink?
+    public var type: String
+    public var startIndex: Int
+    public var length: Int
+    public var attribute: String?
+    public var link: FDLink?
 
     public init(type: String, startIndex: Int, length: Int, attribute: String? = nil, link: FDLink? = nil) {
         self.type = type

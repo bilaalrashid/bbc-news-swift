@@ -8,8 +8,8 @@
 import Foundation
 
 public struct FDResult: Codable, Equatable, Hashable {
-    public let data: FDData
-    public let contentType: String
+    public var data: FDData
+    public var contentType: String
 
     public init(data: FDData, contentType: String) {
         self.data = data

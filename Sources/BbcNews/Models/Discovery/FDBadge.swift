@@ -8,10 +8,10 @@
 import Foundation
 
 public struct FDBadge: Codable, Equatable, Hashable {
-    public let type: String
-    public let brand: String
-    public let text: String?
-    public let duration: Int?
+    public var type: String
+    public var brand: String
+    public var text: String?
+    public var duration: Int?
 
     public init(type: String, brand: String, text: String? = nil, duration: Int? = nil) {
         self.type = type

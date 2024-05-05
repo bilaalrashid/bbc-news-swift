@@ -8,17 +8,17 @@
 import Foundation
 
 public struct FDStoryPromo: Codable, Equatable, Hashable {
-    public let type: String
-    public let style: String
-    public let languageCode: String
-    public let text: String?
-    public let link: FDLink
-    public let subtext: String?
-    public let updated: Int?
-    public let topic: FDTopic?
-    public let image: FDImage?
-    public let badges: [FDBadge]?
-    public let uasToken: String?
+    public var type: String
+    public var style: String
+    public var languageCode: String
+    public var text: String?
+    public var link: FDLink
+    public var subtext: String?
+    public var updated: Int?
+    public var topic: FDTopic?
+    public var image: FDImage?
+    public var badges: [FDBadge]?
+    public var uasToken: String?
 
     public init(
         type: String,

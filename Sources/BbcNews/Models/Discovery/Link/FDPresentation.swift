@@ -8,10 +8,10 @@
 import Foundation
 
 public struct FDPresentation: Codable, Equatable, Hashable {
-    public let type: String
-    public let title: String?
-    public let canShare: Bool?
-    public let contentSource: String?
+    public var type: String
+    public var title: String?
+    public var canShare: Bool?
+    public var contentSource: String?
 
     public init(type: String, title: String? = nil, canShare: Bool? = nil, contentSource: String? = nil) {
         self.type = type

@@ -8,7 +8,7 @@
 import Foundation
 
 public struct FDTemperature: Codable, Equatable, Hashable {
-    public let celsius: Int
+    public var celsius: Int
 
     public init(celsius: Int) {
         self.celsius = celsius

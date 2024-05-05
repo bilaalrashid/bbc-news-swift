@@ -8,10 +8,10 @@
 import Foundation
 
 public struct FDLinkDestination: Codable, Equatable, Hashable {
-    public let sourceFormat: String
-    public let url: String
-    public let id: String
-    public let presentation: FDPresentation
+    public var sourceFormat: String
+    public var url: String
+    public var id: String
+    public var presentation: FDPresentation
 
     public init(sourceFormat: String, url: String, id: String, presentation: FDPresentation) {
         self.sourceFormat = sourceFormat

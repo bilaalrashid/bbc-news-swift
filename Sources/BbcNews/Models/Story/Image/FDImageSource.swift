@@ -8,9 +8,9 @@
 import Foundation
 
 public struct FDImageSource: Codable, Equatable, Hashable {
-    public let url: String
-    public let sizingMethod: FDImageSizingMethod
-    public let aspectRatio: Double?
+    public var url: String
+    public var sizingMethod: FDImageSizingMethod
+    public var aspectRatio: Double?
 
     public init(url: String, sizingMethod: FDImageSizingMethod, aspectRatio: Double? = nil) {
         self.url = url

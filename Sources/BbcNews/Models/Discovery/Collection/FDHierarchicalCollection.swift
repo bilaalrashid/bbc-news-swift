@@ -8,8 +8,8 @@
 import Foundation
 
 public struct FDHierarchicalCollection: FDCollection, Codable, Equatable, Hashable {
-    public let type: String
-    public let items: [FDStoryPromo]
+    public var type: String
+    public var items: [FDStoryPromo]
 
     public init(type: String, items: [FDStoryPromo]) {
         self.type = type

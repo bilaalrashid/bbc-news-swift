@@ -8,8 +8,8 @@
 import Foundation
 
 public struct FDTextContainerText: Codable, Equatable, Hashable {
-    public let text: String
-    public let spans: [FDTextContainerSpan]
+    public var text: String
+    public var spans: [FDTextContainerSpan]
 
     public init(text: String, spans: [FDTextContainerSpan]) {
         self.text = text

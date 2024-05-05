@@ -8,10 +8,10 @@
 import Foundation
 
 public struct FDMedia: Codable, Equatable, Hashable {
-    public let type: String
-    public let source: FDMediaSource
-    public let image: FDImage
-    public let metadata: FDMediaMetadata
+    public var type: String
+    public var source: FDMediaSource
+    public var image: FDImage
+    public var metadata: FDMediaMetadata
 
     public init(type: String, source: FDMediaSource, image: FDImage, metadata: FDMediaMetadata) {
         self.type = type

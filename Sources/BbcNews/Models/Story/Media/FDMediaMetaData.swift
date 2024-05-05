@@ -8,12 +8,12 @@
 import Foundation
 
 public struct FDMediaMetadata: Codable, Equatable, Hashable {
-    public let title: String
-    public let summary: String?
-    public let caption: String
-    public let timestamp: Int
-    public let associatedContentUrl: String
-    public let allowAdvertising: Bool
+    public var title: String
+    public var summary: String?
+    public var caption: String
+    public var timestamp: Int
+    public var associatedContentUrl: String
+    public var allowAdvertising: Bool
 
     public init(
         title: String,

@@ -8,9 +8,9 @@
 import Foundation
 
 public struct FDTopic: Codable, Equatable, Hashable {
-    public let text: String?
-    public let title: String?
-    public let link: FDLink?
+    public var text: String?
+    public var title: String?
+    public var link: FDLink?
 
     public init(text: String? = nil, title: String? = nil, link: FDLink? = nil) {
         self.text = text

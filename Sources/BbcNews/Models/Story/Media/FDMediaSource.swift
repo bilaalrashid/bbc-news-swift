@@ -8,13 +8,13 @@
 import Foundation
 
 public struct FDMediaSource: Codable, Equatable, Hashable {
-    public let type: String
-    public let id: String
-    public let duration: Int
-    public let aspectRatio: Double
-    public let isLive: Bool
-    public let canAutoPlay: Bool
-    public let episodePid: String
+    public var type: String
+    public var id: String
+    public var duration: Int
+    public var aspectRatio: Double
+    public var isLive: Bool
+    public var canAutoPlay: Bool
+    public var episodePid: String
 
     public init(type: String, id: String, duration: Int, aspectRatio: Double, isLive: Bool, canAutoPlay: Bool, episodePid: String) {
         self.type = type

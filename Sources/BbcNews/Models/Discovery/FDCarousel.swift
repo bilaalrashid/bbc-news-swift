@@ -8,11 +8,11 @@
 import Foundation
 
 public struct FDCarousel: Codable, Equatable, Hashable {
-    public let type: String
-    public let items: [FDStoryPromo]
-    public let aspectRatio: Double
-    public let presentation: FDPresentation
-    public let hasPageIndicator: Bool
+    public var type: String
+    public var items: [FDStoryPromo]
+    public var aspectRatio: Double
+    public var presentation: FDPresentation
+    public var hasPageIndicator: Bool
 
     public init(type: String, items: [FDStoryPromo], aspectRatio: Double, presentation: FDPresentation, hasPageIndicator: Bool) {
         self.type = type

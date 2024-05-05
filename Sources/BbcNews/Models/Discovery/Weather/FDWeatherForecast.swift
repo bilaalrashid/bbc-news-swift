@@ -8,11 +8,11 @@
 import Foundation
 
 public struct FDWeatherForecast: Codable, Equatable, Hashable {
-    public let description: String
-    public let high: FDTemperature
-    public let low: FDTemperature
-    public let icon: String
-    public let nighttimeLayout: Bool
+    public var description: String
+    public var high: FDTemperature
+    public var low: FDTemperature
+    public var icon: String
+    public var nighttimeLayout: Bool
 
     public init(description: String, high: FDTemperature, low: FDTemperature, icon: String, nighttimeLayout: Bool) {
         self.description = description

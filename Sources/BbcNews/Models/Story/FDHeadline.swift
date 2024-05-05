@@ -8,15 +8,15 @@
 import Foundation
 
 public struct FDHeadline: Codable, Equatable, Hashable {
-    public let type: String
-    public let text: String
-    public let lastUpdated: Int?
-    public let firstPublished: Int?
-    public let lastPublished: Int?
-    public let byline: FDHeadlineByline?
-    public let topic: FDTopic?
-    public let languageCode: String
-    public let readTimeMinutes: Int
+    public var type: String
+    public var text: String
+    public var lastUpdated: Int?
+    public var firstPublished: Int?
+    public var lastPublished: Int?
+    public var byline: FDHeadlineByline?
+    public var topic: FDTopic?
+    public var languageCode: String
+    public var readTimeMinutes: Int
 
     public var published: Int? {
         return self.lastUpdated ?? self.lastPublished ?? self.firstPublished

@@ -8,8 +8,8 @@
 import Foundation
 
 public struct FDHeadlineByline: Codable, Equatable, Hashable {
-    public let name: String
-    public let purpose: String
+    public var name: String
+    public var purpose: String
 
     public init(name: String, purpose: String) {
         self.name = name

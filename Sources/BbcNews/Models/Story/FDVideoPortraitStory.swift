@@ -8,12 +8,12 @@
 import Foundation
 
 public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
-    public let type: String
-    public let id: String
-    public let url: String
-    public let text: String
-    public let subtext: String
-    public let media: FDMedia
+    public var type: String
+    public var id: String
+    public var url: String
+    public var text: String
+    public var subtext: String
+    public var media: FDMedia
 
     public init(type: String, id: String, url: String, text: String, subtext: String, media: FDMedia) {
         self.type = type

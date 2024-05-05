@@ -8,10 +8,10 @@
 import Foundation
 
 public struct FDDataMetadata: Codable, Equatable, Hashable {
-    public let name: String
-    public let allowAdvertising: Bool
-    public let lastUpdated: Int
-    public let shareUrl: String?
+    public var name: String
+    public var allowAdvertising: Bool
+    public var lastUpdated: Int
+    public var shareUrl: String?
 
     public init(name: String, allowAdvertising: Bool, lastUpdated: Int, shareUrl: String? = nil) {
         self.name = name

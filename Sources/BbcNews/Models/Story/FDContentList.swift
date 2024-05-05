@@ -8,9 +8,9 @@
 import Foundation
 
 public struct FDContentList: Codable, Equatable, Hashable {
-    public let type: String
-    public let ordering: String
-    public let listItems: [FDTextContainerText]
+    public var type: String
+    public var ordering: String
+    public var listItems: [FDTextContainerText]
 
     public init(type: String, ordering: String, listItems: [FDTextContainerText]) {
         self.type = type

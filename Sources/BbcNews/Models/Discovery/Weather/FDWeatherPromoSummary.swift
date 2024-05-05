@@ -8,10 +8,10 @@
 import Foundation
 
 public struct FDWeatherPromoSummary: Codable, Equatable, Hashable {
-    public let type: String
-    public let period: String
-    public let location: FDWeatherLocation
-    public let forecast: FDWeatherForecast
+    public var type: String
+    public var period: String
+    public var location: FDWeatherLocation
+    public var forecast: FDWeatherForecast
 
     public init(type: String, period: String, location: FDWeatherLocation, forecast: FDWeatherForecast) {
         self.type = type
