@@ -19,7 +19,5 @@ jobs:
         with:
           swift-version: ${{ matrix.swift }}
       - uses: actions/checkout@v4
-      - name: Install test Package.swift
-        run: mv PackageTests.swift Package.swift
       - name: Run tests
         run: swift test
