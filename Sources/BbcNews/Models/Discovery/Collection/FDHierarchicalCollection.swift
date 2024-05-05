@@ -12,8 +12,12 @@ public struct FDHierarchicalCollection: FDCollection, Codable, Equatable, Hashab
     internal let type: String
     public var storyPromos: [FDStoryPromo]
 
-    public init(items: [FDStoryPromo]) {
+    public init(storyPromos: [FDStoryPromo]) {
         self.type = "HierarchicalCollection"
-        self.storyPromos = items
+        self.storyPromos = storyPromos
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case type, storyPromos = "items"
     }
 }

@@ -10,10 +10,14 @@ import Foundation
 public struct FDChipList: Codable, Equatable, Hashable {
     /// Used for decoding `FDItem`. This is always `ChipList`.
     internal let type: String
-    public var items: [FDTopic]
+    public var topics: [FDTopic]
 
-    public init(items: [FDTopic]) {
+    public init(topics: [FDTopic]) {
         self.type = "ChipList"
-        self.items = items
+        self.topics = topics
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case type, topics = "items"
     }
 }

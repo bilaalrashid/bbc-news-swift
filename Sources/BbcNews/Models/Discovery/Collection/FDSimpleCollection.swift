@@ -12,8 +12,12 @@ public struct FDSimpleCollection: FDCollection, Codable, Equatable, Hashable {
     internal let type: String
     public var storyPromos: [FDStoryPromo]
 
-    public init(items: [FDStoryPromo]) {
+    public init(storyPromos: [FDStoryPromo]) {
         self.type = "SimpleCollection"
-        self.storyPromos = items
+        self.storyPromos = storyPromos
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case type, storyPromos = "items"
     }
 }
