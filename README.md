@@ -7,8 +7,18 @@ A Swift API client for the BBC News API.
 
 ## Linting
 
+This project uses SwiftLint to enforce coding style.
+
+You can check for any style violations using:
+
 ```
 swiftlint --config .swiftlint.yml --strict
+```
+
+You can attempt to fix any violations using:
+
+```
+swiftlint --config .swiftlint.yml --strict --fix
 ```
 
 ## Testing
