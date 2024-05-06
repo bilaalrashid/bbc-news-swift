@@ -14,6 +14,7 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     public var lastUpdated: Int?
     public var firstPublished: Int?
     public var lastPublished: Int?
+    /// A legacy method for storing article bylines. Modern articles use a `FDByline` object as a sibling instead.
     public var byline: FDHeadlineByline?
     public var topic: FDTopic?
     public var languageCode: String

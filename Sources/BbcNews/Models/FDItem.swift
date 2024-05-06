@@ -22,6 +22,7 @@ public enum FDItem: Codable, Equatable, Hashable {
     case media(FDMedia)
     case image(FDImage)
     case headline(FDHeadline)
+    case byline(FDByline)
     case textContainer(FDTextContainer)
     case sectionHeader(FDSectionHeader)
     case contentList(FDContentList)
@@ -86,6 +87,10 @@ public enum FDItem: Codable, Equatable, Hashable {
             self = .headline(value)
             return
         }
+        if let value = try? container.decode(FDByline.self), value.type == "Byline" {
+            self = .byline(value)
+            return
+        }
         if let value = try? container.decode(FDTextContainer.self), value.type == "textContainer" {
             self = .textContainer(value)
             return
@@ -136,6 +141,8 @@ public enum FDItem: Codable, Equatable, Hashable {
         case .image(let value):
             try container.encode(value)
         case .headline(let value):
+            try container.encode(value)
+        case .byline(let value):
             try container.encode(value)
         case .textContainer(let value):
             try container.encode(value)

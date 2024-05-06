@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// A legacy method for storing article bylines.
+///
+/// Modern articles use a `FDByline` object instead.
 public struct FDHeadlineByline: Codable, Equatable, Hashable {
     public var name: String
     public var purpose: String
