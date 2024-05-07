@@ -11,7 +11,7 @@ import XCTest
 final class SchemaTests: XCTestCase {
     func testFDResult() throws {
         // Ignore call-to-action banner, which we don't support
-        try self.executeTest(file: "IndexDiscovery", unknownIndexesToIgnore: [41])
+        try self.executeTest(file: "IndexDiscovery", unknownIndexesToIgnore: [35])
         try self.executeTest(file: "Topic")
         try self.executeTest(file: "Story")
     }

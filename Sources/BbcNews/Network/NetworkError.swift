@@ -8,12 +8,15 @@
 import Foundation
 
 public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
+    case noUrl
     case invalidUrl(url: String)
     case invalidResponse
     case unsuccessfulStatusCode(code: Int)
 
     public var description: String {
         switch self {
+        case .noUrl:
+            return "There was no URL to request"
         case .invalidUrl(let url):
             return "\(url) is not a valid URL"
         case .invalidResponse:
@@ -25,6 +28,8 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
 
     public var errorDescription: String? {
         switch self {
+        case .noUrl:
+            return NSLocalizedString(self.description, comment: "No URL")
         case .invalidUrl:
             return NSLocalizedString(self.description, comment: "Invalid URL")
         case .invalidResponse:

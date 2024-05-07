@@ -1,5 +1,6 @@
 {
     "data": {
+        "type": "ContentResponse",
         "metadata": {
             "name": "Amazon",
             "allowAdvertising": true,
@@ -7,8 +8,149 @@
         },
         "items": [
             {
+                "type": "TopicButton",
+                "topic": {
+                    "text": "Amazon"
+                },
+                "resourceId": "urn:bbc:tipo:topic:c50znx8v8y4t",
+                "trackedEvents": [
+                    {
+                        "event": "unfollow",
+                        "trackers": [
+                            {
+                                "type": "ati_v2",
+                                "payload": {
+                                    "action_type": "tap",
+                                    "action_name": "news-topic-index-follow-component~unfollow"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "event": "follow",
+                        "trackers": [
+                            {
+                                "type": "ati_v2",
+                                "payload": {
+                                    "action_type": "tap",
+                                    "action_name": "news-topic-index-follow-component~follow"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "type": "SimplePromoGrid",
                 "items": [
+                    {
+                        "type": "StoryPromo",
+                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                        "languageCode": "en-gb",
+                        "text": "Jobs boost as Amazon announces plan for new site",
+                        "link": {
+                            "trackers": [
+                                {
+                                    "type": "ati_v2",
+                                    "payload": {
+                                        "action_type": "feedNormal-tap-position0",
+                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                    }
+                                }
+                            ],
+                            "destinations": [
+                                {
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-england-northamptonshire-68969371&service=news&type=asset",
+                                    "id": "/news/uk-england-northamptonshire-68969371",
+                                    "presentation": {
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
+                                    }
+                                }
+                            ]
+                        },
+                        "subtext": "The so-called fulfilment centre will be built in Northampton and could take customer orders in 2026.",
+                        "updated": 1715076108000,
+                        "topic": {
+                            "text": "Northampton",
+                            "link": {
+                                "trackers": [
+                                    {
+                                        "type": "ati_v2",
+                                        "payload": {
+                                            "action_type": "feedNormal-attributionTap-position0",
+                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
+                                        }
+                                    }
+                                ],
+                                "destinations": [
+                                    {
+                                        "sourceFormat": "ABL",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=c383j9k4ldzt&type=topic",
+                                        "id": "c383j9k4ldzt",
+                                        "presentation": {
+                                            "type": "SINGLE_RENDERER",
+                                            "title": "Northampton",
+                                            "canShare": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "image": {
+                            "type": "Image",
+                            "source": {
+                                "aspectRatio": 1.7777777777777777,
+                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/4F6A/production/_127403302_whatsubject.jpg",
+                                "sizingMethod": {
+                                    "type": "SPECIFIC_WIDTHS",
+                                    "widthToken": "{width}",
+                                    "widths": [
+                                        80,
+                                        100,
+                                        128,
+                                        144,
+                                        160,
+                                        200,
+                                        240,
+                                        288,
+                                        320,
+                                        360,
+                                        400,
+                                        432,
+                                        480,
+                                        512,
+                                        576,
+                                        640,
+                                        720,
+                                        768,
+                                        780,
+                                        800,
+                                        854,
+                                        960,
+                                        1024,
+                                        1080,
+                                        1136,
+                                        1152,
+                                        1200,
+                                        1280,
+                                        1440,
+                                        1536,
+                                        1600,
+                                        1920,
+                                        2048,
+                                        2560
+                                    ]
+                                }
+                            },
+                            "metadata": {
+                                "altText": "Amazon package",
+                                "copyrightText": "Reuters"
+                            }
+                        },
+                        "uasToken": "urn:bbc:cps:curie:asset:c7be8f63-4178-4d95-a990-1bb2d3469f9f"
+                    },
                     {
                         "type": "StoryPromo",
                         "style": "SMALL_HORIZONTAL_PROMO_CARD",
@@ -26,12 +168,12 @@
                             ],
                             "destinations": [
                                 {
-                                    "sourceFormat": "HTML",
-                                    "url": "https://www.bbc.com/news/articles/cp9g7mky27no",
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcp9g7mky27no&clientName=Chrysalis&clientVersion=pre-7",
                                     "id": "https://www.bbc.com/news/articles/cp9g7mky27no",
                                     "presentation": {
-                                        "type": "WEB",
-                                        "contentSource": "BBC"
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
                                     }
                                 }
                             ]
@@ -53,7 +195,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cnlkl1gkn5jt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cnlkl1gkn5jt&type=topic",
                                         "id": "cnlkl1gkn5jt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -135,12 +277,12 @@
                             ],
                             "destinations": [
                                 {
-                                    "sourceFormat": "HTML",
-                                    "url": "https://www.bbc.com/news/articles/c9ez72kn1rlo",
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc9ez72kn1rlo&clientName=Chrysalis&clientVersion=pre-7",
                                     "id": "https://www.bbc.com/news/articles/c9ez72kn1rlo",
                                     "presentation": {
-                                        "type": "WEB",
-                                        "contentSource": "BBC"
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
                                     }
                                 }
                             ]
@@ -162,7 +304,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cjn6w9x7j9wt&type=topic",
                                         "id": "cjn6w9x7j9wt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -244,7 +386,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=world-us-canada-68918102&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=world-us-canada-68918102&service=news&type=asset",
                                     "id": "/news/world-us-canada-68918102",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -270,7 +412,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cp35rmprpn5t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cp35rmprpn5t&type=topic",
                                         "id": "cp35rmprpn5t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -352,7 +494,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=entertainment-arts-68834389&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=entertainment-arts-68834389&service=news&type=asset",
                                     "id": "/news/entertainment-arts-68834389",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -378,7 +520,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9j39l8pt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cvrl9j39l8pt&type=topic",
                                         "id": "cvrl9j39l8pt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -460,7 +602,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-manchester-68789096&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-england-manchester-68789096&service=news&type=asset",
                                     "id": "/news/uk-england-manchester-68789096",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -486,7 +628,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=ceq8p90z9xpt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=ceq8p90z9xpt&type=topic",
                                         "id": "ceq8p90z9xpt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -568,7 +710,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=newsbeat-68790064&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=newsbeat-68790064&service=news&type=asset",
                                     "id": "/news/newsbeat-68790064",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -594,7 +736,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=c9mn073kx8jt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=c9mn073kx8jt&type=topic",
                                         "id": "c9mn073kx8jt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -676,7 +818,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68729318&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=business-68729318&service=news&type=asset",
                                     "id": "/news/business-68729318",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -702,7 +844,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cjn6w9x7j9wt&type=topic",
                                         "id": "cjn6w9x7j9wt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -783,12 +925,12 @@
                             ],
                             "destinations": [
                                 {
-                                    "sourceFormat": "HTML",
-                                    "url": "https://www.bbc.com/news/articles/cll5dv31d2no",
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcll5dv31d2no&clientName=Chrysalis&clientVersion=pre-7",
                                     "id": "https://www.bbc.com/news/articles/cll5dv31d2no",
                                     "presentation": {
-                                        "type": "WEB",
-                                        "contentSource": "BBC"
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
                                     }
                                 }
                             ]
@@ -810,7 +952,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cr1k15w1vk6t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cr1k15w1vk6t&type=topic",
                                         "id": "cr1k15w1vk6t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -893,7 +1035,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=world-us-canada-68609687&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=world-us-canada-68609687&service=news&type=asset",
                                     "id": "/news/world-us-canada-68609687",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -919,7 +1061,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cp35rmprpn5t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cp35rmprpn5t&type=topic",
                                         "id": "cp35rmprpn5t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1001,7 +1143,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68563339&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=business-68563339&service=news&type=asset",
                                     "id": "/news/business-68563339",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1027,7 +1169,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cjn6w9x7j9wt&type=topic",
                                         "id": "cjn6w9x7j9wt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1109,7 +1251,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-south-yorkshire-68564845&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-england-south-yorkshire-68564845&service=news&type=asset",
                                     "id": "/news/uk-england-south-yorkshire-68564845",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1135,7 +1277,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cp60w97zl7kt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cp60w97zl7kt&type=topic",
                                         "id": "cp60w97zl7kt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1216,12 +1358,12 @@
                             ],
                             "destinations": [
                                 {
-                                    "sourceFormat": "HTML",
-                                    "url": "https://www.bbc.com/news/articles/ckrx15kex58o",
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fckrx15kex58o&clientName=Chrysalis&clientVersion=pre-7",
                                     "id": "https://www.bbc.com/news/articles/ckrx15kex58o",
                                     "presentation": {
-                                        "type": "WEB",
-                                        "contentSource": "BBC"
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
                                     }
                                 }
                             ]
@@ -1243,7 +1385,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=ck71r1x591xt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=ck71r1x591xt&type=topic",
                                         "id": "ck71r1x591xt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1326,7 +1468,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=technology-68428536&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=technology-68428536&service=news&type=asset",
                                     "id": "/news/technology-68428536",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1352,7 +1494,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9jzx0r5t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cvrl9jzx0r5t&type=topic",
                                         "id": "cvrl9jzx0r5t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1434,7 +1576,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68355811&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=business-68355811&service=news&type=asset",
                                     "id": "/news/business-68355811",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1460,7 +1602,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cjn6w9x7j9wt&type=topic",
                                         "id": "cjn6w9x7j9wt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1542,7 +1684,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=technology-68316683&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=technology-68316683&service=news&type=asset",
                                     "id": "/news/technology-68316683",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1568,7 +1710,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9jzx0r5t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cvrl9jzx0r5t&type=topic",
                                         "id": "cvrl9jzx0r5t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1650,7 +1792,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68277678&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=business-68277678&service=news&type=asset",
                                     "id": "/news/business-68277678",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1676,7 +1818,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cjn6w9x7j9wt&type=topic",
                                         "id": "cjn6w9x7j9wt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1758,7 +1900,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-coventry-warwickshire-68275312&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-england-coventry-warwickshire-68275312&service=news&type=asset",
                                     "id": "/news/uk-england-coventry-warwickshire-68275312",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1784,7 +1926,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cnlkl1gkn5jt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cnlkl1gkn5jt&type=topic",
                                         "id": "cnlkl1gkn5jt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1866,7 +2008,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=technology-68250127&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=technology-68250127&service=news&type=asset",
                                     "id": "/news/technology-68250127",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -1892,7 +2034,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cvrl9jzx0r5t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cvrl9jzx0r5t&type=topic",
                                         "id": "cvrl9jzx0r5t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -1974,7 +2116,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-coventry-warwickshire-68239721&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-england-coventry-warwickshire-68239721&service=news&type=asset",
                                     "id": "/news/uk-england-coventry-warwickshire-68239721",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -2000,7 +2142,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cnlkl1gkn5jt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cnlkl1gkn5jt&type=topic",
                                         "id": "cnlkl1gkn5jt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -2081,12 +2223,12 @@
                             ],
                             "destinations": [
                                 {
-                                    "sourceFormat": "HTML",
-                                    "url": "https://www.bbc.com/news/articles/c3g0n9j28n5o",
+                                    "sourceFormat": "ABL",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc3g0n9j28n5o&clientName=Chrysalis&clientVersion=pre-7",
                                     "id": "https://www.bbc.com/news/articles/c3g0n9j28n5o",
                                     "presentation": {
-                                        "type": "WEB",
-                                        "contentSource": "BBC"
+                                        "type": "SINGLE_RENDERER",
+                                        "canShare": true
                                     }
                                 }
                             ]
@@ -2108,7 +2250,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cw9v6l8dek5t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cw9v6l8dek5t&type=topic",
                                         "id": "cw9v6l8dek5t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -2191,7 +2333,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68175778&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=business-68175778&service=news&type=asset",
                                     "id": "/news/business-68175778",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -2217,7 +2359,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cjn6w9x7j9wt&type=topic",
                                         "id": "cjn6w9x7j9wt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -2299,7 +2441,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68131819&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=business-68131819&service=news&type=asset",
                                     "id": "/news/business-68131819",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -2325,7 +2467,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cjn6w9x7j9wt&type=topic",
                                         "id": "cjn6w9x7j9wt",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -2407,7 +2549,7 @@
                             "destinations": [
                                 {
                                     "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=uk-england-birmingham-68082223&service=news&type=asset",
+                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-england-birmingham-68082223&service=news&type=asset",
                                     "id": "/news/uk-england-birmingham-68082223",
                                     "presentation": {
                                         "type": "SINGLE_RENDERER",
@@ -2433,7 +2575,7 @@
                                 "destinations": [
                                     {
                                         "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cr1k15w1vk6t&type=topic",
+                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cr1k15w1vk6t&type=topic",
                                         "id": "cr1k15w1vk6t",
                                         "presentation": {
                                             "type": "SINGLE_RENDERER",
@@ -2496,120 +2638,12 @@
                             }
                         },
                         "uasToken": "urn:bbc:cps:curie:asset:eb5dc0d6-08f6-4fec-a807-a696b2a218c2"
-                    },
-                    {
-                        "type": "StoryPromo",
-                        "style": "SMALL_HORIZONTAL_PROMO_CARD",
-                        "languageCode": "en-gb",
-                        "text": "Amazon fined for 'excessive' surveillance of workers",
-                        "link": {
-                            "trackers": [
-                                {
-                                    "type": "ati_v2",
-                                    "payload": {
-                                        "action_type": "feedNormal-tap-position0",
-                                        "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
-                                    }
-                                }
-                            ],
-                            "destinations": [
-                                {
-                                    "sourceFormat": "ABL",
-                                    "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=business-68067022&service=news&type=asset",
-                                    "id": "/news/business-68067022",
-                                    "presentation": {
-                                        "type": "SINGLE_RENDERER",
-                                        "canShare": true
-                                    }
-                                }
-                            ]
-                        },
-                        "subtext": "The online retail giant was found to be keeping detailed data on employee working patterns.",
-                        "updated": 1706018742000,
-                        "topic": {
-                            "text": "Business",
-                            "link": {
-                                "trackers": [
-                                    {
-                                        "type": "ati_v2",
-                                        "payload": {
-                                            "action_type": "feedNormal-attributionTap-position0",
-                                            "action_name": "latestUpdates-8da727e17c504bb5b7688b7c695a8829"
-                                        }
-                                    }
-                                ],
-                                "destinations": [
-                                    {
-                                        "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=cjn6w9x7j9wt&type=topic",
-                                        "id": "cjn6w9x7j9wt",
-                                        "presentation": {
-                                            "type": "SINGLE_RENDERER",
-                                            "title": "Business",
-                                            "canShare": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        "image": {
-                            "type": "Image",
-                            "source": {
-                                "aspectRatio": 1.7777777777777777,
-                                "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/3BEC/production/_132404351_amazon.png",
-                                "sizingMethod": {
-                                    "type": "SPECIFIC_WIDTHS",
-                                    "widthToken": "{width}",
-                                    "widths": [
-                                        80,
-                                        100,
-                                        128,
-                                        144,
-                                        160,
-                                        200,
-                                        240,
-                                        288,
-                                        320,
-                                        360,
-                                        400,
-                                        432,
-                                        480,
-                                        512,
-                                        576,
-                                        640,
-                                        720,
-                                        768,
-                                        780,
-                                        800,
-                                        854,
-                                        960,
-                                        1024,
-                                        1080,
-                                        1136,
-                                        1152,
-                                        1200,
-                                        1280,
-                                        1440,
-                                        1536,
-                                        1600,
-                                        1920,
-                                        2048,
-                                        2560
-                                    ]
-                                }
-                            },
-                            "metadata": {
-                                "altText": "Man scanning box",
-                                "copyrightText": "Getty Images"
-                            }
-                        },
-                        "uasToken": "urn:bbc:cps:curie:asset:d7d2f734-1feb-4cb7-9ea9-9d5a994a24a2"
                     }
                 ]
             },
             {
                 "type": "Copyright",
-                "lastUpdated": 1714857420678
+                "lastUpdated": 1715107205131
             }
         ],
         "trackers": [

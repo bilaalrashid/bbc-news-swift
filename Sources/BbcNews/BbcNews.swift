@@ -20,18 +20,23 @@ import UIKit
 ///
 /// This attempts to mimic the User-Agent of the iOS app.
 public struct BbcNews {
-    /// The base URL at which the API is hosted at.
-    public static let baseUrl = "https://news-app.api.bbc.co.uk"
+    /// The hostname at which the API is hosted at.
+    public static let hostname = "news-app.api.bbc.co.uk"
 
     /// Checks if a URL is hosted on the BBC News API.
     ///
     /// - Parameter url: The URL to check.
     /// - Returns: If the URL is hosted on the BBC News API.
     public static func isApiUrl(url: String) -> Bool {
-        guard let baseHostname = URL(string: self.baseUrl)?.host else { return false }
         guard let hostname = URL(string: url)?.host else { return false }
-        return hostname == baseHostname
+        return hostname == self.hostname
     }
+
+    /// The value of `clientName` in API network requests.
+    private let clientName = "Chrysalis"
+
+    /// The value of `clientVersion` in API network requests.
+    private let clientVersion = "pre-7"
 
     /// The session to perform network requests from.
     private let session: URLSession
@@ -68,7 +73,7 @@ public struct BbcNews {
         configuration.httpAdditionalHeaders = [
             // Pretend to be the BBC News app
             // Example: BBCNews/25339 (iPhone15,2; iOS 16.6) BBCHTTPClient/9.0.0
-            "User-Agent": "BBCNews/25339 (\(modelIdentifier); \(systemName) \(systemVersion)) BBCHTTPClient/9.0.0"
+            "User-Agent": "BBCNews/25625 (\(modelIdentifier); \(systemName) \(systemVersion)) BBCHTTPClient/10.0.0"
         ]
         self.session = URLSession(configuration: configuration)
     }
@@ -78,15 +83,23 @@ public struct BbcNews {
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
     public func fetchIndexDiscoveryPage(postcode: String? = nil) async throws -> FDResult {
-        let url: String = {
-            var url = BbcNews.baseUrl + "/fd/abl?page=chrysalis_discovery&service=news&type=index&clientName=Chrysalis"
-            if let postcode = postcode {
-                url += "&clientLoc=" + postcode
-            }
-            return url
-        }()
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = BbcNews.hostname
+        components.path = "/fd/abl"
+        components.queryItems = [
+            URLQueryItem(name: "clientName", value: self.clientName),
+            URLQueryItem(name: "clientVersion", value: self.clientVersion),
+            URLQueryItem(name: "page", value: "chrysalis_discovery"),
+            URLQueryItem(name: "service", value: "news"),
+            URLQueryItem(name: "type", value: "index")
+        ]
 
-        return try await self.fetchFDUrl(url: url)
+        if let url = components.url?.absoluteString {
+            return try await self.fetchFDUrl(url: url)
+        }
+
+        throw NetworkError.noUrl
     }
 
     /// Fetches the pages for multiple topics.
@@ -108,8 +121,22 @@ public struct BbcNews {
     /// - Parameter topicId: The topic ID to fetch.
     /// - Returns: The fetched topic page.
     public func fetchTopicPage(for topicId: String) async throws -> FDResult {
-        let url = BbcNews.baseUrl + "/fd/abl?clientName=Chrysalis&clientVersion=pre-5&page=\(topicId)&type=topic"
-        return try await self.fetchFDUrl(url: url)
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = BbcNews.hostname
+        components.path = "/fd/abl"
+        components.queryItems = [
+            URLQueryItem(name: "clientName", value: self.clientName),
+            URLQueryItem(name: "clientVersion", value: self.clientVersion),
+            URLQueryItem(name: "page", value: topicId),
+            URLQueryItem(name: "type", value: "topic")
+        ]
+
+        if let url = components.url?.absoluteString {
+            return try await self.fetchFDUrl(url: url)
+        }
+
+        throw NetworkError.noUrl
     }
 
     /// Fetches a page from the BBC News API.

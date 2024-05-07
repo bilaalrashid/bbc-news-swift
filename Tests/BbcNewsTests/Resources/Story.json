@@ -1,708 +1,443 @@
 {
     "data": {
         "metadata": {
-            "name": "UK heatwave: Hottest day recorded as thunderstorms warning in some areas",
+            "name": "TikTok sues to block US law which could ban app",
             "allowAdvertising": true,
-            "lastUpdated": 1709629559000,
-            "shareUrl": "https://www.bbc.co.uk/news/uk-66759254"
+            "lastUpdated": 0,
+            "shareUrl": "https://www.bbc.com/news/articles/c72pqlgqe4jo"
         },
         "items": [
             {
-                "type": "Image",
-                "source": {
-                    "aspectRatio": 1.7777777777777777,
-                    "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/151F2/production/_131041568_1076834be0241711d5944cc35e97aca5541036ea0_470_7834_44091000x563.jpg",
-                    "sizingMethod": {
-                        "type": "SPECIFIC_WIDTHS",
-                        "widthToken": "{width}",
-                        "widths": [
-                            80,
-                            100,
-                            128,
-                            144,
-                            160,
-                            200,
-                            240,
-                            288,
-                            320,
-                            360,
-                            400,
-                            432,
-                            480,
-                            512,
-                            576,
-                            640,
-                            720,
-                            768,
-                            780,
-                            800,
-                            854,
-                            960,
-                            1024,
-                            1080,
-                            1136,
-                            1152,
-                            1200,
-                            1280,
-                            1440,
-                            1536,
-                            1600,
-                            1920,
-                            2048,
-                            2560
-                        ]
-                    }
-                },
-                "metadata": {
-                    "altText": "A woman uses a fan to cool herself in an underground train in London",
-                    "copyrightText": "EPA"
-                }
-            },
-            {
-                "type": "Headline",
-                "text": "UK heatwave: Hottest day recorded as thunderstorms warning in some areas",
-                "firstPublished": 1694223379000,
-                "lastPublished": 1694285117000,
+                "text": "TikTok sues to block US law which could ban app",
+                "lastPublished": 1715106355225,
+                "firstPublished": 1715100556663,
                 "topic": {
-                    "text": "UK",
+                    "text": "Business",
                     "link": {
-                        "trackers": [],
                         "destinations": [
                             {
-                                "sourceFormat": "ABL",
-                                "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=czpxgx8070wt&service=news&type=topic",
-                                "id": "czpxgx8070wt",
+                                "id": "https://www.bbc.co.uk/news/business",
+                                "url": "https://www.bbc.co.uk/news/business",
+                                "sourceFormat": "HTML",
                                 "presentation": {
-                                    "type": "SINGLE_RENDERER",
-                                    "title": "UK",
-                                    "canShare": false
+                                    "type": "WEB",
+                                    "contentSource": "BBC"
                                 }
                             }
-                        ]
+                        ],
+                        "trackers": []
                     }
                 },
-                "languageCode": "en-gb",
-                "readTimeMinutes": 2
+                "type": "Headline",
+                "lastUpdated": 1715106355225
             },
             {
-                "type": "Byline",
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/37e6/live/0660b600-0c90-11ef-91ef-3101b349bfcd.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 1.7777777777777777
+                    },
+                    "metadata": {
+                        "altText": "A person holds a sign during a press conference about their opposition to a TikTok ban on Capitol Hill in Washington, DC on March 22, 2023.",
+                        "copyrightText": "Getty Images"
+                    },
+                    "type": "Image"
+                },
+                "type": "ImageContainer"
+            },
+            {
                 "contributors": [
                     {
-                        "type": "Contributor",
-                        "name": "Marita Moloney",
-                        "role": "BBC News"
+                        "name": "Natalie Sherman",
+                        "role": "Business reporter, New York"
                     }
-                ]
+                ],
+                "type": "Byline"
             },
             {
-                "type": "textContainer",
-                "containerType": "introduction",
                 "text": {
-                    "text": "Saturday was the hottest day of the year, according to provisional figures from the Met Office.",
+                    "text": "TikTok has filed a lawsuit aiming to block a US law that would ban in the video app in the country unless it is sold by its Chinese parent company.",
                     "spans": []
-                }
+                },
+                "containerType": "body",
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "body",
                 "text": {
-                    "text": "A temperature of 32.7C (91F) was recorded at Heathrow Airport, making it the sixth day in a row that the heat had exceeded 30 degrees. ",
+                    "text": "In the filing, the social media company called the act an \"extraordinary intrusion on free speech rights\" of the company and its 170 million American users. ",
                     "spans": []
-                }
+                },
+                "containerType": "body",
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "body",
                 "text": {
-                    "text": "Thursday was previously the warmest day of 2023, with 32.6C recorded in Wisley, Surrey. ",
+                    "text": "It said the US had put forward only \"speculative concerns\" to justify the measure and asked the court to stop it.",
                     "spans": []
-                }
+                },
+                "containerType": "body",
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "body",
                 "text": {
-                    "text": "But Saturday may be the last hot day for parts of England and Wales, with a warning of possible thunderstorms.",
-                    "spans": []
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "A yellow Met Office weather warning for thunderstorms is in place on Sunday for most of Northern Ireland, parts of northern England and Wales, and parts of southern Scotland, from 14:00 BST to 23:59. ",
-                    "spans": []
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "It comes as figures published by NHS England show there has been a fivefold increase in the number of people seeking advice about heat exhaustion over the past week.",
-                    "spans": []
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "The current heatwave is the longest run of 30C September days on record.",
+                    "text": "President Joe Biden signed the bill into law last month, citing national security justifications. ",
                     "spans": [
                         {
                             "type": "link",
-                            "startIndex": 24,
-                            "length": 47,
+                            "startIndex": 20,
+                            "length": 35,
                             "link": {
-                                "trackers": [],
                                 "destinations": [
                                     {
-                                        "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=uk-66743788&service=news&type=asset",
-                                        "id": "/news/uk-66743788",
+                                        "id": "https://www.bbc.co.uk/news/articles/c87zp82247yo",
+                                        "url": "https://www.bbc.co.uk/news/articles/c87zp82247yo",
+                                        "sourceFormat": "HTML",
                                         "presentation": {
-                                            "type": "SINGLE_RENDERER",
-                                            "canShare": true
+                                            "type": "WEB",
+                                            "contentSource": "BBC"
                                         }
                                     }
-                                ]
+                                ],
+                                "trackers": []
                             }
                         }
                     ]
-                }
-            },
-            {
-                "type": "ContentList",
-                "ordering": "UNORDERED",
-                "listItems": [
-                    {
-                        "text": "How to keep your home cool ",
-                        "spans": [
-                            {
-                                "type": "link",
-                                "startIndex": 0,
-                                "length": 27,
-                                "link": {
-                                    "trackers": [],
-                                    "destinations": [
-                                        {
-                                            "sourceFormat": "ABL",
-                                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=science-environment-62209480&service=news&type=asset",
-                                            "id": "/news/science-environment-62209480",
-                                            "presentation": {
-                                                "type": "SINGLE_RENDERER",
-                                                "canShare": true
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "text": "Tips on sleeping in the heat",
-                        "spans": [
-                            {
-                                "type": "link",
-                                "startIndex": 0,
-                                "length": 28,
-                                "link": {
-                                    "trackers": [],
-                                    "destinations": [
-                                        {
-                                            "sourceFormat": "ABL",
-                                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=health-49072212&service=news&type=asset",
-                                            "id": "/news/health-49072212",
-                                            "presentation": {
-                                                "type": "SINGLE_RENDERER",
-                                                "canShare": true
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "text": "What are the heat exhaustion and heatstroke symptoms?",
-                        "spans": [
-                            {
-                                "type": "link",
-                                "startIndex": 0,
-                                "length": 53,
-                                "link": {
-                                    "trackers": [],
-                                    "destinations": [
-                                        {
-                                            "sourceFormat": "ABL",
-                                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=health-62120167&service=news&type=asset",
-                                            "id": "/news/health-62120167",
-                                            "presentation": {
-                                                "type": "SINGLE_RENDERER",
-                                                "canShare": true
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "textContainer",
+                },
                 "containerType": "body",
-                "text": {
-                    "text": "BBC Weather presenter Sarah Keith-Lucas said Sunday would be another very hot day, especially in the south, with temperatures of 32C possible. ",
-                    "spans": []
-                }
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
+                "text": {
+                    "text": "It followed years of debate in Washington, which has claimed that TikTok's Chinese ownership raises the risk that data on US users could fall into the hands of the Chinese government or be used for propaganda. ",
+                    "spans": []
+                },
                 "containerType": "body",
-                "text": {
-                    "text": "Temperatures will cooler further north, with a chance of more widespread showers and thunderstorms later in the day, but southern and eastern parts should stay dry.",
-                    "spans": []
-                }
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
+                "text": {
+                    "text": "TikTok has maintained it is independent, while parent company ByteDance has said it has no plans to sell the business. ",
+                    "spans": []
+                },
                 "containerType": "body",
-                "text": {
-                    "text": "Cooler air will reach all parts of the UK through the early part of next week with showers in the forecast at times.",
-                    "spans": []
-                }
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "crosshead",
                 "text": {
-                    "text": "Heat exhaustion queries",
+                    "text": "The Chinese government has criticised the law as US \"bullying\" of a foreign firm and signalled it would oppose a sale.",
                     "spans": []
-                }
-            },
-            {
-                "type": "textContainer",
+                },
                 "containerType": "body",
-                "text": {
-                    "text": "Meanwhile, an amber heat-health warning issued by the UK Health Security Agency is in effect for nearly every area of England until 21:00 on Sunday.",
-                    "spans": []
-                }
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "body",
                 "text": {
-                    "text": "This indicates that the effects of high temperatures could be felt across the whole health service.",
+                    "text": "Under the US law, app stores would be barred from offering TikTok in the US starting in January 2025, unless parent company ByteDance finds a buyer. President Biden could extend that deadline by 90 days if talks are making progress. ",
                     "spans": []
-                }
+                },
+                "containerType": "body",
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "body",
                 "text": {
-                    "text": "Prolonged heat above 30C is a risk for older people and those with respiratory or cardiovascular diseases.",
+                    "text": "In the filing, TikTok said that requirement was \"simply not possible: not commercially, not technologically, not legally.  And certainly not on the 270-day timeline required by the Act\".",
                     "spans": []
-                }
+                },
+                "containerType": "body",
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "body",
                 "text": {
-                    "text": "The rise in temperatures has led to a 552% increase in people visiting the NHS website for heat exhaustion advice. ",
+                    "text": "The Department of Justice declined to comment. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "TikTok had previously said it planned to contest the law in the courts. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "In the filing with the DC Circuit Court of Appeals on Tuesday it said the measure unfairly singled out TikTok, creating a “two-tiered speech regime with one set of rules for one named platform, and another set of rules for everyone else”.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "It noted that similar attempted bans, including by former president Donald Trump, had met with trouble in US courts.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The company added that the decision by many politicians, including Mr Biden, to maintain accounts on the app undermined the claims of a security threat. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The US has in the past restricted foreign ownership of broadcast television and radio stations, which require government licences to access public airwaves. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "TikTok said its business was distinct, and the government could not dictate ownership of \"privately created speech forums\".",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "It said it had spent more than $2bn in an effort to address US concerns, creating safeguards on US data. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Jacob Helberg, who leads a committee charged by Congress with monitoring the national security implications of US-China trade, said TikTok's investments were viewed in Washington as a \"deceptive marketing effort\".",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "He said the lawsuit was \"unserious\" and failed \"to address the national security question at hand\".",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "But Jameel Jaffer, executive director of the Knight First Amendment Institute at Columbia University, said he expected TikTok’s challenge to succeed.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"The first amendment means the government can’t restrict Americans’ access to ideas, information, or media from abroad without a very good reason for it - and no such reason exists here,” he said.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "TikTok's suit comes as recent comments by US Senator Mitt Romney, which tied support for the ban to the desire to shape US perceptions of the Israel-Gaza conflict, have drawn attention. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"Some wonder why there was such overwhelming support for us to shut down potentially TikTok or other entities of that nature,\" Mr Romney said.",
                     "spans": [
                         {
                             "type": "link",
-                            "startIndex": 71,
-                            "length": 42,
+                            "startIndex": 137,
+                            "length": 4,
                             "link": {
-                                "trackers": [],
                                 "destinations": [
                                     {
+                                        "id": "https://www.state.gov/secretary-antony-j-blinken-at-mccain-institutes-2024-sedona-forum-keynote-conversation-with-senator-mitt-romney/",
+                                        "url": "https://www.state.gov/secretary-antony-j-blinken-at-mccain-institutes-2024-sedona-forum-keynote-conversation-with-senator-mitt-romney/",
                                         "sourceFormat": "HTML",
-                                        "url": "https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/",
-                                        "id": "https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/",
                                         "presentation": {
                                             "type": "WEB",
                                             "contentSource": "EXTERNAL"
                                         }
                                     }
-                                ]
+                                ],
+                                "trackers": []
                             }
-                        }
-                    ]
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "There were 32,130 visits to the health advice page on heat exhaustion and heatstroke from Sunday to Thursday this week, according to figures released by NHS England, which runs the NHS website.",
-                    "spans": [
-                        {
-                            "type": "link",
-                            "startIndex": 54,
-                            "length": 30,
-                            "link": {
-                                "trackers": [],
-                                "destinations": [
-                                    {
-                                        "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=health-62120167&service=news&type=asset",
-                                        "id": "/news/health-62120167",
-                                        "presentation": {
-                                            "type": "SINGLE_RENDERER",
-                                            "canShare": true
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "There were 4,928 visits made during the same period last week.",
-                    "spans": []
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "Heatwaves have become more frequent, more intense, and last longer because of human-induced climate change.",
-                    "spans": [
-                        {
-                            "type": "link",
-                            "startIndex": 10,
-                            "length": 56,
-                            "link": {
-                                "trackers": [],
-                                "destinations": [
-                                    {
-                                        "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=science-environment-58073295&service=news&type=asset",
-                                        "id": "/news/science-environment-58073295",
-                                        "presentation": {
-                                            "type": "SINGLE_RENDERER",
-                                            "canShare": true
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "Last year the UK recorded temperatures above 40C for the first time. Scientists said that would have been \"virtually impossible without climate change\".",
-                    "spans": []
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "The world has already warmed by an average of 1.1C since the industrial era began and temperatures will keep rising unless governments around the world make steep cuts to greenhouse gas emissions.",
-                    "spans": []
-                }
-            },
-            {
-                "type": "Image",
-                "source": {
-                    "aspectRatio": 8.384279475982533,
-                    "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/1739F/production/_113753159_yqa_get_in_touch_top_no_yqa_text_640-nc.png",
-                    "sizingMethod": {
-                        "type": "SPECIFIC_WIDTHS",
-                        "widthToken": "{width}",
-                        "widths": [
-                            80,
-                            100,
-                            128,
-                            144,
-                            160,
-                            200,
-                            240,
-                            288,
-                            320,
-                            360,
-                            400,
-                            432,
-                            480,
-                            512,
-                            576,
-                            640,
-                            720,
-                            768,
-                            780,
-                            800,
-                            854,
-                            960,
-                            1024,
-                            1080,
-                            1136,
-                            1152,
-                            1200,
-                            1280,
-                            1440,
-                            1536,
-                            1600,
-                            1920,
-                            2048,
-                            2560
-                        ]
-                    }
-                },
-                "metadata": {
-                    "altText": "Banner saying 'Get in touch'"
-                }
-            },
-            {
-                "type": "textContainer",
-                "containerType": "body",
-                "text": {
-                    "text": "If you have you been affected by the hot weather, you can share your tips and experiences by emailing: haveyoursay@bbc.co.uk.",
-                    "spans": [
+                        },
                         {
                             "type": "emphasis",
-                            "startIndex": 0,
-                            "length": 103,
+                            "startIndex": 137,
+                            "length": 4,
                             "attribute": "bold"
                         },
                         {
-                            "type": "link",
-                            "startIndex": 103,
-                            "length": 21,
-                            "link": {
-                                "trackers": [],
-                                "destinations": [
-                                    {
-                                        "sourceFormat": "HTML",
-                                        "url": "mailto:haveyoursay@bbc.co.uk?subject=Heatwave66759254",
-                                        "id": "mailto:haveyoursay@bbc.co.uk?subject=Heatwave66759254",
-                                        "presentation": {
-                                            "type": "WEB",
-                                            "contentSource": "BBC"
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "type": "emphasis",
-                            "startIndex": 124,
+                            "startIndex": 141,
                             "length": 1,
                             "attribute": "bold"
                         }
                     ]
-                }
+                },
+                "containerType": "body",
+                "type": "textContainer"
             },
             {
-                "type": "textContainer",
-                "containerType": "body",
                 "text": {
-                    "text": "Please include a contact number if you are willing to speak to a BBC journalist. You can also get in touch in the following ways:",
+                    "text": "\"If you look at the postings on TikTok and the number of mentions of Palestinians, relative to other social media sites - it's overwhelmingly so among TikTok broadcasts.\"",
                     "spans": []
-                }
-            },
-            {
-                "type": "ContentList",
-                "ordering": "UNORDERED",
-                "listItems": [
-                    {
-                        "text": "WhatsApp: +44 7756 165803",
-                        "spans": [
-                            {
-                                "type": "emphasis",
-                                "startIndex": 10,
-                                "length": 15,
-                                "attribute": "bold"
-                            }
-                        ]
-                    },
-                    {
-                        "text": "Tweet: @BBC_HaveYourSay",
-                        "spans": [
-                            {
-                                "type": "link",
-                                "startIndex": 7,
-                                "length": 16,
-                                "link": {
-                                    "trackers": [],
-                                    "destinations": [
-                                        {
-                                            "sourceFormat": "HTML",
-                                            "url": "http://twitter.com/BBC_HaveYourSay",
-                                            "id": "http://twitter.com/BBC_HaveYourSay",
-                                            "presentation": {
-                                                "type": "WEB",
-                                                "contentSource": "EXTERNAL"
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "text": "Upload pictures or video",
-                        "spans": [
-                            {
-                                "type": "link",
-                                "startIndex": 0,
-                                "length": 24,
-                                "link": {
-                                    "trackers": [],
-                                    "destinations": [
-                                        {
-                                            "sourceFormat": "HTML",
-                                            "url": "https://tinyurl.com/e66rejtn",
-                                            "id": "https://tinyurl.com/e66rejtn",
-                                            "presentation": {
-                                                "type": "WEB",
-                                                "contentSource": "EXTERNAL"
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "text": "Please read our terms & conditions and privacy policy",
-                        "spans": [
-                            {
-                                "type": "link",
-                                "startIndex": 16,
-                                "length": 18,
-                                "link": {
-                                    "trackers": [],
-                                    "destinations": [
-                                        {
-                                            "sourceFormat": "HTML",
-                                            "url": "http://www.bbc.co.uk/usingthebbc/terms/",
-                                            "id": "http://www.bbc.co.uk/usingthebbc/terms/",
-                                            "presentation": {
-                                                "type": "WEB",
-                                                "contentSource": "BBC"
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "type": "link",
-                                "startIndex": 39,
-                                "length": 14,
-                                "link": {
-                                    "trackers": [],
-                                    "destinations": [
-                                        {
-                                            "sourceFormat": "HTML",
-                                            "url": "http://www.bbc.co.uk/usingthebbc/privacy-policy/",
-                                            "id": "http://www.bbc.co.uk/usingthebbc/privacy-policy/",
-                                            "presentation": {
-                                                "type": "WEB",
-                                                "contentSource": "BBC"
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "textContainer",
+                },
                 "containerType": "body",
+                "type": "textContainer"
+            },
+            {
                 "text": {
-                    "text": "If you are reading this page and can't see the form you will need to visit the mobile version of the BBC website to submit your question or comment or you can email us at HaveYourSay@bbc.co.uk. Please include your name, age and location with any submission. ",
-                    "spans": [
+                    "text": "Mr Jaffer said such comments would make it harder for the US to defend the law.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "But Congressman John Moolenaar, the current leader of the committee that helped to craft the law, said he was confident it would be upheld.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "“Congress and the Executive Branch have concluded, based on both publicly available and classified information, that TikTok poses a grave risk to national security and the American people,\" he said.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"It is telling that TikTok would rather spend its time, money, and effort fighting in court than solving the problem by breaking up with the Chinese Communist Party.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                "text": "TikTok will not be sold, Chinese parent tells US",
+                "link": {
+                    "destinations": [
                         {
-                            "type": "link",
-                            "startIndex": 101,
-                            "length": 11,
-                            "link": {
-                                "trackers": [],
-                                "destinations": [
-                                    {
-                                        "sourceFormat": "ABL",
-                                        "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=front_page&service=news&type=asset",
-                                        "id": "/news/front_page",
-                                        "presentation": {
-                                            "type": "SINGLE_RENDERER",
-                                            "canShare": true
-                                        }
-                                    }
-                                ]
+                            "id": "https://www.bbc.com/news/articles/c289n8m4j19o.app",
+                            "url": "https://www.bbc.com/news/articles/c289n8m4j19o.app",
+                            "sourceFormat": "HTML",
+                            "presentation": {
+                                "type": "WEB",
+                                "contentSource": "BBC"
                             }
+                        }
+                    ],
+                    "trackers": []
+                },
+                "languageCode": "en-gb",
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/08a9/live/7b202790-0395-11ef-ba16-6b66497f92e6.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
                         },
-                        {
-                            "type": "link",
-                            "startIndex": 171,
-                            "length": 21,
-                            "link": {
-                                "trackers": [],
-                                "destinations": [
-                                    {
-                                        "sourceFormat": "HTML",
-                                        "url": "mailto:Haveyoursay@bbc.co.uk",
-                                        "id": "mailto:Haveyoursay@bbc.co.uk",
-                                        "presentation": {
-                                            "type": "WEB",
-                                            "contentSource": "BBC"
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
+                        "aspectRatio": 1.7775456919060053
+                    },
+                    "metadata": {
+                        "altText": "TikTok logo and US flag.",
+                        "copyrightText": "Reuters"
+                    },
+                    "type": "Image"
+                },
+                "type": "StoryPromo"
             },
             {
-                "type": "SectionHeader",
-                "text": "Related Stories"
-            },
-            {
-                "type": "StoryPromo",
                 "style": "SMALL_HORIZONTAL_PROMO_CARD",
-                "languageCode": "en-gb",
-                "text": "September heatwave sets new record",
+                "text": "When could TikTok be banned under new US law?",
                 "link": {
-                    "trackers": [
+                    "destinations": [
                         {
-                            "type": "ati_v2",
-                            "payload": {
-                                "action_type": "tap",
-                                "action_name": "article-related-story"
+                            "id": "https://www.bbc.com/news/technology-53476117.app",
+                            "url": "https://www.bbc.com/news/technology-53476117.app",
+                            "sourceFormat": "HTML",
+                            "presentation": {
+                                "type": "WEB",
+                                "contentSource": "BBC"
                             }
                         }
                     ],
-                    "destinations": [
-                        {
-                            "sourceFormat": "ABL",
-                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=uk-66743788&service=news&type=asset",
-                            "id": "/news/uk-66743788",
-                            "presentation": {
-                                "type": "SINGLE_RENDERER",
-                                "canShare": true
-                            }
-                        }
-                    ]
+                    "trackers": []
                 },
-                "subtext": "Temperatures pass 30C (86F) for four consecutive days, and more hot weather is on the way.",
-                "updated": 1694107487000,
+                "languageCode": "en-gb",
                 "image": {
-                    "type": "Image",
                     "source": {
-                        "aspectRatio": 1.7777777777777777,
-                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/9AE3/production/_131015693_2a4955f45bf68bb91e8668cc1ed49b7766773aec.jpg",
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/14047/production/_133219918_tiktok-gettyimages-2074368670.jpg",
                         "sizingMethod": {
                             "type": "SPECIFIC_WIDTHS",
                             "widthToken": "{width}",
@@ -710,7 +445,6 @@
                                 80,
                                 100,
                                 128,
-                                144,
                                 160,
                                 200,
                                 240,
@@ -725,476 +459,49 @@
                                 640,
                                 720,
                                 768,
-                                780,
                                 800,
-                                854,
                                 960,
                                 1024,
-                                1080,
-                                1136,
-                                1152,
-                                1200,
-                                1280,
-                                1440,
                                 1536,
-                                1600,
-                                1920,
-                                2048,
-                                2560
+                                2048
                             ]
-                        }
+                        },
+                        "aspectRatio": 1.7777777777777777
                     },
                     "metadata": {
-                        "altText": "A man walks past a screen with predicted temperatures in London",
-                        "caption": "A man walks past a screen with predicted temperatures in London"
-                    }
-                }
-            },
-            {
-                "type": "StoryPromo",
-                "style": "SMALL_HORIZONTAL_PROMO_CARD",
-                "languageCode": "en-gb",
-                "text": "Will the Welsh heatwave last?",
-                "link": {
-                    "trackers": [
-                        {
-                            "type": "ati_v2",
-                            "payload": {
-                                "action_type": "tap",
-                                "action_name": "article-related-story"
-                            }
-                        }
-                    ],
-                    "destinations": [
-                        {
-                            "sourceFormat": "ABL",
-                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=uk-wales-66735014&service=news&type=asset",
-                            "id": "/news/uk-wales-66735014",
-                            "presentation": {
-                                "type": "SINGLE_RENDERER",
-                                "canShare": true
-                            }
-                        }
-                    ]
-                },
-                "subtext": "The sunny weather returns, but what exactly is a heatwave and how long will it last?",
-                "updated": 1694029539000,
-                "image": {
-                    "type": "Image",
-                    "source": {
-                        "aspectRatio": 1.7777777777777777,
-                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/182FE/production/_131007099_p0gc2jks.jpg",
-                        "sizingMethod": {
-                            "type": "SPECIFIC_WIDTHS",
-                            "widthToken": "{width}",
-                            "widths": [
-                                80,
-                                100,
-                                128,
-                                144,
-                                160,
-                                200,
-                                240,
-                                288,
-                                320,
-                                360,
-                                400,
-                                432,
-                                480,
-                                512,
-                                576,
-                                640,
-                                720,
-                                768,
-                                780,
-                                800,
-                                854,
-                                960,
-                                1024,
-                                1080,
-                                1136,
-                                1152,
-                                1200,
-                                1280,
-                                1440,
-                                1536,
-                                1600,
-                                1920,
-                                2048,
-                                2560
-                            ]
-                        }
+                        "altText": "TikTok supporters demonstrate outside the US capital building on 13 March 2024",
+                        "copyrightText": "Getty Images"
                     },
-                    "metadata": {
-                        "altText": "The sunny weather returns but what exactly is a heatwave and how long will it last?"
-                    }
+                    "type": "Image"
                 },
-                "badges": [
-                    {
-                        "type": "VIDEO",
-                        "brand": "DEFAULT"
-                    }
-                ]
+                "type": "StoryPromo"
             },
             {
-                "type": "StoryPromo",
-                "style": "SMALL_HORIZONTAL_PROMO_CARD",
-                "languageCode": "en-gb",
-                "text": "Northern Ireland enters heatwave as high temperatures remain",
-                "link": {
-                    "trackers": [
-                        {
-                            "type": "ati_v2",
-                            "payload": {
-                                "action_type": "tap",
-                                "action_name": "article-related-story"
-                            }
-                        }
-                    ],
-                    "destinations": [
-                        {
-                            "sourceFormat": "ABL",
-                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=uk-northern-ireland-66727497&service=news&type=asset",
-                            "id": "/news/uk-northern-ireland-66727497",
-                            "presentation": {
-                                "type": "SINGLE_RENDERER",
-                                "canShare": true
-                            }
-                        }
-                    ]
-                },
-                "subtext": "Wednesday was the third consecutive day where temperatures in Northern Ireland reached 25C or higher.",
-                "updated": 1694076952000,
-                "image": {
-                    "type": "Image",
-                    "source": {
-                        "aspectRatio": 1.7777777777777777,
-                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/36A5/production/_130998931_peterbreenecoastalpathannalongheatwave.jpg",
-                        "sizingMethod": {
-                            "type": "SPECIFIC_WIDTHS",
-                            "widthToken": "{width}",
-                            "widths": [
-                                80,
-                                100,
-                                128,
-                                144,
-                                160,
-                                200,
-                                240,
-                                288,
-                                320,
-                                360,
-                                400,
-                                432,
-                                480,
-                                512,
-                                576,
-                                640,
-                                720,
-                                768,
-                                780,
-                                800,
-                                854,
-                                960,
-                                1024,
-                                1080,
-                                1136,
-                                1152,
-                                1200,
-                                1280,
-                                1440,
-                                1536,
-                                1600,
-                                1920,
-                                2048,
-                                2560
-                            ]
-                        }
-                    },
-                    "metadata": {
-                        "altText": "Annalong coastal path",
-                        "caption": "Annalong's coastal path has been popular with walkers in County Down"
-                    }
-                }
-            },
-            {
-                "type": "StoryPromo",
-                "style": "SMALL_HORIZONTAL_PROMO_CARD",
-                "languageCode": "en-gb",
-                "text": "How do hot and cold-health alerts work?",
-                "link": {
-                    "trackers": [
-                        {
-                            "type": "ati_v2",
-                            "payload": {
-                                "action_type": "tap",
-                                "action_name": "article-related-story"
-                            }
-                        }
-                    ],
-                    "destinations": [
-                        {
-                            "sourceFormat": "ABL",
-                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=health-65843463&service=news&type=asset",
-                            "id": "/news/health-65843463",
-                            "presentation": {
-                                "type": "SINGLE_RENDERER",
-                                "canShare": true
-                            }
-                        }
-                    ]
-                },
-                "subtext": "The weather alert service warns the public when high or low temperatures could damage their health.",
-                "updated": 1707310258000,
-                "image": {
-                    "type": "Image",
-                    "source": {
-                        "aspectRatio": 1.7777777777777777,
-                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/A52B/production/_132338224_gettyimages-132747109.jpg",
-                        "sizingMethod": {
-                            "type": "SPECIFIC_WIDTHS",
-                            "widthToken": "{width}",
-                            "widths": [
-                                80,
-                                100,
-                                128,
-                                144,
-                                160,
-                                200,
-                                240,
-                                288,
-                                320,
-                                360,
-                                400,
-                                432,
-                                480,
-                                512,
-                                576,
-                                640,
-                                720,
-                                768,
-                                780,
-                                800,
-                                854,
-                                960,
-                                1024,
-                                1080,
-                                1136,
-                                1152,
-                                1200,
-                                1280,
-                                1440,
-                                1536,
-                                1600,
-                                1920,
-                                2048,
-                                2560
-                            ]
-                        }
-                    },
-                    "metadata": {
-                        "altText": "A woman wearing red gloves stands in the snow"
-                    }
-                }
-            },
-            {
-                "type": "StoryPromo",
-                "style": "SMALL_HORIZONTAL_PROMO_CARD",
-                "languageCode": "en-gb",
-                "text": "Is the UK getting hotter, and what causes heatwaves?",
-                "link": {
-                    "trackers": [
-                        {
-                            "type": "ati_v2",
-                            "payload": {
-                                "action_type": "tap",
-                                "action_name": "article-related-story"
-                            }
-                        }
-                    ],
-                    "destinations": [
-                        {
-                            "sourceFormat": "ABL",
-                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=science-environment-61825371&service=news&type=asset",
-                            "id": "/news/science-environment-61825371",
-                            "presentation": {
-                                "type": "SINGLE_RENDERER",
-                                "canShare": true
-                            }
-                        }
-                    ]
-                },
-                "subtext": "The Met Office says heatwaves are now far more likely to occur than they were in the 18th century.",
-                "updated": 1688400601000,
-                "image": {
-                    "type": "Image",
-                    "source": {
-                        "aspectRatio": 1.7777777777777777,
-                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/0702/production/_125449710_p075nbw4.jpg",
-                        "sizingMethod": {
-                            "type": "SPECIFIC_WIDTHS",
-                            "widthToken": "{width}",
-                            "widths": [
-                                80,
-                                100,
-                                128,
-                                144,
-                                160,
-                                200,
-                                240,
-                                288,
-                                320,
-                                360,
-                                400,
-                                432,
-                                480,
-                                512,
-                                576,
-                                640,
-                                720,
-                                768,
-                                780,
-                                800,
-                                854,
-                                960,
-                                1024,
-                                1080,
-                                1136,
-                                1152,
-                                1200,
-                                1280,
-                                1440,
-                                1536,
-                                1600,
-                                1920,
-                                2048,
-                                2560
-                            ]
-                        }
-                    },
-                    "metadata": {
-                        "altText": "A woman applies sunscreen to her shoulder"
-                    }
-                }
-            },
-            {
-                "type": "StoryPromo",
-                "style": "SMALL_HORIZONTAL_PROMO_CARD",
-                "languageCode": "en-gb",
-                "text": "Hot weather: How to sleep in the heat",
-                "link": {
-                    "trackers": [
-                        {
-                            "type": "ati_v2",
-                            "payload": {
-                                "action_type": "tap",
-                                "action_name": "article-related-story"
-                            }
-                        }
-                    ],
-                    "destinations": [
-                        {
-                            "sourceFormat": "ABL",
-                            "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&page=health-49072212&service=news&type=asset",
-                            "id": "/news/health-49072212",
-                            "presentation": {
-                                "type": "SINGLE_RENDERER",
-                                "canShare": true
-                            }
-                        }
-                    ]
-                },
-                "subtext": "A simple guide on how to get a good night's sleep in the heat.",
-                "updated": 1686156465000,
-                "image": {
-                    "type": "Image",
-                    "source": {
-                        "aspectRatio": 1.7777777777777777,
-                        "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/2F82/production/_108026121_gettyimages-607493658.jpg",
-                        "sizingMethod": {
-                            "type": "SPECIFIC_WIDTHS",
-                            "widthToken": "{width}",
-                            "widths": [
-                                80,
-                                100,
-                                128,
-                                144,
-                                160,
-                                200,
-                                240,
-                                288,
-                                320,
-                                360,
-                                400,
-                                432,
-                                480,
-                                512,
-                                576,
-                                640,
-                                720,
-                                768,
-                                780,
-                                800,
-                                854,
-                                960,
-                                1024,
-                                1080,
-                                1136,
-                                1152,
-                                1200,
-                                1280,
-                                1440,
-                                1536,
-                                1600,
-                                1920,
-                                2048,
-                                2560
-                            ]
-                        }
-                    },
-                    "metadata": {
-                        "altText": "Young woman in bed trying to sleep"
-                    }
-                }
-            },
-            {
-                "type": "Copyright",
-                "lastUpdated": 1709629559000
+                "lastUpdated": 1715108507950,
+                "type": "Copyright"
             }
         ],
         "trackers": [
             {
                 "type": "ati_v2",
                 "payload": {
-                    "section": "uk",
-                    "page_title": "UK heatwave: Hottest day recorded as thunderstorms warning in some areas",
+                    "bbc_url": "https://www.bbc.com/news/articles/c72pqlgqe4jo",
+                    "bbc_content_id": "urn:bbc:optimo:asset:c72pqlgqe4jo",
                     "bbc_content_type": "article",
-                    "bbc_producer": "NEWS",
-                    "name": "news.uk.story.66759254.page",
-                    "bbc_content_id": "urn:bbc:cps:curie:asset:f5231fe2-7323-42f3-9f0e-cdb6955c76aa"
-                }
-            },
-            {
-                "type": "Chartbeat_1",
-                "payload": {
-                    "id": "https://www.bbc.co.uk/news/uk-66759254",
-                    "name": "UK heatwave: Hottest day recorded as thunderstorms warning in some areas",
-                    "sections": "News, News - ART"
-                }
-            },
-            {
-                "type": "uas_read_state",
-                "payload": {
-                    "uasToken": "urn:bbc:cps:curie:asset:f5231fe2-7323-42f3-9f0e-cdb6955c76aa"
-                }
-            },
-            {
-                "type": "optimizely_v1",
-                "payload": {
-                    "action_name": "page_view"
+                    "language": "en-gb",
+                    "page_title": "TikTok sues to block US law which could ban app",
+                    "custom_var_7": "News",
+                    "name": "news.articles.c72pqlgqe4jo.page",
+                    "custom_var_1": "2024-05-07T16:49:16.663Z",
+                    "custom_var_2": "2024-05-07T18:25:55.225Z",
+                    "custom_var_3": "Joe+Biden~Business~TikTok~Social+media",
+                    "custom_var_4": "1e80aea5-9931-40e5-bac5-c919d297df08~2f2db234-3c2d-40a4-b4ac-eea661faadd0~452c2711-4003-4d66-9cf5-ae05c75d00d7~ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+                    "comments_enabled": "false",
+                    "uploader_format": "false"
                 }
             }
-        ]
+        ],
+        "type": "ContentResponse"
     },
     "contentType": "application/json; charset=utf-8"
 }

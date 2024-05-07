@@ -16,10 +16,12 @@ public enum FDItem: Codable, Equatable, Hashable {
     case weatherPromoSummary(FDWeatherPromoSummary)
     case carousel(FDCarousel)
     case videoPortraitStory(FDVideoPortraitStory)
+    case topicButton(FDTopicButton)
     case chipList(FDChipList)
     case copyright(FDCopyright)
 
     case media(FDMedia)
+    case imageContainer(FDImageContainer)
     case image(FDImage)
     case headline(FDHeadline)
     case byline(FDByline)
@@ -27,8 +29,6 @@ public enum FDItem: Codable, Equatable, Hashable {
     case sectionHeader(FDSectionHeader)
     case contentList(FDContentList)
     case storyPromo(FDStoryPromo)
-
-    //    case callToActionBanner
 
     case unknown
 
@@ -67,6 +67,10 @@ public enum FDItem: Codable, Equatable, Hashable {
             self = .videoPortraitStory(value)
             return
         }
+        if let value = try? container.decode(FDTopicButton.self), value.type == "TopicButton" {
+            self = .topicButton(value)
+            return
+        }
         if let value = try? container.decode(FDChipList.self), value.type == "ChipList" {
             self = .chipList(value)
             return
@@ -77,6 +81,10 @@ public enum FDItem: Codable, Equatable, Hashable {
         }
         if let value = try? container.decode(FDMedia.self), value.type == "Media" {
             self = .media(value)
+            return
+        }
+        if let value = try? container.decode(FDImageContainer.self), value.type == "ImageContainer" {
+            self = .imageContainer(value)
             return
         }
         if let value = try? container.decode(FDImage.self), value.type == "Image" {
@@ -132,11 +140,15 @@ public enum FDItem: Codable, Equatable, Hashable {
             try container.encode(value)
         case .videoPortraitStory(let value):
             try container.encode(value)
+        case .topicButton(let value):
+            try container.encode(value)
         case .chipList(let value):
             try container.encode(value)
         case .copyright(let value):
             try container.encode(value)
         case .media(let value):
+            try container.encode(value)
+        case .imageContainer(let value):
             try container.encode(value)
         case .image(let value):
             try container.encode(value)
