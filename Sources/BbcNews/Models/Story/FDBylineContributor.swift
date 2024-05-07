@@ -10,7 +10,7 @@ import Foundation
 /// A contributor to an article in the byline.
 public struct FDBylineContributor: Codable, Equatable, Hashable {
     /// The type of the contributor.
-    public var type: String
+    public var type: String?
 
     /// The name of the contributor.
     public var name: String
@@ -24,7 +24,7 @@ public struct FDBylineContributor: Codable, Equatable, Hashable {
     ///   - type: The type of the contributor.
     ///   - name: The name of the contributor.
     ///   - role: The role of the contributor.
-    public init(type: String, name: String, role: String) {
+    public init(type: String?, name: String, role: String) {
         self.type = type
         self.name = name
         self.role = role
