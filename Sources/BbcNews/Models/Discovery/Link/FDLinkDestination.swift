@@ -24,6 +24,12 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
     public var shareUrl: URL? {
         switch self.sourceFormat {
         case "ABL":
+            // Some articles in the pre-7 API version return the full URL in the `id` property
+            // swiftlint:disable:next force_https
+            if self.id.hasPrefix("http://") || self.id.hasPrefix("https://") {
+                return URL(string: self.id)
+            }
+
             // The ID will contain a leading slash, so we shouldn't include one ourself in the concatenation.
             return URL(string: "https://bbc.co.uk" + self.id)
         case "HTML":
