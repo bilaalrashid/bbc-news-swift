@@ -20,8 +20,18 @@ import UIKit
 ///
 /// This attempts to mimic the User-Agent of the iOS app.
 public struct BbcNews {
+    // MARK: - Static properties
+
     /// The hostname at which the API is hosted at.
     public static let hostname = "news-app.api.bbc.co.uk"
+
+    /// The value of `clientName` in API network requests.
+    private static let clientName = "Chrysalis"
+
+    /// The value of `clientVersion` in API network requests.
+    private static let clientVersion = "pre-7"
+
+    // MARK: - Static methods
 
     /// Checks if a URL is hosted on the BBC News API.
     ///
@@ -32,14 +42,37 @@ public struct BbcNews {
         return hostname == self.hostname
     }
 
-    /// The value of `clientName` in API network requests.
-    private let clientName = "Chrysalis"
+    /// Converts a web URL that returns HTML to a native API URL that returns a JSON representation.
+    ///
+    /// - Parameter url: The web URL to convert.
+    /// - Returns: The native API URL, if successful.
+    public static func convertWebUrlToApi(url: String) -> String? {
+        let regex = #/https?:\/\/(www\.)?bbc\.co(m|\.uk)\/news\/(\w|\-|\/)+\.app$/#
 
-    /// The value of `clientVersion` in API network requests.
-    private let clientVersion = "pre-7"
+        // swiftlint:disable:next unused_optional_binding
+        guard let _ = try? regex.firstMatch(in: url) else {
+            return nil
+        }
+
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "news-app.api.bbc.co.uk"
+        components.path = "/fd/app-article-api"
+        components.queryItems = [
+            URLQueryItem(name: "clientName", value: self.clientName),
+            URLQueryItem(name: "clientVersion", value: self.clientVersion),
+            URLQueryItem(name: "page", value: url)
+        ]
+
+        return components.url?.absoluteString
+    }
+
+    // MARK: - Instance properties
 
     /// The session to perform network requests from.
     private let session: URLSession
+
+    // MARK: - Instance methods
 
 #if canImport(UIKit)
     /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
@@ -88,8 +121,8 @@ public struct BbcNews {
         components.host = BbcNews.hostname
         components.path = "/fd/abl"
         components.queryItems = [
-            URLQueryItem(name: "clientName", value: self.clientName),
-            URLQueryItem(name: "clientVersion", value: self.clientVersion),
+            URLQueryItem(name: "clientName", value: BbcNews.clientName),
+            URLQueryItem(name: "clientVersion", value: BbcNews.clientVersion),
             URLQueryItem(name: "page", value: "chrysalis_discovery"),
             URLQueryItem(name: "service", value: "news"),
             URLQueryItem(name: "type", value: "index")
@@ -126,8 +159,8 @@ public struct BbcNews {
         components.host = BbcNews.hostname
         components.path = "/fd/abl"
         components.queryItems = [
-            URLQueryItem(name: "clientName", value: self.clientName),
-            URLQueryItem(name: "clientVersion", value: self.clientVersion),
+            URLQueryItem(name: "clientName", value: BbcNews.clientName),
+            URLQueryItem(name: "clientVersion", value: BbcNews.clientVersion),
             URLQueryItem(name: "page", value: topicId),
             URLQueryItem(name: "type", value: "topic")
         ]
