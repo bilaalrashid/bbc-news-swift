@@ -1,0 +1,28 @@
+{
+    "data": {
+        "resolvedLink": {
+            "destinations": [
+                {
+                    "id": "https://www.bbc.co.uk/news/articles/cy73wv35v0lo.app",
+                    "url": "https://www.bbc.co.uk/news/articles/cy73wv35v0lo.app",
+                    "sourceFormat": "HTML",
+                    "presentation": {
+                        "type": "WEB",
+                        "contentSource": "BBC"
+                    }
+                }
+            ],
+            "trackers": [
+                {
+                    "type": "pg_telemetry",
+                    "payload": {
+                        "fallback_reason": "unsupported_blocks",
+                        "unsupported_blocks": "embed, aresUploader, aresSendCTA, rawUgcCampaign"
+                    }
+                }
+            ]
+        },
+        "type": "ResolverResponse"
+    },
+    "contentType": "application/json; charset=utf-8"
+}

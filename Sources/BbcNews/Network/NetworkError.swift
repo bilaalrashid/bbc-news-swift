@@ -12,6 +12,7 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
     case invalidUrl(url: String)
     case invalidResponse
     case unsuccessfulStatusCode(code: Int)
+    case newDestination(link: FDLink)
 
     public var description: String {
         switch self {
@@ -23,6 +24,8 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
             return "The response to the HTTP request was invalid"
         case .unsuccessfulStatusCode(let code):
             return "The HTTP response gave an unsuccessful response code (\(code))"
+        case .newDestination(let link):
+            return "The response provides a new destination to resolve to (\(link))"
         }
     }
 
@@ -36,6 +39,8 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
             return NSLocalizedString(self.description, comment: "Invalid HTTP response")
         case .unsuccessfulStatusCode:
             return NSLocalizedString(self.description, comment: "Unsuccessful HTTP request")
+        case .newDestination:
+            return NSLocalizedString(self.description, comment: "New destination provided")
         }
     }
 }

@@ -199,6 +199,15 @@ public struct BbcNews {
         }
 
         let decoder = JSONDecoder()
-        return try decoder.decode(FDResult.self, from: data)
+
+        // First check if the URL resolves to a new destination, otherwise attempt to decode as a normal response.
+        do {
+            let newDestination = try decoder.decode(FDResolverResult.self, from: data)
+            throw NetworkError.newDestination(link: newDestination.data.resolvedLink)
+        } catch let error as NetworkError {
+            throw error
+        } catch {
+            return try decoder.decode(FDResult.self, from: data)
+        }
     }
 }
