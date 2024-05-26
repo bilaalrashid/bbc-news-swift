@@ -7,13 +7,23 @@
 
 import Foundation
 
+/// A container for a paragraph of text in a story.
 public struct FDTextContainer: Codable, Equatable, Hashable {
     /// Used for decoding `FDItem`. This is always `textContainer`.
     internal let type: String
-    public var containerType: String
-    public var text: FDTextContainerText
 
-    public init(containerType: String, text: FDTextContainerText) {
+    /// The type of the container that the text should be displayed in.
+    public var containerType: String
+
+    /// The text to be displayed in the paragraph.
+    public var text: FDAttributedText
+    
+    /// Creates a new text container for a paragraph in a story.
+    ///
+    /// - Parameters:
+    ///   - containerType: The type of the container that the text should be displayed in.
+    ///   - text: The text to be displayed in the paragraph.
+    public init(containerType: String, text: FDAttributedText) {
         self.type = "textContainer"
         self.containerType = containerType
         self.text = text

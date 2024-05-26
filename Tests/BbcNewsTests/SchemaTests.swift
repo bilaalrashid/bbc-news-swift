@@ -14,6 +14,7 @@ final class SchemaTests: XCTestCase {
         try self.executeResultTest(file: "IndexDiscovery", unknownIndexesToIgnore: [35])
         try self.executeResultTest(file: "Topic")
         try self.executeResultTest(file: "Story")
+        try self.executeResultTest(file: "Story2")
         try self.executeResolverResultTest(file: "ResolverResponse")
     }
 

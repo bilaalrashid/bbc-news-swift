@@ -7,16 +7,39 @@
 
 import Foundation
 
+/// A remote source for a playable media item.
 public struct FDMediaSource: Codable, Equatable, Hashable {
+    /// The type of the media.
     public var type: String
-    public var id: String
-    public var duration: Int
-    public var aspectRatio: Double
-    public var isLive: Bool
-    public var canAutoPlay: Bool
-    public var episodePid: String
 
-    public init(type: String, id: String, duration: Int, aspectRatio: Double, isLive: Bool, canAutoPlay: Bool, episodePid: String) {
+    /// The identifier of the media item.
+    public var id: String
+
+    /// The duration of the media item, in milliseconds.
+    public var duration: Int
+
+    /// The aspect ratio of the media item.
+    public var aspectRatio: Double
+
+    /// If the media item is a live broadcast.
+    public var isLive: Bool
+
+    /// If the media item should be allowed to start playing without user interaction.
+    public var canAutoPlay: Bool
+
+    /// The identifier of the media item.
+    public var episodePid: String?
+    
+    /// Creates a new remote source for a playable media item.
+    /// - Parameters:
+    ///   - type: The type of the media.
+    ///   - id: The identifier of the media item.
+    ///   - duration: The duration of the media item, in milliseconds.
+    ///   - aspectRatio: The aspect ratio of the media item.
+    ///   - isLive: If the media item is a live broadcast.
+    ///   - canAutoPlay: If the media item should be allowed to start playing without user interaction.
+    ///   - episodePid: The identifier of the media item.
+    public init(type: String, id: String, duration: Int, aspectRatio: Double, isLive: Bool, canAutoPlay: Bool, episodePid: String? = nil) {
         self.type = type
         self.id = id
         self.duration = duration

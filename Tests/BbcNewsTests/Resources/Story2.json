@@ -1,0 +1,920 @@
+{
+    "data": {
+        "metadata": {
+            "name": "Ex-Post Office boss Vennells' five big inquiry moments",
+            "allowAdvertising": true,
+            "lastUpdated": 0,
+            "shareUrl": "https://www.bbc.com/news/articles/cgxx1zgpn0ko"
+        },
+        "items": [
+            {
+                "text": "Ex-Post Office boss Vennells' five big inquiry moments",
+                "lastPublished": 1716585927792,
+                "firstPublished": 1716585927792,
+                "topic": {
+                    "text": "Business",
+                    "link": {
+                        "destinations": [
+                            {
+                                "id": "https://www.bbc.co.uk/news/business",
+                                "url": "https://www.bbc.co.uk/news/business",
+                                "sourceFormat": "HTML",
+                                "presentation": {
+                                    "type": "WEB",
+                                    "contentSource": "BBC"
+                                }
+                            }
+                        ],
+                        "trackers": []
+                    }
+                },
+                "type": "Headline",
+                "lastUpdated": 1716585927792
+            },
+            {
+                "source": {
+                    "id": "p0j03jqy",
+                    "type": "VIDEO",
+                    "isLive": false,
+                    "canAutoPlay": true,
+                    "duration": 140000,
+                    "aspectRatio": 1.7777777777777777
+                },
+                "metadata": {
+                    "title": "Key moments from former Post Office chief's three-day testimony",
+                    "summary": "Key moments from Paula Vennells' three days of questioning at Post Office inquiry",
+                    "caption": "Key moments from Paula Vennells' three days of questioning at Post Office inquiry",
+                    "captionWithStyle": {
+                        "text": "Key moments from Paula Vennells' three days of questioning at Post Office inquiry",
+                        "spans": []
+                    },
+                    "timestamp": 1716567459000,
+                    "allowAdvertising": true
+                },
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0j04b20.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                128,
+                                160,
+                                240,
+                                288,
+                                320,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1136,
+                                1152,
+                                1200,
+                                1280,
+                                1440,
+                                1536,
+                                1600,
+                                1920
+                            ]
+                        },
+                        "aspectRatio": 1.778087279480037
+                    },
+                    "metadata": {
+                        "altText": "Paula Vennells at the Post Office inquiry",
+                        "copyrightText": "PA"
+                    },
+                    "type": "Image"
+                },
+                "type": "Media"
+            },
+            {
+                "text": {
+                    "text": "Former Post Office chief executive Paula Vennells has broken her almost decade-long silence on the Horizon IT scandal. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "She was quizzed over the course of three days on how things unfolded during her time at the head of the organisation by both the counsel to the public inquiry and lawyers speaking on behalf of sub-postmasters.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "It was the most anticipated appearance in the long-running inquiry into what has been described as the biggest miscarriage of justice in British history.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Here is a summary of five of the key moments:",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "1. Tears, more tears and apologies",
+                    "spans": []
+                },
+                "containerType": "crosshead",
+                "type": "textContainer"
+            },
+            {
+                "source": {
+                    "id": "p0hzhk7q",
+                    "type": "VIDEO",
+                    "isLive": false,
+                    "canAutoPlay": true,
+                    "duration": 79000,
+                    "aspectRatio": 1.7777777777777777
+                },
+                "metadata": {
+                    "title": "'I am very, very sorry,' says Paula Vennells",
+                    "summary": "'I am very, very sorry,' says Paula Vennells",
+                    "caption": "\"I am very, very sorry,\" said former Post Office boss Paula Vennells",
+                    "captionWithStyle": {
+                        "text": "\"I am very, very sorry,\" said former Post Office boss Paula Vennells",
+                        "spans": []
+                    },
+                    "timestamp": 1716369836000,
+                    "allowAdvertising": true
+                },
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0hzhppz.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                128,
+                                160,
+                                240,
+                                288,
+                                320,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1136,
+                                1152,
+                                1200,
+                                1280,
+                                1440,
+                                1536,
+                                1600,
+                                1920
+                            ]
+                        },
+                        "aspectRatio": 1.779788838612368
+                    },
+                    "metadata": {
+                        "altText": "Paula Vennells",
+                        "copyrightText": ""
+                    },
+                    "type": "Image"
+                },
+                "type": "Media"
+            },
+            {
+                "text": {
+                    "text": "She wasn’t on trial – but she might just as well have been.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Over the three days, Paula Vennells faced an onslaught of hostile questions. Lead counsel to the inquiry, Jason Beer, was subtle but probing.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The lawyers for the sub-postmasters, who had the final say, were hard-hitting and merciless.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "To begin with, the former Post Office boss was poised. There were carefully prepared apologies to the sub-postmasters, to Alan Bates – whose campaign for justice formed the centrepiece of the ITV drama Mr Bates v the Post Office - and to others.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "There was a great deal she said she couldn’t remember. There was even more she claimed she had never been told. The Post Office may have been aware that the Horizon IT system was deeply flawed, and that a key witness had failed to disclose vital information to the courts. But Ms Vennells, it seems, wasn’t.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Then, her composure failed. Asked by Mr Beer whether she had misled MPs about court cases involving Horizon, she broke down in tears. She recovered, then cried again when asked about the case of Martin Griffiths, a sub-postmaster who took his own life after being financially ruined by the Post Office.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "It wouldn’t be the last time. But her tears attracted scant sympathy from the victims of the scandal watching her in the room.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "2. 'I think you knew'",
+                    "spans": []
+                },
+                "containerType": "crosshead",
+                "type": "textContainer"
+            },
+            {
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/52a6/live/6596af70-19d4-11ef-a026-91ed5721ae3b.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 0.5615615615615616
+                    },
+                    "metadata": {
+                        "altText": "Text messages between Moya Greene and Paula Greene ",
+                        "caption": "Texts from former Royal Mail boss Moya Greene reveal her doubts",
+                        "captionWithStyle": {
+                            "text": "Texts from former Royal Mail boss Moya Greene reveal her doubts",
+                            "spans": []
+                        }
+                    },
+                    "type": "Image"
+                },
+                "type": "ImageContainer"
+            },
+            {
+                "text": {
+                    "text": "The emergence of blistering texts between Ms Vennells and Dame Moya Greene, Royal Mail's former boss, was one of the week's more shocking moments.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The two exchanged messages after ITV aired its drama in January, which thrust the decades-old scandal back into the spotlight.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"When it was clear the system was at fault, the [Post Office] should have raised a red flag, stopped all proceedings, given people back their money and then tried to compensate them for the ruin this caused in their lives,\" Dame Moya said in a text message.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Ms Vennells agreed: \"This has/is taking too long Moya. The toll on everyone affected is dreadful.”",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Then came the gut punch. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"I don’t know what to say. I think you knew,\" said Dame Moya.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"No Moya, that isn’t the case,\" replied Ms Vennells.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "It was the question that Jason Beer also wanted an answer to: \"How could you not know?\" ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"This is a situation that is so complex, it is a question I have asked myself as well,\" said Ms Vennells.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"I have learned some things that I did not know as a result of the inquiry and I imagine that we will go through some of the detail of that. I wish I had known.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "3. The UK's 'unluckiest' boss?",
+                    "spans": []
+                },
+                "containerType": "crosshead",
+                "type": "textContainer"
+            },
+            {
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/abe8/live/8c1c85f0-19d6-11ef-80aa-699d54c46324.png",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 1.7740963855421688
+                    },
+                    "metadata": {
+                        "altText": "Former Post Office boss Paula Vennells enters public inquiry ",
+                        "copyrightText": "PA"
+                    },
+                    "type": "Image"
+                },
+                "type": "ImageContainer"
+            },
+            {
+                "text": {
+                    "text": "Ms Vennells was running a big business and in charge of thousands of staff. The Inquiry wanted to know how much she knew about what was going on in her organisation.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "In key areas, she claims her knowledge was limited.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "According to Ms Vennells’ 775 page witness statement, she wasn’t being given the information and documents she needed to find out the truth about the Horizon IT system.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Mr Beer wasn’t impressed and asked her: “Do you think you’re the unluckiest CEO in history?”",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Ms Vennells says the problem was “I was too trusting” and some of her staff let her down. But some weren’t allowed to be heard - her head of legal was kept out of a Post Office board meeting “like a naughty schoolgirl”, according to Mr Beer.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "One key element of the Horizon scandal is that the Post Office conducted its own prosecution of sub-postmasters. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Ms Vennells told the inquiry it took five years of working at the Post Office for her to find that out. Mr Beer seemed baffled by this and there was incredulous laughter from those in the room.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "4. Avoid making 'front page news'",
+                    "spans": []
+                },
+                "containerType": "crosshead",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Some of the most revealing exchanges weren't about IT systems, but about the press.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Sub-postmasters long suspected the organisation was more focused on its brand than its people. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "In 2013, when issues with bugs were discovered, Ms Vennells was internally questioning if there should be a review of past prosecutions going back many years. The PR boss advised against this: \"We don't want to be front page news\", he told his boss.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Ms Vennells said she would never make a legal decision based on optics. The problem? Her response contained the phrase: \"I will take your steer\".",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "On another occasion, the chief executive sent an email in which she said her \"goal\" was that all press be \"scoured for negative comment and refuted\".",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Ms Vennells claimed the email was being read all wrong. She was only trying to make sure inaccurate misrepresentations were corrected.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Is that believable or a sign of a defensive culture? That is for the inquiry chair to decide.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Whatever the truth, it is clear the \"love\" and \"trust\" people have for the organisation Ms Vennells used to lead has been badly damaged.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "5. The privatisation of Royal Mail ",
+                    "spans": []
+                },
+                "containerType": "crosshead",
+                "type": "textContainer"
+            },
+            {
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/3135/live/bd6a6cb0-19dd-11ef-96c0-29950cf02be4.png",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 1.777583187390543
+                    },
+                    "metadata": {
+                        "altText": "Royal Mail worker",
+                        "copyrightText": "Getty"
+                    },
+                    "type": "Image"
+                },
+                "type": "ImageContainer"
+            },
+            {
+                "text": {
+                    "text": "Another stand-out moment came when Ms Vennells was asked about the flotation of Royal Mail in 2013. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The Post Office used to be part of Royal Mail but was split off when the then coalition government decided to privatise the UK's postal service. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The board of the Post Office had become alarmed about potential civil claims for wrongful prosecutions, to the point where it notified the Post Office’s insurers.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Ms Vennells admitted that revelations about possible prosecution failures during the time when Royal Mail was in charge of the Post Office would have been devastating for the privatisation.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Royal Mail director Les Owen had wanted to include a reference to the Horizon IT system in the prospectus for the flotation.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "But Ms Vennells admitted that she'd arranged for it to be removed, telling her boss afterwards: \"I have earned my keep on this one.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "In fact, she listed keeping Horizon out of the Royal Mail flotation prospectus as one of her \"key achievements\" for the year.   ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Edward Henry KC, who is representing some of sub-postmasters at the inquiry,  asked that if it had emerged that people were being wrongly prosecuted \"it would have threatened to disrupt the flotation\".",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"I'm sure that would have been the case,\" Ms Vennells said.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "But she added that she “had no conversations about any strategy around the Royal Mail privatisation\".",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Reporting by Tom Espiner, Tom Beal, Peter Ruddick, Theo Leggett and Dearbail Jordan",
+                    "spans": [
+                        {
+                            "type": "emphasis",
+                            "startIndex": 0,
+                            "length": 83,
+                            "attribute": "italic"
+                        }
+                    ]
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                "text": "Joy and disbelief as Post Office convictions quashed",
+                "link": {
+                    "destinations": [
+                        {
+                            "id": "https://www.bbc.co.uk/news/articles/cp003mz7d14o.app",
+                            "url": "https://www.bbc.co.uk/news/articles/cp003mz7d14o.app",
+                            "sourceFormat": "HTML",
+                            "presentation": {
+                                "type": "WEB",
+                                "contentSource": "BBC"
+                            }
+                        }
+                    ],
+                    "trackers": []
+                },
+                "languageCode": "en-gb",
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/fa22/live/89f18c40-19ad-11ef-af66-edd17488ddd3.png",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 1.7775061124694376
+                    },
+                    "metadata": {
+                        "altText": "Keith Bell",
+                        "copyrightText": "Keith Bell"
+                    },
+                    "type": "Image"
+                },
+                "type": "StoryPromo"
+            },
+            {
+                "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                "text": "Ex-Post Office boss cries as she admits incorrect evidence",
+                "link": {
+                    "destinations": [
+                        {
+                            "id": "https://www.bbc.co.uk/news/articles/cq550449zwyo.app",
+                            "url": "https://www.bbc.co.uk/news/articles/cq550449zwyo.app",
+                            "sourceFormat": "HTML",
+                            "presentation": {
+                                "type": "WEB",
+                                "contentSource": "BBC"
+                            }
+                        }
+                    ],
+                    "trackers": []
+                },
+                "languageCode": "en-gb",
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/da9d/live/b0725f60-185f-11ef-baa7-25d483663b8e.png",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 1.7831912302070645
+                    },
+                    "metadata": {
+                        "altText": "Paula Vennels crying with a tissue over her face",
+                        "copyrightText": "Post Office Inquiry"
+                    },
+                    "type": "Image"
+                },
+                "type": "StoryPromo"
+            },
+            {
+                "style": "SMALL_HORIZONTAL_PROMO_CARD",
+                "text": "Why were hundreds of Post Office workers wrongly prosecuted?",
+                "link": {
+                    "destinations": [
+                        {
+                            "id": "https://www.bbc.co.uk/news/business-56718036.app",
+                            "url": "https://www.bbc.co.uk/news/business-56718036.app",
+                            "sourceFormat": "HTML",
+                            "presentation": {
+                                "type": "WEB",
+                                "contentSource": "BBC"
+                            }
+                        }
+                    ],
+                    "trackers": []
+                },
+                "languageCode": "en-gb",
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/1849A/production/_132228499_gettyimages-1232474525.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 1.7777777777777777
+                    },
+                    "metadata": {
+                        "altText": "Post Office supporter outside of Royal Courts of Justice in 2021",
+                        "copyrightText": "Getty Images"
+                    },
+                    "type": "Image"
+                },
+                "type": "StoryPromo"
+            },
+            {
+                "lastUpdated": 1716655609371,
+                "type": "Copyright"
+            }
+        ],
+        "trackers": [
+            {
+                "type": "ati_v2",
+                "payload": {
+                    "bbc_url": "https://www.bbc.co.uk/news/articles/cgxx1zgpn0ko",
+                    "bbc_content_id": "urn:bbc:optimo:asset:cgxx1zgpn0ko",
+                    "bbc_content_type": "article",
+                    "language": "en-gb",
+                    "page_title": "Ex-Post Office boss Vennells' five big inquiry moments",
+                    "custom_var_7": "News",
+                    "name": "news.articles.cgxx1zgpn0ko.page",
+                    "custom_var_1": "2024-05-24T21:25:27.792Z",
+                    "custom_var_2": "2024-05-24T21:25:27.792Z",
+                    "custom_var_3": "Post+Office+Inquiry~Business~Post+Office+Ltd",
+                    "custom_var_4": "0e65d7d9-3319-4fa6-b525-5a0bfe6373f7~2f2db234-3c2d-40a4-b4ac-eea661faadd0~45d6fedf-a2f0-46ce-bb6d-47bae45c1b0d",
+                    "comments_enabled": "false",
+                    "uploader_format": "false"
+                }
+            }
+        ],
+        "type": "ContentResponse"
+    },
+    "contentType": "application/json; charset=utf-8"
+}
