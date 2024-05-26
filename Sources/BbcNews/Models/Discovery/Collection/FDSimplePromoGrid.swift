@@ -7,11 +7,17 @@
 
 import Foundation
 
+/// A collection of story promos that should be displayed as a grid.
 public struct FDSimplePromoGrid: FDCollection, Codable, Equatable, Hashable {
     /// Used for decoding `FDItem`. This is always `SimplePromoGrid`.
     internal let type: String
+
+    /// The story promos to be displayed in the collection.
     public var storyPromos: [FDStoryPromo]
 
+    /// Creates a new collection of story promos that should be displayed as a grid.
+    ///
+    /// - Parameter storyPromos: The story promos to be displayed in the collection.
     public init(storyPromos: [FDStoryPromo]) {
         self.type = "SimplePromoGrid"
         self.storyPromos = storyPromos

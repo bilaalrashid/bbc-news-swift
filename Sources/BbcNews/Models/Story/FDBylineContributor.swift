@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// A contributor to an article in the byline.
+/// A contributor to a story in a byline.
 public struct FDBylineContributor: Codable, Equatable, Hashable {
     /// The type of the contributor.
     public var type: String?

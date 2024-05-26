@@ -7,12 +7,22 @@
 
 import Foundation
 
+/// An image to be displayed.
 public struct FDImage: Codable, Equatable, Hashable {
     /// Used for decoding `FDItem`. This is always `Image`.
     internal let type: String
-    public var source: FDImageSource
-    public var metadata: FDImageMetadata?
 
+    /// The remote source of the image.
+    public var source: FDImageSource
+
+    /// The metadata of the image.
+    public var metadata: FDImageMetadata?
+    
+    /// Creates a new image.
+    ///
+    /// - Parameters:
+    ///   - source: The remote source of the image.
+    ///   - metadata: The metadata of the image.
     public init(source: FDImageSource, metadata: FDImageMetadata? = nil) {
         self.type = "Image"
         self.source = source

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// The list of ordered items to be displayed to the user for a page returned by the API.
 public enum FDItem: Codable, Equatable, Hashable {
     case billboard(FDBillboard)
     case hierarchicalCollection(FDHierarchicalCollection)

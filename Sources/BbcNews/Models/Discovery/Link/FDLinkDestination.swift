@@ -7,12 +7,29 @@
 
 import Foundation
 
+/// A destination of a link.
 public struct FDLinkDestination: Codable, Equatable, Hashable {
+    /// The format of the destination.
     public var sourceFormat: String
-    public var url: String
-    public var id: String
-    public var presentation: FDPresentation
 
+    /// The URL being linked to.
+    public var url: String
+
+    /// The id of the destination being linked to.
+    ///
+    /// This may sometimes be the same as `url`.
+    public var id: String
+
+    /// A description of how the destination should be presented.
+    public var presentation: FDPresentation
+    
+    /// Creates a new destination for a link.
+    ///
+    /// - Parameters:
+    ///   - sourceFormat: The format of the destination.
+    ///   - url: The URL being linked to.
+    ///   - id: The id of the destination being linked to.
+    ///   - presentation: A description of how the destination should be presented.
     public init(sourceFormat: String, url: String, id: String, presentation: FDPresentation) {
         self.sourceFormat = sourceFormat
         self.url = url

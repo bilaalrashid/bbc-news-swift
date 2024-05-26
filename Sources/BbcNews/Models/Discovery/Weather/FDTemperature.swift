@@ -7,9 +7,14 @@
 
 import Foundation
 
+/// A representation of a temperate in a weather forecast.
 public struct FDTemperature: Codable, Equatable, Hashable {
+    /// The temperate value, represented in celsius.
     public var celsius: Int
-
+    
+    /// Creates a new temperate representation.
+    ///
+    /// - Parameter celsius: The temperate value, represented in celsius.
     public init(celsius: Int) {
         self.celsius = celsius
     }
