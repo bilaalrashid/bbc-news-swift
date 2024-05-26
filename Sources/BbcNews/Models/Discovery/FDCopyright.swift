@@ -13,12 +13,12 @@ public struct FDCopyright: Codable, Equatable, Hashable {
     internal let type: String
 
     /// The 64-bit timestamp of when the copyrighted work was last updated.
-    public var lastUpdated: Int
-    
+    public var lastUpdated: Date
+
     /// Creates a new definition of a copyrighted piece of work.
     ///
     /// - Parameter lastUpdated: The time the copyrighted work was last updated.
-    public init(lastUpdated: Int) {
+    public init(lastUpdated: Date) {
         self.type = "Copyright"
         self.lastUpdated = lastUpdated
     }

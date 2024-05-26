@@ -45,7 +45,7 @@ final class SchemaTests: XCTestCase {
         }
 
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .deferredToDate
+        decoder.dateDecodingStrategy = .millisecondsSince1970
         decoder.keyDecodingStrategy = .useDefaultKeys
 
         return try decoder.decode(T.self, from: data)

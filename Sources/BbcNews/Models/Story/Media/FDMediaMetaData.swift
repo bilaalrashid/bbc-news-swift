@@ -22,7 +22,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
     public var captionWithStyle: FDAttributedText?
 
     /// The 64-bit timestamp of the time the media item was last updated.
-    public var timestamp: Int
+    public var timestamp: Date
 
     /// A URL that displays content associated to the media item.
     public var associatedContentUrl: String?
@@ -45,7 +45,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
         summary: String? = nil,
         caption: String,
         captionWithStyle: FDAttributedText? = nil,
-        timestamp: Int,
+        timestamp: Date,
         associatedContentUrl: String? = nil,
         allowAdvertising: Bool
     ) {

@@ -18,7 +18,7 @@ public struct FDDataMetadata: Codable, Equatable, Hashable {
     /// The 64-bit timestamp of the last time the page was updated.
     ///
     /// This is always `0` for story discovery pages.
-    public var lastUpdated: Int
+    public var lastUpdated: Date
 
     /// The URL of a webpage displaying the same page returned by the API.
     public var shareUrl: String?
@@ -30,7 +30,7 @@ public struct FDDataMetadata: Codable, Equatable, Hashable {
     ///   - allowAdvertising: If the page allows advertising to be displayed.
     ///   - lastUpdated: The timestamp of the last time the page was updated.
     ///   - shareUrl: The URL of a webpage displaying the same returned by the API.
-    public init(name: String, allowAdvertising: Bool, lastUpdated: Int, shareUrl: String? = nil) {
+    public init(name: String, allowAdvertising: Bool, lastUpdated: Date, shareUrl: String? = nil) {
         self.name = name
         self.allowAdvertising = allowAdvertising
         self.lastUpdated = lastUpdated

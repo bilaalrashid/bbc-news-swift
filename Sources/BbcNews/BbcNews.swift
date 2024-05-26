@@ -199,6 +199,7 @@ public struct BbcNews {
         }
 
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .millisecondsSince1970
 
         // First check if the URL resolves to a new destination, otherwise attempt to decode as a normal response.
         do {

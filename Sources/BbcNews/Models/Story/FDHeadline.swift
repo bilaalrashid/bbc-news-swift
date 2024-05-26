@@ -18,13 +18,13 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     /// A legacy property for storing a 64-bit timestamp of the time the story was last updated.
     ///
     /// Deprecated in favour of `firstPublished` and `lastPublished`.
-    public var lastUpdated: Int?
+    public var lastUpdated: Date?
 
     /// A 64-bit timestamp of the time the story was first published.
-    public var firstPublished: Int?
+    public var firstPublished: Date?
 
     /// A 64-bit timestamp of the time the story was last updated.
-    public var lastPublished: Int?
+    public var lastPublished: Date?
 
     /// A legacy property for storing article bylines.
     ///
@@ -43,7 +43,7 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     /// A computed property that returns the time the story was last published.
     ///
     /// This is a wrapper around `lastUpdated`, `lastPublished` and `firstPublished`.
-    public var published: Int? {
+    public var published: Date? {
         return self.lastUpdated ?? self.lastPublished ?? self.firstPublished
     }
     
@@ -60,9 +60,9 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     ///   - readTimeMinutes: The estimated number of minutes that the article would take to be read.
     public init(
         text: String,
-        lastUpdated: Int? = nil,
-        firstPublished: Int? = nil,
-        lastPublished: Int? = nil,
+        lastUpdated: Date? = nil,
+        firstPublished: Date? = nil,
+        lastPublished: Date? = nil,
         byline: FDHeadlineByline? = nil,
         topic: FDTopic? = nil,
         languageCode: String? = nil,

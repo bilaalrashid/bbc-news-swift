@@ -28,7 +28,7 @@ public struct FDStoryPromo: Codable, Equatable, Hashable {
     public var link: FDLink
 
     /// The 64-bit timestamp of the time the story was last updated.
-    public var updated: Int?
+    public var updated: Date?
 
     /// The main topic that the story relates to.
     public var topic: FDTopic?
@@ -61,7 +61,7 @@ public struct FDStoryPromo: Codable, Equatable, Hashable {
         text: String? = nil,
         subtext: String? = nil,
         link: FDLink,
-        updated: Int? = nil,
+        updated: Date? = nil,
         topic: FDTopic? = nil,
         image: FDImage? = nil,
         badges: [FDBadge]? = nil,
