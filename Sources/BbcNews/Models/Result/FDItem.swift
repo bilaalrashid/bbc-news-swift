@@ -20,7 +20,6 @@ public enum FDItem: Codable, Equatable, Hashable {
     case topicButton(FDTopicButton)
     case chipList(FDChipList)
     case copyright(FDCopyright)
-
     case media(FDMedia)
     case imageContainer(FDImageContainer)
     case image(FDImage)
@@ -30,7 +29,7 @@ public enum FDItem: Codable, Equatable, Hashable {
     case sectionHeader(FDSectionHeader)
     case contentList(FDContentList)
     case storyPromo(FDStoryPromo)
-
+    case callToActionBanner(FDCallToActionBanner)
     case unknown
 
     // swiftlint:disable cyclomatic_complexity function_body_length
@@ -116,8 +115,11 @@ public enum FDItem: Codable, Equatable, Hashable {
             self = .storyPromo(value)
             return
         }
+        if let value = try? container.decode(FDCallToActionBanner.self), value.type == "CallToActionBanner" {
+            self = .callToActionBanner(value)
+            return
+        }
         self = .unknown
-        return
     }
     // swiftlint:enable cyclomatic_complexity function_body_length
 
@@ -164,6 +166,8 @@ public enum FDItem: Codable, Equatable, Hashable {
         case .contentList(let value):
             try container.encode(value)
         case .storyPromo(let value):
+            try container.encode(value)
+        case .callToActionBanner(let value):
             try container.encode(value)
         case .unknown:
             try container.encode(false)
