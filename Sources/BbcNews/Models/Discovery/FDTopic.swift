@@ -21,7 +21,7 @@ public struct FDTopic: Codable, Equatable, Hashable {
 
     /// A link to a new page.
     public var link: FDLink?
-    
+
     /// Creates a new story topic.
     ///
     /// - Parameters:

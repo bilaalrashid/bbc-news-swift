@@ -14,7 +14,7 @@ public struct FDBillboard: FDCollection, Codable, Equatable, Hashable {
 
     /// The story promo(s) to be displayed in the collection.
     public var storyPromos: [FDStoryPromo]
-    
+
     /// Create a story promo collection to be displayed with the highest prominence at the top of a story discovery page.
     ///
     /// - Parameter storyPromos: The story promo(s) to be displayed in the collection.

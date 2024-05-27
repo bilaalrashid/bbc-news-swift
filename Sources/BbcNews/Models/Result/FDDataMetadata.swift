@@ -22,7 +22,7 @@ public struct FDDataMetadata: Codable, Equatable, Hashable {
 
     /// The URL of a webpage displaying the same page returned by the API.
     public var shareUrl: String?
-    
+
     /// Creates new page results metadata.
     ///
     /// - Parameters:

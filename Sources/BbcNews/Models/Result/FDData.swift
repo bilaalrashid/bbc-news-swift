@@ -14,10 +14,10 @@ public struct FDData: Codable, Equatable, Hashable {
 
     /// The metadata of the results returned.
     public var metadata: FDDataMetadata
-    
+
     /// The list of ordered items to be displayed to the user.
     public var items: [FDItem]
-    
+
     /// Creates new data returned from the API.
     ///
     /// - Parameters:

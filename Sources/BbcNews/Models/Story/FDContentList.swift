@@ -13,17 +13,17 @@ public struct FDContentList: Codable, Equatable, Hashable {
     internal let type: String
 
     /// The type ordering type of the list.
-    public var ordering: String
+    public var ordering: FDContentListOrder
 
     /// The text items in the list.
     public var listItems: [FDAttributedText]
-    
+
     /// Creates a new list of text items.
     ///
     /// - Parameters:
     ///   - ordering: The type ordering type of the list.
     ///   - listItems: The text items in the list.
-    public init(ordering: String, listItems: [FDAttributedText]) {
+    public init(ordering: FDContentListOrder, listItems: [FDAttributedText]) {
         self.type = "ContentList"
         self.ordering = ordering
         self.listItems = listItems

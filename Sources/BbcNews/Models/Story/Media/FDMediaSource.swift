@@ -10,7 +10,7 @@ import Foundation
 /// A remote source for a playable media item.
 public struct FDMediaSource: Codable, Equatable, Hashable {
     /// The type of the media.
-    public var type: String
+    public var type: FDMediaType
 
     /// The identifier of the media item.
     public var id: String
@@ -29,7 +29,7 @@ public struct FDMediaSource: Codable, Equatable, Hashable {
 
     /// The identifier of the media item.
     public var episodePid: String?
-    
+
     /// Creates a new remote source for a playable media item.
     /// - Parameters:
     ///   - type: The type of the media.
@@ -39,7 +39,15 @@ public struct FDMediaSource: Codable, Equatable, Hashable {
     ///   - isLive: If the media item is a live broadcast.
     ///   - canAutoPlay: If the media item should be allowed to start playing without user interaction.
     ///   - episodePid: The identifier of the media item.
-    public init(type: String, id: String, duration: Int, aspectRatio: Double, isLive: Bool, canAutoPlay: Bool, episodePid: String? = nil) {
+    public init(
+        type: FDMediaType,
+        id: String,
+        duration: Int,
+        aspectRatio: Double,
+        isLive: Bool,
+        canAutoPlay: Bool,
+        episodePid: String? = nil
+    ) {
         self.type = type
         self.id = id
         self.duration = duration

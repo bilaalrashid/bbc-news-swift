@@ -17,7 +17,7 @@ public struct FDImageSource: Codable, Equatable, Hashable {
 
     /// The aspect ratio of the image.
     public var aspectRatio: Double?
-    
+
     /// Creates a new remote source for an image.
     ///
     /// - Parameters:

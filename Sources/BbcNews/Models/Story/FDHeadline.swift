@@ -30,7 +30,7 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     ///
     /// Deprecated in favour of stories using a `FDByline` object as a sibling instead.
     public var byline: FDHeadlineByline?
-    
+
     /// The main topic that the story relates to.
     public var topic: FDTopic?
 
@@ -46,7 +46,7 @@ public struct FDHeadline: Codable, Equatable, Hashable {
     public var published: Date? {
         return self.lastUpdated ?? self.lastPublished ?? self.firstPublished
     }
-    
+
     /// Creates a new story headline.
     ///
     /// - Parameters:

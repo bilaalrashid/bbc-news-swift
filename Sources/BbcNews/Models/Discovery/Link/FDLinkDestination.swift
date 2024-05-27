@@ -10,7 +10,7 @@ import Foundation
 /// A destination of a link.
 public struct FDLinkDestination: Codable, Equatable, Hashable {
     /// The format of the destination.
-    public var sourceFormat: String
+    public var sourceFormat: FDSourceFormat
 
     /// The URL being linked to.
     public var url: String
@@ -22,7 +22,7 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
 
     /// A description of how the destination should be presented.
     public var presentation: FDPresentation
-    
+
     /// Creates a new destination for a link.
     ///
     /// - Parameters:
@@ -30,7 +30,7 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
     ///   - url: The URL being linked to.
     ///   - id: The id of the destination being linked to.
     ///   - presentation: A description of how the destination should be presented.
-    public init(sourceFormat: String, url: String, id: String, presentation: FDPresentation) {
+    public init(sourceFormat: FDSourceFormat, url: String, id: String, presentation: FDPresentation) {
         self.sourceFormat = sourceFormat
         self.url = url
         self.id = id
@@ -40,7 +40,7 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
     /// Returns the URL for sharing the link destination.
     public var shareUrl: URL? {
         switch self.sourceFormat {
-        case "ABL":
+        case .abl:
             // Some articles in the pre-7 API version return the full URL in the `id` property
             // swiftlint:disable:next force_https
             if self.id.hasPrefix("http://") || self.id.hasPrefix("https://") {
@@ -49,7 +49,7 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
 
             // The ID will contain a leading slash, so we shouldn't include one ourself in the concatenation.
             return URL(string: "https://bbc.co.uk" + self.id)
-        case "HTML":
+        case .html:
             return URL(string: self.url)
         default:
             return nil

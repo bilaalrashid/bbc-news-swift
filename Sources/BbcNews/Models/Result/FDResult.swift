@@ -16,7 +16,7 @@ public struct FDResult: Codable, Equatable, Hashable {
 
     /// The content type of the response from the API.
     public var contentType: String
-    
+
     /// Creates a new API response object.
     ///
     /// - Parameters:

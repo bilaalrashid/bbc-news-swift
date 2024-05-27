@@ -17,7 +17,7 @@ public struct FDCollectionHeader: Codable, Equatable, Hashable {
 
     /// A link to a new page.
     public var link: FDLink?
-    
+
     /// Creates a new header for a story promo collection.
     ///
     /// - Parameters:

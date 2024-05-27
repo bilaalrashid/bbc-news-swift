@@ -19,11 +19,11 @@ public struct FDWeatherForecast: Codable, Equatable, Hashable {
     public var low: FDTemperature
 
     /// The identifier of the weather icon to be displayed.
-    public var icon: String
+    public var icon: FDWeatherIcon
 
     /// If the forecast should be displayed to the user in a night-time specific layout.
     public var nightTimeLayout: Bool
-    
+
     /// Created a new weather a forecast prediction.
     ///
     /// - Parameters:
@@ -32,7 +32,7 @@ public struct FDWeatherForecast: Codable, Equatable, Hashable {
     ///   - low: The lowest temperature predicted during the forecast period.
     ///   - icon: The identifier of the weather icon to be displayed.
     ///   - nightTimeLayout: If the forecast should be displayed to the user in a night-time specific layout.
-    public init(description: String, high: FDTemperature, low: FDTemperature, icon: String, nightTimeLayout: Bool) {
+    public init(description: String, high: FDTemperature, low: FDTemperature, icon: FDWeatherIcon, nightTimeLayout: Bool) {
         self.description = description
         self.high = high
         self.low = low

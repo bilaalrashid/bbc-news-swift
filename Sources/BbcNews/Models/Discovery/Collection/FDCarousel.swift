@@ -23,7 +23,7 @@ public struct FDCarousel: FDCollection, Codable, Equatable, Hashable {
 
     /// If page indicators be displayed for each item in the carousel.
     public var hasPageIndicator: Bool
-    
+
     /// Creates a new collection of story promos that should be displayed as a scrollable carousel.
     ///
     /// - Parameters:

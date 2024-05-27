@@ -13,7 +13,7 @@ public struct FDStoryPromo: Codable, Equatable, Hashable {
     internal let type: String
 
     /// The style in which the promo should be displayed.
-    public var style: String
+    public var style: FDStoryPromoStyle
 
     /// The ISO 639-1 language code of the language used in the story.
     public var languageCode: String
@@ -41,7 +41,7 @@ public struct FDStoryPromo: Codable, Equatable, Hashable {
 
     /// The internal uniform resource name of the story.
     public var uasToken: String?
-    
+
     /// Creates a promo description that links to a story.
     ///
     /// - Parameters:
@@ -56,7 +56,7 @@ public struct FDStoryPromo: Codable, Equatable, Hashable {
     ///   - badges: A list of badges that relate to the story.
     ///   - uasToken: The internal uniform resource name of the story.
     public init(
-        style: String,
+        style: FDStoryPromoStyle,
         languageCode: String,
         text: String? = nil,
         subtext: String? = nil,

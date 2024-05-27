@@ -17,7 +17,7 @@ public struct FDImage: Codable, Equatable, Hashable {
 
     /// The metadata of the image.
     public var metadata: FDImageMetadata?
-    
+
     /// Creates a new image.
     ///
     /// - Parameters:
@@ -39,7 +39,7 @@ public struct FDImage: Codable, Equatable, Hashable {
     /// - Parameter maxWidth: The maximum width which the URL should return an image for.
     /// - Returns: A URL that returns a version of the image, or `nil` if no image URLs can be found.
     public func largestImageUrl(upTo maxWidth: Double) -> String? {
-        if self.source.sizingMethod.type == "SPECIFIC_WIDTHS" {
+        if self.source.sizingMethod.type == .specificWidths {
             let allowedWidths = self.source.sizingMethod.widths.filter { Double($0) <= maxWidth }
 
             if let maxSize = allowedWidths.last {

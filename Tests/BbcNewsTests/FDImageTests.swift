@@ -10,7 +10,7 @@ import XCTest
 
 final class FDImageTests: XCTestCase {
     func testImageUrls() throws {
-        let image = self.getFDImage(sizingMethod: "SPECIFIC_WIDTHS")
+        let image = self.getFDImage(sizingMethod: .specificWidths)
 
         XCTAssertEqual(
             image.largestImageUrl,
@@ -30,7 +30,7 @@ final class FDImageTests: XCTestCase {
     }
 
     func testInvalidSizingMethods() throws {
-        let image = self.getFDImage(sizingMethod: "INVALID")
+        let image = self.getFDImage(sizingMethod: .unknown)
 
         XCTAssertEqual(
             image.largestImageUrl,
@@ -44,7 +44,7 @@ final class FDImageTests: XCTestCase {
         )
     }
 
-    private func getFDImage(sizingMethod: String) -> FDImage {
+    private func getFDImage(sizingMethod: FDImageSizingMethodType) -> FDImage {
         return FDImage(
             source: FDImageSource(
                 url: "https://example.invalid/img/{width}/example.jpg",

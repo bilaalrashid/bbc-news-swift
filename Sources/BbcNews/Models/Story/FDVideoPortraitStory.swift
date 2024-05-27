@@ -26,7 +26,7 @@ public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
 
     /// The video media to display in the story.
     public var media: FDMedia
-    
+
     /// Creates a new portrait video story.
     ///
     /// - Parameters:

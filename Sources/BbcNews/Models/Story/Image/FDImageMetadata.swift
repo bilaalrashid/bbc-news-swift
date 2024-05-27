@@ -17,7 +17,7 @@ public struct FDImageMetadata: Codable, Equatable, Hashable {
 
     /// A copyright attribution for the image.
     public var copyrightText: String?
-    
+
     /// Metadata for an image.
     ///
     /// - Parameters:

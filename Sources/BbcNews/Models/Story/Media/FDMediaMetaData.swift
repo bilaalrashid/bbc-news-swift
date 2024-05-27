@@ -26,10 +26,10 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
 
     /// A URL that displays content associated to the media item.
     public var associatedContentUrl: String?
-    
+
     /// Is advertising allowed with the media item.
     public var allowAdvertising: Bool
-    
+
     /// Creates a new description of metadata for a media item.
     ///
     /// - Parameters:

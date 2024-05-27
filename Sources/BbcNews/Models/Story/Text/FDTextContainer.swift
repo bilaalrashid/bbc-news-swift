@@ -17,7 +17,7 @@ public struct FDTextContainer: Codable, Equatable, Hashable {
 
     /// The text to be displayed in the paragraph.
     public var text: FDAttributedText
-    
+
     /// Creates a new text container for a paragraph in a story.
     ///
     /// - Parameters:

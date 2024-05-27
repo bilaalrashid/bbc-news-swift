@@ -11,7 +11,7 @@ import Foundation
 public struct FDTemperature: Codable, Equatable, Hashable {
     /// The temperate value, represented in celsius.
     public var celsius: Int
-    
+
     /// Creates a new temperate representation.
     ///
     /// - Parameter celsius: The temperate value, represented in celsius.

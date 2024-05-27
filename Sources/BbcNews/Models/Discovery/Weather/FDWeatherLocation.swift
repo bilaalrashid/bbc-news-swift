@@ -16,7 +16,7 @@ public struct FDWeatherLocation: Codable, Equatable, Hashable {
 
     /// If the location being described the is the same as the user's current location.
     public var isCurrentLocation: Bool
-    
+
     /// Creates a new location to describe a weather forecast.
     ///
     /// - Parameters:

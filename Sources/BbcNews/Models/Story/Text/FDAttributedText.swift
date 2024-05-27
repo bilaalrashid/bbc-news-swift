@@ -14,7 +14,7 @@ public struct FDAttributedText: Codable, Equatable, Hashable {
 
     /// A list of spans used to annotate the text inside the container.
     public var spans: [FDAttributedTextSpan]
-    
+
     /// Creates a new text paragraph with annotated attributed.
     ///
     /// - Parameters:

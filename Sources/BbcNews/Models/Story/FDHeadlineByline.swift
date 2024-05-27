@@ -16,7 +16,7 @@ public struct FDHeadlineByline: Codable, Equatable, Hashable {
 
     /// The description or job title of the individual featured in the byline.
     public var purpose: String
-    
+
     /// Creates a new byline for a story.
     ///
     /// - Parameters:

@@ -14,7 +14,7 @@ public struct FDHierarchicalCollection: FDCollection, Codable, Equatable, Hashab
 
     /// The story promos to be displayed in the collection.
     public var storyPromos: [FDStoryPromo]
-    
+
     /// Creates a new collection of story promos that should be displayed with inflated prominence.
     ///
     /// - Parameter storyPromos: The story promos to be displayed in the collection.

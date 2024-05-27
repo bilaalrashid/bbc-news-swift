@@ -20,7 +20,7 @@ public struct FDWeatherPromoSummary: Codable, Equatable, Hashable {
 
     /// The weather description of the forecast prediction.
     public var forecast: FDWeatherForecast
-    
+
     /// Creates a new promo summary for a weather forecast.
     ///
     /// - Parameters:

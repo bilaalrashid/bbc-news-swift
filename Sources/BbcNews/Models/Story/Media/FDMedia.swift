@@ -20,7 +20,7 @@ public struct FDMedia: Codable, Equatable, Hashable {
 
     /// The metadata for the media item.
     public var metadata: FDMediaMetadata
-    
+
     /// Creates a new playable media item.
     ///
     /// - Parameters:

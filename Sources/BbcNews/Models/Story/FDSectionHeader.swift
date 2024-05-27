@@ -14,7 +14,7 @@ public struct FDSectionHeader: Codable, Equatable, Hashable {
 
     /// The text in the section header.
     public var text: String
-    
+
     /// Creates a new section header in a story.
     ///
     /// - Parameter text: The text in the header.
