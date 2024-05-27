@@ -18,14 +18,18 @@ public struct FDData: Codable, Equatable, Hashable {
     /// The list of ordered items to be displayed to the user.
     public var items: [FDItem]
 
+    /// The events to track.
+    public var trackers: [FDTracker]?
+
     /// Creates new data returned from the API.
     ///
     /// - Parameters:
     ///   - metadata: The metadata of the results returned.
     ///   - items: The story promos or story contents to be displayed.
-    public init(metadata: FDDataMetadata, items: [FDItem]) {
+    public init(metadata: FDDataMetadata, items: [FDItem], trackers: [FDTracker]? = nil) {
         self.type = "ContentResponse"
         self.metadata = metadata
         self.items = items
+        self.trackers = trackers
     }
 }

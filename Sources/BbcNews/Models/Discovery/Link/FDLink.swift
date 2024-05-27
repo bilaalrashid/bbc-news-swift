@@ -12,10 +12,16 @@ public struct FDLink: Codable, Equatable, Hashable {
     /// The destination(s) of the link.
     public var destinations: [FDLinkDestination]
 
+    /// The events to track.
+    public var trackers: [FDTracker]
+
     /// Creates a new link to a page(s).
     ///
-    /// - Parameter destinations: The destination(s) of the link.
-    public init(destinations: [FDLinkDestination]) {
+    /// - Parameters:
+    ///   - destinations: The destination(s) of the link.
+    ///   - trackers: The events to track.
+    public init(destinations: [FDLinkDestination], trackers: [FDTracker]) {
         self.destinations = destinations
+        self.trackers = trackers
     }
 }
