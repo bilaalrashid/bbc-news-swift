@@ -27,7 +27,7 @@ public struct FDCallToActionBanner: Codable, Equatable, Hashable {
     ///   - title: The title of the call-to-action-banner.
     ///   - subtitle: The subtitle of the call-to-action banner.
     ///   - buttons: The buttons that the user is direct towards.
-    init(title: String, subtitle: String, buttons: [FDCallToActionButton]) {
+    public init(title: String, subtitle: String, buttons: [FDCallToActionButton]) {
         self.type = "CallToActionBanner"
         self.title = title
         self.subtitle = subtitle
