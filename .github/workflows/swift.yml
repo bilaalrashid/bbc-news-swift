@@ -1,0 +1,42 @@
+name: Swift
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/realm/swiftlint:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: SwiftLint
+        run: swiftlint --config .swiftlint.yml --reporter github-actions-logging --strict
+
+  test:
+    name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
+        swift: ["5.10"]
+    runs-on: ${{ matrix.os }}
+    needs: lint
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: ${{ matrix.swift }}
+
+      - name: Run tests
+        run: swift test
