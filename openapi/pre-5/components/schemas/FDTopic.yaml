@@ -1,0 +1,13 @@
+description: A topic that a story can relate to.
+type: object
+properties:
+  text:
+    description: The name of the topic. This is never used alongside `title`.
+    type: string
+    example: Entertainment & Arts
+  title:
+    description: The name of the topic. This is never used alongside `text`.
+    type: string
+    example: Entertainment & Arts
+  link:
+    $ref: ./FDLink.yaml

@@ -1,0 +1,13 @@
+description: A container for a single image.
+required:
+  - type
+  - image
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `ImageContainer`.
+    type: string
+    enum:
+      - ImageContainer
+  image:
+    $ref: ./FDImage.yaml

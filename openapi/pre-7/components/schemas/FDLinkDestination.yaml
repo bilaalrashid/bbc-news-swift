@@ -1,0 +1,26 @@
+description: A destination of a link.
+required:
+  - sourceFormat
+  - url
+  - id
+  - presentation
+type: object
+properties:
+  sourceFormat:
+    description: The format of the destination.
+    type: string
+    enum:
+      - ABL
+      - HTML
+  url:
+    description: The URL being linked to.
+    type: string
+    format: uri
+  id:
+    description: >-
+      The id of the destination being linked to. This may sometimes be the same
+      as `url`.
+    type: string
+    example: /news/health-62120167
+  presentation:
+    $ref: ./FDPresentation.yaml

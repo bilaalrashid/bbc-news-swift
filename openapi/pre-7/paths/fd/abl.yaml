@@ -1,0 +1,89 @@
+get:
+  operationId: abl
+  security: []
+  tags:
+    - Discovery
+    - Story
+  summary: Fetch a BBC news page.
+  description: >-
+    Returns data for a page that returns a list of links to stories,
+    or the contents of an individual story (deprecated). Examples
+    include the "Home" tab, pages for specific topic categories.
+  parameters:
+    - name: clientName
+      in: query
+      description: The internal codename of the client making the request.
+      required: true
+      schema:
+        type: string
+        enum:
+          - Chrysalis
+    - name: clientVersion
+      in: query
+      description: The version of the client making the request.
+      required: true
+      schema:
+        type: string
+        default: pre-5
+    - name: service
+      in: query
+      description: This appears to be the BBC service which to fetch items for.
+      required: true
+      schema:
+        type: string
+        enum:
+          - news
+    - name: page
+      in: query
+      description: The ID of the page to fetch.
+      required: true
+      schema:
+        type: string
+        default: chrysalis_discovery
+    - name: type
+      in: query
+      description: The type of the page being fetched.
+      required: true
+      schema:
+        type: string
+        enum:
+          - index
+          - topic
+          - asset
+    - name: clientLoc
+      in: query
+      description: The first half of a UK postcode to customise results for.
+      required: false
+      schema:
+        type: string
+        example: W1A
+    - name: clientNeedsUpdate
+      in: query
+      description: Does the client need to be prompted with an update.
+      required: false
+      schema:
+        type: boolean
+        default: false
+  responses:
+    '200':
+      description: Successful
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/FDResult.yaml
+    '204':
+      description: New destination
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/FDResolverResult.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/ResponseError.yaml

@@ -1,0 +1,36 @@
+description: A portrait video for a story that consists only of a single video.
+required:
+  - type
+  - id
+  - url
+  - text
+  - subtext
+  - media
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - VideoPortraitStory
+  id:
+    description: The BBC pid of the video.
+    type: string
+    example: p0hyzfgw
+  url:
+    description: The URL of the poster image for the video story.
+    type: string
+    format: uri
+    example: http://c.files.bbci.co.uk/BD44/production/_133325484_meteorstill1.jpg
+  text:
+    description: The title of the video story.
+    type: string
+    example: 'Watch: Blue fireball lights up skies over Spain'
+  subtext:
+    description: The short description of the video story.
+    type: string
+    example: >-
+      Videos from Spain and Portugal show a suspected meteorite streaking across
+      the night sky.
+  media:
+    $ref: ./FDMedia.yaml

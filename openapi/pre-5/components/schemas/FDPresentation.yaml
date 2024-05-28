@@ -1,0 +1,28 @@
+description: A description of how a page should be presented to a user.
+required:
+  - type
+type: object
+properties:
+  type:
+    description: The type of presentation format for the page.
+    type: string
+    enum:
+      - WEB
+      - SINGLE_RENDERER
+      - MULTIPLE_RENDERER
+      - NO_PADDING
+  title:
+    description: The title of the page to be presented.
+    type: string
+    example: Entertainment & Arts
+  canShare:
+    description: >-
+      If the user can be shown a share URL to that the displayed content in web
+      form.
+    type: boolean
+  contentSource:
+    description: A description of where the linked page(s) are sourced from.
+    type: string
+    enum:
+      - BBC
+      - EXTERNAL

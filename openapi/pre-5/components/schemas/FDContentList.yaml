@@ -1,0 +1,20 @@
+description: A list of text items.
+required:
+  - type
+  - ordering
+  - listItems
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `ContentList`.
+    type: string
+    enum:
+      - ContentList
+  ordering:
+    description: The type ordering type of the list.
+    type: string
+    enum:
+      - UNORDERED
+      - ORDERED
+  listItems:
+    $ref: ./FDAttributedText.yaml

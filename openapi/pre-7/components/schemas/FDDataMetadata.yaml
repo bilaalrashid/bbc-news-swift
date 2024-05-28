@@ -1,0 +1,26 @@
+description: The metadata of a page of results returned by the API.
+required:
+  - name
+  - allowAdvertising
+  - lastUpdated
+type: object
+properties:
+  name:
+    description: The name of the page to display to the user.
+    type: string
+    example: News App UK Front Page
+  allowAdvertising:
+    description: If the page allows advertising to be displayed.
+    type: boolean
+  lastUpdated:
+    description: >-
+      The 64-bit timestamp of the last time the page was updated. This is always
+      `0` for story discovery pages.
+    type: integer
+    format: int64
+    example: 0
+  shareUrl:
+    description: The URL of a webpage displaying the same page returned by the API.
+    type: string
+    format: uri
+    example: https://www.bbc.co.uk/news/uk-politics-66630308

@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: BBC News Internal API
+  description: >-
+    Unofficial documentation of the internal API used for the iOS and Android
+    BBC News apps.
+  version: pre-7
+  license:
+    name: MIT
+    url: https://github.com/bilaalrashid/bbc-news-swift/raw/main/LICENSE
+externalDocs:
+  description: Swift implementation (bbc-news-swift)
+  url: https://github.com/bilaalrashid/bbc-news-swift
+servers:
+  - url: https://news-app.api.bbc.co.uk
+tags:
+  - name: Discovery
+    description: Fetch lists of story promos
+  - name: Story
+    description: Fetch the contents of a story
+paths:
+  /fd/abl:
+    $ref: paths/fd/abl.yaml
+  /fd/app-article-api:
+    $ref: paths/fd/app-article-api.yaml

@@ -1,0 +1,12 @@
+description: A new link where the response from the API is now located.
+required:
+  - resolvedLink
+type: object
+properties:
+  type:
+    description: Used for decoding `FDResolverResult`. This is always `ResolverResponse`.
+    type: string
+    enum:
+      - ResolverResponse
+  resolvedLink:
+    $ref: ./FDLink.yaml

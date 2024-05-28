@@ -1,0 +1,47 @@
+description: A payload of a tracker event.
+type: object
+properties:
+  id:
+    description: The URL or ID of the payload.
+    type: string
+    example: https://www.bbc.co.uk/news/world-asia-66783384
+  name:
+    description: The name of the payload.
+    type: string
+    example: Vladimir Putin says military cooperation with Kim Jong Un a possibility
+  page_title:
+    description: The title of the page content represented by the payload.
+    type: string
+    example: Vladimir Putin says military cooperation with Kim Jong Un a possibility
+  section:
+    description: The section that the payload represents.
+    type: string
+    example: world::asia
+  sections:
+    description: The sections that the payload represents.
+    type: string
+    example: News, News - ART
+  uasToken:
+    description: The uniform resource name of the content.
+    type: string
+    example: urn:bbc:cps:curie:asset:320ab811-ad52-4721-aa85-27e1609aa1d6
+  bbc_content_id:
+    description: The uniform resource name of the content.
+    type: string
+    example: urn:bbc:cps:curie:asset:320ab811-ad52-4721-aa85-27e1609aa1d6
+  bbc_producer:
+    description: The service or brand of the content the payload represents.
+    type: string
+    example: NEWS
+  bbc_content_type:
+    description: The type of content that the payload represents.
+    type: string
+    example: article
+  action_type:
+    description: The type of the action the payload represents.
+    type: string
+    example: carousel-scroll-reached-end
+  action_name:
+    description: The name of the action the payload represents.
+    type: string
+    example: article-onward-journey

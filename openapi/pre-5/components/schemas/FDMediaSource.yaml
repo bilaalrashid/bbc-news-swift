@@ -1,0 +1,42 @@
+description: A remote source for a playable media item.
+required:
+  - type
+  - id
+  - duration
+  - aspectRatio
+  - isLive
+  - canAutoPlay
+type: object
+properties:
+  type:
+    description: The type of the media.
+    type: string
+    enum:
+      - VIDEO
+      - AUDIO
+  id:
+    description: The identifier of the media item.
+    type: string
+    example: p0j03jqy
+  duration:
+    description: The duration of the media item, in milliseconds.
+    type: integer
+    format: int64
+    example: 140000
+  aspectRatio:
+    description: The aspect ratio of the media item.
+    type: number
+    format: double
+    example: 1.7777777
+  isLive:
+    description: If the media item is a live broadcast.
+    type: boolean
+  canAutoPlay:
+    description: >-
+      If the media item should be allowed to start playing without user
+      interaction.
+    type: boolean
+  episodePid:
+    description: The identifier of the media item.
+    type: string
+    example: p0j03jqy

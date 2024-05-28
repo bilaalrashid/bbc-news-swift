@@ -1,0 +1,12 @@
+description: A analytics event that should be tracked.
+required:
+  - type
+  - payload
+type: object
+properties:
+  type:
+    description: The type of the event to track.
+    type: string
+    example: ati_v2
+  payload:
+    $ref: ./FDTrackerPayload.yaml

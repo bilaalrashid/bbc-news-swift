@@ -1,0 +1,19 @@
+description: A contributor to a story in a byline.
+required:
+  - name
+  - role
+type: object
+properties:
+  type:
+    description: The type of the contributor.
+    type: string
+    enum:
+      - Contributor
+  name:
+    description: The role of the contributor.
+    type: string
+    example: Laura Kuenssberg
+  role:
+    description: The role of the contributor.
+    type: string
+    example: Presenter, Sunday with Laura Kuenssberg

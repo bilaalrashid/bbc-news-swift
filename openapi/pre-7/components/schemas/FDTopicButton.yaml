@@ -1,0 +1,22 @@
+description: A button representing a topic.
+required:
+  - type
+  - topic
+  - resourceId
+  - trackedEvents
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - TopicButton
+  topic:
+    $ref: ./FDTopic.yaml
+  resourceId:
+    description: The internal uniform resource name of the topic represented by the button.
+    type: string
+    format: urn
+    example: urn:bbc:tipo:topic:c50znx8v8y4t
+  trackedEvents:
+    $ref: ./FDTrackedEvent.yaml

@@ -1,0 +1,21 @@
+description: The main data from the API response.
+required:
+  - metadata
+  - items
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - ContentResponse
+  metadata:
+    $ref: ./FDDataMetadata.yaml
+  items:
+    type: array
+    items:
+      $ref: ./FDItem.yaml
+  trackers:
+    type: array
+    items:
+      $ref: ./FDTracker.yaml

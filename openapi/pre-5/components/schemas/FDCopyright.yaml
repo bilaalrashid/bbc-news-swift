@@ -1,0 +1,15 @@
+description: A description of a copyright claim for a piece of work.
+required:
+  - type
+  - topics
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - Copyright
+  lastUpdated:
+    description: The 64-bit timestamp of when the copyrighted work was last updated.
+    type: integer
+    format: int64

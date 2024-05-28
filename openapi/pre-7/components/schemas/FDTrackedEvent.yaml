@@ -1,0 +1,14 @@
+description: An event with an action that should be tracked.
+required:
+  - event
+  - trackers
+type: object
+properties:
+  event:
+    description: The name of the event being tracked.
+    type: string
+    example: unfollow
+  trackers:
+    type: array
+    items:
+      $ref: ./FDTracker.yaml

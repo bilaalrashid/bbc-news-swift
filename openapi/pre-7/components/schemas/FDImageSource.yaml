@@ -1,0 +1,19 @@
+description: The remote source for an image.
+required:
+  - url
+  - sizingMethod
+  - metadata
+type: object
+properties:
+  url:
+    description: The URL that the image is located.
+    type: string
+    format: uri
+    example: https://ichef.bbci.co.uk/images/ic/{width}xn/p0j04b20.jpg
+  sizingMethod:
+    $ref: ./FDImageSizingMethod.yaml
+  aspectRatio:
+    description: The aspect ratio of the image.
+    type: number
+    format: double
+    example: 1.7777777

@@ -1,0 +1,29 @@
+description: A visual badge to tag a story with.
+required:
+  - type
+  - brand
+type: object
+properties:
+  type:
+    description: The type of the badge.
+    type: string
+    enum:
+      - LIVE
+      - BREAKING
+      - VIDEO
+      - AUDIO
+  brand:
+    description: The brand the badge represents.
+    type: string
+    enum:
+      - NEWS
+      - SPORT
+      - DEFAULT
+  text:
+    description: The text displayed within the badge.
+    type: string
+    example: LIVE
+  duration:
+    description: The time duration of the media described, represented in milliseconds.
+    type: integer
+    format: int64

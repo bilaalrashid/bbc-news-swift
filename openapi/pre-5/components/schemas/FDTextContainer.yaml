@@ -1,0 +1,21 @@
+description: A container for a paragraph of text in a story.
+required:
+  - type
+  - containerType
+  - text
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `textContainer`.
+    type: string
+    enum:
+      - textContainer
+  containerType:
+    description: The type of the container that the text should be displayed in.
+    type: string
+    enum:
+      - introduction
+      - body
+      - crosshead
+  text:
+    $ref: ./FDAttributedText.yaml

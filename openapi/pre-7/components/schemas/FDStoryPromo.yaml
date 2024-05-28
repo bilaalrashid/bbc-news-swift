@@ -1,0 +1,67 @@
+description: A promo description that links to a story.
+required:
+  - type
+  - style
+  - languageCode
+  - link
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `StoryPromo`.
+    type: string
+    enum:
+      - StoryPromo
+  style:
+    description: The style in which the promo should be displayed.
+    type: string
+    enum:
+      - BADGE_LED_PROMO_CARD
+      - EMPHASISED_PROMO_CARD
+      - GALLERY_PROMO_CARD
+      - HERO_PROMO_CARD
+      - HIGHLIGHTED_PROMO_CARD
+      - IMAGE_LED_PROMO_CARD
+      - IMPACTFUL_TEXT_PROMO_CARD
+      - LARGE_PROMO_CARD
+      - PORTRAIT_PROMO_CARD
+      - SMALL_CAROUSEL_PROMO_CARD
+      - SMALL_HORIZONTAL_PROMO_CARD
+      - SMALL_VERTICAL_PROMO_CARD
+      - SQUARE_PROMO_CARD
+      - SQUARE_TEXT_OVER_IMAGE_PROMO_CARD
+      - TEXT_PROMO_CARD
+      - VIDEO_PACKAGE_PROMO_CARD
+  languageCode:
+    description: The ISO 639-1 language code of the language used in the story.
+    type: string
+    example: en-gb
+  text:
+    description: The title of the story.
+    type: string
+    example: TikTok sues to block US law which could ban app
+  subtext:
+    description: The subtext of the story.
+    type: string
+    example: >-
+      TikTok said the measure was an "extraordinary intrusion on free speech
+      rights".
+  link:
+    $ref: ./FDLink.yaml
+  updated:
+    description: The 64-bit timestamp of the time the story was last updated.
+    type: integer
+    format: int64
+  topic:
+    $ref: ./FDTopic.yaml
+  image:
+    $ref: ./FDImage.yaml
+  badges:
+    description: A list of badges that relate to the story.
+    type: array
+    items:
+      $ref: ./FDBadge.yaml
+  uasToken:
+    description: The internal uniform resource name of the story.
+    type: string
+    format: urn
+    example: urn:bbc:optimo:asset:c72pqlgqe4jo

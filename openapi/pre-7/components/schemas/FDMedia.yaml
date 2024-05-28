@@ -1,0 +1,19 @@
+description: A media item to be played.
+required:
+  - type
+  - source
+  - image
+  - metadata
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `Media`.
+    type: string
+    enum:
+      - Media
+  source:
+    $ref: ./FDMediaSource.yaml
+  image:
+    $ref: ./FDImage.yaml
+  metadata:
+    $ref: ./FDMediaMetadata.yaml

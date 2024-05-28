@@ -1,0 +1,43 @@
+description: A headline for a story.
+required:
+  - type
+  - text
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `Headline`.
+    type: string
+    enum:
+      - Headline
+  text:
+    description: The text in the headline.
+    type: string
+    example: TikTok sues to block US law which could ban app
+  lastUpdated:
+    description: >-
+      A legacy property for storing a 64-bit timestamp of the time the story was
+      last updated. Deprecated in favour of `firstPublished` and
+      `lastPublished`.
+    type: integer
+    format: int64
+    deprecated: true
+  firstPublished:
+    description: A 64-bit timestamp of the time the story was first published.
+    type: integer
+    format: int64
+  lastPublished:
+    description: A 64-bit timestamp of the time the story was last updated.
+    type: integer
+    format: int64
+  byline:
+    $ref: ./FDHeadlineByline.yaml
+  topic:
+    $ref: ./FDTopic.yaml
+  languageCode:
+    description: The ISO 639-1 language code of the language used in the story.
+    type: string
+    example: en-gb
+  readTimeMinutes:
+    description: The estimated number of minutes that the article would take to be read.
+    type: integer
+    format: int32

@@ -1,0 +1,13 @@
+description: A response from the API indicating the content exists at a new location.
+required:
+  - data
+  - contentType
+type: object
+properties:
+  data:
+    $ref: ./FDResolverResponse.yaml
+  contentType:
+    description: The content type of the response from the API.
+    type: string
+    enum:
+      - application/json; charset=utf-8

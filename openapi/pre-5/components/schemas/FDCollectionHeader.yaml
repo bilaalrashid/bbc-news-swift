@@ -1,0 +1,17 @@
+description: A header for a story promo collection.
+required:
+  - type
+  - text
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - CollectionHeader
+  text:
+    description: The story promos to be displayed in the collection.
+    type: string
+    example: Top Stories
+  link:
+    $ref: ./FDLink.yaml

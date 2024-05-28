@@ -1,0 +1,9 @@
+properties:
+  message:
+    type: string
+    example: release channel "foo" does not exist
+  code:
+    type: string
+    example: NotFound
+  data:
+    type: object

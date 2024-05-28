@@ -1,0 +1,53 @@
+get:
+  operationId: app-article-api
+  security: []
+  tags:
+    - Story
+  summary: Fetch the full contents of a story.
+  description: Returns the full contents of a story.
+  parameters:
+    - name: clientName
+      in: query
+      description: The internal codename of the client making the request.
+      required: true
+      schema:
+        type: string
+        enum:
+          - Chrysalis
+    - name: clientVersion
+      in: query
+      description: The version of the client making the request.
+      required: true
+      schema:
+        type: string
+        default: pre-5
+    - name: page
+      in: query
+      description: The ID or URL of the page to fetch.
+      required: true
+      schema:
+        type: string
+        example: null
+  responses:
+    '200':
+      description: Successful
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/FDResult.yaml
+    '204':
+      description: New destination
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/FDResolverResult.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/ResponseError.yaml

@@ -1,0 +1,18 @@
+description: >-
+  A collection containing a single story promo that is displayed with the
+  highest prominence at the top of a story discovery page.
+required:
+  - type
+  - items
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - Billboard
+  items:
+    description: The story promo(s) to be displayed in the collection.
+    type: array
+    items:
+      $ref: ./FDStoryPromo.yaml

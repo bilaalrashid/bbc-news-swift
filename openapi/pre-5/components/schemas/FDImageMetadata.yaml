@@ -1,0 +1,17 @@
+description: Metadata descriptions of an image.
+type: object
+properties:
+  altText:
+    description: >-
+      A textual description of an image, to be used as alternative text in place
+      of the image.
+    type: string
+    example: Paula Vennells at the Post Office inquiry
+  caption:
+    description: A caption to display with the image.
+    type: string
+    example: Paula Vennells at the Post Office inquiry
+  copyrightText:
+    description: A copyright attribution for the image.
+    type: string
+    example: Getty

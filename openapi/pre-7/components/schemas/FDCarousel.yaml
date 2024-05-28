@@ -1,0 +1,31 @@
+description: >-
+  A collection of story promos that should be displayed as a scrollable
+  carousel.
+required:
+  - type
+  - items
+  - aspectRatio
+  - presentation
+  - hasPageIndicator
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - Carousel
+  items:
+    description: The story promos to be displayed in the collection.
+    type: array
+    items:
+      $ref: ./FDStoryPromo.yaml
+  aspectRatio:
+    description: The aspect ratio of each promo displayed in the collection.
+    type: number
+    format: double
+    example: 1.777777
+  presentation:
+    $ref: ./FDPresentation.yaml
+  hasPageIndicator:
+    description: If page indicators be displayed for each item in the carousel.
+    type: boolean

@@ -1,0 +1,25 @@
+type: object
+description: >-
+  The list of ordered items to be displayed to the user for a page returned by
+  the API.
+oneOf:
+  - $ref: ./FDBillboard.yaml
+  - $ref: ./FDHierarchicalCollection.yaml
+  - $ref: ./FDCollectionHeader.yaml
+  - $ref: ./FDSimpleCollection.yaml
+  - $ref: ./FDSimplePromoGrid.yaml
+  - $ref: ./FDWeatherPromoSummary.yaml
+  - $ref: ./FDCarousel.yaml
+  - $ref: ./FDVideoPortraitStory.yaml
+  - $ref: ./FDTopicButton.yaml
+  - $ref: ./FDChipList.yaml
+  - $ref: ./FDCopyright.yaml
+  - $ref: ./FDMedia.yaml
+  - $ref: ./FDImageContainer.yaml
+  - $ref: ./FDImage.yaml
+  - $ref: ./FDHeadline.yaml
+  - $ref: ./FDByline.yaml
+  - $ref: ./FDTextContainer.yaml
+  - $ref: ./FDSectionHeader.yaml
+  - $ref: ./FDContentList.yaml
+  - $ref: ./FDStoryPromo.yaml

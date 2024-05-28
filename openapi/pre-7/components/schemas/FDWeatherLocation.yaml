@@ -1,0 +1,17 @@
+description: A location being described by a weather forecast.
+required:
+  - name
+  - isCurrentLocation
+type: object
+properties:
+  name:
+    description: >-
+      The display name of the location being described. This is typically the
+      first half of the UK postcode for the location.
+    type: string
+    example: W1A
+  isCurrentLocation:
+    description: >-
+      If the location being described the is the same as the user's current
+      location.
+    type: boolean

@@ -1,0 +1,25 @@
+description: A definition of how to fetch the correct size of the image.
+required:
+  - type
+  - widthToken
+  - widths
+type: object
+properties:
+  type:
+    description: The type of sizing method used.
+    type: string
+    enum:
+      - SPECIFIC_WIDTHS
+  widthToken:
+    description: The token in the URL where the chosen width should be defined.
+    type: string
+    example: '{width}'
+  widths:
+    description: >-
+      The fixed options of widths that can we used to substitute in place of the
+      width token.
+    type: array
+    items:
+      type: integer
+      format: int32
+      example: 1024

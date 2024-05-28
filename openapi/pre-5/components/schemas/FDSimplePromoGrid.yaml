@@ -1,0 +1,16 @@
+description: A collection of story promos that should be displayed as a grid.
+required:
+  - type
+  - items
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - SimplePromoGrid
+  items:
+    description: The story promos to be displayed in the collection.
+    type: array
+    items:
+      $ref: ./FDStoryPromo.yaml

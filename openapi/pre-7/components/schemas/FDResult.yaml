@@ -1,0 +1,13 @@
+description: The main response object from the API.
+required:
+  - data
+  - contentType
+type: object
+properties:
+  data:
+    $ref: ./FDData.yaml
+  contentType:
+    description: The content type of the response from the API.
+    type: string
+    enum:
+      - application/json; charset=utf-8

@@ -1,0 +1,16 @@
+description: A byline for a story.
+required:
+  - type
+  - contributors
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `Byline`.
+    type: string
+    enum:
+      - Byline
+  contributors:
+    description: The list of contributors in the article.
+    type: array
+    items:
+      $ref: ./FDBylineContributor.yaml
