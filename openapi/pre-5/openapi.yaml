@@ -4,7 +4,7 @@ info:
   description: >-
     Unofficial documentation of the internal API used for the iOS and Android
     BBC News apps.
-  version: pre-7
+  version: pre-5
   license:
     name: MIT
     url: https://github.com/bilaalrashid/bbc-news-swift/raw/main/LICENSE
