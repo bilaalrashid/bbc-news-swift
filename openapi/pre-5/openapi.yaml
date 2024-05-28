@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: BBC News Internal API
-  description: >-
+  description: |-
     Unofficial documentation of the internal API used for the iOS and Android
     BBC News apps.
 
