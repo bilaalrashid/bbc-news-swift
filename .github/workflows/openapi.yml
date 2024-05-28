@@ -46,6 +46,9 @@ jobs:
       - name: Build pre-7
         run: redocly build-docs openapi/pre-7/openapi.yaml --output build/pre-7.html
 
+      - name: Link index.html to latest version
+        run: cp build/pre-7.html build/index.html
+
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v5
