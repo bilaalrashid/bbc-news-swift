@@ -129,7 +129,7 @@ public struct BbcNews {
         ]
 
         if let url = components.url?.absoluteString {
-            return try await self.fetchFDUrl(url: url)
+            return try await self.fetch(url: url)
         }
 
         throw NetworkError.noUrl
@@ -139,11 +139,11 @@ public struct BbcNews {
     ///
     /// - Parameter topicIds: The topic IDs to fetch.
     /// - Returns: The fetched topic pages.
-    public func fetchTopicPages(for topicIds: [String]) async throws -> [FDResult] {
+    public func fetchTopicDiscoveryPages(for topicIds: [String]) async throws -> [FDResult] {
         var results = [FDResult]()
 
         for topicId in topicIds {
-            results.append(try await self.fetchTopicPage(for: topicId))
+            results.append(try await self.fetchTopicDiscoveryPage(for: topicId))
         }
 
         return results
@@ -153,7 +153,7 @@ public struct BbcNews {
     ///
     /// - Parameter topicId: The topic ID to fetch.
     /// - Returns: The fetched topic page.
-    public func fetchTopicPage(for topicId: String) async throws -> FDResult {
+    public func fetchTopicDiscoveryPage(for topicId: String) async throws -> FDResult {
         var components = URLComponents()
         components.scheme = "https"
         components.host = BbcNews.hostname
@@ -166,7 +166,7 @@ public struct BbcNews {
         ]
 
         if let url = components.url?.absoluteString {
-            return try await self.fetchFDUrl(url: url)
+            return try await self.fetch(url: url)
         }
 
         throw NetworkError.noUrl
@@ -176,7 +176,7 @@ public struct BbcNews {
     ///
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
-    public func fetchFDUrl(url urlString: String) async throws -> FDResult {
+    public func fetch(url urlString: String) async throws -> FDResult {
         // swiftlint:disable indentation_width
 #if canImport(OSLog)
         Logger.network.debug("Requesting: \(urlString, privacy: .public)")
