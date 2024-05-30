@@ -42,12 +42,12 @@ public struct BbcNews {
         return hostname == self.hostname
     }
 
-    /// Converts a web URL that returns HTML to a native API URL that returns a JSON representation.
+    /// Converts a BBC News webpage URL to a native API URL that returns a JSON representation, if one exists.
     ///
     /// - Parameter url: The web URL to convert.
     /// - Returns: The native API URL, if successful.
     public static func convertWebUrlToApi(url: String) -> String? {
-        let regex = #/https?:\/\/(www\.)?bbc\.co(m|\.uk)\/news\/(\w|\-|\/)+\.app$/#
+        let regex = #/https?:\/\/(www\.)?bbc\.co(m|\.uk)\/news\/(\w|\-|\/)+(\.app)?$/#
 
         // swiftlint:disable:next unused_optional_binding
         guard let _ = try? regex.firstMatch(in: url) else {

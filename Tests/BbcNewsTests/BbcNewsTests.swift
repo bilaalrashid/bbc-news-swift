@@ -34,6 +34,11 @@ final class BbcNewsTests: XCTestCase {
         )
 
         XCTAssertEqual(
+            BbcNews.convertWebUrlToApi(url: "https://www.bbc.co.uk/news/uk-politics-68983472"),
+            "https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.co.uk/news/uk-politics-68983472"
+        )
+
+        XCTAssertEqual(
             BbcNews.convertWebUrlToApi(url: "https://bilaal.co.uk"),
             nil
         )
