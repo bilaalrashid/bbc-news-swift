@@ -12,6 +12,7 @@ properties:
       - BREAKING
       - VIDEO
       - AUDIO
+      - ORDERED
   brand:
     description: The brand the badge represents.
     type: string

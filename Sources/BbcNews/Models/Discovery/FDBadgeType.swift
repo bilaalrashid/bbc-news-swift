@@ -13,6 +13,7 @@ public enum FDBadgeType: String, Codable, Equatable, Hashable, Unknownable {
     case breaking = "BREAKING"
     case video = "VIDEO"
     case audio = "AUDIO"
+    case ordered = "ORDERED"
 
     case unknown
 }
