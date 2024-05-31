@@ -13,7 +13,7 @@ public struct FDTextContainer: Codable, Equatable, Hashable {
     internal let type: String
 
     /// The type of the container that the text should be displayed in.
-    public var containerType: String
+    public var containerType: FDTextContainerType
 
     /// The text to be displayed in the paragraph.
     public var text: FDAttributedText
@@ -23,7 +23,7 @@ public struct FDTextContainer: Codable, Equatable, Hashable {
     /// - Parameters:
     ///   - containerType: The type of the container that the text should be displayed in.
     ///   - text: The text to be displayed in the paragraph.
-    public init(containerType: String, text: FDAttributedText) {
+    public init(containerType: FDTextContainerType, text: FDAttributedText) {
         self.type = "textContainer"
         self.containerType = containerType
         self.text = text
