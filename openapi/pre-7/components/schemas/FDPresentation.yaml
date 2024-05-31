@@ -11,6 +11,7 @@ properties:
       - SINGLE_RENDERER
       - MULTIPLE_RENDERER
       - NO_PADDING
+      - VERTICAL_VIDEO
   title:
     description: The title of the page to be presented.
     type: string

@@ -13,6 +13,7 @@ public enum FDPresentationType: String, Codable, Equatable, Hashable, Unknownabl
     case singleRenderer = "SINGLE_RENDERER"
     case multipleRenderer = "MULTIPLE_RENDERER"
     case noPadding = "NO_PADDING"
+    case verticalVideo = "VERTICAL_VIDEO"
 
     case unknown
 }
