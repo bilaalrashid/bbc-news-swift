@@ -19,7 +19,7 @@ public struct FDAttributedTextSpan: Codable, Equatable, Hashable {
     public var length: Int
 
     /// A style attribute for the text in the span.
-    public var attribute: String?
+    public var attribute: FDAttribute?
 
     /// A link that the attributed text in the span should link to.
     public var link: FDLink?
@@ -32,7 +32,7 @@ public struct FDAttributedTextSpan: Codable, Equatable, Hashable {
     ///   - length: The number of characters that the span applied for.
     ///   - attribute: A style attribute for the text in the span.
     ///   - link: A link that the attributed text in the span should link to.
-    public init(type: FDAttributeType, startIndex: Int, length: Int, attribute: String? = nil, link: FDLink? = nil) {
+    public init(type: FDAttributeType, startIndex: Int, length: Int, attribute: FDAttribute? = nil, link: FDLink? = nil) {
         self.type = type
         self.startIndex = startIndex
         self.length = length
