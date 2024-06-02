@@ -57,6 +57,15 @@ get:
       schema:
         type: string
         example: W1A
+    - name: release
+      in: query
+      description: The release track of the API to use.
+      required: false
+      schema:
+        type: string
+        enum:
+          - public-alpha
+          - team
     - name: clientNeedsUpdate
       in: query
       description: Does the client need to be prompted with an update.

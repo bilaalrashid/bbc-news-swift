@@ -28,6 +28,15 @@ get:
       schema:
         type: string
         example: null
+    - name: release
+      in: query
+      description: The release track of the API to use.
+      required: false
+      schema:
+        type: string
+        enum:
+          - public-alpha
+          - team
   responses:
     '200':
       description: Successful

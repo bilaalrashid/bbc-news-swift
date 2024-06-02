@@ -65,6 +65,7 @@ get:
         type: string
         enum:
           - public-alpha
+          - team
     - name: clientNeedsUpdate
       in: query
       description: Does the client need to be prompted with an update.
