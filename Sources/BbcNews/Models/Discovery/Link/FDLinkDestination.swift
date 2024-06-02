@@ -55,4 +55,13 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
             return nil
         }
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+
+    // swiftlint:disable:next operator_whitespace
+    public static func ==(lhs: FDLinkDestination, rhs: FDLinkDestination) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

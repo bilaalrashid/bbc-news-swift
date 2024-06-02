@@ -24,4 +24,13 @@ public struct FDTrackedEvent: Codable, Equatable, Hashable {
         self.event = event
         self.trackers = trackers
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.event)
+    }
+
+    // swiftlint:disable:next operator_whitespace
+    public static func ==(lhs: FDTrackedEvent, rhs: FDTrackedEvent) -> Bool {
+        return lhs.event == rhs.event
+    }
 }

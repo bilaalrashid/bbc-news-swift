@@ -56,4 +56,13 @@ public struct FDMediaSource: Codable, Equatable, Hashable {
         self.canAutoPlay = canAutoPlay
         self.episodePid = episodePid
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+
+    // swiftlint:disable:next operator_whitespace
+    public static func ==(lhs: FDMediaSource, rhs: FDMediaSource) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

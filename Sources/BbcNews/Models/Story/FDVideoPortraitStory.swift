@@ -43,4 +43,13 @@ public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
         self.subtext = subtext
         self.media = media
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+
+    // swiftlint:disable:next operator_whitespace
+    public static func ==(lhs: FDVideoPortraitStory, rhs: FDVideoPortraitStory) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

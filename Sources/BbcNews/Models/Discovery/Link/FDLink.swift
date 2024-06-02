@@ -24,4 +24,13 @@ public struct FDLink: Codable, Equatable, Hashable {
         self.destinations = destinations
         self.trackers = trackers
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.destinations)
+    }
+
+    // swiftlint:disable:next operator_whitespace
+    public static func ==(lhs: FDLink, rhs: FDLink) -> Bool {
+        return lhs.destinations == rhs.destinations
+    }
 }

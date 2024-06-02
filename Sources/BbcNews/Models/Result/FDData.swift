@@ -32,4 +32,14 @@ public struct FDData: Codable, Equatable, Hashable {
         self.items = items
         self.trackers = trackers
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.metadata)
+        hasher.combine(self.items)
+    }
+
+    // swiftlint:disable:next operator_whitespace
+    public static func ==(lhs: FDData, rhs: FDData) -> Bool {
+        return lhs.metadata == rhs.metadata && lhs.items == rhs.items
+    }
 }

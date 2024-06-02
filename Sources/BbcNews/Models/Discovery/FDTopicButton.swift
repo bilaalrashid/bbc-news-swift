@@ -32,4 +32,13 @@ public struct FDTopicButton: Codable, Equatable, Hashable {
         self.resourceId = resourceId
         self.trackedEvents = trackedEvents
     }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.resourceId)
+    }
+
+    // swiftlint:disable:next operator_whitespace
+    public static func ==(lhs: FDTopicButton, rhs: FDTopicButton) -> Bool {
+        return lhs.resourceId == rhs.resourceId
+    }
 }
