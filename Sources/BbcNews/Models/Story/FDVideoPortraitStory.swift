@@ -16,7 +16,7 @@ public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
     public var id: String
 
     /// The URL of the poster image for the video story.
-    public var url: String
+    public var url: URL
 
     /// The title of the video story.
     public var text: String
@@ -35,7 +35,7 @@ public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
     ///   - text: The title of the video story.
     ///   - subtext: The short description of the video story.
     ///   - media: The video media to display in the story.
-    public init(id: String, url: String, text: String, subtext: String, media: FDMedia) {
+    public init(id: String, url: URL, text: String, subtext: String, media: FDMedia) {
         self.type = "VideoPortraitStory"
         self.id = id
         self.url = url

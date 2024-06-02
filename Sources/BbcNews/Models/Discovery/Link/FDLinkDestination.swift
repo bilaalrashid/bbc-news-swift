@@ -13,7 +13,7 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
     public var sourceFormat: FDSourceFormat
 
     /// The URL being linked to.
-    public var url: String
+    public var url: URL
 
     /// The id of the destination being linked to.
     ///
@@ -30,7 +30,7 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
     ///   - url: The URL being linked to.
     ///   - id: The id of the destination being linked to.
     ///   - presentation: A description of how the destination should be presented.
-    public init(sourceFormat: FDSourceFormat, url: String, id: String, presentation: FDPresentation) {
+    public init(sourceFormat: FDSourceFormat, url: URL, id: String, presentation: FDPresentation) {
         self.sourceFormat = sourceFormat
         self.url = url
         self.id = id
@@ -50,7 +50,7 @@ public struct FDLinkDestination: Codable, Equatable, Hashable {
             // The ID will contain a leading slash, so we shouldn't include one ourself in the concatenation.
             return URL(string: "https://bbc.co.uk" + self.id)
         case .html:
-            return URL(string: self.url)
+            return self.url
         default:
             return nil
         }

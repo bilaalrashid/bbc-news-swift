@@ -35,22 +35,39 @@ public struct BbcNews {
 
     /// Checks if a URL is hosted on the BBC News API.
     ///
+    /// - Parameter urlString: The URL to check.
+    /// - Returns: If the URL is hosted on the BBC News API.
+    public static func isApiUrl(urlString: String) -> Bool {
+        guard let url = URL(string: urlString) else { return false }
+        return BbcNews.isApiUrl(url: url)
+    }
+
+    /// Checks if a URL is hosted on the BBC News API.
+    ///
     /// - Parameter url: The URL to check.
     /// - Returns: If the URL is hosted on the BBC News API.
-    public static func isApiUrl(url: String) -> Bool {
-        guard let hostname = URL(string: url)?.host else { return false }
-        return hostname == self.hostname
+    public static func isApiUrl(url: URL) -> Bool {
+        return url.host == self.hostname
+    }
+
+    /// Converts a BBC News webpage URL to a native API URL that returns a JSON representation, if one exists.
+    ///
+    /// - Parameter urlString: The web URL to convert.
+    /// - Returns: The native API URL, if successful.
+    public static func convertWebUrlToApi(urlString: String) -> String? {
+        guard let url = URL(string: urlString) else { return nil }
+        return BbcNews.convertWebUrlToApi(url: url)?.absoluteString
     }
 
     /// Converts a BBC News webpage URL to a native API URL that returns a JSON representation, if one exists.
     ///
     /// - Parameter url: The web URL to convert.
     /// - Returns: The native API URL, if successful.
-    public static func convertWebUrlToApi(url: String) -> String? {
+    public static func convertWebUrlToApi(url: URL) -> URL? {
         let regex = #/https?:\/\/(www\.)?bbc\.co(m|\.uk)\/news\/(\w|\-|\/)+(\.app)?$/#
 
         // swiftlint:disable:next unused_optional_binding
-        guard let _ = try? regex.firstMatch(in: url) else {
+        guard let _ = try? regex.firstMatch(in: url.absoluteString) else {
             return nil
         }
 
@@ -61,10 +78,10 @@ public struct BbcNews {
         components.queryItems = [
             URLQueryItem(name: "clientName", value: self.clientName),
             URLQueryItem(name: "clientVersion", value: self.clientVersion),
-            URLQueryItem(name: "page", value: url)
+            URLQueryItem(name: "page", value: url.absoluteString)
         ]
 
-        return components.url?.absoluteString
+        return components.url
     }
 
     // MARK: - Instance properties
@@ -128,7 +145,7 @@ public struct BbcNews {
             URLQueryItem(name: "type", value: "index")
         ]
 
-        if let url = components.url?.absoluteString {
+        if let url = components.url {
             return try await self.fetch(url: url)
         }
 
@@ -165,7 +182,7 @@ public struct BbcNews {
             URLQueryItem(name: "type", value: "topic")
         ]
 
-        if let url = components.url?.absoluteString {
+        if let url = components.url {
             return try await self.fetch(url: url)
         }
 
@@ -176,16 +193,24 @@ public struct BbcNews {
     ///
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
-    public func fetch(url urlString: String) async throws -> FDResult {
-        // swiftlint:disable indentation_width
-#if canImport(OSLog)
-        Logger.network.debug("Requesting: \(urlString, privacy: .public)")
-#endif
-        // swiftlint:enable indentation_width
-
+    public func fetch(urlString: String) async throws -> FDResult {
         guard let url = URL(string: urlString) else {
             throw NetworkError.invalidUrl(url: urlString)
         }
+
+        return try await self.fetch(url: url)
+    }
+
+    /// Fetches a page from the BBC News API.
+    ///
+    /// - Parameter url: The URL to fetch.
+    /// - Returns: The fetched page.
+    public func fetch(url: URL) async throws -> FDResult {
+        // swiftlint:disable indentation_width
+#if canImport(OSLog)
+        Logger.network.debug("Requesting: \(url, privacy: .public)")
+#endif
+        // swiftlint:enable indentation_width
 
         let (data, response) = try await self.session.data(from: url)
 

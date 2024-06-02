@@ -21,7 +21,7 @@ public struct FDDataMetadata: Codable, Equatable, Hashable {
     public var lastUpdated: Date
 
     /// The URL of a webpage displaying the same page returned by the API.
-    public var shareUrl: String?
+    public var shareUrl: URL?
 
     /// Creates new page results metadata.
     ///
@@ -30,7 +30,7 @@ public struct FDDataMetadata: Codable, Equatable, Hashable {
     ///   - allowAdvertising: If the page allows advertising to be displayed.
     ///   - lastUpdated: The timestamp of the last time the page was updated.
     ///   - shareUrl: The URL of a webpage displaying the same returned by the API.
-    public init(name: String, allowAdvertising: Bool, lastUpdated: Date, shareUrl: String? = nil) {
+    public init(name: String, allowAdvertising: Bool, lastUpdated: Date, shareUrl: URL? = nil) {
         self.name = name
         self.allowAdvertising = allowAdvertising
         self.lastUpdated = lastUpdated

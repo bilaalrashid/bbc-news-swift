@@ -48,10 +48,10 @@ for item in results.data.items {
 import BbcNews
 
 // Check if a URL is part of the BBC News API
-BbcNews.isApiUrl(url: "https://bbc.co.uk") // false
+BbcNews.isApiUrl(url: URL(string: "https://bbc.co.uk")!) // false
 
 // Convert a webpage URL to a URL for the API
-BbcNews.convertWebUrlToApi(url: "https://www.bbc.com/news/articles/c289n8m4j19o") // https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.com/news/articles/c289n8m4j19o
+BbcNews.convertWebUrlToApi(url: URL(string: "https://www.bbc.com/news/articles/c289n8m4j19o")!) // https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.com/news/articles/c289n8m4j19o
 ```
 
 ## Development

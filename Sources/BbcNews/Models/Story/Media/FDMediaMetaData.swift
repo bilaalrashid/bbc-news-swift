@@ -25,7 +25,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
     public var timestamp: Date
 
     /// A URL that displays content associated to the media item.
-    public var associatedContentUrl: String?
+    public var associatedContentUrl: URL?
 
     /// Is advertising allowed with the media item.
     public var allowAdvertising: Bool
@@ -46,7 +46,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
         caption: String,
         captionWithStyle: FDAttributedText? = nil,
         timestamp: Date,
-        associatedContentUrl: String? = nil,
+        associatedContentUrl: URL? = nil,
         allowAdvertising: Bool
     ) {
         self.title = title

@@ -30,7 +30,7 @@ public struct FDImage: Codable, Equatable, Hashable {
     }
 
     /// Returns the URL that provides the image in the largest possible width, or `nil` if no image URLs can be found.
-    public var largestImageUrl: String? {
+    public var largestImageUrl: URL? {
         return self.largestImageUrl(upTo: .infinity)
     }
 
@@ -38,18 +38,19 @@ public struct FDImage: Codable, Equatable, Hashable {
     ///
     /// - Parameter maxWidth: The maximum width which the URL should return an image for.
     /// - Returns: A URL that returns a version of the image, or `nil` if no image URLs can be found.
-    public func largestImageUrl(upTo maxWidth: Double) -> String? {
+    public func largestImageUrl(upTo maxWidth: Double) -> URL? {
         if self.source.sizingMethod.type == .specificWidths {
             let allowedWidths = self.source.sizingMethod.widths.filter { Double($0) <= maxWidth }
 
             if let maxSize = allowedWidths.last {
-                return self.source.url.replacingOccurrences(of: self.source.sizingMethod.widthToken, with: String(maxSize))
+                let url = self.source.url.replacingOccurrences(of: self.source.sizingMethod.widthToken, with: String(maxSize))
+                return URL(string: url)
             }
 
             return nil
         }
 
         // If we don't recognise the sizing method, assume the URL is not templated.
-        return self.source.url
+        return URL(string: self.source.url)
     }
 }

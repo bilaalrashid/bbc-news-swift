@@ -14,17 +14,17 @@ final class FDImageTests: XCTestCase {
 
         XCTAssertEqual(
             image.largestImageUrl,
-            "https://example.invalid/img/300/example.jpg",
+            URL(string: "https://example.invalid/img/300/example.jpg"),
             "Fails to return URL for the largest width"
         )
         XCTAssertEqual(
             image.largestImageUrl(upTo: 250),
-            "https://example.invalid/img/200/example.jpg",
+            URL(string: "https://example.invalid/img/200/example.jpg"),
             "Fails to return the largest width up to the specified maximum"
         )
         XCTAssertEqual(
             image.largestImageUrl(upTo: 200),
-            "https://example.invalid/img/200/example.jpg",
+            URL(string: "https://example.invalid/img/200/example.jpg"),
             "Fails to return the largest width when equal to the specified maximum"
         )
     }
@@ -34,12 +34,12 @@ final class FDImageTests: XCTestCase {
 
         XCTAssertEqual(
             image.largestImageUrl,
-            "https://example.invalid/img/{width}/example.jpg",
+            URL(string: "https://example.invalid/img/{width}/example.jpg"),
             "Fails to return an unmodified URL for an unrecognised sizing method"
         )
         XCTAssertEqual(
             image.largestImageUrl(upTo: 250),
-            "https://example.invalid/img/{width}/example.jpg",
+            URL(string: "https://example.invalid/img/{width}/example.jpg"),
             "Fails to return an unmodified URL for an unrecognised sizing method"
         )
     }

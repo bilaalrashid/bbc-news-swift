@@ -10,6 +10,8 @@ import Foundation
 /// The remote source for an image.
 public struct FDImageSource: Codable, Equatable, Hashable {
     /// The URL that the image is located.
+    ///
+    /// Depending on the `sizingMethod` this could be a template string.
     public var url: String
 
     /// The definition of how to fetch the correct size of the image.
