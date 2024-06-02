@@ -91,7 +91,7 @@ public struct BbcNews {
 
     // MARK: - Instance methods
 
-#if canImport(UIKit)
+    #if canImport(UIKit)
     /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
     ///
     /// This initialises the User-Agent string, based upon the operating system and device that the request is performed from. Defaulting
@@ -108,7 +108,7 @@ public struct BbcNews {
             systemVersion: UIDevice.current.systemVersion
         )
     }
-#endif
+    #endif
 
     /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
     ///
@@ -206,11 +206,9 @@ public struct BbcNews {
     /// - Parameter url: The URL to fetch.
     /// - Returns: The fetched page.
     public func fetch(url: URL) async throws -> FDResult {
-        // swiftlint:disable indentation_width
-#if canImport(OSLog)
+        #if canImport(OSLog)
         Logger.network.debug("Requesting: \(url, privacy: .public)")
-#endif
-        // swiftlint:enable indentation_width
+        #endif
 
         let (data, response) = try await self.session.data(from: url)
 
