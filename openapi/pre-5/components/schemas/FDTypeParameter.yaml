@@ -1,0 +1,12 @@
+name: type
+in: query
+description: The type of the page being fetched.
+required: true
+schema:
+  type: string
+  enum:
+    - index
+    - topic
+    - asset
+    - topiccollection
+    - resolver

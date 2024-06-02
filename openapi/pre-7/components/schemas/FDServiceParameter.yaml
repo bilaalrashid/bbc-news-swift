@@ -1,0 +1,15 @@
+name: service
+in: query
+description: >-
+  This appears to be the BBC service which to fetch items for.
+  `"news"` referes to the English language version of the app.
+required: true
+schema:
+  type: string
+  enum:
+    - news
+    - arabic
+    - hindi
+    - mundo
+    - russian
+    - cymrufyw

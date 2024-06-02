@@ -6,37 +6,16 @@ get:
   summary: Fetch the full contents of a story.
   description: Returns the full contents of a story.
   parameters:
-    - name: clientName
-      in: query
-      description: The internal codename of the client making the request.
-      required: true
-      schema:
-        type: string
-        enum:
-          - Chrysalis
-    - name: clientVersion
-      in: query
-      description: The version of the client making the request.
-      required: true
-      schema:
-        type: string
-        default: pre-5
+    - $ref: ../../components/schemas/FDClientNameParameter.yaml
+    - $ref: ../../components/schemas/FDClientVersionParameter.yaml
     - name: page
       in: query
       description: The ID or URL of the page to fetch.
       required: true
       schema:
         type: string
-        example: null
-    - name: release
-      in: query
-      description: The release track of the API to use.
-      required: false
-      schema:
-        type: string
-        enum:
-          - public-alpha
-          - team
+        example: https://www.bbc.co.uk/news/articles/cd11kvk1je4o
+    - $ref: ../../components/schemas/FDReleaseParameter.yaml
   responses:
     '200':
       description: Successful

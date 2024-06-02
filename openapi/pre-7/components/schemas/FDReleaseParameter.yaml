@@ -1,0 +1,9 @@
+name: release
+in: query
+description: The release track of the API to use.
+required: false
+schema:
+  type: string
+  enum:
+    - public-alpha
+    - team

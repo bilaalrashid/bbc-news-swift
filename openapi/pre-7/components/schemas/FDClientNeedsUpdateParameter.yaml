@@ -1,0 +1,7 @@
+name: clientNeedsUpdate
+in: query
+description: Does the client need to be prompted with an update.
+required: false
+schema:
+  type: boolean
+  default: false

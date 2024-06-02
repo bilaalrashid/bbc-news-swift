@@ -10,69 +10,14 @@ get:
     or the contents of an individual story. Examples include the
     "Home" tab, pages for specific topic categories.
   parameters:
-    - name: clientName
-      in: query
-      description: The internal codename of the client making the request.
-      required: true
-      schema:
-        type: string
-        enum:
-          - Chrysalis
-    - name: clientVersion
-      in: query
-      description: The version of the client making the request.
-      required: true
-      schema:
-        type: string
-        default: pre-5
-    - name: service
-      in: query
-      description: This appears to be the BBC service which to fetch items for.
-      required: true
-      schema:
-        type: string
-        enum:
-          - news
-    - name: page
-      in: query
-      description: The ID of the page to fetch.
-      required: true
-      schema:
-        type: string
-        default: chrysalis_discovery
-    - name: type
-      in: query
-      description: The type of the page being fetched.
-      required: true
-      schema:
-        type: string
-        enum:
-          - index
-          - topic
-          - asset
-    - name: clientLoc
-      in: query
-      description: The first half of a UK postcode to customise results for.
-      required: false
-      schema:
-        type: string
-        example: W1A
-    - name: release
-      in: query
-      description: The release track of the API to use.
-      required: false
-      schema:
-        type: string
-        enum:
-          - public-alpha
-          - team
-    - name: clientNeedsUpdate
-      in: query
-      description: Does the client need to be prompted with an update.
-      required: false
-      schema:
-        type: boolean
-        default: false
+    - $ref: ../../components/schemas/FDClientNameParameter.yaml
+    - $ref: ../../components/schemas/FDClientVersionParameter.yaml
+    - $ref: ../../components/schemas/FDServiceParameter.yaml
+    - $ref: ../../components/schemas/FDPageParameter.yaml
+    - $ref: ../../components/schemas/FDTypeParameter.yaml
+    - $ref: ../../components/schemas/FDClientLocationParameter.yaml
+    - $ref: ../../components/schemas/FDReleaseParameter.yaml
+    - $ref: ../../components/schemas/FDClientNeedsUpdateParameter.yaml
   responses:
     '200':
       description: Successful
