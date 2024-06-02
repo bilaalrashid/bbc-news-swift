@@ -5,6 +5,8 @@
 
 A Swift client and [unofficial documentation](https://bilaalrashid.github.io/bbc-news-swift/) for the BBC News API.
 
+This project is for educational and research purposes only.
+
 ## Installation
 
 bbc-news-swift can be installed using [Swift Package Manager](https://www.swift.org/documentation/package-manager/) by adding the following to your `Package.swift` file:
