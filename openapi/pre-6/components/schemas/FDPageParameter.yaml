@@ -1,0 +1,12 @@
+name: page
+in: query
+description: The ID of the page to fetch.
+required: true
+schema:
+  type: string
+  enum:
+    - chrysalis_discovery
+    - front_page
+    - live_radio
+    - media_page
+    - topic_menu

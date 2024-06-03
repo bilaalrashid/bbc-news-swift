@@ -1,0 +1,17 @@
+description: >-
+  A byline for a story. This is deprecated in favour of `FDByline` as a direct
+  child of `FDItem`.
+deprecated: true
+required:
+  - name
+  - purpose
+type: object
+properties:
+  name:
+    description: The name of the individual featured in the byline.
+    type: string
+    example: Laura Kuenssberg
+  purpose:
+    description: The description or job title of the individual featured in the byline.
+    type: string
+    example: Presenter, Sunday with Laura Kuenssberg

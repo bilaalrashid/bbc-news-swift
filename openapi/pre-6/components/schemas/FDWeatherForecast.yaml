@@ -1,0 +1,54 @@
+description: A weather description of a forecast prediction.
+required:
+  - description
+  - high
+  - low
+  - icon
+  - nighttimeLayout
+type: object
+properties:
+  description:
+    description: The short, textual description of the forecast.
+    type: string
+    example: Partly cloudy and a gentle breeze
+  high:
+    $ref: ./FDTemperature.yaml
+  low:
+    $ref: ./FDTemperature.yaml
+  icon:
+    description: The identifier of the weather icon to be displayed.
+    type: string
+    enum:
+      - SLEET_SHOWER
+      - THUNDERSTORM
+      - HAIL
+      - HAIL_SHOWER
+      - HAIL_SHOWER_NIGHT
+      - MIST
+      - SLEET
+      - SLEET_SHOWER_NIGHT
+      - SUNNY
+      - SUNNY_INTERVALS
+      - THUNDERY_SHOWER
+      - THUNDERY_SHOWER_NIGHT
+      - HEAVY_RAIN
+      - HEAVY_RAIN_SHOWER
+      - HEAVY_RAIN_SHOWER_NIGHT
+      - HEAVY_SNOW
+      - HEAVY_SNOW_SHOWER
+      - HEAVY_SNOW_SHOWER_NIGHT
+      - LIGHT_RAIN
+      - LIGHT_RAIN_SHOWER
+      - LIGHT_RAIN_SHOWER_NIGHT
+      - LIGHT_SNOW
+      - LIGHT_SNOW_SHOWER
+      - LIGHT_SNOW_SHOWER_NIGHT
+      - LIGHT_SOURCE_CLOUDY_WEATHER
+      - PARTLY_CLOUDY
+      - SANDSTORM
+      - TROPICAL_STORM
+  nighttimeLayout:
+    description: >-
+      If the forecast should be displayed to the user in a night-time specific
+      layout.
+    type: boolean

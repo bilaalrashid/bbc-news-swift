@@ -1,0 +1,16 @@
+description: A collection of topics that should be displayed as a chip list.
+required:
+  - type
+  - topics
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - ChipList
+  topic:
+    description: The topics to be displayed in the list.
+    type: array
+    items:
+      $ref: ./FDTopic.yaml

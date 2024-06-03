@@ -1,0 +1,14 @@
+description: A section header in a story.
+required:
+  - type
+  - text
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `SectionHeader`.
+    type: string
+    enum:
+      - SectionHeader
+  text:
+    description: The text in the section header.
+    type: string

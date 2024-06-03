@@ -1,0 +1,16 @@
+description: The main data from the API response.
+required:
+  - metadata
+  - items
+type: object
+properties:
+  metadata:
+    $ref: ./FDDataMetadata.yaml
+  items:
+    type: array
+    items:
+      $ref: ./FDItem.yaml
+  trackers:
+    type: array
+    items:
+      $ref: ./FDTracker.yaml

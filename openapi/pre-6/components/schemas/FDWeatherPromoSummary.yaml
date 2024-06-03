@@ -1,0 +1,18 @@
+description: A promo summary for the weather forecast.
+required:
+  - type
+type: object
+properties:
+  type:
+    description: The type of the response object.
+    type: string
+    enum:
+      - WeatherPromoSummary
+  period:
+    description: The textual description of the time period covered by the forecast.
+    type: string
+    example: Tonight
+  location:
+    $ref: ./FDWeatherLocation.yaml
+  forecast:
+    $ref: ./FDWeatherForecast.yaml

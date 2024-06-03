@@ -1,0 +1,7 @@
+name: clientLoc
+in: query
+description: The first half of a UK postcode to customise results for.
+required: false
+schema:
+  type: string
+  example: W1A

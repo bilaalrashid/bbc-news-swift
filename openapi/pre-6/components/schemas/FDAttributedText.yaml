@@ -1,0 +1,29 @@
+description: The annotated text contents of a text paragraph displayed in a story.
+required:
+  - type
+  - startIndex
+  - length
+type: object
+properties:
+  type:
+    description: The type of the span.
+    type: string
+    enum:
+      - link
+      - emphasis
+  startIndex:
+    description: The start index of the span.
+    type: integer
+    format: int32
+  length:
+    description: The number of characters that the span applied for.
+    type: integer
+    format: int32
+  attribute:
+    description: The type of the span.
+    type: string
+    enum:
+      - bold
+      - italic
+  link:
+    $ref: ./FDLink.yaml

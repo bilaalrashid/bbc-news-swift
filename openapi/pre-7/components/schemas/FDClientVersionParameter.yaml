@@ -4,4 +4,4 @@ description: The version of the client making the request.
 required: true
 schema:
   type: string
-  default: pre-5
+  default: pre-6

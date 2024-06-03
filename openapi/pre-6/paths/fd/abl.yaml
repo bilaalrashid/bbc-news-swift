@@ -1,0 +1,43 @@
+get:
+  operationId: abl
+  security: []
+  tags:
+    - Discovery
+    - Story
+  summary: Fetch a BBC news page.
+  description: >-
+    Returns data for a page that returns a list of links to stories,
+    or the contents of an individual story. Examples include the
+    "Home" tab, pages for specific topic categories.
+  parameters:
+    - $ref: ../../components/schemas/FDClientNameParameter.yaml
+    - $ref: ../../components/schemas/FDClientVersionParameter.yaml
+    - $ref: ../../components/schemas/FDServiceParameter.yaml
+    - $ref: ../../components/schemas/FDPageParameter.yaml
+    - $ref: ../../components/schemas/FDTypeParameter.yaml
+    - $ref: ../../components/schemas/FDClientLocationParameter.yaml
+    - $ref: ../../components/schemas/FDReleaseParameter.yaml
+    - $ref: ../../components/schemas/FDClientNeedsUpdateParameter.yaml
+  responses:
+    '200':
+      description: Successful
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/FDResult.yaml
+    '204':
+      description: New destination
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../../components/schemas/FDResolverResult.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/ResponseError.yaml

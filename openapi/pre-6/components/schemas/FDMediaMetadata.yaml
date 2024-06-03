@@ -1,0 +1,36 @@
+description: Metadata descriptions of a media item.
+required:
+  - title
+  - caption
+  - timestamp
+  - allowAdvertising
+type: object
+properties:
+  title:
+    description: The title of the media item.
+    type: string
+    example: Key moments from former Post Office chief's three-day testimony
+  summary:
+    description: A summary description of the media item.
+    type: string
+    example: >-
+      Key moments from Paula Vennells' three days of questioning at Post Office
+      inquiry
+  caption:
+    description: The caption to display with the media item.
+    type: string
+    example: >-
+      Key moments from Paula Vennells' three days of questioning at Post Office
+      inquiry
+  timestamp:
+    description: The 64-bit timestamp of the time the media item was last updated.
+    type: integer
+    format: int64
+  associatedContentUrl:
+    description: A URL that displays content associated to the media item.
+    type: string
+    format: uri
+    example: https://www.bbc.co.uk/news/world-europe-69035174
+  allowAdvertising:
+    description: Is advertising allowed with the media item.
+    type: boolean

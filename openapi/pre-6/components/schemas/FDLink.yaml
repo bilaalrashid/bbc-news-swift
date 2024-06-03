@@ -1,0 +1,15 @@
+description: A link to a new page(s).
+required:
+  - destinations
+  - trackers
+type: object
+properties:
+  destinations:
+    description: The destination(s) of the link.
+    type: array
+    items:
+      $ref: ./FDLinkDestination.yaml
+  trackers:
+    type: array
+    items:
+      $ref: ./FDTracker.yaml

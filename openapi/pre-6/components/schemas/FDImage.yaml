@@ -1,0 +1,15 @@
+description: An image to be displayed.
+required:
+  - type
+  - source
+type: object
+properties:
+  type:
+    description: Used for decoding `FDItem`. This is always `Image`.
+    type: string
+    enum:
+      - Image
+  source:
+    $ref: ./FDImageSource.yaml
+  metadata:
+    $ref: ./FDImageMetadata.yaml

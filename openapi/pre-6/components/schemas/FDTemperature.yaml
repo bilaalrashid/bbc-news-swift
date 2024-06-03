@@ -1,0 +1,9 @@
+description: A representation of a temperate in a weather forecast.
+required:
+  - celsius
+type: object
+properties:
+  celsius:
+    description: The temperate value, represented in celsius.
+    type: integer
+    example: 20
