@@ -1,12 +1,11 @@
 name: page
 in: query
-description: The ID of the page to fetch.
+description: >-
+  The ID of the page to fetch.
+
+  Global examples include `"chrysalis_discovery"`, `"front_page"`,
+  `"live_radio"`, `"media_page"`, `"topic_menu"`
 required: true
 schema:
   type: string
-  enum:
-    - chrysalis_discovery
-    - front_page
-    - live_radio
-    - media_page
-    - topic_menu
+  example: chrysalis_discovery
