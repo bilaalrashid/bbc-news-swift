@@ -11,7 +11,7 @@ info:
       - [pre-7](pre-7.html)
       - [pre-6](pre-6.html)
       - [pre-5](pre-5.html)
-  version: pre-5
+  version: pre-6
   license:
     name: MIT
     url: https://github.com/bilaalrashid/bbc-news-swift/raw/main/LICENSE
