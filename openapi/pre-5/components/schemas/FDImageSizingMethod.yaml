@@ -1,23 +1,28 @@
 description: A definition of how to fetch the correct size of the image.
 required:
   - type
-  - widthToken
-  - widths
 type: object
 properties:
   type:
-    description: The type of sizing method used.
+    description: >-
+      The type of sizing method used.
+      `"SPECIFIC_WIDTHS"` defines a placeholder token in a URL, which can be
+      substituted with a specified list of widths.
+      `"NO_WIDTH"` supports only a single width, which is hardcoded into a URL.
     type: string
     enum:
       - SPECIFIC_WIDTHS
+      - NO_WIDTH
   widthToken:
-    description: The token in the URL where the chosen width should be defined.
+    description: >-
+      The token in the URL where the chosen width should be defined. This is used
+      when `type` is `"SPECIFIC_WIDTHS"`.
     type: string
     example: '{width}'
   widths:
     description: >-
       The fixed options of widths that can we used to substitute in place of the
-      width token.
+      width token. This is used when `type` is `"SPECIFIC_WIDTHS"`.
     type: array
     items:
       type: integer

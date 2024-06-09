@@ -1,0 +1,1638 @@
+{
+  "data": {
+      "type": "ContentResponse",
+      "metadata": {
+          "name": "When is the UK general election and who can vote?",
+          "allowAdvertising": true,
+          "lastUpdated": 1717673482000,
+          "shareUrl": "https://www.bbc.co.uk/news/uk-politics-62064552"
+      },
+      "items": [
+          {
+              "type": "Image",
+              "source": {
+                  "aspectRatio": 1.7777777777777777,
+                  "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/7957/production/_133336013_nzsxcbat.png",
+                  "sizingMethod": {
+                      "type": "SPECIFIC_WIDTHS",
+                      "widthToken": "{width}",
+                      "widths": [
+                          80,
+                          100,
+                          128,
+                          144,
+                          160,
+                          200,
+                          240,
+                          288,
+                          320,
+                          360,
+                          400,
+                          432,
+                          480,
+                          512,
+                          576,
+                          640,
+                          720,
+                          768,
+                          780,
+                          800,
+                          854,
+                          960,
+                          1024,
+                          1080,
+                          1136,
+                          1152,
+                          1200,
+                          1280,
+                          1440,
+                          1536,
+                          1600,
+                          1920,
+                          2048,
+                          2560
+                      ]
+                  }
+              },
+              "metadata": {
+                  "altText": "A woman holding a polling station sign"
+              }
+          },
+          {
+              "type": "Headline",
+              "text": "When is the UK general election and who can vote?",
+              "firstPublished": 1657126917000,
+              "lastPublished": 1717673005000,
+              "topic": {
+                  "text": "UK Politics",
+                  "link": {
+                      "trackers": [],
+                      "destinations": [
+                          {
+                              "sourceFormat": "ABL",
+                              "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cvrl962gz9xt&service=news&type=topic",
+                              "id": "cvrl962gz9xt",
+                              "presentation": {
+                                  "type": "SINGLE_RENDERER",
+                                  "title": "UK Politics",
+                                  "canShare": false
+                              }
+                          }
+                      ]
+                  }
+              },
+              "languageCode": "en-gb",
+              "readTimeMinutes": 5
+          },
+          {
+              "type": "Byline",
+              "contributors": [
+                  {
+                      "type": "Contributor",
+                      "name": "Jennifer Clarke",
+                      "role": "BBC News"
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "introduction",
+              "text": {
+                  "text": "The next general election will take place on 4 July.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The announcement ended months of speculation about when the UK would go to the polls.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "What is a general election and how many MPs are there? ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The general election is to elect Members of Parliament - or MPs - to the House of Commons.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The UK is divided into 650 areas, called constituencies, and each of these elects one MP to represent local residents at Westminster.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Most candidates represent a political party, but some stand as independents. ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "Follow the latest campaign developments",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 39,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "ABL",
+                                          "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=crggn4j2lm0t&type=topic",
+                                          "id": "crggn4j2lm0t",
+                                          "presentation": {
+                                              "type": "SINGLE_RENDERER",
+                                              "canShare": false
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "text": "Your Voice, Your Vote: What issues matter to you?",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 49,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "ABL",
+                                          "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Farticles%2Fcz440j1x4xno&clientName=Chrysalis&clientVersion=pre-7",
+                                          "id": "https://www.bbc.co.uk/news/articles/cz440j1x4xno",
+                                          "presentation": {
+                                              "type": "SINGLE_RENDERER",
+                                              "canShare": true
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "text": "Why did Sunak decide to call summer election?",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 45,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "ABL",
+                                          "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-politics-69050402&service=news&type=asset",
+                                          "id": "/news/uk-politics-69050402",
+                                          "presentation": {
+                                              "type": "SINGLE_RENDERER",
+                                              "canShare": true
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "How does voting work?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "In a general election, each person has one vote. ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "On election day, registered voters in each constituency vote for their preferred candidate in their local polling station. Some people vote by post in advance. ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Under a system called \"first past the post\", the candidate who gets the most votes becomes the MP for that area. ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "Election poll tracker: How do the parties compare?",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 50,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "ABL",
+                                          "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-politics-68079726&service=news&type=asset",
+                                          "id": "/news/uk-politics-68079726",
+                                          "presentation": {
+                                              "type": "SINGLE_RENDERER",
+                                              "canShare": true
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "text": "Polling expert Sir John Curtice crunches the numbers... in 60 seconds",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 69,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "ABL",
+                                          "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fvideos%2Fcw00j25xqkjo&clientName=Chrysalis&clientVersion=pre-7",
+                                          "id": "https://www.bbc.co.uk/news/videos/cw00j25xqkjo",
+                                          "presentation": {
+                                              "type": "SINGLE_RENDERER",
+                                              "canShare": true
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "How can I find out about my constituency?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "This election will be fought on new constituency boundaries, redrawn to reflect population changes and to try to even out voter numbers in each area.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Use our tool to find out which constituency you are in and an estimate of what the result would have been had these new boundaries been in place at the last general election, in 2019.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "Image",
+              "source": {
+                  "url": "https://c.files.bbci.co.uk/E851/production/_132337495_boundaries_v3_launcher-2x-nc.png",
+                  "sizingMethod": {
+                      "type": "NO_WIDTH"
+                  }
+              },
+              "link": {
+                  "trackers": [],
+                  "destinations": [
+                      {
+                          "sourceFormat": "HTML",
+                          "url": "https://www.bbc.co.uk/indepthtoolkit/smallprox/include/newsspec/37795-uk-constituencies-changes-2023/english/app?responsive=true&newsapps=true&app-image=https://c.files.bbci.co.uk/E851/production/_132337495_boundaries_v3_launcher-2x-nc.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://c.files.bbci.co.uk/E851/production/_132337495_boundaries_v3_launcher-2x-nc.png&app-image-alt-text=Click%20or%20tap%20here%20to%20see%20interactive%20content",
+                          "id": "https://www.bbc.co.uk/indepthtoolkit/smallprox/include/newsspec/37795-uk-constituencies-changes-2023/english/app?responsive=true&newsapps=true&app-image=https://c.files.bbci.co.uk/E851/production/_132337495_boundaries_v3_launcher-2x-nc.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://c.files.bbci.co.uk/E851/production/_132337495_boundaries_v3_launcher-2x-nc.png&app-image-alt-text=Click%20or%20tap%20here%20to%20see%20interactive%20content",
+                          "presentation": {
+                              "type": "WEB",
+                              "contentSource": "BBC"
+                          }
+                      }
+                  ]
+              },
+              "metadata": {
+                  "altText": "Click or tap here to see interactive content"
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "Find your MP",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 12,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "HTML",
+                                          "url": "https://members.parliament.uk/FindYourMP",
+                                          "id": "https://members.parliament.uk/FindYourMP",
+                                          "presentation": {
+                                              "type": "WEB",
+                                              "contentSource": "EXTERNAL"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "Who can vote in the general election and how old do you have to be?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Anyone on the electoral register aged 18 or over on polling day can vote in the general election as long as they are a British citizen, a qualifying Commonwealth citizen or a Republic of Ireland citizen with a UK address.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "All UK citizens who live abroad can register to vote in the constituency where they were previously resident or on the electoral roll, as long as they are not legally excluded from voting.  ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Students can be registered at both their home and term-time addresses, but can only vote in one place at the general election. Voting more than once in a general election is a criminal offence. ",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 9,
+                          "length": 60,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.electoralcommission.org.uk/voting-and-elections/who-can-vote/students",
+                                      "id": "https://www.electoralcommission.org.uk/voting-and-elections/who-can-vote/students",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Those who cannot vote in general elections include prisoners serving a sentence in jail, and peers from the House of Lords. ",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 6,
+                          "length": 36,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8985/",
+                                      "id": "https://commonslibrary.parliament.uk/research-briefings/cbp-8985/",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The deadline to register to vote in the general election is 23:59 BST on Tuesday 18 June. ",
+                  "spans": [
+                      {
+                          "type": "emphasis",
+                          "startIndex": 60,
+                          "length": 28,
+                          "attribute": "bold"
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "Register to vote",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 16,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "HTML",
+                                          "url": "https://www.gov.uk/register-to-vote",
+                                          "id": "https://www.gov.uk/register-to-vote",
+                                          "presentation": {
+                                              "type": "WEB",
+                                              "contentSource": "EXTERNAL"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "How do postal votes work if you can't vote in person? ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Polling stations are open between 07:00 and 22:00 on election day.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "If you will not be able to turn up in person during those times - and you have already registered for the general election - you can apply for a postal vote.",
+                  "spans": [
+                      {
+                          "type": "emphasis",
+                          "startIndex": 122,
+                          "length": 1,
+                          "attribute": "bold"
+                      },
+                      {
+                          "type": "emphasis",
+                          "startIndex": 124,
+                          "length": 1,
+                          "attribute": "bold"
+                      },
+                      {
+                          "type": "link",
+                          "startIndex": 125,
+                          "length": 32,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.electoralcommission.org.uk/i-am-a/voter/apply-vote-post",
+                                      "id": "https://www.electoralcommission.org.uk/i-am-a/voter/apply-vote-post",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "It does not matter whether you will be on holiday, working or simply find mailing your vote more convenient.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "You will need to prove your identity when applying.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The deadline to apply for a postal vote is 17:00 on Wednesday 19 June.",
+                  "spans": [
+                      {
+                          "type": "emphasis",
+                          "startIndex": 43,
+                          "length": 27,
+                          "attribute": "bold"
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The deadline to apply for a postal vote in Northern Ireland is 17:00 on Friday 14 June 2024.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 13,
+                          "length": 46,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.eoni.org.uk/Vote/Voting-by-post-or-proxy",
+                                      "id": "https://www.eoni.org.uk/Vote/Voting-by-post-or-proxy",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "type": "emphasis",
+                          "startIndex": 63,
+                          "length": 28,
+                          "attribute": "bold"
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "Apply for a postal vote",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 23,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "HTML",
+                                          "url": "https://www.gov.uk/apply-postal-vote",
+                                          "id": "https://www.gov.uk/apply-postal-vote",
+                                          "presentation": {
+                                              "type": "WEB",
+                                              "contentSource": "EXTERNAL"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "How do proxy votes work?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "You can also nominate a proxy to vote on your behalf. You and your proxy must both be registered to vote.  ",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 13,
+                          "length": 16,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.gov.uk/apply-proxy-vote",
+                                      "id": "https://www.gov.uk/apply-proxy-vote",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The rules for voting by proxy have changed. If you applied for a proxy vote before 31 October 2023, this has expired and you need to apply again.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The deadline to apply for a proxy vote for the general election is 17:00 on Wednesday 26 June. ",
+                  "spans": [
+                      {
+                          "type": "emphasis",
+                          "startIndex": 67,
+                          "length": 26,
+                          "attribute": "bold"
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "You can also request an emergency proxy vote after this deadline if last-minute work commitments or a medical emergency mean you cannot vote in person. You can apply for this up to 17:00 on polling day.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 24,
+                          "length": 20,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/emergency-proxy-vote",
+                                      "id": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/emergency-proxy-vote",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The deadline to apply for a proxy vote in Northern Ireland is 17:00 on Friday 14 June 2024.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 13,
+                          "length": 45,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.eoni.org.uk/Vote/Voting-by-post-or-proxy",
+                                      "id": "https://www.eoni.org.uk/Vote/Voting-by-post-or-proxy",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "type": "emphasis",
+                          "startIndex": 62,
+                          "length": 28,
+                          "attribute": "bold"
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "Apply for a proxy vote",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 22,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "HTML",
+                                          "url": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/apply-vote-proxy",
+                                          "id": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/apply-vote-proxy",
+                                          "presentation": {
+                                              "type": "WEB",
+                                              "contentSource": "EXTERNAL"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "Will I need photo ID to vote at the general election?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Yes. Since May 2023, voters have to show a valid form of photo ID at polling stations to vote in person at a general election.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "There are 22 acceptable forms of ID, including:",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 10,
+                          "length": 26,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.electoralcommission.org.uk/voting-and-elections/voter-id/accepted-forms-photo-id",
+                                      "id": "https://www.electoralcommission.org.uk/voting-and-elections/voter-id/accepted-forms-photo-id",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "passports",
+                      "spans": []
+                  },
+                  {
+                      "text": "driving licences",
+                      "spans": []
+                  },
+                  {
+                      "text": "Older or Disabled Person's bus passes",
+                      "spans": []
+                  },
+                  {
+                      "text": "Oyster 60+ cards",
+                      "spans": []
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "You can use out-of-date photo ID as long as you look the same. ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Alternatively, anyone registered to vote without the correct ID - or who no longer looks like their photo - can apply for a free document called a voter authority certificate.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 147,
+                          "length": 28,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.electoralcommission.org.uk/voting-and-elections/voter-id/applying-a-voter-authority-certificate",
+                                      "id": "https://www.electoralcommission.org.uk/voting-and-elections/voter-id/applying-a-voter-authority-certificate",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The deadline to apply for a voter authority certificate to use in the general election is 17:00 on Wednesday 26 June. ",
+                  "spans": [
+                      {
+                          "type": "emphasis",
+                          "startIndex": 90,
+                          "length": 26,
+                          "attribute": "bold"
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "If you realise you do not have valid ID after this deadline, you can apply for an emergency proxy vote up until 17:00 on polling day.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 82,
+                          "length": 20,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/emergency-proxy-vote",
+                                      "id": "https://www.electoralcommission.org.uk/voting-and-elections/ways-vote/emergency-proxy-vote",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Voters in Northern Ireland can use the Electoral Identity Card.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 39,
+                          "length": 23,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.eoni.org.uk/Electoral-Identity-Card/Electoral-Identity-Card-FAQs/How-do-I-apply-for-an-Electoral-Identity-Card",
+                                      "id": "https://www.eoni.org.uk/Electoral-Identity-Card/Electoral-Identity-Card-FAQs/How-do-I-apply-for-an-Electoral-Identity-Card",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "Carousel",
+              "items": [
+                  {
+                      "type": "StoryPromo",
+                      "style": "TEXT_PROMO_CARD",
+                      "languageCode": "en-gb",
+                      "text": "What photo ID will you need to vote in the general election?",
+                      "link": {
+                          "trackers": [],
+                          "destinations": [
+                              {
+                                  "sourceFormat": "ABL",
+                                  "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=explainers-64877005&service=news&type=asset",
+                                  "id": "/news/explainers-64877005",
+                                  "presentation": {
+                                      "type": "SINGLE_RENDERER",
+                                      "canShare": true
+                                  }
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "type": "StoryPromo",
+                      "style": "TEXT_PROMO_CARD",
+                      "languageCode": "en-gb",
+                      "text": "Can I take children or pets to a polling station?",
+                      "link": {
+                          "trackers": [],
+                          "destinations": [
+                              {
+                                  "sourceFormat": "ABL",
+                                  "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=explainers-56849080&service=news&type=asset",
+                                  "id": "/news/explainers-56849080",
+                                  "presentation": {
+                                      "type": "SINGLE_RENDERER",
+                                      "canShare": true
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              ],
+              "aspectRatio": 1.3,
+              "presentation": {
+                  "type": "NO_PADDING"
+              },
+              "hasPageIndicator": false,
+              "trackedEvents": [
+                  {
+                      "event": "scroll_start",
+                      "trackers": [
+                          {
+                              "type": "ati_v2",
+                              "payload": {
+                                  "action_type": "carousel-scroll-start",
+                                  "action_name": "article-onward-journey"
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "event": "scroll_reached_end",
+                      "trackers": [
+                          {
+                              "type": "ati_v2",
+                              "payload": {
+                                  "action_type": "carousel-scroll-reached-end",
+                                  "action_name": "article-onward-journey"
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "event": "carousel_tap",
+                      "trackers": [
+                          {
+                              "type": "ati_v2",
+                              "payload": {
+                                  "action_type": "carousel-tap",
+                                  "action_name": "article-onward-journey"
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "What happens to Parliament and MPs before the election?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The prime minister formally asks the King to \"dissolve\" Parliament - the official term for closing it ahead of an election. ",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 69,
+                          "length": 53,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.parliament.uk/about/how/elections-and-voting/general/dissolution/",
+                                      "id": "https://www.parliament.uk/about/how/elections-and-voting/general/dissolution/",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Parliament was dissolved on Thursday 30 May. This means MPs lose their status, and those who want to remain in the House of Commons have to campaign for their re-election.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "More than 130 MPs have said they will not stand in the general election.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 18,
+                          "length": 29,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "https://www.instituteforgovernment.org.uk/explainer/mps-standing-down-general-election",
+                                      "id": "https://www.instituteforgovernment.org.uk/explainer/mps-standing-down-general-election",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "EXTERNAL"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Government also enters a pre-election period - previously known as \"purdah\" - which restricts ministerial and departmental activity during the campaign.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "ContentList",
+              "ordering": "UNORDERED",
+              "listItems": [
+                  {
+                      "text": "How to watch the TV election debates",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 36,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "ABL",
+                                          "url": "https://news-app.api.bbc.co.uk/fd/app-article-api?page=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Farticles%2Fc722nv38j88o&clientName=Chrysalis&clientVersion=pre-7",
+                                          "id": "https://www.bbc.co.uk/news/articles/c722nv38j88o",
+                                          "presentation": {
+                                              "type": "SINGLE_RENDERER",
+                                              "canShare": true
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "text": "Electioncast: The latest updates on BBC Sounds",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 46,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "HTML",
+                                          "url": "https://www.bbc.co.uk/sounds/brand/p05299nl",
+                                          "id": "https://www.bbc.co.uk/sounds/brand/p05299nl",
+                                          "presentation": {
+                                              "type": "WEB",
+                                              "contentSource": "BBC"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "text": "Sign up for the ElectionEssential newsletter",
+                      "spans": [
+                          {
+                              "type": "link",
+                              "startIndex": 0,
+                              "length": 44,
+                              "link": {
+                                  "trackers": [],
+                                  "destinations": [
+                                      {
+                                          "sourceFormat": "HTML",
+                                          "url": "https://www.bbc.co.uk/newsletters/ElectionEssential/z7hc239",
+                                          "id": "https://www.bbc.co.uk/newsletters/ElectionEssential/z7hc239",
+                                          "presentation": {
+                                              "type": "WEB",
+                                              "contentSource": "BBC"
+                                          }
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "What happens after the election results are announced?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "After the votes have been counted, the King asks the leader of the party with the most MPs to become prime minister and to form a government.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The leader of the party with the second highest number of MPs becomes the leader of the opposition.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "If no party ends up with a majority of MPs - meaning it cannot pass legislation with just its own MPs - the result is a hung Parliament.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 104,
+                          "length": 32,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "ABL",
+                                      "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=election-2015-32336071&service=news&type=asset",
+                                      "id": "/news/election-2015-32336071",
+                                      "presentation": {
+                                          "type": "SINGLE_RENDERER",
+                                          "canShare": true
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "At this point, the largest party might decide to form a coalition government with another party or operate as a minority government, relying on votes from other parties to pass any laws.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The new Parliament will meet on 9 July, when it will elect a Speaker and swear in members. ",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 48,
+                          "length": 20,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "ABL",
+                                      "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-politics-68368076&service=news&type=asset",
+                                      "id": "/news/uk-politics-68368076",
+                                      "presentation": {
+                                          "type": "SINGLE_RENDERER",
+                                          "canShare": true
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "This will be followed by the State Opening of Parliament and the King's Speech, when the government outlines its priorities for the months ahead, on 17 July.",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 25,
+                          "length": 53,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "ABL",
+                                      "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=uk-politics-32816450&service=news&type=asset",
+                                      "id": "/news/uk-politics-32816450",
+                                      "presentation": {
+                                          "type": "SINGLE_RENDERER",
+                                          "canShare": true
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "crosshead",
+              "text": {
+                  "text": "How often are general elections held?",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The latest a Parliament can be dissolved for a general election is on the fifth anniversary of the day it first met.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "For the Parliament which has just been dissolved, that date was 17 December 2024. ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "However, 25 working days are then allowed to prepare for the election.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "So the next election had to be held by 28 January 2025.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "The prime minister can call the election at a time of their choosing, within the five-year period.",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Mr Sunak became prime minister on 25 October 2022 when he succeeded Liz Truss, who took over from Boris Johnson. ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "Image",
+              "source": {
+                  "aspectRatio": 8.421052631578947,
+                  "url": "https://ichef.bbci.co.uk/moira/img/android/v3/{width}/cpsprodpb/3AC6/production/_113664051_yqa_get_in_touch_top_640-nc.png",
+                  "sizingMethod": {
+                      "type": "SPECIFIC_WIDTHS",
+                      "widthToken": "{width}",
+                      "widths": [
+                          80,
+                          100,
+                          128,
+                          144,
+                          160,
+                          200,
+                          240,
+                          288,
+                          320,
+                          360,
+                          400,
+                          432,
+                          480,
+                          512,
+                          576,
+                          640,
+                          720,
+                          768,
+                          780,
+                          800,
+                          854,
+                          960,
+                          1024,
+                          1080,
+                          1136,
+                          1152,
+                          1200,
+                          1280,
+                          1440,
+                          1536,
+                          1600,
+                          1920,
+                          2048,
+                          2560
+                      ]
+                  }
+              },
+              "metadata": {
+                  "altText": "Get in touch banner"
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "What questions do you have about the general election?",
+                  "spans": [
+                      {
+                          "type": "emphasis",
+                          "startIndex": 0,
+                          "length": 54,
+                          "attribute": "bold"
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "In some cases your question will be published, displaying your name, age and location as you provide it, unless you state otherwise. Your contact details will never be published. Please ensure you have read our terms & conditions and privacy policy.",
+                  "spans": [
+                      {
+                          "type": "emphasis",
+                          "startIndex": 0,
+                          "length": 211,
+                          "attribute": "bold"
+                      },
+                      {
+                          "type": "emphasis",
+                          "startIndex": 0,
+                          "length": 211,
+                          "attribute": "italic"
+                      },
+                      {
+                          "type": "link",
+                          "startIndex": 211,
+                          "length": 18,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "http://www.bbc.co.uk/usingthebbc/terms/",
+                                      "id": "http://www.bbc.co.uk/usingthebbc/terms/",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "BBC"
+                                      }
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "type": "emphasis",
+                          "startIndex": 229,
+                          "length": 5,
+                          "attribute": "bold"
+                      },
+                      {
+                          "type": "emphasis",
+                          "startIndex": 229,
+                          "length": 5,
+                          "attribute": "italic"
+                      },
+                      {
+                          "type": "link",
+                          "startIndex": 234,
+                          "length": 14,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "http://www.bbc.co.uk/usingthebbc/privacy-policy/",
+                                      "id": "http://www.bbc.co.uk/usingthebbc/privacy-policy/",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "BBC"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "Use this form to ask your question: ",
+                  "spans": []
+              }
+          },
+          {
+              "type": "textContainer",
+              "containerType": "body",
+              "text": {
+                  "text": "If you are reading this page and can't see the form you will need to visit the mobile version of the BBC website to submit your question or send them via email to YourQuestions@bbc.co.uk. Please include your name, age and location with any question you send in. ",
+                  "spans": [
+                      {
+                          "type": "link",
+                          "startIndex": 101,
+                          "length": 11,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "ABL",
+                                      "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=front_page&service=news&type=asset",
+                                      "id": "/news/front_page",
+                                      "presentation": {
+                                          "type": "SINGLE_RENDERER",
+                                          "canShare": true
+                                      }
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "type": "link",
+                          "startIndex": 163,
+                          "length": 23,
+                          "link": {
+                              "trackers": [],
+                              "destinations": [
+                                  {
+                                      "sourceFormat": "HTML",
+                                      "url": "mailto:YourQuestions@bbc.co.uk?subject=GeneralElectionYQA",
+                                      "id": "mailto:YourQuestions@bbc.co.uk?subject=GeneralElectionYQA",
+                                      "presentation": {
+                                          "type": "WEB",
+                                          "contentSource": "BBC"
+                                      }
+                                  }
+                              ]
+                          }
+                      }
+                  ]
+              }
+          },
+          {
+              "type": "Copyright",
+              "lastUpdated": 1717673482000
+          }
+      ],
+      "trackers": [
+          {
+              "type": "ati_v2",
+              "payload": {
+                  "section": "politics",
+                  "page_title": "When is the UK general election and who can vote?",
+                  "bbc_content_type": "article",
+                  "bbc_producer": "NEWS",
+                  "name": "news.politics.story.62064552.page",
+                  "bbc_content_id": "urn:bbc:cps:curie:asset:5fe0adf5-7071-4df8-9c37-e1806b2c58f7"
+              }
+          },
+          {
+              "type": "Chartbeat_1",
+              "payload": {
+                  "id": "https://www.bbc.co.uk/news/uk-politics-62064552",
+                  "name": "When is the UK general election and who can vote?",
+                  "sections": "News, News - ART"
+              }
+          },
+          {
+              "type": "uas_read_state",
+              "payload": {
+                  "uasToken": "urn:bbc:cps:curie:asset:5fe0adf5-7071-4df8-9c37-e1806b2c58f7"
+              }
+          },
+          {
+              "type": "optimizely_v1",
+              "payload": {
+                  "action_name": "page_view"
+              }
+          }
+      ]
+  },
+  "contentType": "application/json; charset=utf-8"
+}
