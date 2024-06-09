@@ -10,11 +10,11 @@ import XCTest
 
 final class SchemaTests: XCTestCase {
     func testFDResult() async throws {
-        // Ignore call-to-action banner, which we don't support
         try self.executeResultTest(file: "IndexDiscovery")
         try self.executeResultTest(file: "Topic")
         try self.executeResultTest(file: "Story")
         try self.executeResultTest(file: "Story2")
+        try self.executeResultTest(file: "Story3")
         try self.executeResolverResultTest(file: "ResolverResponse")
     }
 

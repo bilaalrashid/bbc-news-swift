@@ -9,8 +9,8 @@ import XCTest
 @testable import BbcNews
 
 final class FDImageTests: XCTestCase {
-    func testImageUrls() throws {
-        let image = self.getFDImage(sizingMethod: .specificWidths)
+    func testSpecificWidthUrls() throws {
+        let image = self.getFDImage(url: "https://example.invalid/img/{width}/example.jpg", sizingMethod: .specificWidths)
 
         XCTAssertEqual(
             image.largestImageUrl,
@@ -29,8 +29,23 @@ final class FDImageTests: XCTestCase {
         )
     }
 
+    func testNoWidthUrl() throws {
+        let image = self.getFDImage(url: "https://example.invalid/img/example.jpg", sizingMethod: .noWidth)
+
+        XCTAssertEqual(
+            image.largestImageUrl,
+            URL(string: "https://example.invalid/img/example.jpg"),
+            "Fails to return the fixed URL when requesting the largest width"
+        )
+        XCTAssertEqual(
+            image.largestImageUrl(upTo: 250),
+            URL(string: "https://example.invalid/img/example.jpg"),
+            "Fails to return the fixed URL when requesting a custom width"
+        )
+    }
+
     func testInvalidSizingMethods() throws {
-        let image = self.getFDImage(sizingMethod: .unknown)
+        let image = self.getFDImage(url: "https://example.invalid/img/{width}/example.jpg", sizingMethod: .unknown)
 
         XCTAssertEqual(
             image.largestImageUrl,
@@ -44,10 +59,10 @@ final class FDImageTests: XCTestCase {
         )
     }
 
-    private func getFDImage(sizingMethod: FDImageSizingMethodType) -> FDImage {
+    private func getFDImage(url: String, sizingMethod: FDImageSizingMethodType) -> FDImage {
         return FDImage(
             source: FDImageSource(
-                url: "https://example.invalid/img/{width}/example.jpg",
+                url: url,
                 sizingMethod: FDImageSizingMethod(
                     type: sizingMethod,
                     widthToken: "{width}",

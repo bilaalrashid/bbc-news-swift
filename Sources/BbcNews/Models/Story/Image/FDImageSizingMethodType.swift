@@ -12,5 +12,8 @@ public enum FDImageSizingMethodType: String, Codable, Equatable, Hashable, Unkno
     /// A sizing method where a token in a URL is substituted with a selection from a pre-defined list of sizes.
     case specificWidths = "SPECIFIC_WIDTHS"
 
+    /// A sizing method where only a single width is supported and is hardcoded into a URL.
+    case noWidth = "NO_WIDTH"
+
     case unknown
 }
