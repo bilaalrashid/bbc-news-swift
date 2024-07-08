@@ -24,8 +24,11 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
     /// The 64-bit timestamp of the time the media item was last updated.
     public var timestamp: Date
 
+    /// The guidance message for the video.
+    public var guidanceMessage: String?
+
     /// A URL that displays content associated to the media item.
-    public var associatedContentUrl: URL?
+    @FailableCodable public var associatedContentUrl: URL?
 
     /// Is advertising allowed with the media item.
     public var allowAdvertising: Bool
@@ -38,6 +41,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
     ///   - caption: The caption to display with the media item.
     ///   - captionWithStyle: The caption with styling items.
     ///   - timestamp: The 64-bit timestamp of the time the media item was last updated.
+    ///   - guidanceMessage: The guidance message for the video.
     ///   - associatedContentUrl: A URL that displays content associated to the media item.
     ///   - allowAdvertising: Is advertising allowed with the media item.
     public init(
@@ -46,6 +50,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
         caption: String,
         captionWithStyle: FDAttributedText? = nil,
         timestamp: Date,
+        guidanceMessage: String? = nil,
         associatedContentUrl: URL? = nil,
         allowAdvertising: Bool
     ) {
@@ -54,6 +59,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
         self.caption = caption
         self.captionWithStyle = captionWithStyle
         self.timestamp = timestamp
+        self.guidanceMessage = guidanceMessage
         self.associatedContentUrl = associatedContentUrl
         self.allowAdvertising = allowAdvertising
     }

@@ -18,7 +18,9 @@ properties:
     type: string
     example: p0hyzfgw
   url:
-    description: The URL of the poster image for the video story.
+    description: >-
+      The URL of the poster image for the video story. This is deprecated in favour
+      of `image` and will return a blank string.
     type: string
     format: uri
     example: http://c.files.bbci.co.uk/BD44/production/_133325484_meteorstill1.jpg
@@ -34,3 +36,5 @@ properties:
       the night sky.
   media:
     $ref: ./FDMedia.yaml
+  image:
+    $ref: ./FDImage.yaml
