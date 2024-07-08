@@ -7,13 +7,26 @@
 
 import Foundation
 
+/// An error occurred during a networking operation.
 public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
+    /// No URL was provided to the caller.
     case noUrl
+
+    /// An invalid URL was provided to the caller.
     case invalidUrl(url: String)
+
+    /// A corrupt response was returned by the server.
     case invalidResponse
+
+    /// A non-success HTTP response code was received by the caller.
+    ///
+    /// This is any response code outside of the 2xx range.
     case unsuccessfulStatusCode(code: Int)
+
+    /// The server returned a new destination to resolve the requested response from.
     case newDestination(link: FDLink)
 
+    /// A human-readable description describing the error.
     public var description: String {
         switch self {
         case .noUrl:
@@ -29,6 +42,7 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
         }
     }
 
+    /// A localized message describing what error occurred.
     public var errorDescription: String? {
         switch self {
         case .noUrl:
