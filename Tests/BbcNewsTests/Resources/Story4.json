@@ -1,0 +1,122 @@
+{
+    "data": {
+        "metadata": {
+            "name": "Cornwall ice cream van whipped out to sea",
+            "allowAdvertising": true,
+            "lastUpdated": 1720457899000
+        },
+        "items": [
+            {
+                "id": "urn:bbc:pips:pid:p0j950j4",
+                "url": "",
+                "text": "Cornwall ice cream van whipped out to sea",
+                "media": {
+                    "source": {
+                        "id": "p0j950j8",
+                        "type": "VIDEO",
+                        "isLive": false,
+                        "canAutoPlay": true,
+                        "duration": 0,
+                        "aspectRatio": 1.7777777777777777,
+                        "episodePid": "p0j950j4"
+                    },
+                    "metadata": {
+                        "title": "Cornwall ice cream van whipped out to sea",
+                        "summary": "Cornwall ice cream van whipped out to sea",
+                        "caption": "Cornwall ice cream van whipped out to sea",
+                        "timestamp": 1720457899000,
+                        "guidanceMessage": "",
+                        "associatedContentUrl": "",
+                        "allowAdvertising": true
+                    },
+                    "image": {
+                        "source": {
+                            "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0j9519n.jpg",
+                            "sizingMethod": {
+                                "type": "SPECIFIC_WIDTHS",
+                                "widthToken": "{width}",
+                                "widths": [
+                                    80,
+                                    128,
+                                    160,
+                                    240,
+                                    288,
+                                    320,
+                                    400,
+                                    432,
+                                    480,
+                                    512,
+                                    576,
+                                    640,
+                                    720,
+                                    768,
+                                    800,
+                                    960,
+                                    1024,
+                                    1136,
+                                    1152,
+                                    1200,
+                                    1280,
+                                    1440,
+                                    1536,
+                                    1600,
+                                    1920
+                                ]
+                            }
+                        },
+                        "metadata": {
+                            "altText": "Yellow ice cream van sits in the waves as people look on"
+                        },
+                        "type": "Image"
+                    },
+                    "type": "Media"
+                },
+                "subtext": "",
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0j9519n.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                128,
+                                160,
+                                240,
+                                288,
+                                320,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1136,
+                                1152,
+                                1200,
+                                1280,
+                                1440,
+                                1536,
+                                1600,
+                                1920
+                            ]
+                        }
+                    },
+                    "metadata": {
+                        "altText": "Yellow ice cream van sits in the waves as people look on"
+                    },
+                    "type": "Image"
+                },
+                "type": "VideoPortraitStory"
+            }
+        ],
+        "trackers": [],
+        "type": "ContentResponse"
+    },
+    "contentType": "application/json; charset=utf-8"
+}

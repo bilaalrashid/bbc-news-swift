@@ -28,8 +28,13 @@ properties:
     description: The 64-bit timestamp of the time the media item was last updated.
     type: integer
     format: int64
+  guidanceMessage:
+    description: The guidance message for the video.
+    type: string
   associatedContentUrl:
-    description: A URL that displays content associated to the media item.
+    description: >-
+      A URL that displays content associated to the media item. This can return a
+      blank string when empty.
     type: string
     format: uri
     example: https://www.bbc.co.uk/news/world-europe-69035174
