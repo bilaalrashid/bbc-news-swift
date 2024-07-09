@@ -26,10 +26,10 @@ let bbcNews = BbcNews()
 let bbcNews = BbcNews(modelIdentifier: "iPhone15,2", systemName: "iOS", systemVersion: "17.0")
 
 // Get results from the home page
-let results = try await bbcNews.fetchIndexDiscoveryPage(postcode: "W1A")
+let results = try await bbcNews.fetchIndexDiscoveryPageThrowing(postcode: "W1A")
 
 // Get results from a topic page
-let results = try await bbcNews.fetchTopicDiscoveryPage(for: "c50znx8v8y4t")
+let results = try await bbcNews.fetchTopicDiscoveryPageThrowing(for: "c50znx8v8y4t")
 
 // Parse story promo from a set of discovery results and fetch the full contents of that story
 for item in results.data.items {
@@ -37,8 +37,30 @@ for item in results.data.items {
         let url = storyPromo.link.destinations[0].url 
 
         // Get the full contents of the story
-        let story = try await bbcNews.fetch(url: url) 
+        let story = try await bbcNews.fetchThrowing(url: url) 
     }
+}
+```
+
+#### Swift 5 Result type
+
+All methods have equivalents to support both the Swift 5 Result type and traditional try-catch.
+You can use the try-catch equivalents by appending `Throwing` to the end of a method name. 
+
+try-catch:
+```swift
+let results = try await bbcNews.fetchIndexDiscoveryPageThrowing(postcode: "W1A")
+print(results) // [...]
+```
+
+Result type:
+```swift
+let result = await bbcNews.fetchIndexDiscoveryPage(postcode: "W1A")
+switch result {
+case .success(let results):
+    print(results) // [...]
+case .failure(let error):
+    print(error)
 }
 ```
 
