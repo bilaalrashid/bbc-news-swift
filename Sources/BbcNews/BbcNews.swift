@@ -160,14 +160,7 @@ public struct BbcNews {
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
     public func fetchIndexDiscoveryPageThrowing(postcode: String? = nil) async throws -> FDResult {
-        let result = await self.fetchIndexDiscoveryPage(postcode: postcode)
-
-        switch result {
-        case .success(let response):
-            return response
-        case .failure(let error):
-            throw error
-        }
+        return try await self.fetchIndexDiscoveryPage(postcode: postcode).get()
     }
 
     /// Fetches the main discovery page of the BBC News app i.e. the page shown in the Home tab.
@@ -207,14 +200,7 @@ public struct BbcNews {
     /// - Parameter topicIds: The topic IDs to fetch.
     /// - Returns: The fetched topic pages.
     public func fetchTopicDiscoveryPagesThrowing(for topicIds: [String]) async throws -> [FDResult] {
-        let result = await self.fetchTopicDiscoveryPages(for: topicIds)
-
-        switch result {
-        case .success(let response):
-            return response
-        case .failure(let error):
-            throw error
-        }
+        return try await self.fetchTopicDiscoveryPages(for: topicIds).get()
     }
 
     /// Fetches the pages for multiple topics.
@@ -243,14 +229,7 @@ public struct BbcNews {
     /// - Parameter topicId: The topic ID to fetch.
     /// - Returns: The fetched topic page.
     public func fetchTopicDiscoveryPageThrowing(for topicId: String) async throws -> FDResult {
-        let result = await self.fetchTopicDiscoveryPage(for: topicId)
-
-        switch result {
-        case .success(let response):
-            return response
-        case .failure(let error):
-            throw error
-        }
+        return try await self.fetchTopicDiscoveryPage(for: topicId).get()
     }
 
     /// Fetches the page for a specified topic.
@@ -285,14 +264,7 @@ public struct BbcNews {
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
     public func fetchThrowing(urlString: String) async throws -> FDResult {
-        let result = await self.fetch(urlString: urlString)
-
-        switch result {
-        case .success(let response):
-            return response
-        case .failure(let error):
-            throw error
-        }
+        return try await self.fetch(urlString: urlString).get()
     }
 
     /// Fetches a page from the BBC News API.
@@ -312,14 +284,7 @@ public struct BbcNews {
     /// - Parameter url: The URL to fetch.
     /// - Returns: The fetched page.
     public func fetchThrowing(url: URL) async throws -> FDResult {
-        let result = await self.fetch(url: url)
-
-        switch result {
-        case .success(let response):
-            return response
-        case .failure(let error):
-            throw error
-        }
+        return try await self.fetch(url: url).get()
     }
 
     /// Fetches a page from the BBC News API.
