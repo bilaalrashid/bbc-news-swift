@@ -1,37 +1,37 @@
 {
     "data": {
         "metadata": {
-            "name": "Cornwall ice cream van whipped out to sea",
+            "name": "One PM out and another in... the day in 60 seconds",
             "allowAdvertising": true,
-            "lastUpdated": 1720457899000
+            "lastUpdated": 1720196295000
         },
         "items": [
             {
-                "id": "urn:bbc:pips:pid:p0j950j4",
+                "id": "urn:bbc:pips:pid:p0j8n7s9",
                 "url": "",
-                "text": "Cornwall ice cream van whipped out to sea",
+                "text": "One PM out and another in... the day in 60 seconds",
                 "media": {
                     "source": {
-                        "id": "p0j950j8",
+                        "id": "p0j8n7sf",
                         "type": "VIDEO",
                         "isLive": false,
                         "canAutoPlay": true,
                         "duration": 0,
                         "aspectRatio": 1.7777777777777777,
-                        "episodePid": "p0j950j4"
+                        "episodePid": "p0j8n7s9"
                     },
                     "metadata": {
-                        "title": "Cornwall ice cream van whipped out to sea",
-                        "summary": "Cornwall ice cream van whipped out to sea",
-                        "caption": "Cornwall ice cream van whipped out to sea",
-                        "timestamp": 1720457899000,
+                        "title": "One PM out and another in... the day in 60 seconds",
+                        "summary": "Watch the key moments as Sir Keir Starmer enters 10 Downing Street following Labour's landslide election win.",
+                        "caption": "One PM out and another in... the day in 60 seconds",
+                        "timestamp": 1720196295000,
                         "guidanceMessage": "",
                         "associatedContentUrl": "",
                         "allowAdvertising": true
                     },
                     "image": {
                         "source": {
-                            "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0j9519n.jpg",
+                            "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0j8nbx0.jpg",
                             "sizingMethod": {
                                 "type": "SPECIFIC_WIDTHS",
                                 "widthToken": "{width}",
@@ -65,7 +65,7 @@
                             }
                         },
                         "metadata": {
-                            "altText": "Yellow ice cream van sits in the waves as people look on"
+                            "altText": "Sunak and Starmer"
                         },
                         "type": "Image"
                     },
@@ -74,7 +74,7 @@
                 "subtext": "",
                 "image": {
                     "source": {
-                        "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0j9519n.jpg",
+                        "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0j8nbx0.jpg",
                         "sizingMethod": {
                             "type": "SPECIFIC_WIDTHS",
                             "widthToken": "{width}",
@@ -108,7 +108,7 @@
                         }
                     },
                     "metadata": {
-                        "altText": "Yellow ice cream van sits in the waves as people look on"
+                        "altText": "Sunak and Starmer"
                     },
                     "type": "Image"
                 },

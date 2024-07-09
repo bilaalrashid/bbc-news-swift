@@ -16,15 +16,15 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
     case invalidUrl(url: String)
 
     /// A corrupt response was returned by the server.
-    case invalidResponse
+    case invalidResponse(url: URL)
 
     /// A non-success HTTP response code was received by the caller.
     ///
     /// This is any response code outside of the 2xx range.
-    case unsuccessfulStatusCode(code: Int)
+    case unsuccessfulStatusCode(url: URL, code: Int)
 
     /// The server returned a new destination to resolve the requested response from.
-    case newDestination(link: FDLink)
+    case newDestination(url: URL, link: FDLink)
 
     /// A human-readable description describing the error.
     public var description: String {
@@ -33,12 +33,12 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
             return "There was no URL to request"
         case .invalidUrl(let url):
             return "\(url) is not a valid URL"
-        case .invalidResponse:
-            return "The response to the HTTP request was invalid"
-        case .unsuccessfulStatusCode(let code):
-            return "The HTTP response gave an unsuccessful response code (\(code))"
-        case .newDestination(let link):
-            return "The response provides a new destination to resolve to (\(link))"
+        case .invalidResponse(let url):
+            return "The response of the HTTP request to \(url) was invalid"
+        case .unsuccessfulStatusCode(let url, let code):
+            return "\(url) returned an unsuccessful HTTP response code (\(code))"
+        case .newDestination(let url, let link):
+            return "\(url) provides a new destination to resolve (\(link))"
         }
     }
 

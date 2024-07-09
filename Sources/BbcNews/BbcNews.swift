@@ -253,12 +253,12 @@ public struct BbcNews {
         let (data, response) = try await self.session.data(from: url)
 
         guard let httpResponse = response as? HTTPURLResponse else {
-            throw NetworkError.invalidResponse
+            throw NetworkError.invalidResponse(url: url)
         }
 
         let success = 200..<300
         guard success.contains(httpResponse.statusCode) else {
-            throw NetworkError.unsuccessfulStatusCode(code: httpResponse.statusCode)
+            throw NetworkError.unsuccessfulStatusCode(url: url, code: httpResponse.statusCode)
         }
 
         let decoder = JSONDecoder()
@@ -267,7 +267,7 @@ public struct BbcNews {
         // First check if the URL resolves to a new destination, otherwise attempt to decode as a normal response.
         do {
             let newDestination = try decoder.decode(FDResolverResult.self, from: data)
-            throw NetworkError.newDestination(link: newDestination.data.resolvedLink)
+            throw NetworkError.newDestination(url: url, link: newDestination.data.resolvedLink)
         } catch let error as NetworkError {
             throw error
         } catch {
