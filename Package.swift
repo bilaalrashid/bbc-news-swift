@@ -6,11 +6,11 @@ import PackageDescription
 let package = Package(
     name: "BbcNews",
     platforms: [
-        .iOS(.v12),
+        .iOS(.v16),
         .macOS(.v13),
         .macCatalyst(.v13),
-        .tvOS(.v12),
-        .watchOS(.v4),
+        .tvOS(.v16),
+        .watchOS(.v9),
         .visionOS(.v1)
     ],
     products: [
