@@ -16,6 +16,7 @@ final class SchemaTests: XCTestCase {
         try self.executeResultTest(file: "Story2")
         try self.executeResultTest(file: "Story3")
         try self.executeResultTest(file: "Story4")
+        try self.executeResultTest(file: "Story5")
         try self.executeResolverResultTest(file: "ResolverResponse")
     }
 

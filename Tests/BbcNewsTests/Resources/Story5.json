@@ -1,0 +1,392 @@
+{
+    "data": {
+        "metadata": {
+            "name": "Witness says he saw gunman on roof near Trump rally",
+            "allowAdvertising": true,
+            "lastUpdated": 0,
+            "shareUrl": "https://www.bbc.com/news/articles/cn4v7v2g5l1o"
+        },
+        "items": [
+            {
+                "text": "Witness says he saw gunman on roof near Trump rally",
+                "lastPublished": 1720921027167,
+                "firstPublished": 1720917625792,
+                "topic": {
+                    "text": "US & Canada",
+                    "link": {
+                        "trackers": [],
+                        "destinations": [
+                            {
+                                "sourceFormat": "ABL",
+                                "url": "https://news-app.api.bbc.co.uk/fd/abl?clientName=Chrysalis&clientVersion=pre-7&page=cp35rmprpn5t&type=topic",
+                                "id": "cp35rmprpn5t",
+                                "presentation": {
+                                    "type": "SINGLE_RENDERER",
+                                    "canShare": false
+                                }
+                            }
+                        ]
+                    }
+                },
+                "type": "Headline",
+                "lastUpdated": 1720921027167
+            },
+            {
+                "source": {
+                    "id": "p0jb9sx3",
+                    "type": "VIDEO",
+                    "isLive": false,
+                    "canAutoPlay": true,
+                    "duration": 103000,
+                    "aspectRatio": 1.7777777777777777
+                },
+                "metadata": {
+                    "title": "Watch: Witness tells BBC he saw gunman on roof",
+                    "summary": "Watch: Witness tells BBC he saw gunman on roof",
+                    "timestamp": 1720915552000,
+                    "allowAdvertising": true
+                },
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/images/ic/{width}xn/p0jb9vs3.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                128,
+                                160,
+                                240,
+                                288,
+                                320,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1136,
+                                1152,
+                                1200,
+                                1280,
+                                1440,
+                                1536,
+                                1600,
+                                1920
+                            ]
+                        },
+                        "aspectRatio": 1.7862407862407863
+                    },
+                    "metadata": {
+                        "altText": "A man with a rifle was seen on a rooftop minutes before shots were fired at a Trump rally, a witness says.",
+                        "copyrightText": ""
+                    },
+                    "type": "Image"
+                },
+                "type": "Media"
+            },
+            {
+                "contributors": [
+                    {
+                        "name": "Gary O'Donoghue",
+                        "role": "Senior North America correspondent, Butler County, Pennsylvania"
+                    }
+                ],
+                "type": "Byline"
+            },
+            {
+                "text": {
+                    "text": "A man with a rifle was seen on a rooftop minutes before shots were fired at a Donald Trump rally in Pennsylvania, a witness has told the BBC. ",
+                    "spans": [
+                        {
+                            "type": "emphasis",
+                            "startIndex": 0,
+                            "length": 142,
+                            "attribute": "bold"
+                        }
+                    ]
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Greg Smith said the man had crawled on top of a building just outside the event in Butler County on Friday evening.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "He said he pointed the gunman out to police.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"I'm thinking to myself 'Why is Trump still speaking, why have they not pulled him off the stage'... the next thing you know, five shots ring out.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The former president was immediately swarmed by Secret Service agents and escorted away. He was seen with blood on his face and later said a bullet had pierced his ear.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The gunman was shot dead, officials later confirmed. Mr Smith told the BBC he saw Secret Service agents shoot the man.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "image": {
+                    "source": {
+                        "url": "https://ichef.bbci.co.uk/ace/apps/{width}/cpsprodpb/08ae/live/f56ba080-4182-11ef-9747-6dd61f762b71.jpg",
+                        "sizingMethod": {
+                            "type": "SPECIFIC_WIDTHS",
+                            "widthToken": "{width}",
+                            "widths": [
+                                80,
+                                100,
+                                128,
+                                160,
+                                200,
+                                240,
+                                288,
+                                320,
+                                360,
+                                400,
+                                432,
+                                480,
+                                512,
+                                576,
+                                640,
+                                720,
+                                768,
+                                800,
+                                960,
+                                1024,
+                                1536,
+                                2048
+                            ]
+                        },
+                        "aspectRatio": 1.7777777777777777
+                    },
+                    "metadata": {
+                        "altText": "Security officers search for the gunman",
+                        "caption": "Security officers search for the gunman",
+                        "captionWithStyle": {
+                            "text": "Security officers search for the gunman",
+                            "spans": []
+                        },
+                        "copyrightText": "Getty Images"
+                    },
+                    "type": "Image"
+                },
+                "type": "ImageContainer"
+            },
+            {
+                "text": {
+                    "text": "Mr Smith was listening from outside the rally and said he saw the gunman around five minutes into Trump's speech.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"We noticed the guy bear-crawling up the roof of the building beside us, 50ft away,\" he said.  \"He had a rifle, we could clearly see a rifle.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"We're pointing at him, the police are down there running around on the ground, we're like 'Hey man, there's a guy on the roof with a rifle'... and the police did not know what was going on.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Mr Smith said he tried to alert the authorities for three to four minutes, but thought they probably could not see the gunman because of the slope of the roof. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"Why is there not Secret Service on all of these roofs here?\" he asked. \"This is not a big place. \"[It's a] security failure, 100% security failure.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "He said he later saw the agents shoot the gunman: \"They crawled up on the roof, they had their guns pointed at him, made sure he was dead. He was dead, and that was it - it was over.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Anthony Guglielmi, a Secret Service spokesman, said agents had \"neutralised the shooter\" and \"quickly responded with protective measures\". ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "The incident is being investigated as an attempted assassination.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "A crowd member was killed and two others were critically injured, the service added.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Mr Smith later told the BBC his child was \"crying and begging me to take him home\" after the shooting. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"There were a lot of kids up there with us who were terrified, they're still terrified,\" he said.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Another witness who was inside the event described dropping to the ground after hearing five gunshots in quick succession. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Jason, who did not give his surname, told the BBC: \"We see the Secret Service jump on Trump to protect him; everyone on the ground dropped down very quickly. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "Then he \"stood up and put his fist up in the air\". ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"He was a little bloody, his ear was bleeding. He stood up and he was alive and breathing.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "An emergency department doctor at the rally told CBS News, the BBC's US partner, that he treated a crowd member for a gunshot wound to the head.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"I heard the shots, I thought it was firecrackers to begin with,\" he said. ",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"Someone over there was screaming 'He's been shot, he's been shot'.",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"They guy had spun around [and was] jammed between the benches.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "text": {
+                    "text": "\"There was a lot of blood.\"",
+                    "spans": []
+                },
+                "containerType": "body",
+                "type": "textContainer"
+            },
+            {
+                "lastUpdated": 1720992085777,
+                "type": "Copyright"
+            }
+        ],
+        "trackers": [
+            {
+                "type": "ati_v2",
+                "payload": {
+                    "bbc_url": "https://www.bbc.co.uk/news/articles/cn4v7v2g5l1o",
+                    "bbc_content_id": "urn:bbc:optimo:asset:cn4v7v2g5l1o",
+                    "bbc_content_type": "article",
+                    "language": "en-gb",
+                    "page_title": "Witness says he saw gunman on roof near Trump rally",
+                    "custom_var_7": "News",
+                    "name": "news.articles.cn4v7v2g5l1o.page",
+                    "custom_var_1": "2024-07-14T00:40:25.792Z",
+                    "custom_var_2": "2024-07-14T01:37:07.167Z",
+                    "custom_var_3": "Republican+Party~Pennsylvania~US+election+2024~Donald+Trump~United+States",
+                    "custom_var_4": "1da109b9-d231-44a5-ab28-29a1b039b590~47742f73-b93b-4f8f-9fda-cc1dfdf58e88~647d5613-e0e2-4ef5-b0ce-b491de38bdbd~78080d81-2849-497e-bc3a-bf364626456b~82857f8e-8134-462a-bb32-b7b14f4eab75",
+                    "comments_enabled": "false",
+                    "uploader_format": "false"
+                }
+            }
+        ],
+        "type": "ContentResponse"
+    },
+    "contentType": "application/json; charset=utf-8"
+}

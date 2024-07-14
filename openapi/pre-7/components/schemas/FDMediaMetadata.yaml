@@ -1,7 +1,6 @@
 description: Metadata descriptions of a media item.
 required:
   - title
-  - caption
   - timestamp
   - allowAdvertising
 type: object
