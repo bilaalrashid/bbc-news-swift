@@ -16,7 +16,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
     public var summary: String?
 
     /// The caption to display with the media item.
-    public var caption: String
+    public var caption: String?
 
     /// The caption with styling items.
     public var captionWithStyle: FDAttributedText?
@@ -47,7 +47,7 @@ public struct FDMediaMetadata: Codable, Equatable, Hashable {
     public init(
         title: String,
         summary: String? = nil,
-        caption: String,
+        caption: String? = nil,
         captionWithStyle: FDAttributedText? = nil,
         timestamp: Date,
         guidanceMessage: String? = nil,
