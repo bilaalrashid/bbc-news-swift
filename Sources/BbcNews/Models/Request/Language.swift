@@ -28,7 +28,7 @@ public enum Language: String, Codable, Equatable, Hashable, CaseIterable {
     case russian
 
     /// The user facing name of the language.
-    var displayName: String {
+    public var displayName: String {
         switch self {
         case .arabic:
             return "Arabic"
@@ -46,7 +46,7 @@ public enum Language: String, Codable, Equatable, Hashable, CaseIterable {
     }
 
     /// The value of the `clientName` URL parameter to use when calling the API for this language.
-    var clientName: String {
+    public var clientName: String {
         switch self {
         case .arabic:
             return "Arabic"
@@ -64,7 +64,7 @@ public enum Language: String, Codable, Equatable, Hashable, CaseIterable {
     }
 
     /// The value of the `service` URL parameter to use when calling the API for this language.
-    var service: String {
+    public var service: String {
         switch self {
         case .arabic:
             return "arabic"
