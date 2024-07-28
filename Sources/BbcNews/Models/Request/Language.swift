@@ -8,7 +8,7 @@
 import Foundation
 
 /// A language supported by the API.
-public enum Language: Codable, Equatable, Hashable {
+public enum Language: String, Codable, Equatable, Hashable, CaseIterable {
     /// The Arabic language.
     case arabic
 
@@ -26,6 +26,24 @@ public enum Language: Codable, Equatable, Hashable {
 
     /// The Russian language.
     case russian
+
+    /// The user facing name of the language.
+    var displayName: String {
+        switch self {
+        case .arabic:
+            return "Arabic"
+        case .cymru:
+            return "Cymru"
+        case .english:
+            return "English"
+        case .hindi:
+            return "Hindi"
+        case .mundo:
+            return "Mundo"
+        case .russian:
+            return "Russian"
+        }
+    }
 
     /// The value of the `clientName` URL parameter to use when calling the API for this language.
     var clientName: String {
