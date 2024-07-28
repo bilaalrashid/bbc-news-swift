@@ -121,7 +121,9 @@ public struct BbcNews {
         self.init(
             modelIdentifier: UIDevice.current.modelIdentifier,
             systemName: UIDevice.current.systemName,
-            systemVersion: UIDevice.current.systemVersion
+            systemVersion: UIDevice.current.systemVersion,
+            language: language,
+            release: release
         )
     }
     #endif
