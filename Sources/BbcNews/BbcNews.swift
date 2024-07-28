@@ -50,24 +50,24 @@ public struct BbcNews {
     /// Converts a BBC News webpage URL to a native API URL that returns a JSON representation, if one exists.
     ///
     /// - Parameters:
-    ///   - urlString: The language that results should be localised for.
-    ///   - language: The language that results should be localised for.
+    ///   - urlString: The URL to convert.
+    ///   - service: The international service that API results should be localised for e.g. BBC Cymru.
     ///   - release: The release track of the API version.
     /// - Returns: The native API URL, if successful.
-    public static func convertWebUrlToApi(urlString: String, language: Language = .english, release: ReleaseTrack? = nil) -> String? {
+    public static func convertWebUrlToApi(urlString: String, service: Service = .english, release: ReleaseTrack? = nil) -> String? {
         guard let url = URL(string: urlString) else { return nil }
-        let result = BbcNews.convertWebUrlToApi(url: url, language: language, release: release)
+        let result = BbcNews.convertWebUrlToApi(url: url, service: service, release: release)
         return result?.absoluteString
     }
 
     /// Converts a BBC News webpage URL to a native API URL that returns a JSON representation, if one exists.
     ///
     /// - Parameters:
-    ///   - urlString: The language that results should be localised for.
-    ///   - language: The language that results should be localised for.
+    ///   - url: The URL to convert.
+    ///   - service: The international service that API results should be localised for e.g. BBC Cymru.
     ///   - release: The release track of the API version.
     /// - Returns: The native API URL, if successful.
-    public static func convertWebUrlToApi(url: URL, language: Language = .english, release: ReleaseTrack? = nil) -> URL? {
+    public static func convertWebUrlToApi(url: URL, service: Service = .english, release: ReleaseTrack? = nil) -> URL? {
         let regex = #/https?:\/\/(www\.)?bbc\.co(m|\.uk)\/news\/(\w|\-|\/)+(\.app)?$/#
 
         // swiftlint:disable:next unused_optional_binding
@@ -80,7 +80,7 @@ public struct BbcNews {
         components.host = "news-app.api.bbc.co.uk"
         components.path = "/fd/app-article-api"
         components.queryItems = [
-            URLQueryItem(name: "clientName", value: language.clientName),
+            URLQueryItem(name: "clientName", value: service.clientName),
             URLQueryItem(name: "clientVersion", value: self.clientVersion),
             URLQueryItem(name: "page", value: url.absoluteString)
         ]
@@ -97,8 +97,8 @@ public struct BbcNews {
     /// The session to perform network requests from.
     private let session: URLSession
 
-    /// The language that API results should be localised for.
-    private let language: Language
+    /// service: The international service that API results should be localised for e.g. BBC Cymru.
+    private let service: Service
 
     /// The release track of the API version.
     private let releaseTrack: ReleaseTrack?
@@ -115,14 +115,14 @@ public struct BbcNews {
     ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
     ///   - systemName: The name of the operating system e.g. iOS.
     ///   - systemVersion: The version of the operating system e.g. 16.6.
-    ///   - language: The language that results should be localised for.
+    ///   - service: The international service that API results should be localised for e.g. BBC Cymru.
     ///   - release: The release track of the API version.
-    public init(language: Language = .english, release: ReleaseTrack? = nil) {
+    public init(service: Service = .english, release: ReleaseTrack? = nil) {
         self.init(
             modelIdentifier: UIDevice.current.modelIdentifier,
             systemName: UIDevice.current.systemName,
             systemVersion: UIDevice.current.systemVersion,
-            language: language,
+            service: service,
             release: release
         )
     }
@@ -136,13 +136,13 @@ public struct BbcNews {
     ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
     ///   - systemName: The name of the operating system e.g. iOS.
     ///   - systemVersion: The version of the operating system e.g. 16.6.
-    ///   - language: The language that results should be localised for.
+    ///   - service: The international service that API results should be localised for e.g. BBC Cymru.
     ///   - release: The release track of the API version.
     public init(
         modelIdentifier: String,
         systemName: String,
         systemVersion: String,
-        language: Language = .english,
+        service: Service = .english,
         release: ReleaseTrack? = nil
     ) {
         let configuration = URLSessionConfiguration.default
@@ -153,7 +153,7 @@ public struct BbcNews {
         ]
 
         self.session = URLSession(configuration: configuration)
-        self.language = language
+        self.service = service
         self.releaseTrack = nil
     }
 
@@ -175,10 +175,10 @@ public struct BbcNews {
         components.host = BbcNews.hostname
         components.path = "/fd/abl"
         components.queryItems = [
-            URLQueryItem(name: "clientName", value: self.language.clientName),
+            URLQueryItem(name: "clientName", value: self.service.clientName),
             URLQueryItem(name: "clientVersion", value: BbcNews.clientVersion),
             URLQueryItem(name: "page", value: "chrysalis_discovery"),
-            URLQueryItem(name: "service", value: self.language.service),
+            URLQueryItem(name: "service", value: self.service.service),
             URLQueryItem(name: "type", value: "index")
         ]
 
@@ -244,7 +244,7 @@ public struct BbcNews {
         components.host = BbcNews.hostname
         components.path = "/fd/abl"
         components.queryItems = [
-            URLQueryItem(name: "clientName", value: self.language.clientName),
+            URLQueryItem(name: "clientName", value: self.service.clientName),
             URLQueryItem(name: "clientVersion", value: BbcNews.clientVersion),
             URLQueryItem(name: "page", value: topicId),
             URLQueryItem(name: "type", value: "topic")

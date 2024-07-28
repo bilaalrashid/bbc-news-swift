@@ -1,5 +1,5 @@
 //
-//  Language.swift
+//  Service.swift
 //  BbcNews
 //
 //  Created by Bilaal Rashid on 04/06/2024.
@@ -7,27 +7,27 @@
 
 import Foundation
 
-/// A language supported by the API.
-public enum Language: String, Codable, Equatable, Hashable, CaseIterable {
-    /// The Arabic language.
+/// An international service that API results should be localised for e.g. BBC Cymru.
+public enum Service: String, Codable, Equatable, Hashable, CaseIterable {
+    /// The Arabic language service.
     case arabic
 
-    /// The Cymru language.
+    /// The Cymru language service.
     case cymru
 
-    /// The English language.
+    /// The English language service.
     case english
 
-    /// The Hindi language.
+    /// The Hindi language service.
     case hindi
 
-    /// The Mundo language.
+    /// The Mundo language service.
     case mundo
 
-    /// The Russian language.
+    /// The Russian language service.
     case russian
 
-    /// The user facing name of the language.
+    /// The user facing name of the service.
     public var displayName: String {
         switch self {
         case .arabic:
@@ -45,7 +45,7 @@ public enum Language: String, Codable, Equatable, Hashable, CaseIterable {
         }
     }
 
-    /// The value of the `clientName` URL parameter to use when calling the API for this language.
+    /// The value of the `clientName` URL parameter to use when calling the API for this service.
     public var clientName: String {
         switch self {
         case .arabic:
@@ -63,7 +63,7 @@ public enum Language: String, Codable, Equatable, Hashable, CaseIterable {
         }
     }
 
-    /// The value of the `service` URL parameter to use when calling the API for this language.
+    /// The value of the `service` URL parameter to use when calling the API for this service.
     public var service: String {
         switch self {
         case .arabic:
