@@ -8,7 +8,7 @@
 import Foundation
 
 /// A visual badge to tag a story with.
-public struct FDBadge: Codable, Equatable, Hashable {
+public struct FDBadge: Codable, Equatable, Hashable, Sendable {
     /// The type of the badge.
     public var type: FDBadgeType
 

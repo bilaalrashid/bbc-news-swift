@@ -8,7 +8,7 @@
 import Foundation
 
 /// A promo description that links to a story.
-public struct FDStoryPromo: Codable, Equatable, Hashable {
+public struct FDStoryPromo: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `StoryPromo`.
     internal let type: String
 

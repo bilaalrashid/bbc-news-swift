@@ -8,7 +8,7 @@
 import Foundation
 
 /// The metadata of a page of results returned by the BBC News API.
-public struct FDDataMetadata: Codable, Equatable, Hashable {
+public struct FDDataMetadata: Codable, Equatable, Hashable, Sendable {
     /// The name of the page to display to the user.
     public var name: String
 

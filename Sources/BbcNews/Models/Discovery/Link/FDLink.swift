@@ -8,7 +8,7 @@
 import Foundation
 
 /// A link to a new page(s).
-public struct FDLink: Codable, Equatable, Hashable {
+public struct FDLink: Codable, Equatable, Hashable, Sendable {
     /// The destination(s) of the link.
     public var destinations: [FDLinkDestination]
 

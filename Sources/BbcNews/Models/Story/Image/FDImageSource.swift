@@ -8,7 +8,7 @@
 import Foundation
 
 /// The remote source for an image.
-public struct FDImageSource: Codable, Equatable, Hashable {
+public struct FDImageSource: Codable, Equatable, Hashable, Sendable {
     /// The URL that the image is located.
     ///
     /// Depending on the `sizingMethod` this could be a template string.

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A header for a story promo collection.
-public struct FDCollectionHeader: Codable, Equatable, Hashable {
+public struct FDCollectionHeader: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `CollectionHeader`.
     internal let type: String
 

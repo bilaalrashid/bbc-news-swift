@@ -8,7 +8,7 @@
 import Foundation
 
 /// Icon names representing weather conditions.
-public enum FDWeatherIcon: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDWeatherIcon: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case sleetShower = "SLEET_SHOWER"
     case thunderstorm = "THUNDERSTORM"
     case hail = "HAIL"

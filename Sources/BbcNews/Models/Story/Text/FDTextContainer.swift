@@ -8,7 +8,7 @@
 import Foundation
 
 /// A container for a paragraph of text in a story.
-public struct FDTextContainer: Codable, Equatable, Hashable {
+public struct FDTextContainer: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `textContainer`.
     internal let type: String
 

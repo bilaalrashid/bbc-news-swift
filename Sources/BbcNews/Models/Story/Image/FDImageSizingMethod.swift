@@ -8,7 +8,7 @@
 import Foundation
 
 /// A definition of how to fetch the correct size of the image.
-public struct FDImageSizingMethod: Codable, Equatable, Hashable {
+public struct FDImageSizingMethod: Codable, Equatable, Hashable, Sendable {
     /// The type of sizing method used.
     public var type: FDImageSizingMethodType
 

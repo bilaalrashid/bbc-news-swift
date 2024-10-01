@@ -8,7 +8,7 @@
 import Foundation
 
 /// An international service that API results should be localised for e.g. BBC Cymru.
-public enum Service: String, Codable, Equatable, Hashable, CaseIterable {
+public enum Service: String, Codable, Equatable, Hashable, Sendable, CaseIterable {
     /// The Arabic language service.
     case arabic
 

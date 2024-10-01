@@ -8,7 +8,7 @@
 import Foundation
 
 /// A representation of a temperate in a weather forecast.
-public struct FDTemperature: Codable, Equatable, Hashable {
+public struct FDTemperature: Codable, Equatable, Hashable, Sendable {
     /// The temperate value, represented in celsius.
     public var celsius: Int
 

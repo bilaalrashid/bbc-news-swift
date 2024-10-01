@@ -8,7 +8,7 @@
 import Foundation
 
 /// Styles which a promo card could be displayed in.
-public enum FDStoryPromoStyle: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDStoryPromoStyle: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case badgeLedPromoCard = "BADGE_LED_PROMO_CARD"
     case emphasisedPromoCard = "EMPHASISED_PROMO_CARD"
     case galleryPromoCard = "GALLERY_PROMO_CARD"

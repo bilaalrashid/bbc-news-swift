@@ -8,7 +8,7 @@
 import Foundation
 
 /// An event with an action that should be tracked.
-public struct FDTrackedEvent: Codable, Equatable, Hashable {
+public struct FDTrackedEvent: Codable, Equatable, Hashable, Sendable {
     /// The name of the event being tracked.
     public var event: String
 

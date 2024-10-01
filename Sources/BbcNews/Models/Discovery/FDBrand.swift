@@ -8,7 +8,7 @@
 import Foundation
 
 /// A brand described by the API.
-public enum FDBrand: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDBrand: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case news = "NEWS"
     case sport = "SPORT"
     case defaultBrand = "DEFAULT"

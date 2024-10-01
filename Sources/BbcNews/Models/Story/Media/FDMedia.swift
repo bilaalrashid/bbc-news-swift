@@ -8,7 +8,7 @@
 import Foundation
 
 /// A media item to be played.
-public struct FDMedia: Codable, Equatable, Hashable {
+public struct FDMedia: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `Media`.
     internal let type: String
 

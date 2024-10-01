@@ -8,7 +8,7 @@
 import Foundation
 
 /// A definition of a modified attribute of text over a defined range.
-public struct FDAttributedTextSpan: Codable, Equatable, Hashable {
+public struct FDAttributedTextSpan: Codable, Equatable, Hashable, Sendable {
     /// The type of the span.
     public var type: FDAttributeType
 

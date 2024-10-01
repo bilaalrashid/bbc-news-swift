@@ -8,7 +8,7 @@
 import Foundation
 
 /// A collection of story promos that should be displayed as a grid.
-public struct FDSimplePromoGrid: FDCollection, Codable, Equatable, Hashable {
+public struct FDSimplePromoGrid: FDCollection, Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `SimplePromoGrid`.
     internal let type: String
 

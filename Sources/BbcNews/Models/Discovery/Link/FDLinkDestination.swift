@@ -8,7 +8,7 @@
 import Foundation
 
 /// A destination of a link.
-public struct FDLinkDestination: Codable, Equatable, Hashable {
+public struct FDLinkDestination: Codable, Equatable, Hashable, Sendable {
     /// The format of the destination.
     public var sourceFormat: FDSourceFormat
 

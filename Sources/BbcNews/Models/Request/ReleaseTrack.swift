@@ -8,7 +8,7 @@
 import Foundation
 
 /// A release track for the API.
-public enum ReleaseTrack: String, Codable, Equatable, Hashable {
+public enum ReleaseTrack: String, Codable, Equatable, Hashable, Sendable {
     /// The `public-alpha` release track.
     case publicAlpha = "public-alpha"
 

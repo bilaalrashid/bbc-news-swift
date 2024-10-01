@@ -8,7 +8,7 @@
 import Foundation
 
 /// An image to be displayed.
-public struct FDImage: Codable, Equatable, Hashable {
+public struct FDImage: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `Image`.
     internal let type: String
 

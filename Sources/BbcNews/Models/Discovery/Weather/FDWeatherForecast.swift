@@ -8,7 +8,7 @@
 import Foundation
 
 /// A weather description of a forecast prediction.
-public struct FDWeatherForecast: Codable, Equatable, Hashable {
+public struct FDWeatherForecast: Codable, Equatable, Hashable, Sendable {
     /// The short, textual description of the forecast.
     public var description: String
 

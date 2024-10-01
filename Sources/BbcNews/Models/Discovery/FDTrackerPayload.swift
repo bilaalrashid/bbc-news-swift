@@ -8,7 +8,7 @@
 import Foundation
 
 /// A payload of a tracker event.
-public struct FDTrackerPayload: Codable, Equatable, Hashable {
+public struct FDTrackerPayload: Codable, Equatable, Hashable, Sendable {
     /// The URL or ID of the payload.
     public var id: String?
 

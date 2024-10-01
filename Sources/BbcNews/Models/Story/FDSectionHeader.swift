@@ -8,7 +8,7 @@
 import Foundation
 
 /// A section header in a story.
-public struct FDSectionHeader: Codable, Equatable, Hashable {
+public struct FDSectionHeader: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `SectionHeader`.
     internal let type: String
 

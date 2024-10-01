@@ -8,7 +8,7 @@
 import Foundation
 
 /// Types of a link presentation.
-public enum FDPresentationType: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDPresentationType: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case web = "WEB"
     case singleRenderer = "SINGLE_RENDERER"
     case multipleRenderer = "MULTIPLE_RENDERER"

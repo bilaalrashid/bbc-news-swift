@@ -8,7 +8,7 @@
 import Foundation
 
 /// A collection containing a single story promo that is displayed with the highest prominence at the top of a story discovery page.
-public struct FDBillboard: FDCollection, Codable, Equatable, Hashable {
+public struct FDBillboard: FDCollection, Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `Billboard`.
     internal let type: String
 

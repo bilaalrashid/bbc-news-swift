@@ -8,7 +8,7 @@
 import Foundation
 
 /// A banner that leads the user towards a call-to-action.
-public struct FDCallToActionBanner: Codable, Equatable, Hashable {
+public struct FDCallToActionBanner: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `CallToActionBanner`.
     internal let type: String
 

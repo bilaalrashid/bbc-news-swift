@@ -8,7 +8,7 @@
 import Foundation
 
 /// A remote source for a playable media item.
-public struct FDMediaSource: Codable, Equatable, Hashable {
+public struct FDMediaSource: Codable, Equatable, Hashable, Sendable {
     /// The type of the media.
     public var type: FDMediaType
 

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A collection of topics that should be displayed as a chip list.
-public struct FDChipList: Codable, Equatable, Hashable {
+public struct FDChipList: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `ChipList`.
     internal let type: String
 
