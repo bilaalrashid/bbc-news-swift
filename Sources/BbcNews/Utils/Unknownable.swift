@@ -15,6 +15,7 @@ public protocol Unknownable: Decodable, RawRepresentable {
 
 public extension Unknownable where Self: RawRepresentable, Self.RawValue: Decodable {
     init(from decoder: Decoder) throws {
-        self = (try? Self(rawValue: decoder.singleValueContainer().decode(RawValue.self))) ?? Self.unknown
+        let value = try? Self(rawValue: decoder.singleValueContainer().decode(RawValue.self))
+        self = value ?? Self.unknown
     }
 }
