@@ -60,31 +60,31 @@ final class BbcNewsTests: XCTestCase {
 
     func testConvertWebUrlToApi() throws {
         XCTAssertEqual(
-            // swiftlint:disable:next force_https force_unwrapping
+            // swiftlint:disable:next force_unwrapping
             BbcNews.convertWebUrlToApi(url: URL(string: "https://www.bbc.co.uk/news/uk-politics-68983472.app")!),
             URL(string: "https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.co.uk/news/uk-politics-68983472.app")
         )
 
         XCTAssertEqual(
-            // swiftlint:disable:next force_https force_unwrapping
+            // swiftlint:disable:next force_unwrapping
             BbcNews.convertWebUrlToApi(url: URL(string: "https://www.bbc.co.uk/news/world-europe-18023383.app")!),
             URL(string: "https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.co.uk/news/world-europe-18023383.app")
         )
 
         XCTAssertEqual(
-            // swiftlint:disable:next force_https force_unwrapping
+            // swiftlint:disable:next force_unwrapping
             BbcNews.convertWebUrlToApi(url: URL(string: "https://www.bbc.com/news/articles/c289n8m4j19o.app")!),
             URL(string: "https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.com/news/articles/c289n8m4j19o.app")
         )
 
         XCTAssertEqual(
-            // swiftlint:disable:next force_https force_unwrapping
+            // swiftlint:disable:next force_unwrapping
             BbcNews.convertWebUrlToApi(url: URL(string: "https://www.bbc.co.uk/news/uk-politics-68983472")!),
             URL(string: "https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.co.uk/news/uk-politics-68983472")
         )
 
         XCTAssertEqual(
-            // swiftlint:disable:next force_https force_unwrapping
+            // swiftlint:disable:next force_unwrapping
             BbcNews.convertWebUrlToApi(url: URL(string: "https://bilaal.co.uk")!),
             nil
         )
