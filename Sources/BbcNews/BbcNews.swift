@@ -161,7 +161,7 @@ public struct BbcNews {
     ///
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
-    public func fetchIndexDiscoveryPageThrowing(postcode: String? = nil) async throws(NetworkError) -> FDResult {
+    public func fetchIndexDiscoveryPageThrowing(postcode: String? = nil) async throws(NetworkError) -> Components.Schemas.FDResult {
         return try await self.fetchIndexDiscoveryPage(postcode: postcode).get()
     }
 
@@ -169,7 +169,7 @@ public struct BbcNews {
     ///
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
-    public func fetchIndexDiscoveryPage(postcode: String? = nil) async -> Result<FDResult, NetworkError> {
+    public func fetchIndexDiscoveryPage(postcode: String? = nil) async -> Result<Components.Schemas.FDResult, NetworkError> {
         var components = URLComponents()
         components.scheme = "https"
         components.host = BbcNews.hostname
@@ -201,7 +201,7 @@ public struct BbcNews {
     ///
     /// - Parameter topicIds: The topic IDs to fetch.
     /// - Returns: The fetched topic pages.
-    public func fetchTopicDiscoveryPagesThrowing(for topicIds: [String]) async throws(NetworkError) -> [FDResult] {
+    public func fetchTopicDiscoveryPagesThrowing(for topicIds: [String]) async throws(NetworkError) -> [Components.Schemas.FDResult] {
         return try await self.fetchTopicDiscoveryPages(for: topicIds).get()
     }
 
@@ -209,8 +209,8 @@ public struct BbcNews {
     ///
     /// - Parameter topicIds: The topic IDs to fetch.
     /// - Returns: The fetched topic pages.
-    public func fetchTopicDiscoveryPages(for topicIds: [String]) async -> Result<[FDResult], NetworkError> {
-        var results = [FDResult]()
+    public func fetchTopicDiscoveryPages(for topicIds: [String]) async -> Result<[Components.Schemas.FDResult], NetworkError> {
+        var results = [Components.Schemas.FDResult]()
 
         for topicId in topicIds {
             let result = await self.fetchTopicDiscoveryPage(for: topicId)
@@ -230,7 +230,7 @@ public struct BbcNews {
     ///
     /// - Parameter topicId: The topic ID to fetch.
     /// - Returns: The fetched topic page.
-    public func fetchTopicDiscoveryPageThrowing(for topicId: String) async throws(NetworkError) -> FDResult {
+    public func fetchTopicDiscoveryPageThrowing(for topicId: String) async throws(NetworkError) -> Components.Schemas.FDResult {
         return try await self.fetchTopicDiscoveryPage(for: topicId).get()
     }
 
@@ -238,7 +238,7 @@ public struct BbcNews {
     ///
     /// - Parameter topicId: The topic ID to fetch.
     /// - Returns: The fetched topic page.
-    public func fetchTopicDiscoveryPage(for topicId: String) async -> Result<FDResult, NetworkError> {
+    public func fetchTopicDiscoveryPage(for topicId: String) async -> Result<Components.Schemas.FDResult, NetworkError> {
         var components = URLComponents()
         components.scheme = "https"
         components.host = BbcNews.hostname
@@ -265,7 +265,7 @@ public struct BbcNews {
     ///
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
-    public func fetchThrowing(urlString: String) async throws(NetworkError) -> FDResult {
+    public func fetchThrowing(urlString: String) async throws(NetworkError) -> Components.Schemas.FDResult {
         return try await self.fetch(urlString: urlString).get()
     }
 
@@ -273,7 +273,7 @@ public struct BbcNews {
     ///
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
-    public func fetch(urlString: String) async -> Result<FDResult, NetworkError> {
+    public func fetch(urlString: String) async -> Result<Components.Schemas.FDResult, NetworkError> {
         guard let url = URL(string: urlString) else {
             return .failure(NetworkError.invalidUrl(url: urlString))
         }
@@ -285,7 +285,7 @@ public struct BbcNews {
     ///
     /// - Parameter url: The URL to fetch.
     /// - Returns: The fetched page.
-    public func fetchThrowing(url: URL) async throws(NetworkError) -> FDResult {
+    public func fetchThrowing(url: URL) async throws(NetworkError) -> Components.Schemas.FDResult {
         return try await self.fetch(url: url).get()
     }
 
@@ -293,7 +293,7 @@ public struct BbcNews {
     ///
     /// - Parameter url: The URL to fetch.
     /// - Returns: The fetched page.
-    public func fetch(url: URL) async -> Result<FDResult, NetworkError> {
+    public func fetch(url: URL) async -> Result<Components.Schemas.FDResult, NetworkError> {
         #if canImport(OSLog)
         Logger.network.debug("Requesting: \(url, privacy: .public)")
         #endif
@@ -314,20 +314,20 @@ public struct BbcNews {
             decoder.dateDecodingStrategy = .millisecondsSince1970
 
             // First check if the URL resolves to a new destination, otherwise attempt to decode as a normal response.
-            let newDestinationResult = decoder.decodeWithoutThrowing(FDResolverResult.self, from: data)
+            let newDestinationResult = decoder.decodeWithoutThrowing(Components.Schemas.FDResolverResult.self, from: data)
 
             if case .success(let newDestination) = newDestinationResult {
                 return .failure(NetworkError.newDestination(url: url, link: newDestination.data.resolvedLink))
             }
 
-            let decodingResult = decoder.decodeWithoutThrowing(FDResult.self, from: data)
+            let decodingResult = decoder.decodeWithoutThrowing(Components.Schemas.FDResult.self, from: data)
 
             switch decodingResult {
             case .success(let decoded):
                 return .success(decoded)
             case .failure(let error):
                 if let error = error as? DecodingError {
-                    return .failure(NetworkError.undecodableResponse(url: url, type: FDResult.self, underlyingError: error))
+                    return .failure(NetworkError.undecodableResponse(url: url, type: Components.Schemas.FDResult.self, underlyingError: error))
                 }
 
                 return .failure(NetworkError.generic(underlyingError: error))

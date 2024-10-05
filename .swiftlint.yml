@@ -3,6 +3,7 @@ excluded:
   - ${PWD}/Pods
   - ${PWD}/DerivedData
   - ${PWD}/.build
+  - ${PWD}/Sources/BbcNews/Gen
 
 disabled_rules:
   - multiple_closures_with_trailing_closure

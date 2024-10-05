@@ -1,0 +1,1256 @@
+openapi: 3.0.0
+info:
+  title: BBC News Internal API
+  description: |-
+    Unofficial documentation of the internal API used for the iOS and Android
+    BBC News apps.
+
+    This documentation is for educational and research purposes only.
+
+    Versions:
+      - [pre-7](pre-7.html)
+      - [pre-6](pre-6.html)
+      - [pre-5](pre-5.html)
+  version: pre-7
+  license:
+    name: MIT
+    url: https://github.com/bilaalrashid/bbc-news-swift/raw/main/LICENSE
+servers:
+  - url: https://news-app.api.bbc.co.uk
+tags:
+  - name: Discovery
+    description: Fetch lists of story promos
+  - name: Story
+    description: Fetch the contents of a story
+externalDocs:
+  description: Swift implementation (bbc-news-swift)
+  url: https://github.com/bilaalrashid/bbc-news-swift
+paths:
+  /fd/abl:
+    get:
+      operationId: abl
+      security: []
+      tags:
+        - Discovery
+        - Story
+      summary: Fetch a BBC news page.
+      description: Returns data for a page that returns a list of links to stories, or the contents of an individual story (deprecated). Examples include the "Home" tab, pages for specific topic categories.
+      parameters:
+        - $ref: '#/components/parameters/FDClientNameParameter'
+        - $ref: '#/components/parameters/FDClientVersionParameter'
+        - $ref: '#/components/parameters/FDServiceParameter'
+        - $ref: '#/components/parameters/FDPageParameter'
+        - $ref: '#/components/parameters/FDTypeParameter'
+        - $ref: '#/components/parameters/FDClientLocationParameter'
+        - $ref: '#/components/parameters/FDReleaseParameter'
+        - $ref: '#/components/parameters/FDClientNeedsUpdateParameter'
+      responses:
+        '200':
+          description: Successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FDResult'
+        '204':
+          description: New destination
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FDResolverResult'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseError'
+  /fd/app-article-api:
+    get:
+      operationId: app-article-api
+      security: []
+      tags:
+        - Story
+      summary: Fetch the full contents of a story.
+      description: Returns the full contents of a story.
+      parameters:
+        - $ref: '#/components/parameters/FDClientNameParameter'
+        - $ref: '#/components/parameters/FDClientVersionParameter'
+        - name: page
+          in: query
+          description: The ID or URL of the page to fetch.
+          required: true
+          schema:
+            type: string
+            example: https://www.bbc.co.uk/news/articles/cd11kvk1je4o
+        - $ref: '#/components/parameters/FDReleaseParameter'
+      responses:
+        '200':
+          description: Successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FDResult'
+        '204':
+          description: New destination
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FDResolverResult'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseError'
+components:
+  parameters:
+    FDClientNameParameter:
+      name: clientName
+      in: query
+      description: The name of the client making the request. `"Chrysalis"` refers to the English language version of the app.
+      required: true
+      schema:
+        type: string
+        enum:
+          - Chrysalis
+          - Arabic
+          - Cymru
+          - Hindi
+          - Russian
+          - Mundo
+    FDClientVersionParameter:
+      name: clientVersion
+      in: query
+      description: The version of the client making the request.
+      required: true
+      schema:
+        type: string
+        default: pre-6
+    FDServiceParameter:
+      name: service
+      in: query
+      description: This appears to be the BBC service which to fetch items for. `"news"` referes to the English language version of the app.
+      required: true
+      schema:
+        type: string
+        enum:
+          - news
+          - arabic
+          - hindi
+          - mundo
+          - russian
+          - cymrufyw
+    FDPageParameter:
+      name: page
+      in: query
+      description: |-
+        The ID of the page to fetch.
+        Global examples include `"chrysalis_discovery"`, `"front_page"`, `"live_radio"`, `"media_page"`, `"topic_menu"`
+      required: true
+      schema:
+        type: string
+        example: chrysalis_discovery
+    FDTypeParameter:
+      name: type
+      in: query
+      description: The type of the page being fetched.
+      required: true
+      schema:
+        type: string
+        enum:
+          - index
+          - topic
+          - asset
+          - topiccollection
+          - resolver
+    FDClientLocationParameter:
+      name: clientLoc
+      in: query
+      description: The first half of a UK postcode to customise results for.
+      required: false
+      schema:
+        type: string
+        example: W1A
+    FDReleaseParameter:
+      name: release
+      in: query
+      description: The release track of the API to use.
+      required: false
+      schema:
+        type: string
+        enum:
+          - public-alpha
+          - team
+    FDClientNeedsUpdateParameter:
+      name: clientNeedsUpdate
+      in: query
+      description: Does the client need to be prompted with an update.
+      required: false
+      schema:
+        type: boolean
+        default: false
+  schemas:
+    FDDataMetadata:
+      description: The metadata of a page of results returned by the API.
+      required:
+        - name
+        - allowAdvertising
+        - lastUpdated
+      type: object
+      properties:
+        name:
+          description: The name of the page to display to the user.
+          type: string
+          example: News App UK Front Page
+        allowAdvertising:
+          description: If the page allows advertising to be displayed.
+          type: boolean
+        lastUpdated:
+          description: The 64-bit timestamp of the last time the page was updated. This is always `0` for story discovery pages.
+          type: integer
+          format: int64
+          example: 0
+        shareUrl:
+          description: The URL of a webpage displaying the same page returned by the API.
+          type: string
+          format: uri
+          example: https://www.bbc.co.uk/news/uk-politics-66630308
+    FDLink:
+      description: A link to a new page(s).
+      required:
+        - destinations
+        - trackers
+      type: object
+      properties:
+        destinations:
+          description: The destination(s) of the link.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDLinkDestination'
+        trackers:
+          type: array
+          items:
+            $ref: '#/components/schemas/FDTracker'
+    FDPresentation:
+      description: A description of how a page should be presented to a user.
+      required:
+        - type
+      type: object
+      properties:
+        type:
+          description: The type of presentation format for the page.
+          type: string
+          enum:
+            - WEB
+            - SINGLE_RENDERER
+            - MULTIPLE_RENDERER
+            - NO_PADDING
+            - VERTICAL_VIDEO
+        title:
+          description: The title of the page to be presented.
+          type: string
+          example: Entertainment & Arts
+        canShare:
+          description: If the user can be shown a share URL to that the displayed content in web form.
+          type: boolean
+        contentSource:
+          description: A description of where the linked page(s) are sourced from.
+          type: string
+          enum:
+            - BBC
+            - EXTERNAL
+        renderLinks:
+          description: A further set of links referenced by a MULTIPLE_RENDERER presentation.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDLink'
+    FDLinkDestination:
+      description: A destination of a link.
+      required:
+        - sourceFormat
+        - url
+        - id
+        - presentation
+      type: object
+      properties:
+        sourceFormat:
+          description: The format of the destination.
+          type: string
+          enum:
+            - ABL
+            - HTML
+        url:
+          description: The URL being linked to.
+          type: string
+          format: uri
+        id:
+          description: The id of the destination being linked to. This may sometimes be the same as `url`.
+          type: string
+          example: /news/health-62120167
+        presentation:
+          $ref: '#/components/schemas/FDPresentation'
+    FDTrackerPayload:
+      description: A payload of a tracker event.
+      type: object
+      properties:
+        id:
+          description: The URL or ID of the payload.
+          type: string
+          example: https://www.bbc.co.uk/news/world-asia-66783384
+        name:
+          description: The name of the payload.
+          type: string
+          example: Vladimir Putin says military cooperation with Kim Jong Un a possibility
+        page_title:
+          description: The title of the page content represented by the payload.
+          type: string
+          example: Vladimir Putin says military cooperation with Kim Jong Un a possibility
+        section:
+          description: The section that the payload represents.
+          type: string
+          example: world::asia
+        sections:
+          description: The sections that the payload represents.
+          type: string
+          example: News, News - ART
+        uasToken:
+          description: The uniform resource name of the content.
+          type: string
+          example: urn:bbc:cps:curie:asset:320ab811-ad52-4721-aa85-27e1609aa1d6
+        bbc_content_id:
+          description: The uniform resource name of the content.
+          type: string
+          example: urn:bbc:cps:curie:asset:320ab811-ad52-4721-aa85-27e1609aa1d6
+        bbc_producer:
+          description: The service or brand of the content the payload represents.
+          type: string
+          example: NEWS
+        bbc_content_type:
+          description: The type of content that the payload represents.
+          type: string
+          example: article
+        action_type:
+          description: The type of the action the payload represents.
+          type: string
+          example: carousel-scroll-reached-end
+        action_name:
+          description: The name of the action the payload represents.
+          type: string
+          example: article-onward-journey
+    FDTracker:
+      description: A analytics event that should be tracked.
+      required:
+        - type
+        - payload
+      type: object
+      properties:
+        type:
+          description: The type of the event to track.
+          type: string
+          example: ati_v2
+        payload:
+          $ref: '#/components/schemas/FDTrackerPayload'
+    FDTopic:
+      description: A topic that a story can relate to.
+      type: object
+      properties:
+        text:
+          description: The name of the topic. This is never used alongside `title`.
+          type: string
+          example: Entertainment & Arts
+        title:
+          description: The name of the topic. This is never used alongside `text`.
+          type: string
+          example: Entertainment & Arts
+        link:
+          $ref: '#/components/schemas/FDLink'
+    FDImageSizingMethod:
+      description: A definition of how to fetch the correct size of the image.
+      required:
+        - type
+      type: object
+      properties:
+        type:
+          description: The type of sizing method used. `"SPECIFIC_WIDTHS"` defines a placeholder token in a URL, which can be substituted with a specified list of widths. `"NO_WIDTH"` supports only a single width, which is hardcoded into a URL.
+          type: string
+          enum:
+            - SPECIFIC_WIDTHS
+            - NO_WIDTH
+        widthToken:
+          description: The token in the URL where the chosen width should be defined. This is used when `type` is `"SPECIFIC_WIDTHS"`.
+          type: string
+          example: '{width}'
+        widths:
+          description: The fixed options of widths that can we used to substitute in place of the width token. This is used when `type` is `"SPECIFIC_WIDTHS"`.
+          type: array
+          items:
+            type: integer
+            format: int32
+            example: 1024
+    FDImageSource:
+      description: The remote source for an image.
+      required:
+        - url
+        - sizingMethod
+        - metadata
+      type: object
+      properties:
+        url:
+          description: The URL that the image is located.
+          type: string
+          format: uri
+          example: https://ichef.bbci.co.uk/images/ic/{width}xn/p0j04b20.jpg
+        sizingMethod:
+          $ref: '#/components/schemas/FDImageSizingMethod'
+        aspectRatio:
+          description: The aspect ratio of the image.
+          type: number
+          format: double
+          example: 1.7777777
+    FDImageMetadata:
+      description: Metadata descriptions of an image.
+      type: object
+      properties:
+        altText:
+          description: A textual description of an image, to be used as alternative text in place of the image.
+          type: string
+          example: Paula Vennells at the Post Office inquiry
+        caption:
+          description: A caption to display with the image.
+          type: string
+          example: Paula Vennells at the Post Office inquiry
+        copyrightText:
+          description: A copyright attribution for the image.
+          type: string
+          example: Getty
+    FDImage:
+      description: An image to be displayed.
+      required:
+        - type
+        - source
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `Image`.
+          type: string
+          enum:
+            - Image
+        source:
+          $ref: '#/components/schemas/FDImageSource'
+        metadata:
+          $ref: '#/components/schemas/FDImageMetadata'
+    FDBadge:
+      description: A visual badge to tag a story with.
+      required:
+        - type
+        - brand
+      type: object
+      properties:
+        type:
+          description: The type of the badge.
+          type: string
+          enum:
+            - LIVE
+            - BREAKING
+            - VIDEO
+            - AUDIO
+            - ORDERED
+        brand:
+          description: The brand the badge represents.
+          type: string
+          enum:
+            - NEWS
+            - SPORT
+            - DEFAULT
+        text:
+          description: The text displayed within the badge.
+          type: string
+          example: LIVE
+        duration:
+          description: The time duration of the media described, represented in milliseconds.
+          type: integer
+          format: int64
+    FDStoryPromo:
+      description: A promo description that links to a story.
+      required:
+        - type
+        - style
+        - languageCode
+        - link
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `StoryPromo`.
+          type: string
+          enum:
+            - StoryPromo
+        style:
+          description: The style in which the promo should be displayed.
+          type: string
+          enum:
+            - BADGE_LED_PROMO_CARD
+            - EMPHASISED_PROMO_CARD
+            - GALLERY_PROMO_CARD
+            - HERO_PROMO_CARD
+            - HIGHLIGHTED_PROMO_CARD
+            - IMAGE_LED_PROMO_CARD
+            - IMPACTFUL_TEXT_PROMO_CARD
+            - LARGE_PROMO_CARD
+            - PORTRAIT_PROMO_CARD
+            - SMALL_CAROUSEL_PROMO_CARD
+            - SMALL_HORIZONTAL_PROMO_CARD
+            - SMALL_VERTICAL_PROMO_CARD
+            - SQUARE_PROMO_CARD
+            - SQUARE_TEXT_OVER_IMAGE_PROMO_CARD
+            - TEXT_PROMO_CARD
+            - VIDEO_PACKAGE_PROMO_CARD
+        languageCode:
+          description: The ISO 639-1 language code of the language used in the story.
+          type: string
+          example: en-gb
+        text:
+          description: The title of the story.
+          type: string
+          example: TikTok sues to block US law which could ban app
+        subtext:
+          description: The subtext of the story.
+          type: string
+          example: TikTok said the measure was an "extraordinary intrusion on free speech rights".
+        link:
+          $ref: '#/components/schemas/FDLink'
+        updated:
+          description: The 64-bit timestamp of the time the story was last updated.
+          type: integer
+          format: int64
+        topic:
+          $ref: '#/components/schemas/FDTopic'
+        image:
+          $ref: '#/components/schemas/FDImage'
+        badges:
+          description: A list of badges that relate to the story.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDBadge'
+        uasToken:
+          description: The internal uniform resource name of the story.
+          type: string
+          format: urn
+          example: urn:bbc:optimo:asset:c72pqlgqe4jo
+    FDBillboard:
+      description: A collection containing a single story promo that is displayed with the highest prominence at the top of a story discovery page.
+      required:
+        - type
+        - items
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - Billboard
+        items:
+          description: The story promo(s) to be displayed in the collection.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDStoryPromo'
+    FDHierarchicalCollection:
+      description: A collection of story promos that should be displayed with inflated prominence.
+      required:
+        - type
+        - items
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - HierarchicalCollection
+        items:
+          description: The story promos to be displayed in the collection.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDStoryPromo'
+    FDCollectionHeader:
+      description: A header for a story promo collection.
+      required:
+        - type
+        - text
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - CollectionHeader
+        text:
+          description: The story promos to be displayed in the collection.
+          type: string
+          example: Top Stories
+        link:
+          $ref: '#/components/schemas/FDLink'
+    FDSimpleCollection:
+      description: A collection of story promos that should be displayed with standard prominence.
+      required:
+        - type
+        - items
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - SimpleCollection
+        items:
+          description: The story promos to be displayed in the collection.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDStoryPromo'
+    FDSimplePromoGrid:
+      description: A collection of story promos that should be displayed as a grid.
+      required:
+        - type
+        - items
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - SimplePromoGrid
+        items:
+          description: The story promos to be displayed in the collection.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDStoryPromo'
+    FDWeatherLocation:
+      description: A location being described by a weather forecast.
+      required:
+        - name
+        - isCurrentLocation
+      type: object
+      properties:
+        name:
+          description: The display name of the location being described. This is typically the first half of the UK postcode for the location.
+          type: string
+          example: W1A
+        isCurrentLocation:
+          description: If the location being described the is the same as the user's current location.
+          type: boolean
+    FDTemperature:
+      description: A representation of a temperate in a weather forecast.
+      required:
+        - celsius
+      type: object
+      properties:
+        celsius:
+          description: The temperate value, represented in celsius.
+          type: integer
+          example: 20
+    FDWeatherForecast:
+      description: A weather description of a forecast prediction.
+      required:
+        - description
+        - high
+        - low
+        - icon
+        - nighttimeLayout
+      type: object
+      properties:
+        description:
+          description: The short, textual description of the forecast.
+          type: string
+          example: Partly cloudy and a gentle breeze
+        high:
+          $ref: '#/components/schemas/FDTemperature'
+        low:
+          $ref: '#/components/schemas/FDTemperature'
+        icon:
+          description: The identifier of the weather icon to be displayed.
+          type: string
+          enum:
+            - SLEET_SHOWER
+            - THUNDERSTORM
+            - HAIL
+            - HAIL_SHOWER
+            - HAIL_SHOWER_NIGHT
+            - MIST
+            - SLEET
+            - SLEET_SHOWER_NIGHT
+            - SUNNY
+            - SUNNY_INTERVALS
+            - THUNDERY_SHOWER
+            - THUNDERY_SHOWER_NIGHT
+            - HEAVY_RAIN
+            - HEAVY_RAIN_SHOWER
+            - HEAVY_RAIN_SHOWER_NIGHT
+            - HEAVY_SNOW
+            - HEAVY_SNOW_SHOWER
+            - HEAVY_SNOW_SHOWER_NIGHT
+            - LIGHT_RAIN
+            - LIGHT_RAIN_SHOWER
+            - LIGHT_RAIN_SHOWER_NIGHT
+            - LIGHT_SNOW
+            - LIGHT_SNOW_SHOWER
+            - LIGHT_SNOW_SHOWER_NIGHT
+            - LIGHT_SOURCE_CLOUDY_WEATHER
+            - PARTLY_CLOUDY
+            - SANDSTORM
+            - TROPICAL_STORM
+        nighttimeLayout:
+          description: If the forecast should be displayed to the user in a night-time specific layout.
+          type: boolean
+    FDWeatherPromoSummary:
+      description: A promo summary for the weather forecast.
+      required:
+        - type
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - WeatherPromoSummary
+        period:
+          description: The textual description of the time period covered by the forecast.
+          type: string
+          example: Tonight
+        location:
+          $ref: '#/components/schemas/FDWeatherLocation'
+        forecast:
+          $ref: '#/components/schemas/FDWeatherForecast'
+    FDCarousel:
+      description: A collection of story promos that should be displayed as a scrollable carousel.
+      required:
+        - type
+        - items
+        - aspectRatio
+        - presentation
+        - hasPageIndicator
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - Carousel
+        items:
+          description: The story promos to be displayed in the collection.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDStoryPromo'
+        aspectRatio:
+          description: The aspect ratio of each promo displayed in the collection.
+          type: number
+          format: double
+          example: 1.777777
+        presentation:
+          $ref: '#/components/schemas/FDPresentation'
+        hasPageIndicator:
+          description: If page indicators be displayed for each item in the carousel.
+          type: boolean
+    FDMediaSource:
+      description: A remote source for a playable media item.
+      required:
+        - type
+        - id
+        - duration
+        - aspectRatio
+        - isLive
+        - canAutoPlay
+      type: object
+      properties:
+        type:
+          description: The type of the media.
+          type: string
+          enum:
+            - VIDEO
+            - AUDIO
+        id:
+          description: The identifier of the media item.
+          type: string
+          example: p0j03jqy
+        duration:
+          description: The duration of the media item, in milliseconds.
+          type: integer
+          format: int64
+          example: 140000
+        aspectRatio:
+          description: The aspect ratio of the media item.
+          type: number
+          format: double
+          example: 1.7777777
+        isLive:
+          description: If the media item is a live broadcast.
+          type: boolean
+        canAutoPlay:
+          description: If the media item should be allowed to start playing without user interaction.
+          type: boolean
+        episodePid:
+          description: The identifier of the media item.
+          type: string
+          example: p0j03jqy
+    FDAttributedText:
+      description: The annotated text contents of a text paragraph displayed in a story.
+      required:
+        - type
+        - startIndex
+        - length
+      type: object
+      properties:
+        type:
+          description: The type of the span.
+          type: string
+          enum:
+            - link
+            - emphasis
+        startIndex:
+          description: The start index of the span.
+          type: integer
+          format: int32
+        length:
+          description: The number of characters that the span applied for.
+          type: integer
+          format: int32
+        attribute:
+          description: The type of the span.
+          type: string
+          enum:
+            - bold
+            - italic
+        link:
+          $ref: '#/components/schemas/FDLink'
+    FDMediaMetadata:
+      description: Metadata descriptions of a media item.
+      required:
+        - title
+        - timestamp
+        - allowAdvertising
+      type: object
+      properties:
+        title:
+          description: The title of the media item.
+          type: string
+          example: Key moments from former Post Office chief's three-day testimony
+        summary:
+          description: A summary description of the media item.
+          type: string
+          example: Key moments from Paula Vennells' three days of questioning at Post Office inquiry
+        caption:
+          description: The caption to display with the media item.
+          type: string
+          example: Key moments from Paula Vennells' three days of questioning at Post Office inquiry
+        captionWithStyle:
+          $ref: '#/components/schemas/FDAttributedText'
+        timestamp:
+          description: The 64-bit timestamp of the time the media item was last updated.
+          type: integer
+          format: int64
+        guidanceMessage:
+          description: The guidance message for the video.
+          type: string
+        associatedContentUrl:
+          description: A URL that displays content associated to the media item. This can return a blank string when empty.
+          type: string
+          format: uri
+          example: https://www.bbc.co.uk/news/world-europe-69035174
+        allowAdvertising:
+          description: Is advertising allowed with the media item.
+          type: boolean
+    FDMedia:
+      description: A media item to be played.
+      required:
+        - type
+        - source
+        - image
+        - metadata
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `Media`.
+          type: string
+          enum:
+            - Media
+        source:
+          $ref: '#/components/schemas/FDMediaSource'
+        image:
+          $ref: '#/components/schemas/FDImage'
+        metadata:
+          $ref: '#/components/schemas/FDMediaMetadata'
+    FDVideoPortraitStory:
+      description: A portrait video for a story that consists only of a single video.
+      required:
+        - type
+        - id
+        - url
+        - text
+        - subtext
+        - media
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - VideoPortraitStory
+        id:
+          description: The BBC pid of the video.
+          type: string
+          example: p0hyzfgw
+        url:
+          description: The URL of the poster image for the video story. This is deprecated in favour of `image` and will return a blank string.
+          type: string
+          format: uri
+          example: http://c.files.bbci.co.uk/BD44/production/_133325484_meteorstill1.jpg
+        text:
+          description: The title of the video story.
+          type: string
+          example: 'Watch: Blue fireball lights up skies over Spain'
+        subtext:
+          description: The short description of the video story.
+          type: string
+          example: Videos from Spain and Portugal show a suspected meteorite streaking across the night sky.
+        media:
+          $ref: '#/components/schemas/FDMedia'
+        image:
+          $ref: '#/components/schemas/FDImage'
+    FDTrackedEvent:
+      description: An event with an action that should be tracked.
+      required:
+        - event
+        - trackers
+      type: object
+      properties:
+        event:
+          description: The name of the event being tracked.
+          type: string
+          example: unfollow
+        trackers:
+          type: array
+          items:
+            $ref: '#/components/schemas/FDTracker'
+    FDTopicButton:
+      description: A button representing a topic.
+      required:
+        - type
+        - topic
+        - resourceId
+        - trackedEvents
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - TopicButton
+        topic:
+          $ref: '#/components/schemas/FDTopic'
+        resourceId:
+          description: The internal uniform resource name of the topic represented by the button.
+          type: string
+          format: urn
+          example: urn:bbc:tipo:topic:c50znx8v8y4t
+        trackedEvents:
+          $ref: '#/components/schemas/FDTrackedEvent'
+    FDChipList:
+      description: A collection of topics that should be displayed as a chip list.
+      required:
+        - type
+        - items
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - ChipList
+        items:
+          description: The topics to be displayed in the list.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDTopic'
+    FDCopyright:
+      description: A description of a copyright claim for a piece of work.
+      required:
+        - type
+        - topics
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - Copyright
+        lastUpdated:
+          description: The 64-bit timestamp of when the copyrighted work was last updated.
+          type: integer
+          format: int64
+    FDImageContainer:
+      description: A container for a single image.
+      required:
+        - type
+        - image
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `ImageContainer`.
+          type: string
+          enum:
+            - ImageContainer
+        image:
+          $ref: '#/components/schemas/FDImage'
+    FDHeadlineByline:
+      description: A byline for a story. This is deprecated in favour of `FDByline` as a direct child of `FDItem`.
+      deprecated: true
+      required:
+        - name
+        - purpose
+      type: object
+      properties:
+        name:
+          description: The name of the individual featured in the byline.
+          type: string
+          example: Laura Kuenssberg
+        purpose:
+          description: The description or job title of the individual featured in the byline.
+          type: string
+          example: Presenter, Sunday with Laura Kuenssberg
+    FDHeadline:
+      description: A headline for a story.
+      required:
+        - type
+        - text
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `Headline`.
+          type: string
+          enum:
+            - Headline
+        text:
+          description: The text in the headline.
+          type: string
+          example: TikTok sues to block US law which could ban app
+        lastUpdated:
+          description: A legacy property for storing a 64-bit timestamp of the time the story was last updated. Deprecated in favour of `firstPublished` and `lastPublished`.
+          type: integer
+          format: int64
+          deprecated: true
+        firstPublished:
+          description: A 64-bit timestamp of the time the story was first published.
+          type: integer
+          format: int64
+        lastPublished:
+          description: A 64-bit timestamp of the time the story was last updated.
+          type: integer
+          format: int64
+        byline:
+          $ref: '#/components/schemas/FDHeadlineByline'
+        topic:
+          $ref: '#/components/schemas/FDTopic'
+        languageCode:
+          description: The ISO 639-1 language code of the language used in the story.
+          type: string
+          example: en-gb
+        readTimeMinutes:
+          description: The estimated number of minutes that the article would take to be read.
+          type: integer
+          format: int32
+    FDBylineContributor:
+      description: A contributor to a story in a byline.
+      required:
+        - name
+        - role
+      type: object
+      properties:
+        type:
+          description: The type of the contributor.
+          type: string
+          enum:
+            - Contributor
+        name:
+          description: The role of the contributor.
+          type: string
+          example: Laura Kuenssberg
+        role:
+          description: The role of the contributor.
+          type: string
+          example: Presenter, Sunday with Laura Kuenssberg
+    FDByline:
+      description: A byline for a story.
+      required:
+        - type
+        - contributors
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `Byline`.
+          type: string
+          enum:
+            - Byline
+        contributors:
+          description: The list of contributors in the article.
+          type: array
+          items:
+            $ref: '#/components/schemas/FDBylineContributor'
+    FDTextContainer:
+      description: A container for a paragraph of text in a story.
+      required:
+        - type
+        - containerType
+        - text
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `textContainer`.
+          type: string
+          enum:
+            - textContainer
+        containerType:
+          description: The type of the container that the text should be displayed in.
+          type: string
+          enum:
+            - introduction
+            - body
+            - crosshead
+        text:
+          $ref: '#/components/schemas/FDAttributedText'
+    FDSectionHeader:
+      description: A section header in a story.
+      required:
+        - type
+        - text
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `SectionHeader`.
+          type: string
+          enum:
+            - SectionHeader
+        text:
+          description: The text in the section header.
+          type: string
+    FDContentList:
+      description: A list of text items.
+      required:
+        - type
+        - ordering
+        - listItems
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDItem`. This is always `ContentList`.
+          type: string
+          enum:
+            - ContentList
+        ordering:
+          description: The type ordering type of the list.
+          type: string
+          enum:
+            - UNORDERED
+            - ORDERED
+        listItems:
+          $ref: '#/components/schemas/FDAttributedText'
+    FDItem:
+      type: object
+      description: The list of ordered items to be displayed to the user for a page returned by the API.
+      oneOf:
+        - $ref: '#/components/schemas/FDBillboard'
+        - $ref: '#/components/schemas/FDHierarchicalCollection'
+        - $ref: '#/components/schemas/FDCollectionHeader'
+        - $ref: '#/components/schemas/FDSimpleCollection'
+        - $ref: '#/components/schemas/FDSimplePromoGrid'
+        - $ref: '#/components/schemas/FDWeatherPromoSummary'
+        - $ref: '#/components/schemas/FDCarousel'
+        - $ref: '#/components/schemas/FDVideoPortraitStory'
+        - $ref: '#/components/schemas/FDTopicButton'
+        - $ref: '#/components/schemas/FDChipList'
+        - $ref: '#/components/schemas/FDCopyright'
+        - $ref: '#/components/schemas/FDMedia'
+        - $ref: '#/components/schemas/FDImageContainer'
+        - $ref: '#/components/schemas/FDImage'
+        - $ref: '#/components/schemas/FDHeadline'
+        - $ref: '#/components/schemas/FDByline'
+        - $ref: '#/components/schemas/FDTextContainer'
+        - $ref: '#/components/schemas/FDSectionHeader'
+        - $ref: '#/components/schemas/FDContentList'
+        - $ref: '#/components/schemas/FDStoryPromo'
+    FDData:
+      description: The main data from the API response.
+      required:
+        - metadata
+        - items
+      type: object
+      properties:
+        type:
+          description: The type of the response object.
+          type: string
+          enum:
+            - ContentResponse
+        metadata:
+          $ref: '#/components/schemas/FDDataMetadata'
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/FDItem'
+        trackers:
+          type: array
+          items:
+            $ref: '#/components/schemas/FDTracker'
+    FDResult:
+      description: The main response object from the API.
+      required:
+        - data
+        - contentType
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/FDData'
+        contentType:
+          description: The content type of the response from the API.
+          type: string
+          enum:
+            - application/json; charset=utf-8
+    FDResolverResponse:
+      description: A new link where the response from the API is now located.
+      required:
+        - resolvedLink
+      type: object
+      properties:
+        type:
+          description: Used for decoding `FDResolverResult`. This is always `ResolverResponse`.
+          type: string
+          enum:
+            - ResolverResponse
+        resolvedLink:
+          $ref: '#/components/schemas/FDLink'
+    FDResolverResult:
+      description: A response from the API indicating the content exists at a new location.
+      required:
+        - data
+        - contentType
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/FDResolverResponse'
+        contentType:
+          description: The content type of the response from the API.
+          type: string
+          enum:
+            - application/json; charset=utf-8
+    ResponseError:
+      properties:
+        message:
+          type: string
+          example: release channel "foo" does not exist
+        code:
+          type: string
+          example: NotFound
+        data:
+          type: object

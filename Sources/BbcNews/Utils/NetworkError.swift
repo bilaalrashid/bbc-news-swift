@@ -24,7 +24,7 @@ public enum NetworkError: Error, LocalizedError, CustomStringConvertible {
     case unsuccessfulStatusCode(url: URL, code: Int)
 
     /// The server returned a new destination to resolve the requested response from.
-    case newDestination(url: URL, link: FDLink)
+    case newDestination(url: URL, link: Components.Schemas.FDLink)
 
     /// A response was returned that was unable to be decoded into a type.
     case undecodableResponse(url: URL, type: Decodable.Type, underlyingError: DecodingError)
