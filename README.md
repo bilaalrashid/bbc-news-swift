@@ -24,8 +24,6 @@ bbc-news-swift can be installed using [Swift Package Manager](https://www.swift.
 ```swift
 import BbcNews
 
-let bbcNews = BbcNews()
-// or
 let bbcNews = BbcNews(modelIdentifier: "iPhone15,2", systemName: "iOS", systemVersion: "17.0")
 
 // Get results from the home page
