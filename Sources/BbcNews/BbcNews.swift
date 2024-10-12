@@ -117,7 +117,7 @@ public struct BbcNews {
     ///   - systemVersion: The version of the operating system e.g. 16.6.
     ///   - service: The international service that API results should be localised for e.g. BBC Cymru.
     ///   - release: The release track of the API version.
-    public init(service: Service = .english, release: ReleaseTrack? = nil) {
+    @MainActor public init(service: Service = .english, release: ReleaseTrack? = nil) {
         self.init(
             modelIdentifier: UIDevice.current.modelIdentifier,
             systemName: UIDevice.current.systemName,
