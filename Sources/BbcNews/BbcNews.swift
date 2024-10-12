@@ -10,7 +10,7 @@ import Foundation
 import FoundationNetworking
 #endif
 #if canImport(OSLog)
-import OSLog
+@preconcurrency import OSLog
 #endif
 #if canImport(UIKit)
 import UIKit

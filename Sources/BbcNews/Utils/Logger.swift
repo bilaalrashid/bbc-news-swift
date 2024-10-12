@@ -6,7 +6,7 @@
 //
 
 #if canImport(OSLog)
-import OSLog
+@preconcurrency import OSLog
 
 extension Logger {
     /// The Unified Logging subsystem name
