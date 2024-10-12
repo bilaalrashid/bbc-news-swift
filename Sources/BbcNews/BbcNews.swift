@@ -12,9 +12,6 @@ import FoundationNetworking
 #if canImport(OSLog)
 @preconcurrency import OSLog
 #endif
-#if canImport(UIKit)
-import UIKit
-#endif
 
 /// A network controller for the BBC News private API, as used by the iOS app.
 ///
@@ -104,29 +101,6 @@ public struct BbcNews {
     private let releaseTrack: ReleaseTrack?
 
     // MARK: - Instance methods
-
-    #if canImport(UIKit)
-    /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
-    ///
-    /// This initialises the User-Agent string, based upon the operating system and device that the request is performed from. Defaulting
-    /// to fetching from `UIDevice`, if available on the platform.
-    ///
-    /// - Parameters:
-    ///   - modelIdentifier: The model identifier of the device e.g. iPhone15,2,
-    ///   - systemName: The name of the operating system e.g. iOS.
-    ///   - systemVersion: The version of the operating system e.g. 16.6.
-    ///   - service: The international service that API results should be localised for e.g. BBC Cymru.
-    ///   - release: The release track of the API version.
-    @MainActor public init(service: Service = .english, release: ReleaseTrack? = nil) {
-        self.init(
-            modelIdentifier: UIDevice.current.modelIdentifier,
-            systemName: UIDevice.current.systemName,
-            systemVersion: UIDevice.current.systemVersion,
-            service: service,
-            release: release
-        )
-    }
-    #endif
 
     /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
     ///
