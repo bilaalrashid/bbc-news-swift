@@ -10,7 +10,7 @@ import Foundation
 /// A legacy method for storing story bylines.
 ///
 /// Modern articles use a `FDByline` object instead.
-public struct FDHeadlineByline: Codable, Equatable, Hashable {
+public struct FDHeadlineByline: Codable, Equatable, Hashable, Sendable {
     /// The name of the individual featured in the byline.
     public var name: String
 

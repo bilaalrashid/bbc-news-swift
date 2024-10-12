@@ -8,7 +8,7 @@
 import Foundation
 
 /// A type of image sizing method.
-public enum FDImageSizingMethodType: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDImageSizingMethodType: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     /// A sizing method where a token in a URL is substituted with a selection from a pre-defined list of sizes.
     case specificWidths = "SPECIFIC_WIDTHS"
 

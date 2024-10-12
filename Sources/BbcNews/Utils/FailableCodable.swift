@@ -9,7 +9,8 @@ import Foundation
 
 /// A property wrapper that decodes an empty value as nil.
 @propertyWrapper
-public struct FailableCodable<Wrapped>: Codable, Equatable, Hashable where Wrapped: Codable, Wrapped: Equatable, Wrapped: Hashable {
+public struct FailableCodable<Wrapped>: Codable, Equatable, Hashable, Sendable
+    where Wrapped: Codable, Wrapped: Equatable, Wrapped: Hashable, Wrapped: Sendable {
     /// The wrapped value of the property wrapper.
     public var wrappedValue: Wrapped?
 

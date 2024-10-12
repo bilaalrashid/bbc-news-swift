@@ -8,7 +8,7 @@
 import Foundation
 
 /// A location where a link was sourced from.
-public enum FDContentSource: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDContentSource: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case bbc = "BBC"
     case external = "EXTERNAL"
 

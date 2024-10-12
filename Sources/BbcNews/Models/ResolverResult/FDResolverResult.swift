@@ -8,7 +8,7 @@
 import Foundation
 
 /// An API response providing a new link to resolve to.
-public struct FDResolverResult: Codable, Equatable, Hashable {
+public struct FDResolverResult: Codable, Equatable, Hashable, Sendable {
     /// The data of the new link to resolve to.
     public var data: FDResolverResponse
 

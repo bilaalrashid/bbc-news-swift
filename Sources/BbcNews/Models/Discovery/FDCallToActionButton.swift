@@ -8,7 +8,7 @@
 import Foundation
 
 /// A button in a call to action banner.
-public struct FDCallToActionButton: Codable, Equatable, Hashable {
+public struct FDCallToActionButton: Codable, Equatable, Hashable, Sendable {
     /// The title of the button.
     public var title: String
 

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A list of text items.
-public struct FDContentList: Codable, Equatable, Hashable {
+public struct FDContentList: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `ContentList`.
     internal let type: String
 

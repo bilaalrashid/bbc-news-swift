@@ -8,7 +8,7 @@
 import Foundation
 
 /// The details of a new link for an API request to resolve to.
-public struct FDResolverResponse: Codable, Equatable, Hashable {
+public struct FDResolverResponse: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDResolverResult`. This is always `ResolverResponse`.
     internal let type: String?
 

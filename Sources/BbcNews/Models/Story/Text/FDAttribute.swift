@@ -8,7 +8,7 @@
 import Foundation
 
 /// An attribute that can be applied to a span of text.
-public enum FDAttribute: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDAttribute: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case bold
     case italic
 

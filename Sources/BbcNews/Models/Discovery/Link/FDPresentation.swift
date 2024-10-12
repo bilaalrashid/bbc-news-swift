@@ -8,7 +8,7 @@
 import Foundation
 
 /// A description of how a page should be presented to a user.
-public struct FDPresentation: Codable, Equatable, Hashable {
+public struct FDPresentation: Codable, Equatable, Hashable, Sendable {
     /// The type of presentation format for the page.
     public var type: FDPresentationType
 

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A location being described by a weather forecast.
-public struct FDWeatherLocation: Codable, Equatable, Hashable {
+public struct FDWeatherLocation: Codable, Equatable, Hashable, Sendable {
     /// The display name of the location being described.
     ///
     /// This is typically the first half of the UK postcode for the location.

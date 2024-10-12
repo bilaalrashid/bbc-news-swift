@@ -8,7 +8,7 @@
 import Foundation
 
 /// A headline for a story.
-public struct FDHeadline: Codable, Equatable, Hashable {
+public struct FDHeadline: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `Headline`.
     internal let type: String
 

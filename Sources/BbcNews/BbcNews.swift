@@ -10,7 +10,7 @@ import Foundation
 import FoundationNetworking
 #endif
 #if canImport(OSLog)
-import OSLog
+@preconcurrency import OSLog
 #endif
 #if canImport(UIKit)
 import UIKit
@@ -161,7 +161,7 @@ public struct BbcNews {
     ///
     /// - Parameter postcode: The first part of the user's UK postcode e.g. W1A.
     /// - Returns: The index discovery page.
-    public func fetchIndexDiscoveryPageThrowing(postcode: String? = nil) async throws -> FDResult {
+    public func fetchIndexDiscoveryPageThrowing(postcode: String? = nil) async throws(NetworkError) -> FDResult {
         return try await self.fetchIndexDiscoveryPage(postcode: postcode).get()
     }
 
@@ -201,7 +201,7 @@ public struct BbcNews {
     ///
     /// - Parameter topicIds: The topic IDs to fetch.
     /// - Returns: The fetched topic pages.
-    public func fetchTopicDiscoveryPagesThrowing(for topicIds: [String]) async throws -> [FDResult] {
+    public func fetchTopicDiscoveryPagesThrowing(for topicIds: [String]) async throws(NetworkError) -> [FDResult] {
         return try await self.fetchTopicDiscoveryPages(for: topicIds).get()
     }
 
@@ -230,7 +230,7 @@ public struct BbcNews {
     ///
     /// - Parameter topicId: The topic ID to fetch.
     /// - Returns: The fetched topic page.
-    public func fetchTopicDiscoveryPageThrowing(for topicId: String) async throws -> FDResult {
+    public func fetchTopicDiscoveryPageThrowing(for topicId: String) async throws(NetworkError) -> FDResult {
         return try await self.fetchTopicDiscoveryPage(for: topicId).get()
     }
 
@@ -265,7 +265,7 @@ public struct BbcNews {
     ///
     /// - Parameter urlString: The absolute URL to fetch.
     /// - Returns: The fetched page.
-    public func fetchThrowing(urlString: String) async throws -> FDResult {
+    public func fetchThrowing(urlString: String) async throws(NetworkError) -> FDResult {
         return try await self.fetch(urlString: urlString).get()
     }
 
@@ -285,7 +285,7 @@ public struct BbcNews {
     ///
     /// - Parameter url: The URL to fetch.
     /// - Returns: The fetched page.
-    public func fetchThrowing(url: URL) async throws -> FDResult {
+    public func fetchThrowing(url: URL) async throws(NetworkError) -> FDResult {
         return try await self.fetch(url: url).get()
     }
 

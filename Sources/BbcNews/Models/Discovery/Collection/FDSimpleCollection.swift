@@ -8,7 +8,7 @@
 import Foundation
 
 /// A collection of story promos that should be displayed with standard prominence.
-public struct FDSimpleCollection: FDCollection, Codable, Equatable, Hashable {
+public struct FDSimpleCollection: FDCollection, Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `SimpleCollection`.
     internal let type: String
 

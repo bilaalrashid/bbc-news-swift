@@ -8,7 +8,7 @@
 import Foundation
 
 /// A promo summary for the weather forecast.
-public struct FDWeatherPromoSummary: Codable, Equatable, Hashable {
+public struct FDWeatherPromoSummary: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `WeatherPromoSummary`.
     internal let type: String
 

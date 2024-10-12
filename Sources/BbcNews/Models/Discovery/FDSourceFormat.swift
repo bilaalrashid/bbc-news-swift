@@ -8,7 +8,7 @@
 import Foundation
 
 /// A format that a result is returned in.
-public enum FDSourceFormat: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDSourceFormat: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     /// A result that is defined in the native format returned by the API.
     case abl = "ABL"
 

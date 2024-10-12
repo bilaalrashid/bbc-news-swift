@@ -8,7 +8,7 @@
 import Foundation
 
 /// A analytics event that should be tracked.
-public struct FDTracker: Codable, Equatable, Hashable {
+public struct FDTracker: Codable, Equatable, Hashable, Sendable {
     /// The type of the event to track.
     public var type: String
 

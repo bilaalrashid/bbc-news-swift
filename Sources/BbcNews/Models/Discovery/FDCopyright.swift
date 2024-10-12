@@ -8,7 +8,7 @@
 import Foundation
 
 /// A description of a copyright claim for a piece of work.
-public struct FDCopyright: Codable, Equatable, Hashable {
+public struct FDCopyright: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `Copyright`.
     internal let type: String
 

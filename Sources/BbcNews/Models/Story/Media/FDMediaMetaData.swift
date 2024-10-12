@@ -8,7 +8,7 @@
 import Foundation
 
 /// Metadata descriptions of a media item.
-public struct FDMediaMetadata: Codable, Equatable, Hashable {
+public struct FDMediaMetadata: Codable, Equatable, Hashable, Sendable {
     /// The title of the media item.
     public var title: String
 

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A collection of story promos that should be displayed with inflated prominence.
-public struct FDHierarchicalCollection: FDCollection, Codable, Equatable, Hashable {
+public struct FDHierarchicalCollection: FDCollection, Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `HierarchicalCollection`.
     internal let type: String
 

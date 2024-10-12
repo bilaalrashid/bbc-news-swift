@@ -8,7 +8,7 @@
 import Foundation
 
 /// Metadata descriptions of an image.
-public struct FDImageMetadata: Codable, Equatable, Hashable {
+public struct FDImageMetadata: Codable, Equatable, Hashable, Sendable {
     /// A textual description of an image, to be used as alternative text in place of the image.
     public var altText: String?
 

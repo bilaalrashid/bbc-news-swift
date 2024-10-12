@@ -10,7 +10,7 @@ import Foundation
 /// The modern method for storing bylines.
 ///
 /// Older stories use `FDHeadlineByline` inside an `FDHeadline` object instead.
-public struct FDByline: Codable, Equatable, Hashable {
+public struct FDByline: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `Byline`.
     internal let type: String
 

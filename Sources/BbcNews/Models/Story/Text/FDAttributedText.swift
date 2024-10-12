@@ -8,7 +8,7 @@
 import Foundation
 
 /// Annotated contents of a text paragraph.
-public struct FDAttributedText: Codable, Equatable, Hashable {
+public struct FDAttributedText: Codable, Equatable, Hashable, Sendable {
     /// The raw text to display.
     public var text: String
 

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A button representing a topic.
-public struct FDTopicButton: Codable, Equatable, Hashable {
+public struct FDTopicButton: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `TopicButton`.
     internal let type: String
 

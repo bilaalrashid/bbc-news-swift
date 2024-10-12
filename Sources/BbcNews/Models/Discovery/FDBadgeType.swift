@@ -8,7 +8,7 @@
 import Foundation
 
 /// The type of a badge for a story promo.
-public enum FDBadgeType: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDBadgeType: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case live = "LIVE"
     case breaking = "BREAKING"
     case video = "VIDEO"

@@ -8,7 +8,7 @@
 import Foundation
 
 /// A type of a text container.
-public enum FDTextContainerType: String, Codable, Equatable, Hashable, Unknownable {
+public enum FDTextContainerType: String, Codable, Equatable, Hashable, Sendable, Unknownable {
     case introduction
     case body
     case crosshead

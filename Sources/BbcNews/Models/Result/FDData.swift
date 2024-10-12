@@ -8,7 +8,7 @@
 import Foundation
 
 /// The main data returned from the API.
-public struct FDData: Codable, Equatable, Hashable {
+public struct FDData: Codable, Equatable, Hashable, Sendable {
     /// An optional type field returned by the API. The only known value is `ContentResponse`.
     internal let type: String?
 

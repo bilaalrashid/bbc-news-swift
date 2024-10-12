@@ -8,7 +8,7 @@
 import Foundation
 
 /// A topic that a story can relate to.
-public struct FDTopic: Codable, Equatable, Hashable {
+public struct FDTopic: Codable, Equatable, Hashable, Sendable {
     /// The name of the topic.
     ///
     /// This is never used alongside `title`.

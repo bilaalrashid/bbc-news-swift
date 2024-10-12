@@ -8,7 +8,7 @@
 import Foundation
 
 /// A portrait video for a story that consists only of a single video.
-public struct FDVideoPortraitStory: Codable, Equatable, Hashable {
+public struct FDVideoPortraitStory: Codable, Equatable, Hashable, Sendable {
     /// Used for decoding `FDItem`. This is always `VideoPortraitStory`.
     internal let type: String
 
