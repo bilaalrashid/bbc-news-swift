@@ -24,7 +24,7 @@ jobs:
     name: Swift ${{ matrix.swift }} on ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [ubuntu-latest, macos-latest]
         swift: ["6.0"]
     runs-on: ${{ matrix.os }}
     needs: lint
