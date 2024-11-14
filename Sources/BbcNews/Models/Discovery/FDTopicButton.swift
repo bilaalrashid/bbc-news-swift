@@ -26,6 +26,7 @@ public struct FDTopicButton: Codable, Equatable, Hashable, Sendable {
     /// - Parameters:
     ///   - topic: The topic represented by the button.
     ///   - resourceId: The internal uniform resource name of the topic represented by the button.
+    ///   - trackedEvents: The analytics events to respond to after user interaction.
     public init(topic: FDTopic, resourceId: String, trackedEvents: [FDTrackedEvent]) {
         self.type = "TopicButton"
         self.topic = topic

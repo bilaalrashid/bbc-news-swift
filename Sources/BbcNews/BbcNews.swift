@@ -15,7 +15,56 @@ import FoundationNetworking
 
 /// A network controller for the BBC News private API, as used by the iOS app.
 ///
-/// This attempts to mimic the User-Agent of the iOS app.
+/// `BbcNews` abstracts all network requests to the BBC News API. Responses can either be returning using the `Result` type or as part of
+/// a throwing method called with `try`. To use the latter, append the following method names with `Throwing`.
+///
+/// ## Usage
+///
+/// ### Fetching data
+///
+/// ```swift
+/// import BbcNews
+///
+/// let bbcNews = BbcNews(modelIdentifier: "iPhone15,2", systemName: "iOS", systemVersion: "17.0")
+///
+/// // Get results from the home page
+/// let results = await bbcNews.fetchIndexDiscoveryPage(postcode: "W1A")
+///
+/// // Get results from a topic page
+/// let results = await bbcNews.fetchTopicDiscoveryPage(for: "c50znx8v8y4t")
+///
+/// // Check if the network call was a success or not
+/// switch result {
+/// case .success(let result):
+///     // Parse story promo from a set of discovery results and fetch the full contents of that story
+///     for item in result.data.items {
+///         if case .storyPromo(let storyPromo) = item {
+///             let url = storyPromo.link.destinations[0].url
+///
+///             // Get the full contents of the story
+///             let story = await bbcNews.fetch(url: url)
+///         }
+/// }
+///
+/// case .failure(let error):
+///     print(error)
+/// }
+/// ```
+///
+/// ### Utilities
+///
+/// ```swift
+/// import BbcNews
+///
+/// // Check if a URL is part of the BBC News API
+/// BbcNews.isApiUrl(url: URL(string: "https://bbc.co.uk")!) // false
+///
+/// // Convert a webpage URL to a URL for the API
+/// BbcNews.convertWebUrlToApi(url: URL(string: "https://www.bbc.com/news/articles/c289n8m4j19o")!) // https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.com/news/articles/c289n8m4j19o
+/// ```
+///
+/// - Note: This attempts to mimic the User-Agent of the iOS app using the device details passed to
+/// ``init(modelIdentifier:systemName:systemVersion:service:release:)``.
 public struct BbcNews {
     // MARK: - Static properties
 
@@ -29,6 +78,8 @@ public struct BbcNews {
 
     /// Checks if a URL is hosted on the BBC News API.
     ///
+    /// This performs a comparison on the fully qualified domain name of the provided URL.
+    ///
     /// - Parameter urlString: The URL to check.
     /// - Returns: If the URL is hosted on the BBC News API.
     public static func isApiUrl(urlString: String) -> Bool {
@@ -38,6 +89,8 @@ public struct BbcNews {
 
     /// Checks if a URL is hosted on the BBC News API.
     ///
+    /// This performs a comparison on the fully qualified domain name of the provided URL.
+    ///
     /// - Parameter url: The URL to check.
     /// - Returns: If the URL is hosted on the BBC News API.
     public static func isApiUrl(url: URL) -> Bool {
@@ -45,6 +98,15 @@ public struct BbcNews {
     }
 
     /// Converts a BBC News webpage URL to a native API URL that returns a JSON representation, if one exists.
+    ///
+    /// For example, for an input URL such as:
+    /// ```
+    /// https://www.bbc.com/news/articles/c289n8m4j19o
+    /// ```
+    /// The output URL will be in the form:
+    /// ```
+    /// https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.com/news/articles/c289n8m4j19o
+    /// ```
     ///
     /// - Parameters:
     ///   - urlString: The URL to convert.
@@ -58,6 +120,15 @@ public struct BbcNews {
     }
 
     /// Converts a BBC News webpage URL to a native API URL that returns a JSON representation, if one exists.
+    ///
+    /// For example, for an input URL such as:
+    /// ```
+    /// https://www.bbc.com/news/articles/c289n8m4j19o
+    /// ```
+    /// The output URL will be in the form:
+    /// ```
+    /// https://news-app.api.bbc.co.uk/fd/app-article-api?clientName=Chrysalis&clientVersion=pre-7&page=https://www.bbc.com/news/articles/c289n8m4j19o
+    /// ```
     ///
     /// - Parameters:
     ///   - url: The URL to convert.
@@ -102,7 +173,7 @@ public struct BbcNews {
 
     // MARK: - Instance methods
 
-    /// Creates an instance of `BbcNews` for making network requests to the BBC News API.
+    /// Creates an instance of ``BbcNews`` for making network requests to the BBC News API.
     ///
     /// This initialises the User-Agent string, based upon the operating system and device that the request is performed from.
     ///
