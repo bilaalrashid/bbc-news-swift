@@ -19,7 +19,7 @@ public struct FDTrackedEvent: Codable, Equatable, Hashable, Sendable {
     ///
     /// - Parameters:
     ///   - event: The name of the event being tracked.
-    ///   - trackers: The events to track.
+    ///   - trackers: The analytics events to track.
     public init(event: String, trackers: [FDTracker]) {
         self.event = event
         self.trackers = trackers

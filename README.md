@@ -12,12 +12,16 @@ This project is for educational and research purposes only.
 
 ## Installation
 
-bbc-news-swift can be installed using [Swift Package Manager](https://www.swift.org/documentation/package-manager/) by adding the following to your `Package.swift` file:
+bbc-news-swift can be installed using [Swift Package Manager](https://www.swift.org/documentation/package-manager/) by adding the following
+to your `Package.swift` file:
 ```
 .package(url: "https://github.com/bilaalrashid/bbc-news-swift.git", .upToNextMajor(from: "0.0.0"))
 ```
 
 ## Usage
+
+Full documentation is available on
+[Swift Package Index](https://swiftpackageindex.com/bilaalrashid/bbc-news-swift/main/documentation/bbcnews/bbcnews).
 
 ### Fetching data
 
@@ -27,42 +31,50 @@ import BbcNews
 let bbcNews = BbcNews(modelIdentifier: "iPhone15,2", systemName: "iOS", systemVersion: "17.0")
 
 // Get results from the home page
-let results = try await bbcNews.fetchIndexDiscoveryPageThrowing(postcode: "W1A")
+let results = await bbcNews.fetchIndexDiscoveryPage(postcode: "W1A")
 
 // Get results from a topic page
-let results = try await bbcNews.fetchTopicDiscoveryPageThrowing(for: "c50znx8v8y4t")
+let results = await bbcNews.fetchTopicDiscoveryPage(for: "c50znx8v8y4t")
 
-// Parse story promo from a set of discovery results and fetch the full contents of that story
-for item in results.data.items {
-    if case .storyPromo(let storyPromo) = item {
-        let url = storyPromo.link.destinations[0].url 
+// Check if the network call was a success or not
+switch result {
+case .success(let result):
+    // Parse story promo from a set of discovery results and fetch the full contents of that story
+    for item in result.data.items {
+        if case .storyPromo(let storyPromo) = item {
+            let url = storyPromo.link.destinations[0].url 
 
-        // Get the full contents of the story
-        let story = try await bbcNews.fetchThrowing(url: url) 
+            // Get the full contents of the story
+            let story = await bbcNews.fetch(url: url)
+        }
     }
+
+case .failure(let error):
+    print(error)
 }
 ```
 
-#### Swift 5 Result type
+#### `Result` type
 
-All methods have equivalents to support both the Swift 5 Result type and traditional try-catch.
-You can use the try-catch equivalents by appending `Throwing` to the end of a method name. 
+All methods have equivalents to support both the `Result` type and traditional `try`.
+You can use the `try` equivalents by appending `Throwing` to the end of a method name. 
 
-try-catch:
-```swift
-let results = try await bbcNews.fetchIndexDiscoveryPageThrowing(postcode: "W1A")
-print(results) // [...]
-```
-
-Result type:
+`Result`:
 ```swift
 let result = await bbcNews.fetchIndexDiscoveryPage(postcode: "W1A")
 switch result {
 case .success(let results):
     print(results) // [...]
+
 case .failure(let error):
     print(error)
 }
+```
+
+`try`:
+```swift
+let results = try await bbcNews.fetchIndexDiscoveryPageThrowing(postcode: "W1A")
+print(results) // [...]
 ```
 
 ### Utilities
@@ -97,7 +109,8 @@ Full contributing guidelines can be found in [CONTRIBUTING.md](https://github.co
 
 ## OpenAPI
 
-Documentation of the API is defined using OpenAPI and automatically built using the CI (accessible at https://bilaalrashid.github.io/bbc-news-swift).
+Documentation of the API is defined using OpenAPI and automatically built using the CI (accessible at
+https://bilaalrashid.github.io/bbc-news-swift).
 
 These schema files can be linted using [Redocly](https://github.com/Redocly/redocly-cli):
 ```

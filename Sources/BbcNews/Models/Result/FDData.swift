@@ -26,6 +26,7 @@ public struct FDData: Codable, Equatable, Hashable, Sendable {
     /// - Parameters:
     ///   - metadata: The metadata of the results returned.
     ///   - items: The story promos or story contents to be displayed.
+    ///   - trackers: The analytics events to track.
     public init(metadata: FDDataMetadata, items: [FDItem], trackers: [FDTracker]? = nil) {
         self.type = "ContentResponse"
         self.metadata = metadata

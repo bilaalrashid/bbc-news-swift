@@ -19,7 +19,7 @@ public struct FDLink: Codable, Equatable, Hashable, Sendable {
     ///
     /// - Parameters:
     ///   - destinations: The destination(s) of the link.
-    ///   - trackers: The events to track.
+    ///   - trackers: The analytics events to track.
     public init(destinations: [FDLinkDestination], trackers: [FDTracker]) {
         self.destinations = destinations
         self.trackers = trackers
