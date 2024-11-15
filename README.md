@@ -135,4 +135,4 @@ make release-version VERSION=<version>
 ```
 git push --follow-tags
 ```
-3. Create a corresponding [release](https://github.com/bilaalrashid/ReadBeeb/releases/new) on GitHub
+3. Create a corresponding [release](https://github.com/bilaalrashid/bbc-news-swift/releases/new) on GitHub
