@@ -15,7 +15,7 @@ This project is for educational and research purposes only.
 bbc-news-swift can be installed using [Swift Package Manager](https://www.swift.org/documentation/package-manager/) by adding the following
 to your `Package.swift` file:
 ```
-.package(url: "https://github.com/bilaalrashid/bbc-news-swift.git", .upToNextMajor(from: "0.0.0"))
+.package(url: "https://github.com/bilaalrashid/bbc-news-swift.git", .upToNextMajor(from: "1.1.2"))
 ```
 
 ## Usage
