@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+
+# version-bump
+# Bumps the version number of an Xcode project and increments the build number.
+#
+# Usage: ./version-bump --readme <path> [--bump-type <major|minor|patch>] [--version <version>]
+
+### Functions
+
+function semver_major_bump {
+    local version="$1"
+    echo "$version"| awk -F. -v OFS=. '{$1++; $2=$3=0; print}'
+}
+
+function semver_minor_bump {
+    local version="$1"
+    echo "$version"| awk -F. -v OFS=. '{$2++; $3=0; print}'
+}
+
+function semver_patch_bump {
+    local version="$1"
+    echo "$version"| awk -F. -v OFS=. '{$3++; print}'
+}
+
+function get_current_version {
+    git tag -l | sort -rn | head -n1 | sed 's/^v//'
+}
+
+function update_readme_version {
+    local readme="$1"
+    local version="$2"
+    sed -i "s/^\.package(url: \"https:\/\/github\.com\/bilaalrashid\/bbc-news-swift\.git\", \.upToNextMajor(from: \"[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\"))$/.package(url: \"https:\/\/github.com\/bilaalrashid\/bbc-news-swift.git\", \.upToNextMajor(from: \"$version\"))/g" "$readme"
+}
+
+### Main
+
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --readme)
+            readme="$2"
+            shift 2
+            ;;
+        --version)
+            version="$2"
+            shift 2
+            ;;
+        --bump-type)
+            bump_type="$2"
+            shift 2
+            ;;
+        *)
+            echo "Error: Invalid option"
+            exit 1
+            ;;
+    esac
+done
+
+# Make sure we are up to date with remote
+git pull --tags
+
+if [ -z "$readme" ]; then
+    echo "error: Please specify the path to the Xcode project file using --readme."
+    exit 1
+fi
+
+if [ -z "$bump_type" ] && [ -z "$version" ]; then
+    echo "error: Please specify either a bump type or version string using --bump-type or --version."
+    exit 1
+fi
+
+if [ -z "$version" ]; then
+    case "$bump_type" in
+    major)
+        version=$(semver_major_bump "$(get_current_version)")
+        ;;
+    minor)
+        version=$(semver_minor_bump "$(get_current_version)")
+        ;;
+    patch)
+        version=$(semver_patch_bump "$(get_current_version)")
+        ;;
+    *)
+        echo "Error: Invalid option passed to --bump-type"
+        exit 1
+      ;;
+    esac
+
+    echo "No version specified, bumping to $version"
+fi
+
+# Make sure working directory is clean.
+if output=$(git status --porcelain) && [ -n "$output" ]; then
+    printf "error: Please commit any uncommitted files before proceeding:\n%s\n" "$output"
+    exit 1
+fi
+
+# Make sure we are on primary branch
+branch=$(git rev-parse --abbrev-ref HEAD)
+if [[ "$branch" != "master" && "$branch" != "main" ]]; then
+    echo "error: Please switch to the main or master branch before proceeding."
+    exit 1
+fi
+
+# Update the readme file
+update_readme_version "$readme" "$version"
+
+# Commit
+git add .
+git commit -m "Bump tag"
+
+# Tag
+git tag -a "v$version" -m "Bump tag"
