@@ -121,3 +121,18 @@ Changes to these files can be visualised by generating a pageset:
 ```
 redocly build-docs openapi/<version>/openapi.yaml
 ```
+
+## Release
+
+On the `main` branch:
+1. Bump the tag and update the README
+```
+make release # Defaults to patch
+make release-<major|minor|patch>
+make release-version VERSION=<version>
+```
+2. Push to the remote
+```
+git push --follow-tags
+```
+3. Create a corresponding [release](https://github.com/bilaalrashid/ReadBeeb/releases/new) on GitHub
