@@ -11,6 +11,7 @@ import XCTest
 final class SchemaTests: XCTestCase {
     func testFDResult() async throws {
         try self.executeResultTest(file: "IndexDiscovery")
+        try self.executeResultTest(file: "IndexDiscovery2")
         try self.executeResultTest(file: "Topic")
         try self.executeResultTest(file: "Story")
         try self.executeResultTest(file: "Story2")
