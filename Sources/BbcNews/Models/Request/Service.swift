@@ -80,4 +80,13 @@ public enum Service: String, Codable, Equatable, Hashable, Sendable, CaseIterabl
             return "russian"
         }
     }
+
+    /// The value of the `page` URL parameter to use when querying the index discovery page for this service.
+    public var indexPage: String {
+        if self == .english {
+            return "chrysalis_discovery"
+        }
+
+        return "front_page"
+    }
 }

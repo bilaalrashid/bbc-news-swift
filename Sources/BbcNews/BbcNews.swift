@@ -222,7 +222,7 @@ public struct BbcNews {
         components.queryItems = [
             URLQueryItem(name: "clientName", value: self.service.clientName),
             URLQueryItem(name: "clientVersion", value: BbcNews.clientVersion),
-            URLQueryItem(name: "page", value: "front_page"),
+            URLQueryItem(name: "page", value: self.service.indexPage),
             URLQueryItem(name: "service", value: self.service.service),
             URLQueryItem(name: "type", value: "index")
         ]
