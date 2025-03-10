@@ -15,6 +15,9 @@ public struct FDCollectionHeader: Codable, Equatable, Hashable, Sendable {
     /// The text displayed in the header.
     public var text: String
 
+    /// The subtitle text displayed in the header.
+    public var subtitle: String?
+
     /// A link to a new page.
     public var link: FDLink?
 

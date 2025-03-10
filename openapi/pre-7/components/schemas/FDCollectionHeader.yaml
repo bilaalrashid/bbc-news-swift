@@ -13,5 +13,9 @@ properties:
     description: The story promos to be displayed in the collection.
     type: string
     example: Top Stories
+  subtitle:
+    description: Watch our pick of standout clips from across the BBC
+    type: string
+    example: Top Stories
   link:
     $ref: ./FDLink.yaml
